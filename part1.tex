@@ -8,13 +8,10 @@
 \section{Titel der Arbeit}
 Hitobito: Neue Generation von Personen-Filtern
 
-\section{Thematik}
-
-
 \section{Ausgangslage}
 Hitobito ist eine Open Source Webapplikation zum Verwalten von Mitgliedern, Events und vielem mehr. Die Ruby on Rails Applikation wurde 2012 von Puzzle ITC initiiert und wird stets weiterentwickelt.
 
-Die Basis für die Software bildet das Webframework Ruby on Rails. Für das User Interface wird neben statischer Technologie wie HTML und CSS auch JavaScript oder Hotwire verwendet. Der komplette Source-Code steht auf Github zur Verfügung: \url{https://github.com/hitobito/}
+Die Basis für die Software bildet das Webframework Ruby on Rails. Für das User Interface wird neben statischer Technologie wie HTML und CSS auch JavaScript oder Hotwire verwendet. Der komplette Source-Code steht auf Github zur Verfügung: \href{https://github.com/hitobito/}{Hitobito}
 
 Eine Kernfunktionalität von Hitobito ist das Filtern von Personenlisten und von Mailinglistenempfängern mit konfigurierbaren Filtern. Diese werden über das Webinterface konfiguriert. Das Webinterface wurde mit statischen Web technologien entwickelt und ist inzwischen ziemlich in die Jahre gekommen.
 
@@ -114,12 +111,65 @@ Marc arbeitet bereits seit einigen Monaten an Features von Hitobito. Ausserdem h
 \chapter{Firmenstandards}
 
 \section{Code conventions}
+Als Code convention werden die Ruby \href{https://github.com/rubocop/ruby-style-guide}{Style Guides} verwendet. 
+Die Überprüfung dieser Style Guidelines wird mit Rubocop (Formatter) sichergestellt. Die Konfiguration
+dieses Formatters ist unter \href{https://github.com/hitobito/hitobito/blob/master/.rubocop.yml}{rubocop.yml} ersichtlich.
+
+\subsection{Mehrsprachigkeit}
+Hitobito ist eine mehrsprachige Applikation. Alle Erweiterungen oder Anpassungen müssen
+in Deutsch übersetzt werden. Übersetzungen werden in einer Übersetzungsdatei gespeichert oder können
+vom Kunden in einem Tool namens Transifex verwaltet werden.
 
 \subsection{Lizenz}
+Hitobito ist ein Open Source Projekt.
+In jedem File in Hitobito wird das Copyright für den jeweiligen Kunden in Kommentarform beschrieben. 
+Diese Lizenz- und Kundeninformationen können über folgenden Befehl 
+eingefügt werden:
 
-\section{Git conventions}
+\begin{verbatim}
+    rake license:insert
+\end{verbatim}
 
-\section{Security Conventions}
+Die daraus entstehende Lizenz sieht wie folgt aus:
+
+\begin{lstlisting}[language=Ruby]
+    # Copyright (c) 2012 -2021 , hitobito AG . This file is part of
+    # hitobito and licensed under the Affero General Public License version 3
+    # or later . See the COPYING file at the top - level directory or at
+    # https :// github . com / hitobito / hitobito .
+\end{lstlisting}
+
+\newpage
+
+Alternativ dazu können diese Informationen mit 
+
+\begin{verbatim}
+    rake license:remove 
+\end{verbatim}
+
+entfernt oder mit 
+
+\begin{verbatim}
+    rake license:update 
+\end{verbatim} aktualisiert werden.
+
+\section{Git Commit Message Conventions}
+Die Git Commit Messages werden nach den Regeln von Puzzle ITC formuliert. Im Anhang
+unter \hyperref[sec:gitconv]{Git Commit Message Concention} finden sie eine Kopie der Firmenkonventionen. Diese wurden 
+basierend auf folgendem Tutorial definiert: \href{https://cbea.ms/git-commit}{Tutorial}
+
+\begin{itemize}
+    \item Sprache: Englisch
+    \item Kurze und prägnante Message, idealerweise unter 50 Zeichen
+    \item Mit Grossbuchstaben beginnen
+    \item Kein Punkt am Schluss
+    \item Den \textit{imperative mood} (Befehlsform) verwenden, also «Fix bug with X» statt «Fixed bug with X» oder «More fixes for broken stuff»
+    \item Wenn vorhanden Ticket referenzieren:
+    \begin{itemize}
+        \item Bei Open Project Work Packages: «Add X, refs \#12345»
+        \item Bei Gitlab/Github Issues: «Add X \#12345»
+    \end{itemize}
+\end{itemize}
 
 \chapter{IPA-Schutzbedarfanalyse}
 
