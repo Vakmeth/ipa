@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2025.1.13)  4 MAR 2025 09:23
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2025.1.13)  4 MAR 2025 10:42
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -906,7 +906,11 @@ File: lstlang2.sty 2020/03/24 1.8d listings language file
 )
 Package hyperref Info: Option `colorlinks' set `true' on input line 50.
 \c@highlight=\count405
- (./ipa.aux (./titlePage.aux) (./part1.aux) (./part2.aux) (./part3.aux))
+ (./ipa.aux (./titlePage.aux) (./part1.aux) (./part2.aux) (./part3.aux
+
+LaTeX Warning: Label `Github Docs' multiply defined.
+
+))
 \openout1 = `ipa.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 219.
@@ -1801,9 +1805,19 @@ Underfull \hbox (badness 10000) in paragraph at lines 20--21
 \OT1/zi4/m/n/12 viewing-[]activity-[]and-[]data-[]for-[]your-[]repository /
  []
 
+
+Underfull \hbox (badness 10000) in paragraph at lines 21--22
+[][][]$\OT1/zi4/m/n/12 https : / / docs . github . com / en /
+ []
+
+
+Overfull \hbox (60.27791pt too wide) in paragraph at lines 21--22
+\OT1/zi4/m/n/12 communities / using-[]templates-[]to-[]encourage-[]useful-[]issues-[]and-[]pull-[]requests /
+ []
+
 File: bilder//puzzle_tagline_blau.png Graphic file (type png)
 <use bilder//puzzle_tagline_blau.png>
-Package pdftex.def Info: bilder//puzzle_tagline_blau.png  used on input line 24.
+Package pdftex.def Info: bilder//puzzle_tagline_blau.png  used on input line 25.
 (pdftex.def)             Requested size: 82.51282pt x 21.55902pt.
 
 Overfull \hbox (26.79134pt too wide) has occurred while \output is active
@@ -1817,11 +1831,15 @@ Overfull \hbox (26.79134pt too wide) has occurred while \output is active
 
 [37
 
-]
+pdfTeX warning (ext4): destination with the same identifier (name{cite.Github\040Docs}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.25 \chapter
+             {Verwendete Abkürzungen}]
 Kapitel 17.
 File: bilder//puzzle_tagline_blau.png Graphic file (type png)
 <use bilder//puzzle_tagline_blau.png>
-Package pdftex.def Info: bilder//puzzle_tagline_blau.png  used on input line 38.
+Package pdftex.def Info: bilder//puzzle_tagline_blau.png  used on input line 39.
 (pdftex.def)             Requested size: 82.51282pt x 21.55902pt.
 
 Overfull \hbox (26.79134pt too wide) has occurred while \output is active
@@ -1839,7 +1857,7 @@ Overfull \hbox (26.79134pt too wide) has occurred while \output is active
 Kapitel 18.
 File: bilder//puzzle_tagline_blau.png Graphic file (type png)
 <use bilder//puzzle_tagline_blau.png>
-Package pdftex.def Info: bilder//puzzle_tagline_blau.png  used on input line 52.
+Package pdftex.def Info: bilder//puzzle_tagline_blau.png  used on input line 53.
 (pdftex.def)             Requested size: 82.51282pt x 21.55902pt.
 
 Overfull \hbox (26.79134pt too wide) has occurred while \output is active
@@ -1875,6 +1893,9 @@ Overfull \hbox (26.79134pt too wide) has occurred while \output is active
 ] 
 AED: lastpage setting LastPage
 (./ipa.aux (./titlePage.aux) (./part1.aux) (./part2.aux) (./part3.aux))
+
+LaTeX Warning: There were multiply-defined labels.
+
 Package rerunfilecheck Info: File `ipa.out' has not changed.
 (rerunfilecheck)             Checksum: 2598FBD05891F8E11CD7722747C26A1F;16932.
  ) 
@@ -1887,10 +1908,10 @@ Here is how much of TeX's memory you used:
  1141 hyphenation exceptions out of 8191
  108i,16n,129p,449b,746s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/inconsolata/i4-ot1-0.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-ts1.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/inconsolata/Inconsolata-zi4r.pfb></usr/share/texmf/fonts/type1/public/lm/lmbx10.pfb></usr/share/texmf/fonts/type1/public/lm/lmbx12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr17.pfb></usr/share/texmf/fonts/type1/public/lm/lmr9.pfb>
-Output written on ipa.pdf (41 pages, 221388 bytes).
+Output written on ipa.pdf (41 pages, 222001 bytes).
 PDF statistics:
- 1034 PDF objects out of 1200 (max. 8388607)
- 947 compressed objects within 10 object streams
+ 1037 PDF objects out of 1200 (max. 8388607)
+ 950 compressed objects within 10 object streams
  263 named destinations out of 1000 (max. 500000)
  994 words of extra memory for PDF output out of 10000 (max. 10000000)
 
