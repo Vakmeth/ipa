@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2025.1.13)  27 FEB 2025 13:53
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2025.1.13)  4 MAR 2025 09:23
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1788,7 +1788,17 @@ LaTeX Font Info:    Font shape `OT1/zi4/m/n' will be
 (Font)              scaled to size 12.0pt on input line 20.
 
 Underfull \hbox (badness 10000) in paragraph at lines 20--21
-[][][]$\OT1/zi4/m/n/12 https : / / agilescrumgroup . de /
+[]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 20--21
+[][]$\OT1/zi4/m/n/12 https : / / docs . github . com / en / repositories /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 20--21
+\OT1/zi4/m/n/12 viewing-[]activity-[]and-[]data-[]for-[]your-[]repository /
  []
 
 File: bilder//puzzle_tagline_blau.png Graphic file (type png)
@@ -1870,17 +1880,17 @@ Package rerunfilecheck Info: File `ipa.out' has not changed.
  ) 
 Here is how much of TeX's memory you used:
  31750 strings out of 478287
- 599766 string characters out of 5849289
+ 599751 string characters out of 5849289
  1179173 words of memory out of 5000000
  49000 multiletter control sequences out of 15000+600000
  520837 words of font info for 66 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  108i,16n,129p,449b,746s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/inconsolata/i4-ot1-0.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-ts1.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/inconsolata/Inconsolata-zi4r.pfb></usr/share/texmf/fonts/type1/public/lm/lmbx10.pfb></usr/share/texmf/fonts/type1/public/lm/lmbx12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr17.pfb></usr/share/texmf/fonts/type1/public/lm/lmr9.pfb>
-Output written on ipa.pdf (41 pages, 220707 bytes).
+Output written on ipa.pdf (41 pages, 221388 bytes).
 PDF statistics:
- 1033 PDF objects out of 1200 (max. 8388607)
- 946 compressed objects within 10 object streams
+ 1034 PDF objects out of 1200 (max. 8388607)
+ 947 compressed objects within 10 object streams
  263 named destinations out of 1000 (max. 500000)
  994 words of extra memory for PDF output out of 10000 (max. 10000000)
 
