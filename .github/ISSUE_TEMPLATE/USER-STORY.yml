@@ -16,7 +16,7 @@ body:
   - type: dropdown
     id: sprint
     attributes:
-      label: sprint
+      label: Sprint Phase
       description: What sprint should this task be completed in?
       options:
         - 'Sprint 1: Initialisation'
