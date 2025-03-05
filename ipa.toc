@@ -66,6 +66,13 @@
 \contentsline {subsection}{\numberline {11.1.2}Abonnemente}{41}{subsection.11.1.2}%
 \contentsline {section}{\numberline {11.2}Soll-Zustand}{41}{section.11.2}%
 \contentsline {section}{\numberline {11.3}Bedürfniserhebung}{41}{section.11.3}%
+\contentsline {section}{\numberline {11.4}Anforderungen}{41}{section.11.4}%
+\contentsline {subsection}{\numberline {11.4.1}Nicht funktionale Anforderungen}{41}{subsection.11.4.1}%
+\contentsline {subsection}{\numberline {11.4.2}Funktionale Anforderungen}{41}{subsection.11.4.2}%
+\contentsline {section}{\numberline {11.5}Abgrenzung}{41}{section.11.5}%
+\contentsline {section}{\numberline {11.6}Benötigter Rahmen}{41}{section.11.6}%
+\contentsline {subsection}{\numberline {11.6.1}Fehlende Informationen}{41}{subsection.11.6.1}%
+\contentsline {section}{\numberline {11.7}Persönliche Vorgehensziele}{41}{section.11.7}%
 \contentsline {chapter}{\numberline {12}Risikoanalyse und Sicherheitsmassnahmen}{42}{chapter.12}%
 \contentsline {section}{\numberline {12.1}Schnittstellen}{42}{section.12.1}%
 \contentsline {section}{\numberline {12.2}Benutzer und Datenzugriffe}{43}{section.12.2}%
@@ -74,13 +81,9 @@
 \contentsline {subsection}{\numberline {12.2.3}Beispiel Zugriff Tim}{46}{subsection.12.2.3}%
 \contentsline {subsection}{\numberline {12.2.4}Beispiel Zugriff Rudolf}{47}{subsection.12.2.4}%
 \contentsline {subsection}{\numberline {12.2.5}Bedeutung für die Schnittstellen}{47}{subsection.12.2.5}%
-\contentsline {section}{\numberline {12.3}Anforderungen}{49}{section.12.3}%
-\contentsline {subsection}{\numberline {12.3.1}Nicht funktionale Anforderungen}{49}{subsection.12.3.1}%
-\contentsline {subsection}{\numberline {12.3.2}Funktionale Anforderungen}{49}{subsection.12.3.2}%
-\contentsline {section}{\numberline {12.4}Abgrenzung}{49}{section.12.4}%
-\contentsline {section}{\numberline {12.5}Benötigter Rahmen}{49}{section.12.5}%
-\contentsline {subsection}{\numberline {12.5.1}Fehlende Informationen}{49}{subsection.12.5.1}%
-\contentsline {section}{\numberline {12.6}Persönliche Vorgehensziele}{49}{section.12.6}%
+\contentsline {subsection}{\numberline {12.2.6}Risikoanalyse}{48}{subsection.12.2.6}%
+\contentsline {section}{\numberline {12.3}Risikomatrix}{49}{section.12.3}%
+\contentsline {section}{\numberline {12.4}Auswertung}{49}{section.12.4}%
 \contentsline {chapter}{\numberline {13}Entwurf}{50}{chapter.13}%
 \contentsline {section}{\numberline {13.1}Anwendungskonzept}{51}{section.13.1}%
 \contentsline {subsection}{\numberline {13.1.1}Anwendungsdiagram}{51}{subsection.13.1.1}%
@@ -125,7 +128,7 @@
 \contentsline {section}{\numberline {17.1}Code}{56}{section.17.1}%
 \contentsline {section}{\numberline {17.2}Tabellenverzeichnis}{56}{section.17.2}%
 \contentsline {section}{\numberline {17.3}Abbildungsverzeichnis}{56}{section.17.3}%
-\contentsline {subsection}{Quellenverzeichnis}{58}{chapter*.112}%
+\contentsline {subsection}{Quellenverzeichnis}{58}{chapter*.113}%
 \contentsline {chapter}{\numberline {18}Verwendete Abkürzungen}{59}{chapter.18}%
 \contentsline {chapter}{\numberline {19}Glossar}{60}{chapter.19}%
 \contentsline {chapter}{\numberline {20}Anhänge}{61}{chapter.20}%
