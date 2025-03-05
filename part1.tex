@@ -178,14 +178,67 @@ basierend auf folgendem Tutorial definiert: \href{https://cbea.ms/git-commit}{Tu
 \section{Applikationssicherheit}
 
 \chapter{Organisation der IPA-Ergebnisse}
-
 \section{Datensicherung}
+In dieser IPA unterteilen wir die Datensicherung in:
+
+\begin{itemize}
+\item Dokumentation
+\item Code
+\end{itemize}
 
 \subsection{Dokumentation}
+\begin{table}[h!]
+    \begin{tabular}{|L{0.4\textwidth}|L{0.5\textwidth}|}
+        \hline
+        \rowcolor{puzzleblue} \multicolumn{2}{|l|}{\color{white}\textbf{Dokumentation}} \\[12pt]
+        \hline
+        Tools & Git und USB \\
+        \hline
+        Versioniert & Ja \\
+        \hline
+        Interval & Mind. 2x täglich \\
+        \hline
+        Beschreibung & Die Dokumentation ist im ipa-puzzle-template Repository unter dem Branch probe-ipa angelegt.
+        Sobald ein Dokumentationsticket abgeschlossen wurde, werden die Änderungen auf den Github Server in das private Repository
+        gepushed. Dies geschieht mind. 2x täglich. Zusätzlich, wird pro Tag ein Ordner auf einem USB-Stick erstellt.  Am Ende des Tages wird eine Kopie der Dokumentation
+        in diesen Ordner geladen. \\
+      \hline
+      \end{tabular}
+      \caption{Sicherung Dokumentation}
+\end{table}
+
+\newpage
 
 \subsection{Code}
+\begin{table}[h!]
+    \begin{tabular}{|L{0.4\textwidth}|L{0.5\textwidth}|}
+        \hline
+        \rowcolor{puzzleblue} \multicolumn{2}{|l|}{\color{white}\textbf{Code}} \\[12pt]
+        \hline
+        Tools & Git und USB \\
+        \hline
+        Versioniert & Ja \\
+        \hline
+        Interval & Mind. 2x täglich \\
+        \hline
+        Beschreibung & Für die Entwicklung wurden die Repositories hitobito und hitobito\-generic geforked.
+        Auf diesen Repositories wird an Tagen an welchen entwickelt wird, mind. 2x täglich committed. An diesen Tagen
+        wird zur doppelten Sicherung zusätzlich eine Kopie des Projektes auf den USB Stick gespeichert, unter dem Ordner des jeweiligen Tages. \\
+      \hline
+      \end{tabular}
+      \caption{Sicherung Code}
+\end{table}
+
+% Nachweis Backup auf USB Stick %
 
 \subsection{Wiederherstellung des Codes}
+Im Falle eines Datenverlusts, können di Daten entweder über das Github Repository oder den USB-Stick wiederhergestellt werden.
+Bei der Wiederherstellung mit Git wird der SSH-Key für die Klonung des Repositories benötigt. Ist
+dieser SSH-Key nicht verfügbar, wird die Wiederherstellung über den USB-Stick vorgenommen und das Projekt des letzten Speicherstandes
+kopiert. Im Falle des USB-Sticks ist mit mehr Datenverlust zu rechnen, falls der Datenverlust gegen Mittag oder Nachmittag auftritt, da
+die Speicherung erst am Ende des Tages erfolgt. Aus diesem Grund ist die Datenwiederherstellung mit Git zu bevorzugen.
+
+Die Nachweise für die jeweiligen Datensicherungen finden sie im Anhang.
 
 \section{Änderungskontrolle}
 
