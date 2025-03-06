@@ -267,8 +267,114 @@ werden in der Textbox unter dem Titel ``Globale Bedingungen'' auf der Abonnement
    \caption{Globale Filterungsbedingungen für Abonnemente}
 \end{figure}
 
+\newpage
 
 \section{Soll-Zustand}
+In der Vorarbeit für diese IPA wurde vom Kandidaten ein Mockup erstellt. Das Produkt der IPA soll nach diesem Mockup umgesetzt werden.
+Das angefertigte Mockup repräsentiert den Soll-Zustand und wird im folgenden Abschnitt erklärt.
+
+\subsection{Anzeigemasken}
+Zuerst werden die Anzeigemasken des Mockups vorgestellt. Dabei handelt es sich um Anzeigen, welche der Benutzer ausschliesslich lesen und nicht
+bearbeiten kann.
+
+\textbf{Filterübersicht}
+Sobald der Benutzer auf ``Neuer Filter...'' in der Personenübersicht einer Gruppe klickt, soll er auf folgende Ansicht weitergeleitet werden:
+
+\begin{figure}[h]
+   \centering
+   \fbox{\includegraphics[width=0.8\textwidth,]{mockup_nofilter_overview.png}}
+   \caption{Mockup Filterübersicht}
+\end{figure}
+
+Die Übersicht enthält die Radio-Buttons der alten Benutzerschnittstelle. Die massgäbliche Änderung zum Soll-Zustand betrifft den hinzufügen Button.
+Dieser befindet agiert als Dropdown, sobald der Benutzer auf ihn klickt. Das Dropdown besitzt vier Filterungskriterien, nicht mehr die fünf wie sie momentan
+im Hitobito anzutreffen sind. Sind noch keine Filterkriterien erfasst, wird dies dem Benutzer mit einem Text signalisiert.
+Die Speicherungskomponente des Filters bleibt bestehen.
+
+\textbf{Filterübersicht mit Tags und Felder}
+
+Hat der Benutzer seine Filterkriterien definiert, werden diese in Boxen angezeigt.
+Die definierte Filterkriterien verschwinden aus dem Dropdown unter dem Hinzufüge-Butto. Stattdessen können 
+die definierten Filterkriterien über den Stif in der oberen, rechten Ecke einer Box bearbeitete werden.
+
+\begin{figure}[h]
+   \centering
+   \fbox{\includegraphics[width=0.8\textwidth,]{mockup_two_filters.png}}
+   \caption{Mockup mit Tags und Felder definiert}
+\end{figure}
+
+In dieser Ansicht hat der Benutzer das Filterkriterium ``Tags'' und ``Felder'' definiert. Diese Optionen verschwinden
+somit aus dem Dropdown. Wurden zu jedem Filterkriterium Bedingungen erfasst, verschwindet der gesamte Hinzufüge-Button.
+
+\newpage
+
+\textbf{Filterübersicht mit Qualifikationen und Rollen}
+
+Im folgenden Bild hat der Benutzer Tags, Rollen und Qualifikationen als Filterkriterien erfasst.
+
+\begin{figure}[h]
+   \centering
+   \fbox{\includegraphics[width=0.8\textwidth,]{mockup_roles_qualifications.png}}
+   \caption{Mockup mit Qualifikationen und Rollen definiert}
+\end{figure}
+
+\subsection{Bearbeitungsmasken}
+Nachfolgend werden die Anzeigen vorgestellt, welche der Benutzer bearbeiten kann. Diese sind für den Benutzer zugänglich, indem er
+ein Filterkriterium entweder per Hinzufüge-Button hinzufügt oder per Editier-Button (Stift in der oberen rechten Ecke der Box) bearbeitet.
+
+\textbf{Felder}
+
+Die Felder können im neuen Mockup durch ein Dropdown ausgewählt werden. Danach wird kann wie zuvor die Genauigkeit bestimmen werden.
+Will der Benutzer ein weiteres Attribut zu seinen Suchbedingungen hinzufügen, kann er dies über den Hinzufüge-Butten in der rechten unteren Ecke. Auf dieser
+Benutzerschnittstelle ist es möglich die Sprache als Attribut auszuwählen. Für die Sprache kann standardmässig keine Genauigkeit definiert werden.
+
+\begin{figure}[h]
+   \centering
+   \fbox{\includegraphics[width=0.8\textwidth,]{mockup_attributes.png}}
+   \caption{Bearbeitungsmaske Filterkriterium Felder}
+\end{figure}
+
+\newpage
+
+\textbf{Rollen}
+
+Die Rolle kann über die Gruppe oder den Rollennamen definiert werden. Wird unter dem Eingabefeld ``Gruppen'' eine Gruppe hinterlegt,
+werden alle dazugehörigen Rollen dieser Gruppe in die Filterung miteinbezogen. Will der User nur einzelne Rollen
+in die Filterung miteinbeziehen, kann er dies über das Rollen-Eingabefeld. Die Gültigkeit der Rolle wird kann über ein suchbares dropdown ausgewählt werden.
+Das Element der Stichdatum bleibt bestehen. Die Checkbox für die archivierten Rollen wird im Mockup vernachlässigt und standardmässig werden alle Rollen,
+sofern diese die Gültigkeitsbedingungen erfüllen, miteinbezogen.
+
+\begin{figure}[h]
+   \centering
+   \fbox{\includegraphics[width=0.8\textwidth,]{mockup_roles.png}}
+   \caption{Bearbeitungsmaske Filterkriterium Gruppe}
+\end{figure}
+
+\newpage
+
+\textbf{Qualifikationen}
+
+Die Qualifikationen können innerhalb der Bearbeitungsmaske ebenfalls mit einem suchbaren Dropdown 
+ausgewählt werden. Die Radio-Buttons und das Stichdatum bestehen wie bisher. Die Gültigkeit kann wie bei den Rollen über 
+ein suchbares Stichdatum ausgewählt werden.
+
+\begin{figure}[h]
+   \centering
+   \fbox{\includegraphics[width=0.8\textwidth,]{mockup_qualifications.png}}
+   \caption{Bearbeitungsmaske Filterkriterium Qualifikationen}
+\end{figure}
+
+\textbf{Tags}
+
+Die Definition der Tags bleibt bestehen wie in der Soll-Situation beschrieben
+
+\begin{figure}[h]
+   \centering
+   \fbox{\includegraphics[width=0.8\textwidth,]{mockup_tags.png}}
+   \caption{Bearbeitungsmaske Filterkriterium Tags}
+\end{figure}
+
+\newpage
 
 \section{Bedürfniserhebung}
 Um die Bedürfnisse der Kunden vor der Entwicklung zu identifizieren wird eine Bedürfniserhebung durchgeführt. 
@@ -283,8 +389,6 @@ eine Stunde für die Auswertung der Erhebung.
 
 Beteiligt an der Bedürfniserhebung sind Marc Egli und Thomas Ellenberg. Marc Egli ist für die
 Durchführung der Erhebung zuständig. Da die Bedürfniserhebung im Rahmen der IPA durchgeführt wird, wird mit keinem Budget geplant.
-
-\newpage
 
 \subsection{Methodenwahl}
 

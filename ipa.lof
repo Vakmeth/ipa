@@ -30,11 +30,18 @@
 \contentsline {figure}{\numberline {11.14}{\ignorespaces Übersicht einzelnes Abonnement\relax }}{54}{figure.caption.122}%
 \contentsline {figure}{\numberline {11.15}{\ignorespaces Abonnementenübersicht\relax }}{54}{figure.caption.123}%
 \contentsline {figure}{\numberline {11.16}{\ignorespaces Globale Filterungsbedingungen für Abonnemente\relax }}{55}{figure.caption.124}%
+\contentsline {figure}{\numberline {11.17}{\ignorespaces Mockup Filterübersicht\relax }}{56}{figure.caption.125}%
+\contentsline {figure}{\numberline {11.18}{\ignorespaces Mockup mit Tags und Felder definiert\relax }}{57}{figure.caption.126}%
+\contentsline {figure}{\numberline {11.19}{\ignorespaces Mockup mit Qualifikationen und Rollen definiert\relax }}{58}{figure.caption.127}%
+\contentsline {figure}{\numberline {11.20}{\ignorespaces Bearbeitungsmaske Filterkriterium Felder\relax }}{59}{figure.caption.128}%
+\contentsline {figure}{\numberline {11.21}{\ignorespaces Bearbeitungsmaske Filterkriterium Gruppe\relax }}{60}{figure.caption.129}%
+\contentsline {figure}{\numberline {11.22}{\ignorespaces Bearbeitungsmaske Filterkriterium Qualifikationen\relax }}{61}{figure.caption.130}%
+\contentsline {figure}{\numberline {11.23}{\ignorespaces Bearbeitungsmaske Filterkriterium Tags\relax }}{61}{figure.caption.131}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {12.1}{\ignorespaces Gruppen und Ebenen, selbstgezeichnet mit Draw.io\relax }}{70}{figure.caption.135}%
-\contentsline {figure}{\numberline {12.2}{\ignorespaces Beispiel Berechtigungen von Heinz, selbstgezeichnet mit Draw.io\relax }}{71}{figure.caption.136}%
-\contentsline {figure}{\numberline {12.3}{\ignorespaces Beispiel Berechtigungen von Tim, selbstgezeichnet mit Draw.io\relax }}{72}{figure.caption.137}%
-\contentsline {figure}{\numberline {12.4}{\ignorespaces Beispiel Berechtigungen von Tim, selbstgezeichnet mit Draw.io\relax }}{73}{figure.caption.138}%
+\contentsline {figure}{\numberline {12.1}{\ignorespaces Gruppen und Ebenen, selbstgezeichnet mit Draw.io\relax }}{75}{figure.caption.142}%
+\contentsline {figure}{\numberline {12.2}{\ignorespaces Beispiel Berechtigungen von Heinz, selbstgezeichnet mit Draw.io\relax }}{76}{figure.caption.143}%
+\contentsline {figure}{\numberline {12.3}{\ignorespaces Beispiel Berechtigungen von Tim, selbstgezeichnet mit Draw.io\relax }}{77}{figure.caption.144}%
+\contentsline {figure}{\numberline {12.4}{\ignorespaces Beispiel Berechtigungen von Tim, selbstgezeichnet mit Draw.io\relax }}{78}{figure.caption.145}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
@@ -43,5 +50,5 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {20.1}{\ignorespaces Puzzle ITC Git commit conventions\relax }}{87}{figure.caption.144}%
+\contentsline {figure}{\numberline {20.1}{\ignorespaces Puzzle ITC Git commit conventions\relax }}{92}{figure.caption.151}%
 \contentsfinish 
