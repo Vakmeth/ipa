@@ -9,9 +9,263 @@
 \chapter{Einführung}
 
 \chapter{Analyse}
+In der Analyse der IPA wird der Rahmen geschaffen in welchem der Kandidat später während des Implementierens arbeitet. 
+Sie befasst sich mit der Aufnahme von Ist- und Zielzustand des Produktes. Ausserdem werden darin Funktionale und nicht funktionale Anforderungen erfasst.
+Es wird definiert wo sich die IPA abgrenzt. 
+
 \section{Ist-Zustand}
-\subsection{Personenlisten}
+Im folgenden Abschnitt wird erklärt wie die Filterung von Personen und Abonnementen im Hitobito zum
+jetzigen Stand abläuft.
+
+\subsection{Personen}
+Die Personenfilterung bietet zwei Funktionen: Die Filterung selbst und die Speicherung eines Personenfilters.
+Um auf die Personenfilter zugreifen zu können, muss als erstes auf eine Gruppenübersicht navigiert werden.
+
+\begin{figure}[h]
+   \centering
+   \fbox{\includegraphics[width=1\textwidth,]{group_overview.png}}
+   \caption{Gruppenübersicht Hitobito}
+\end{figure}
+
+\newpage
+
+Danach werden unter dem Reiter ``Personen'' alle Personen der ausgewählten Gruppe angezeigt.
+\begin{figure}[h]
+   \centering
+   \fbox{\includegraphics[width=1\textwidth,]{people_overview.png}}
+   \caption{Personenübersicht Hitobito}
+\end{figure}
+
+Unter dem Dropdown ``Weitere Ansichten'' kann der User entweder einen bestehenden Personenfilter auf die angezeigte Personenliste anwenden 
+oder einen neuen Personenfilter erstellen. Der neue Personenfilter kann unter der Option ``Neuer Filter...'' erstellt werden.
+
+\begin{figure}[h]
+   \centering
+   \fbox{\includegraphics[width=1\textwidth,]{filter_selection.png}}
+   \caption{Filterauswahl Hitobito}
+\end{figure}
+
+\newpage
+
+Nach dem Klick auf diese Option wird der Benutzer auf eine Filterübersicht weitergeleitet. Die Filterübersicht besteht aus Buttons für die Speicher und Suche, drei Radio-Buttons und fünf Dropdowns.
+
+Die drei Radio-Buttons zu Beginn definieren auf welcher Ebene gesucht wird.
+Jedes Dropdown bietet dem Benutzer die Möglichkeit Filterkriterien zu definieren. Die Art des Filterkriteriums ist durch
+den Dropdownnamen gegeben.
+
+
+\begin{figure}[h]
+   \centering
+   \fbox{\includegraphics[width=1\textwidth,]{filter_overview.png}}
+   \caption{Filterübersicht Hitobito}
+\end{figure}
+
+\newpage
+
+Im Dropdown ``Rollen'' werden alle Rollen pro Ebene aufgelistet. Der Benutzer kann per Klick auf eine Checkbox
+die Rollen auswählen, welche Personen durch die Filterung aufweisen müssen. Möchte der Benutzer alle Rollen einer Ebene auswählen,
+kann er die mit einem Klick auf den Namen einer Ebene tun. In diesem Beispiel wäre das ein Klick auf ``Hauptebene''. Nach dem Klick auf den
+Ebenennamen werden alle Checkboxen abgehakt. Somit wurden alle Rollen der angeklickten Eben ausgewählt.
+
+Für die Rollen kann des weiteren ein Gültigkeits-Zeitraum definiert werden. Die Gültigkeit
+wird vom Benutzer via Radio-Buttons ausgewählt. Zuletzt kann im ``Rollen'' Dropdown entschieden werden, ob 
+archivierte Rollen bei der Filterung berücksichtigt werden. Das UI bietet dem Benutzer dafür eine weiter selbststehende
+Checkbox.
+
+\begin{figure}[h]
+   \centering
+   \fbox{\includegraphics[width=1\textwidth,]{role_overview.png}}
+   \caption{Filterkriterium Rollen}
+\end{figure}
+
+\begin{figure}[h]
+   \centering
+   \fbox{\includegraphics[width=1\textwidth,]{additional_role_options.png}}
+   \caption{Filterkriterium Rollen - Zeitraum und Archivierung}
+\end{figure}
+
+\newpage
+
+Im Dropdown ``Qualifikationen'' werden alle auswählbaren Qualifikationen angezeigt.
+Der Benutzer wählt alle gewünschten Qualifikationen per Checkbox aus. Per Radio-Button entscheidet
+der Benutzer danach, ob die Person alle oder mindestens eine der angeklickten Rollen aufweisen muss.
+
+Abschliessen für die Qualifikationen kann die Gültigkeit per Radio-Buttons und ein Stichdatum
+per Input-Feld definiert werden.
+
+\begin{figure}[h]
+   \centering
+   \fbox{\includegraphics[width=1\textwidth,]{qualification_overview.png}}
+   \caption{Filterkriterium Qualifikationen}
+\end{figure}
+
+Beim Filterkriterium ``Felder'' handelt es sich um zusätzliche Personenattribute welche in
+die Filterung miteinbezogen werden.
+
+\begin{figure}[h]
+   \centering
+   \fbox{\includegraphics[width=1\textwidth,]{field_overview.png}}
+   \caption{Filterkriterium Felder}
+\end{figure}
+
+\newpage
+
+Unter die Kategorie der ``Felder'' fallen folgende Personenattribute:
+
+\begin{table}[h!]
+   \begin{tabular}{|L{0.5\textwidth}|L{0.5\textwidth}|}
+       \hline
+       \rowcolor{puzzleblue}\color{white}Attribut & \color{white}Datentyp \\
+       \hline
+       Alter & Zahl \\
+       \hline
+       Firmenname & Text \\
+       \hline
+       Geburtstag & Zeit \\
+       \hline
+       Geschlecht & Text \\
+       \hline
+       Haupt-E-Mail & Text \\
+       \hline
+       Hausnummer & Zahl \\
+       \hline
+       Land & Text \\
+       \hline
+       Nachname & Text \\
+       \hline
+       Ort & Text \\
+       \hline
+       PLZ & Zahl \\
+       \hline
+       Postfach & Text \\
+       \hline
+       Strasse & Textwert \\
+       \hline
+       Vornamen & Textwert \\
+       \hline
+       Zusätzliche Adresszeile & Textwert \\
+       \hline
+       Übername & Textwert \\
+       \hline
+     \end{tabular}
+     \caption{Felder-Attribute}
+\end{table}
+
+Die Attribute können über ein Dropdown ausgewählt werden. Wurde das Attribut ausgewählt kann zusätzlich die Genauigkeit
+des Filterkriterums definiert werden.
+
+Für Textwerte bieten sich folgende Genauigkeiten an:
+
+\begin{itemize}
+   \item ist genau
+   \item enthält
+   \item enthält nicht
+\end{itemize}
+
+Für Zahlenwerte bieten sich folgende Genauigkeiten an:
+
+\begin{itemize}
+   \item ist genau
+   \item ist grösser als
+   \item ist kleiner als
+\end{itemize}
+
+So kann der Benutzer bestimmen wie genau sein eingegebener Wert dem ausgewählten Attribut entsprechen soll.
+
+\newpage
+
+Das Filterkriterium ``Sprachen'' bietet die Möglichkeit aus den Optionen Deutsch, Englisch oder Französisch auszuwählen.
+Es können auch mehrer Sprachen ausgewählt werden. Die Auswahl erfolgt über Checkboxen.
+
+\begin{figure}[h]
+   \centering
+   \fbox{\includegraphics[width=1\textwidth,]{language_overview.png}}
+   \caption{Filterkriterium Sprache}
+\end{figure}
+
+
+Das Filterkriterium ``Tags'' macht es möglich Personen nach gegebenen Tags zu suchen. Über zwei 
+Inputfelder kann definiert werden, welche Tags eine Person haben oder nicht haben muss. Die Input-Felder sind
+Dropdowns welche dem Benutzer die Eingabe vervollständigen wenn dieser nach einem Tag sucht.
+
+\begin{figure}[h]
+   \centering
+   \fbox{\includegraphics[width=1\textwidth,]{tag_overview.png}}
+   \caption{Filterkriterium Tags}
+\end{figure}
+
+\newpage
+
+Wurden alle Filterkriterien vom Benutzer definiert kann dieser die Konfiguration des Personenfilters speichern. 
+Dazu muss ein Name des Filters definiert werden. Will der Benutzer den Filter nicht speichern, kann der auf den Button ``Suchen'' klicken. Anschliessend
+werden auf der Personenübersicht nur Personen angezeigt welche die Filterkriterien erfüllen. Wird der Filter nicht gespeichert, 
+muss dieser erneut von Hand zusammengestellt werden.
+
+\begin{figure}[h]
+   \centering
+   \fbox{\includegraphics[width=1\textwidth,]{saving_filter.png}}
+   \caption{Filterkriterium Tags}
+\end{figure}
+
+\newpage
+
 \subsection{Abonnemente}
+Die Abonnementenfilterung kann nicht im Hitobito wie die Personenfilterung angezeigt werden. Stattdessen
+wird die Filterung bei einem Export von Abonnementen als CSV angewendet. So werden im resultierenden CSV nur Personen
+angezeigt, welche den Filterkriterien entsprechen.
+
+Die Abonnementenfilterung kann erneut über die Gruppenübersicht ausgemacht werden.
+
+\begin{figure}[h]
+   \centering
+   \fbox{\includegraphics[width=1\textwidth,]{group_overview.png}}
+   \caption{Gruppenübersicht}
+\end{figure}
+
+Danach muss auf den Reiter ``Abos'' navigiert werden.
+
+\begin{figure}[h]
+   \centering
+   \fbox{\includegraphics[width=1\textwidth,]{subscription_overview.png}}
+   \caption{Abonnementen Übersicht}
+\end{figure}
+
+Auf dieser Ansicht kann der Benutzer per Klick ein Abonnement auswählen.
+
+\newpage
+
+Daraufhin wird der Benutzer auf die Infoseite des Abonnements weitergeleitet. Um die Abonnementenfilterung
+einzusehen muss nun auf den Reiter ``Abonnementen'' navigiert werden.
+
+\begin{figure}[h]
+   \centering
+   \fbox{\includegraphics[width=1\textwidth,]{single_subscription_overview.png}}
+   \caption{Übersicht einzelnes Abonnement}
+\end{figure}
+
+Unter dieser Ansicht ist es dem Benutzer möglich diverse Filterkriterien für das Abonnement zu definieren.
+Im Rahmen dieser IPA werden ausschliesslich die globalen Bedingungen überarbeitet, weswegen die anderen Filterkriterien
+zu vernachlässigen sind. Die globalen Bedingungen können über das Bearbeitungssymbol angepasst werden.
+
+\begin{figure}[h]
+   \centering
+   \fbox{\includegraphics[width=1\textwidth,]{subscription_filter_overview.png}}
+   \caption{Abonnementenübersicht}
+\end{figure}
+
+\newpage
+
+
+In den globalen Bedingungen bieten sich zwei Filterkriterien: Felder und Sprache. Die Funktionsweise
+ist dabei die gleiche, wie die der Personenfilter (weiter oben beschrieben).
+
+Der Benutzer wählt die Filterkriterien aus und Speichert diese anschliessend. Die gespeicherten Bedingungen 
+werden in der Textbox unter dem Titel ``Globale Bedingungen'' auf der Abonnementenübersicht angezeigt.
+\begin{figure}[h]
+   \centering
+   \fbox{\includegraphics[width=1\textwidth,]{global_conditions_overview.png}}
+   \caption{Globale Filterungsbedingungen für Abonnemente}
+\end{figure}
 
 \section{Soll-Zustand}
 
