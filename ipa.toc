@@ -138,8 +138,8 @@
 \contentsline {chapter}{\numberline {19}Glossar}{86}{chapter.19}%
 \contentsline {chapter}{\numberline {20}Anhänge}{87}{chapter.20}%
 \contentsline {section}{\numberline {20.1}Git Commit Message Convention}{87}{section.20.1}%
-\contentsline {section}{\numberline {20.2}Daily-Protokolle}{87}{section.20.2}%
-\contentsline {section}{\numberline {20.3}Sitzungsprotokolle}{87}{section.20.3}%
-\contentsline {section}{\numberline {20.4}Git commit convention}{87}{section.20.4}%
-\contentsline {section}{\numberline {20.5}Security conventions}{87}{section.20.5}%
+\contentsline {section}{\numberline {20.2}Sitzungsprotokolle}{88}{section.20.2}%
+\contentsline {subsection}{\numberline {20.2.1}Sitzung 1}{88}{subsection.20.2.1}%
+\contentsline {section}{\numberline {20.3}Git commit convention}{89}{section.20.3}%
+\contentsline {section}{\numberline {20.4}Security conventions}{89}{section.20.4}%
 \contentsfinish 
