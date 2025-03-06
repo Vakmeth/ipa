@@ -1863,6 +1863,12 @@ INPUT ./bilder//puzzle_tagline_blau.png
 INPUT ./bilder//puzzle_tagline_blau.png
 INPUT bilder//puzzle_tagline_blau.png
 INPUT ./bilder//puzzle_tagline_blau.png
+INPUT ./bilder//puzzle_tagline_blau.png
+INPUT bilder//puzzle_tagline_blau.png
+INPUT ./bilder//puzzle_tagline_blau.png
+INPUT ./bilder//puzzle_tagline_blau.png
+INPUT bilder//puzzle_tagline_blau.png
+INPUT ./bilder//puzzle_tagline_blau.png
 INPUT ./risikoanalyse.tex
 INPUT risikoanalyse.tex
 INPUT ./risikoanalyse.tex
@@ -1948,10 +1954,10 @@ INPUT ./bilder//puzzle_tagline_blau.png
 INPUT ./ipa.lot
 INPUT ipa.lot
 INPUT ipa.lot
-OUTPUT ipa.lot
 INPUT ./bilder//puzzle_tagline_blau.png
 INPUT bilder//puzzle_tagline_blau.png
 INPUT ./bilder//puzzle_tagline_blau.png
+OUTPUT ipa.lot
 INPUT ./ipa.lof
 INPUT ipa.lof
 INPUT ipa.lof
