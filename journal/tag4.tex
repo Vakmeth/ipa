@@ -36,19 +36,55 @@ die Bestätigung um die Anpassung zu machen.
 Nachdem ich das Daily abgeschlossen hatte, schrieb ich den ersten Teil des Arbeitsjournals, da wir im Daily sehr viel besprochen hatten und ich
 alle aufgekommenen Fragen und Anmerkungen zeitnah festhalten wollte.
 
+Nachde ich das Daily abgeschlossen hatte, begann ich den grossen Zeitblock des Entwurfs auf kleiner Tickets umzulagern und diese in meinem Github Board aufzunehmen.
+Dies tat ich da mich mein Hauptexperte daraufhin wies, kleiner Zeitblöcke einzuplanen. Direkt nachdem ich die Tickets erstellt hatte, begann ich mit dem Anwendungskonzept.
+Ich konnte dieses zügig abschliessen un mich dann unmittelbar dem Systemkonzept widmen. Hier stellte ich während der Verfassung meiner Lösungsvarianten ein Probelm in der Aufgabenstellung
+meiner IPA fest: Laut Aufgabenstellung ist es mir untersagt Anpassungen am Backend oder an den Endpoints zu machen. Genauso sei es Verboten, das Datenformat der Endpoints zu ändern. Allerdings
+werde diese beiden Punkte umgehen müssen, denn:
+
+\begin{itemize}
+    \item A: Mein Feature ist auf das Datenformat ``Turbostreams'' ausgelegt, ich werde hier also zwingend Änderungen am Datenformat machen müssen
+    \item B: Es müssen separate Endpoints für die verschiedenen Partials in der View angelegt werden, mit den bestehenden Endpoints ist das Feature nicht umsetzbar, da ich die einzelnen Filterkriterien nicht modular auswechseln kann
+\end{itemize}
+
+Ich werde diese Feststellung am Montag im Daily mit meinen verantwortlichen Fachkräften besprechen und mit ihnen die nächsten Massnahmen für dieses Problem festlegen.
+
+Nachdem ich das Systemkonzept abgeschlossen hatte, habe ich als nächstes realisiert, dass ich noch nicht erfasste Schnittstellen in der Sicherheitsanalyse nachführen muss.
+Durch die Analyse und den Entwurf meiner Lösung bemerkte ich dass ich dort noch nicht alle Schnittstellen erfasst habe. Dieses Problem habe ich auf meine Pendenzenliste geschrieben
+und werde es Dienstagmorgen beheben.
+
+Zuletzt begann ich mit dem Testkonzept. Obwohl ich bis dort gut in der Zeit war, reichte es mir nicht ganz fertig, weswegen ich den Restaufwand nächsten Dienstag erledigen werde.
+Nebenbei schrieb ich Lorenz Müller eine Mail zur Nachfrage, ob ich Echtnamen in Diagrammen verwenden dürfe.
+
 \subsection*{Hilfestellungen}
 \begin{itemize}
-    \item Person: Hilfestellung
+    \item Robin Steiner und Daniel Illi: Nachfrage ob Hauptexperte per Mail kontaktiert werden darf
+    \item Robin Steiner und Daniel Illi: Nachfrage Vorgehensweise Git-Commits
+    \item Robin Steiner und Daniel Illi: Frage zu Kriterium A2, ob Anhang bereits als Nachweis zählt
+    \item Robin Steiner und Daniel Illi: Diskussion der Sicherheitsrisiken und Massnahmen und somit Erfüllung von Punkt 4 in Kriterium G5.
+    \item Robin Steiner und Daniel Illi: Nachfrage zur Formulierung des Sicherheitsrisikos zu Libraries
+    \item Robin Steiner und Daniel Illi: Frage ob Mockup nachbearbeitet werden darf
 \end{itemize}
 
 \subsection*{Reflexion}
 
 \subsubsection*{Was lief gut}
+Persönlich war für mich ein Erfolg, dass ich die Probleme in der Aufgabenstellung und meinen eigenen Fehler bezüglich der Dokumentation der Schnittstellen
+bei den Sicherheitsrisiken frühzeitig erkennen konnte. Dementsprechend kann ich auf diese Fehler noch vor der Umsetzung reagieren und mit einem sauberen Entwurf in diesen Sprint
+starten. Ausserdem hatte ich das Gefühl, das ich heute meine Aufgaben besser organsiert hatte. Ich habe viel mehr mit Notizen für Anmerkungen von Robin und Daniel gearbeitet,
+was es mir ermöglichte, auch das Arbeitsjournal detailtreuer zu schreiben.
 
 \subsubsection*{Was lief weniger gut}
+Heute war meine Konzentration verglichen zu gestern überhaupt nicht vorhanden. Ich hatte nur zum Teil das Gefühl das ich richtig in den 
+Arbeitsfluss komme. Grund dafür könnte sein das heute Freitag ist und ich deswegen abgelenkter war. Deswegen konnte ich auch das Tagesziel von heute nicht erreichen, was bedeutet
+das ich das Testkonzept am Montagmorgen fertigstellen muss.
 
 \subsubsection*{Meine Erkenntnisse von heute}
+Wichtig ist es Unklarheiten und mögliche Konflikte so früh wie möglich zu identifizieren, damit entsprechend auf diese eingegangen werden kann.
 
 \subsection*{Nächste Schritte}
+Am Dienstagmorgen werde ich zuerst die Schnittstellen der Sicherheitsmassnahmen ergänzen. Danach werde ich das Testkonzept abschliessen und den 
+Sprintabschluss machen. Nach dem Sprintabschluss folgt wie dokumentiert das Planning und die Einteilung er nächsten Aufgaben für den kommenden Sprint.
+Ziel ist es am Dienstag mit der Umsetzung zu starten.
 
 \pagebreak
