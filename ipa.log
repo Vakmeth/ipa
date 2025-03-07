@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2025.1.13)  7 MAR 2025 13:38
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2025.1.13)  7 MAR 2025 14:18
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -3056,7 +3056,7 @@ Package pdftex.def Info: bilder//variant_two_class_structure.png  used on input 
 (pdftex.def)             Requested size: 400.0pt x 149.57939pt.
 File: bilder//puzzle_tagline_blau.png Graphic file (type png)
 <use bilder//puzzle_tagline_blau.png>
-Package pdftex.def Info: bilder//puzzle_tagline_blau.png  used on input line 1036.
+Package pdftex.def Info: bilder//puzzle_tagline_blau.png  used on input line 1017.
 (pdftex.def)             Requested size: 82.51282pt x 21.55902pt.
 
 Overfull \hbox (26.79134pt too wide) has occurred while \output is active
@@ -3069,9 +3069,13 @@ Overfull \hbox (26.79134pt too wide) has occurred while \output is active
  []
 
 [95 <./bilder//variant_two_class_structure.png>]
+Overfull \hbox (9.99753pt too wide) in paragraph at lines 1027--1045
+[][] 
+ []
+
 File: bilder//puzzle_tagline_blau.png Graphic file (type png)
 <use bilder//puzzle_tagline_blau.png>
-Package pdftex.def Info: bilder//puzzle_tagline_blau.png  used on input line 1036.
+Package pdftex.def Info: bilder//puzzle_tagline_blau.png  used on input line 1048.
 (pdftex.def)             Requested size: 82.51282pt x 21.55902pt.
 
 Overfull \hbox (26.79134pt too wide) has occurred while \output is active
@@ -3084,10 +3088,13 @@ Overfull \hbox (26.79134pt too wide) has occurred while \output is active
  []
 
 [96]
-Kapitel 14.
+Overfull \hbox (37.59998pt too wide) in paragraph at lines 1067--1080
+[][] 
+ []
+
 File: bilder//puzzle_tagline_blau.png Graphic file (type png)
 <use bilder//puzzle_tagline_blau.png>
-Package pdftex.def Info: bilder//puzzle_tagline_blau.png  used on input line 1042.
+Package pdftex.def Info: bilder//puzzle_tagline_blau.png  used on input line 1083.
 (pdftex.def)             Requested size: 82.51282pt x 21.55902pt.
 
 Overfull \hbox (26.79134pt too wide) has occurred while \output is active
@@ -3099,13 +3106,174 @@ Overfull \hbox (26.79134pt too wide) has occurred while \output is active
  [][]|
  []
 
-[97
+[97]
+Overfull \hbox (37.59998pt too wide) in paragraph at lines 1088--1101
+[][] 
+ []
+
+File: bilder//puzzle_tagline_blau.png Graphic file (type png)
+<use bilder//puzzle_tagline_blau.png>
+Package pdftex.def Info: bilder//puzzle_tagline_blau.png  used on input line 1104.
+(pdftex.def)             Requested size: 82.51282pt x 21.55902pt.
+
+Overfull \hbox (26.79134pt too wide) has occurred while \output is active
+[][]|  
+ []
+
+
+Overfull \hbox (26.79134pt too wide) has occurred while \output is active
+ [][]|
+ []
+
+[98]
+
+Package typearea Warning: \typearea used at group level 2.
+(typearea)                Using \typearea inside any group, e.g.
+(typearea)                environments, math mode, boxes, etc. may result in
+(typearea)                many type setting problems.
+(typearea)                You should move the command \typearea
+(typearea)                outside all groups on input line 1106.
+
+
+Package typearea Warning: Bad type area settings!
+(typearea)                The detected line width is about 52%
+(typearea)                larger than the heuristically estimated maximum
+(typearea)                limit of typographical good line width.
+(typearea)                You should e.g. decrease DIV, (increase fontsize)
+(typearea)                or change papersize.
+
+Package typearea Info: These are the values describing the layout:
+(typearea)             DIV  = 12
+(typearea)             BCOR = 0.0pt
+(typearea)             \paperwidth      = 845.04694pt
+(typearea)              \textwidth      = 633.7852pt
+(typearea)              DIV departure   = -52%
+(typearea)              \evensidemargin = 33.36087pt
+(typearea)              \oddsidemargin  = 33.36087pt
+(typearea)             \paperheight     = 597.50793pt
+(typearea)              \textheight     = 461.5pt
+(typearea)              \topmargin      = -62.35266pt
+(typearea)              \headheight     = 18.125pt
+(typearea)              \headsep        = 21.75pt
+(typearea)              \topskip        = 12.0pt
+(typearea)              \footskip       = 50.75pt
+(typearea)              \baselineskip   = 14.5pt
+(typearea)              on input line 1106.
+Package typearea Info: Using dirty hack to recalculate internal output
+(typearea)             dimensions of LaTeX on input line 1106.
+Package typearea Info: These are the values describing the layout:
+(typearea)             DIV  = areaset
+(typearea)             BCOR = 0.0pt
+(typearea)             \paperwidth      = 845.04694pt
+(typearea)              \textwidth      = 759.68867pt
+(typearea)              \evensidemargin = -29.59088pt
+(typearea)              \oddsidemargin  = -29.59088pt
+(typearea)             \paperheight     = 597.50793pt
+(typearea)              \textheight     = 384.11227pt
+(typearea)              \topmargin      = -39.8881pt
+(typearea)              \headheight     = 17.0pt
+(typearea)              \headsep        = 21.75pt
+(typearea)              \topskip        = 12.0pt
+(typearea)              \footskip       = 50.75pt
+(typearea)              \baselineskip   = 14.5pt
+(typearea)              on input line 1109.
+Package typearea Info: Using dirty hack to recalculate internal output
+(typearea)             dimensions of LaTeX on input line 1109.
+
+Package typearea Warning: \typearea used at group level 2.
+(typearea)                Using \typearea inside any group, e.g.
+(typearea)                environments, math mode, boxes, etc. may result in
+(typearea)                many type setting problems.
+(typearea)                You should move the command \typearea
+(typearea)                outside all groups on input line 1110.
+
+Package typearea Info: These are the values describing the layout:
+(typearea)             DIV  = areaset
+(typearea)             BCOR = 0.0pt
+(typearea)             \paperwidth      = 845.04694pt
+(typearea)              \textwidth      = 759.68867pt
+(typearea)              \evensidemargin = -29.59088pt
+(typearea)              \oddsidemargin  = -29.59088pt
+(typearea)             \paperheight     = 597.50793pt
+(typearea)              \textheight     = 384.11227pt
+(typearea)              \topmargin      = -39.8881pt
+(typearea)              \headheight     = 17.0pt
+(typearea)              \headsep        = 21.75pt
+(typearea)              \topskip        = 12.0pt
+(typearea)              \footskip       = 50.75pt
+(typearea)              \baselineskip   = 14.5pt
+(typearea)              on input line 1110.
+Package typearea Info: Using dirty hack to recalculate internal output
+(typearea)             dimensions of LaTeX on input line 1110.
+File: bilder//puzzle_tagline_blau.png Graphic file (type png)
+<use bilder//puzzle_tagline_blau.png>
+Package pdftex.def Info: bilder//puzzle_tagline_blau.png  used on input line 1137.
+(pdftex.def)             Requested size: 82.51282pt x 21.55902pt.
+
+Package fancyhdr Warning: \headheight is too small (17.0pt): 
+(fancyhdr)                Make it at least 25.90906pt, for example:
+(fancyhdr)                \setlength{\headheight}{25.90906pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-8.90906pt}.
+
+
+Overfull \hbox (26.79134pt too wide) has occurred while \output is active
+[][]|  
+ []
+
+
+Overfull \hbox (26.79134pt too wide) has occurred while \output is active
+ [][]|
+ []
+
+[99]
+
+Package typearea Warning: \bruteforceanalysis used at group level 2.
+(typearea)                Using \bruteforceanalysis inside any group, e.g.
+(typearea)                environments, math mode, boxes, etc. may result in
+(typearea)                many type setting problems.
+(typearea)                You should move the command \bruteforceanalysis
+(typearea)                outside all groups on input line 1138.
+
+File: bilder//puzzle_tagline_blau.png Graphic file (type png)
+<use bilder//puzzle_tagline_blau.png>
+Package pdftex.def Info: bilder//puzzle_tagline_blau.png  used on input line 1158.
+(pdftex.def)             Requested size: 82.51282pt x 21.55902pt.
+
+Overfull \hbox (26.79134pt too wide) has occurred while \output is active
+[][]|  
+ []
+
+
+Overfull \hbox (26.79134pt too wide) has occurred while \output is active
+ [][]|
+ []
+
+[100
+
+]
+Kapitel 14.
+File: bilder//puzzle_tagline_blau.png Graphic file (type png)
+<use bilder//puzzle_tagline_blau.png>
+Package pdftex.def Info: bilder//puzzle_tagline_blau.png  used on input line 1164.
+(pdftex.def)             Requested size: 82.51282pt x 21.55902pt.
+
+Overfull \hbox (26.79134pt too wide) has occurred while \output is active
+[][]|  
+ []
+
+
+Overfull \hbox (26.79134pt too wide) has occurred while \output is active
+ [][]|
+ []
+
+[101
 
 ]
 Kapitel 15.
 File: bilder//puzzle_tagline_blau.png Graphic file (type png)
 <use bilder//puzzle_tagline_blau.png>
-Package pdftex.def Info: bilder//puzzle_tagline_blau.png  used on input line 1049.
+Package pdftex.def Info: bilder//puzzle_tagline_blau.png  used on input line 1171.
 (pdftex.def)             Requested size: 82.51282pt x 21.55902pt.
 
 Overfull \hbox (26.79134pt too wide) has occurred while \output is active
@@ -3117,7 +3285,7 @@ Overfull \hbox (26.79134pt too wide) has occurred while \output is active
  [][]|
  []
 
-[98
+[102
 
 ]
 Kapitel 16.
@@ -3136,7 +3304,7 @@ Overfull \hbox (26.79134pt too wide) has occurred while \output is active
  [][]|
  []
 
-[99
+[103
 
 ]
 \openout2 = `part3.aux'.
@@ -3156,7 +3324,7 @@ Overfull \hbox (26.79134pt too wide) has occurred while \output is active
  [][]|
  []
 
-[100
+[104
 
 
 
@@ -3178,7 +3346,7 @@ Overfull \hbox (26.79134pt too wide) has occurred while \output is active
  [][]|
  []
 
-[101
+[105
 
 ])
 \tf@lot=\write6
@@ -3187,7 +3355,7 @@ Overfull \hbox (26.79134pt too wide) has occurred while \output is active
  (./ipa.lof
 File: bilder//puzzle_tagline_blau.png Graphic file (type png)
 <use bilder//puzzle_tagline_blau.png>
-Package pdftex.def Info: bilder//puzzle_tagline_blau.png  used on input line 31.
+Package pdftex.def Info: bilder//puzzle_tagline_blau.png  used on input line 27.
 (pdftex.def)             Requested size: 82.51282pt x 21.55902pt.
 
 Overfull \hbox (26.79134pt too wide) has occurred while \output is active
@@ -3199,7 +3367,7 @@ Overfull \hbox (26.79134pt too wide) has occurred while \output is active
  [][]|
  []
 
-[102])
+[106])
 \tf@lof=\write7
 \openout7 = `ipa.lof'.
 
@@ -3217,7 +3385,7 @@ Overfull \hbox (26.79134pt too wide) has occurred while \output is active
  [][]|
  []
 
-[103]
+[107]
 Underfull \hbox (badness 10000) in paragraph at lines 21--22
 [][][]$\OT1/zi4/m/n/12 https : / / docs . github . com /
  []
@@ -3323,7 +3491,7 @@ Overfull \hbox (26.79134pt too wide) has occurred while \output is active
  [][]|
  []
 
-[104
+[108
 
 pdfTeX warning (ext4): destination with the same identifier (name{cite.Github\040Docs}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
@@ -3352,7 +3520,7 @@ Overfull \hbox (26.79134pt too wide) has occurred while \output is active
  [][]|
  []
 
-[105pdfTeX warning (ext4): destination with the same identifier (name{cite.Github\040Docs}) has been already used, duplicate ignored
+[109pdfTeX warning (ext4): destination with the same identifier (name{cite.Github\040Docs}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
 l.37 \chapter
@@ -3372,7 +3540,7 @@ Overfull \hbox (26.79134pt too wide) has occurred while \output is active
  [][]|
  []
 
-[106
+[110
 
 ]
 Kapitel 19.
@@ -3390,11 +3558,11 @@ Overfull \hbox (26.79134pt too wide) has occurred while \output is active
  [][]|
  []
 
-[107
+[111
 
 ]
 Kapitel 20.
-<bilder//git_commit_conventions.png, id=1612, 1030.85126pt x 500.87125pt>
+<bilder//git_commit_conventions.png, id=1637, 1030.85126pt x 500.87125pt>
 File: bilder//git_commit_conventions.png Graphic file (type png)
 <use bilder//git_commit_conventions.png>
 Package pdftex.def Info: bilder//git_commit_conventions.png  used on input line 71.
@@ -3423,7 +3591,7 @@ Overfull \hbox (26.79134pt too wide) has occurred while \output is active
  [][]|
  []
 
-[108
+[112
 
  <./bilder//git_commit_conventions.png>]
 File: bilder//puzzle_tagline_blau.png Graphic file (type png)
@@ -3440,7 +3608,7 @@ Overfull \hbox (26.79134pt too wide) has occurred while \output is active
  [][]|
  []
 
-[109]
+[113]
 Overfull \hbox (25.19998pt too wide) in paragraph at lines 117--139
 [][] 
  []
@@ -3460,7 +3628,7 @@ Overfull \hbox (26.79134pt too wide) has occurred while \output is active
  [][]|
  []
 
-[110] 
+[114] 
 AED: lastpage setting LastPage
 (./ipa.aux (./titlePage.aux) (./part1.aux) (./part2.aux) (./part3.aux))
 
@@ -3470,21 +3638,21 @@ LaTeX Warning: There were undefined references.
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `ipa.out' has not changed.
-(rerunfilecheck)             Checksum: 83514D3CDA45F946BD9667779C7131ED;20443.
+(rerunfilecheck)             Checksum: 80B11E98C193D8A2E879B5A49EA97059;20443.
  ) 
 Here is how much of TeX's memory you used:
- 32671 strings out of 478287
- 617048 string characters out of 5849289
+ 32680 strings out of 478287
+ 617166 string characters out of 5849289
  1218173 words of memory out of 5000000
- 49697 multiletter control sequences out of 15000+600000
+ 49698 multiletter control sequences out of 15000+600000
  525463 words of font info for 69 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  108i,18n,129p,496b,1394s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/inconsolata/i4-ot1-0.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-ts1.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/inconsolata/Inconsolata-zi4r.pfb></usr/share/texmf/fonts/type1/public/lm/lmbx10.pfb></usr/share/texmf/fonts/type1/public/lm/lmbx12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr17.pfb></usr/share/texmf/fonts/type1/public/lm/lmr6.pfb></usr/share/texmf/fonts/type1/public/lm/lmr9.pfb></usr/share/texmf/fonts/type1/public/lm/lmri12.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy6.pfb>
-Output written on ipa.pdf (111 pages, 2179286 bytes).
+Output written on ipa.pdf (115 pages, 2187049 bytes).
 PDF statistics:
- 1773 PDF objects out of 2073 (max. 8388607)
- 1529 compressed objects within 16 object streams
- 446 named destinations out of 1000 (max. 500000)
+ 1799 PDF objects out of 2073 (max. 8388607)
+ 1551 compressed objects within 16 object streams
+ 454 named destinations out of 1000 (max. 500000)
  1347 words of extra memory for PDF output out of 10000 (max. 10000000)
 
