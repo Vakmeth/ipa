@@ -119,19 +119,19 @@ wie beschrieben verwendet.
       \multirow{2}*{Nr} & \multirow{2}*{Risikobeschreibung} & \multirow{2}*{Auswirkung} & \multicolumn{4}{|l|}{Vor Massnahme}& \multirow{2}*{Massnahmen} & \multicolumn{4}{|l|}{Nach Massnahme} \\
       \cline{4-7} \cline{9-12}&&& W & S & Risiko & Handlungsweise &&  W & S & Risiko & Handlungsweise \\
       \hline 
-      1 & Daten ausserhalb der Berechtigung eines Benutzers werden angezeigt & Benutzer kann verbotene Informationen einsehen & W2 & S2 & \cellcolor{green}Niedrig & Risikominderung 
+      1 & \label{sec1} Daten ausserhalb der Berechtigung eines Benutzers werden angezeigt & Benutzer kann verbotene Informationen einsehen & W2 & S2 & \cellcolor{green}Niedrig & Risikominderung 
       & Daten werden vor dem Anzeigen im Filter anhand der Berechtigungen des Benutzers gefiltert & W1 & S1 & \cellcolor{green}Niedrig & Risikoakzeptanz \\
       \hline
-      2 & Benutzer kann einen Filter auf einer Ebene speichern, auf welcher er keinen Zugriff hat & Verwirrte Benutzer durch den neuen Filter & W2 & S2 & \cellcolor{green}Niedrig & Risikominderung 
+      2 & \label{sec2} Benutzer kann einen Filter auf einer Ebene speichern, auf welcher er keinen Zugriff hat & Verwirrte Benutzer durch den neuen Filter & W2 & S2 & \cellcolor{green}Niedrig & Risikominderung 
       & Sicherstellen das der Benutzer nur Filter seiner Berechtigung entsprechend speichern kann. & W1 & S1 & \cellcolor{green}Niedrig & Risikoakzeptanz \\
       \hline
-      3 & SQL-Injection in ein Filter Eingabefeld (XSS) & Datenbank kann ausgelesen oder verändert werden & W4 & S4 & \cellcolor{red}Hoch & Risikominderung 
+      3 & \label{sec3} SQL-Injection in ein Filter Eingabefeld (XSS) & Datenbank kann ausgelesen oder verändert werden & W4 & S4 & \cellcolor{red}Hoch & Risikominderung 
       & Alle Eingaben des Benutzers escapen & W2 & S1 & \cellcolor{green}Niedrig & Risikoakzeptanz \\
       \hline
-      4 & Bash-Injection in ein Filter Eingabefeld (XSS) & Schädliche Befehle werden serverseitig ausgeführt & W3 & S4 & \cellcolor{red}Hoch & Risikominderung 
+      4 & \label{sec4} Bash-Injection in ein Filter Eingabefeld (XSS) & Schädliche Befehle werden serverseitig ausgeführt & W3 & S4 & \cellcolor{red}Hoch & Risikominderung 
       & Alle Eingaben des Benutzers escapen & W2 & S1 & \cellcolor{green}Niedrig & Risikoakzeptanz \\
       \hline
-      5 & Falsche Verwending einer Library & Schwachstelle der Library kann von Angreifern ausgenutzt werden & W2 & S3 & \cellcolor{yellow}Mttel & Risikominderung 
+      5 & \label{sec5} Falsche Verwending einer Library & Schwachstelle der Library kann von Angreifern ausgenutzt werden & W2 & S3 & \cellcolor{yellow}Mttel & Risikominderung 
       & Dokumentation der Libraries gut durchgehen, diese auf Schwachstellen überprüfen
        & W2 & S2 & \cellcolor{green} Niedrig & Risikoakzeptanz \\
       \hline

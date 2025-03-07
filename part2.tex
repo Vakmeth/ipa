@@ -596,10 +596,10 @@ Die Reihenfolge der Bedürfnisse in der Tabelle entspricht ihrer Priorisierung
        \hline
        \rowcolor{puzzleblue}\color{white}Bedürfnis & \color{white} Störfaktor & \color{white} Dringlichkeit & \color{white} Begründung \\
        \hline
-       Modularer Aufbau & Das Filterungs UI ist unübersichtlich und der Benutzer kann nicht verstehen, welche Optionen zur Filterung zur Verfügung 
+       \label{bed1} Modularer Aufbau & Das Filterungs UI ist unübersichtlich und der Benutzer kann nicht verstehen, welche Optionen zur Filterung zur Verfügung 
        stehen. Die Filterung soll einem modularen Aufbau folgen, welcher den User durch die Filterung führt. & D1 & Durch den unübersichtliche Aufbau der Filterung und die Reaktion der Testperson wird diesem Bedürfnis die höchste Priorität zugeschrieben. \\
        \hline
-       Filterkriterium ``Sprache'' & Das Filterkriterium ``Sprache'' soll mit dem Filterkriterium ``Felder'' vereinheitlicht werden & D2 & Testperson hat das Bedürfnis zur Vereinheitlichung der Filterkriterien
+       \label{bed2} Filterkriterium ``Sprache'' & Das Filterkriterium ``Sprache'' soll mit dem Filterkriterium ``Felder'' vereinheitlicht werden & D2 & Testperson hat das Bedürfnis zur Vereinheitlichung der Filterkriterien
        während des Inteviews mehrmals wiederholt, weswegen dieses Bedürfnis die zweithöchste Priorität einnimmt.  \\
        \hline
        Option ``Geschlecht'' & Die Option ``Geschlecht'' soll via Dropdown anzupassen sein. Die 
@@ -617,38 +617,187 @@ der globalen Bedingung in den Abonnementen. Somit muss das Filterungsystem wie e
 Mockup als Vorarbeit erledigt wurde, werden für die weitere Arbeit ausschliesslich das Bedürfnis ``Modularer Aufbau'' und 
 ``Filterkriterium Sprache'' in die Anforderungen aufgenommen.
 
+\input{risikoanalyse.tex}
+
 \section{Anforderungen}
+Alle Anforderungen an das Produkt werden im folgenden Abschnitt beschrieben. Die Priorisierung ist durch die Reihenfolge der 
+Anforderungen gegeben. Somit erhält die erste Anforderung die höchste Priorität. Nicht funktionale und funktionale Anforderungen
+werden als gleichwertig bewertet. Somit erhält die erste nicht funktionale Anforderung die gleiche Priorität wie die erste funktionale Anforderung.
+
 \subsection{Nicht funktionale Anforderungen}
 
 \begin{table}[h!]
    \begin{tabular}{|L{0.3\textwidth}|L{0.6\textwidth}|}
        \hline
-       \rowcolor{puzzleblue} \multicolumn{2}{|l|}{\color{white}\textbf{Security, Nicht funktionale Anforderung 1}} \\[4pt]
+       \rowcolor{puzzleblue} \multicolumn{2}{|l|}{\color{white}\textbf{Nicht funktionale Anforderung 1}} \\[4pt]
        \hline
-       Beschreibung & Filterungen sollen auf dem Datensatz gemacht werden, welche durch das can-can-can
-       Gem verfiziert hat. \\
+       Beschreibung & Die Eingabefelder der Filter Benutzerschnittstelle unterbindet XSS Angriffe, gemäss \hyperref[sec3]{\color{blue}Sicherheitsrisiko 3} und \hyperref[sec4]{\color{blue}Sicherheitsrisiko 4}  \\
        \hline
-       Messbarkeit & Nutzer können keine Daten einsehen, auf welche sie keine Berechtigungen haben.  \\
+       Messbarkeit & Benutzer können keine Bash, SQL oder sonstige Injections in das Eingabefeld einfügen.  \\
        \hline
      \end{tabular}
-     \caption{Security}
+     \caption{Nicht funktionale Anforderung 1}
 \end{table}
 
+\begin{table}[h!]
+   \begin{tabular}{|L{0.3\textwidth}|L{0.6\textwidth}|}
+       \hline
+       \rowcolor{puzzleblue} \multicolumn{2}{|l|}{\color{white}\textbf{Nicht funktionale Anforderung 2}} \\[4pt]
+       \hline
+       Beschreibung & Es werden im Rahmen der Implementation nur Libraries ohne nachweisbare Schwachstelle verwendet. Basiert auf \hyperref[sec5]{\color{blue}Sicherheitsrisiko 5}  \\
+       \hline
+       Messbarkeit & Es werden keine Schwachstellen bei den verwendeten Libraries gefunden.    \\
+       \hline
+     \end{tabular}
+     \caption{Nicht funktionale Anforderung 2}
+\end{table}
 
-\color{blue} HeyHeyHey 
+\begin{table}[h!]
+   \begin{tabular}{|L{0.3\textwidth}|L{0.6\textwidth}|}
+       \hline
+       \rowcolor{puzzleblue} \multicolumn{2}{|l|}{\color{white}\textbf{Nicht funktionale Anforderung 3}} \\[4pt]
+       \hline
+       Beschreibung & Filterung soll ausschliesslich verfizierte Daten, basiert auf \color{blue}\hyperref[sec1]{\color{blue} Sicherheitsrisiko 1}\color{black}  \\
+       \hline
+       Messbarkeit & Benutzer können keine Daten einsehen, auf welche sie keine Berechtigungen haben.  \\
+       \hline
+     \end{tabular}
+     \caption{Nicht funktionale Anforderung 3}
+\end{table}
 
-\color{black}
+\begin{table}[h!]
+   \begin{tabular}{|L{0.3\textwidth}|L{0.6\textwidth}|}
+       \hline
+       \rowcolor{puzzleblue} \multicolumn{2}{|l|}{\color{white}\textbf{Nicht funktionale Anforderung 4}} \\[4pt]
+       \hline
+       Beschreibung & Speicherung von Filtern sind nur auf dem Benutzer zugänglichen Ebenen möglich. Basiert auf \color{blue}\hyperref[sec2]{\color{blue} Sicherheitsrisiko 2}\color{black}  \\
+       \hline
+       Messbarkeit & Filter welche vom Benutzer gespeichert werden, sind ausschliesslich auf seiner Ebene zugänglich.  \\
+       \hline
+     \end{tabular}
+     \caption{Nicht funktionale Anforderung 4}
+\end{table}
+
+\begin{table}[h!]
+   \begin{tabular}{|L{0.3\textwidth}|L{0.6\textwidth}|}
+       \hline
+       \rowcolor{puzzleblue} \multicolumn{2}{|l|}{\color{white}\textbf{Nicht funktionale Anforderung 5}} \\[4pt]
+       \hline
+       Beschreibung & Die gewählte Implementation der Überarbeit der Benutzerschnittstelle berücksichtigt, dass zukünftig
+       weitere Filterkriterien dazu kommen können. \\
+       \hline
+       Messbarkeit & Es wird eine generische Methode zur Implementation gewählt, so dass zukünftige Filterkriterien nach dem 
+       vorgegebenen Muster implementiert werden können.  \\
+       \hline
+     \end{tabular}
+     \caption{Nicht funktionale Anforderung 5}
+\end{table}
+
+\begin{table}[h!]
+   \begin{tabular}{|L{0.3\textwidth}|L{0.6\textwidth}|}
+       \hline
+       \rowcolor{puzzleblue} \multicolumn{2}{|l|}{\color{white}\textbf{Nicht funktionale Anforderung 6}} \\[4pt]
+       \hline
+       Beschreibung & Die Benutzerschnittstelle ist visuell ansprechend implementiert und folgt einem modularem Aufbau. Gemäss \hyperref[bed1]{Bedürfnis} aus Bedürfniserhebung \\
+       \hline
+       Messbarkeit & Es ist dem Benutzer möglich durch die hinterlegte Instruktion das Produkt zweckmässig zu verwenden.  \\
+       \hline
+     \end{tabular}
+     \caption{Nicht funktionale Anforderung 6}
+\end{table}
+
+\newpage
+
 \subsection{Funktionale Anforderungen}
+\begin{table}[h!]
+   \begin{tabular}{|L{0.3\textwidth}|L{0.6\textwidth}|}
+       \hline
+       \rowcolor{puzzleblue} \multicolumn{2}{|l|}{\color{white}\textbf{Funktionale Anforderung 1}} \\[4pt]
+       \hline
+       Beschreibung & Die Filterung bietet mit der neuen Implementation die gleiche Grundfunktionalität wie bisher. \\
+       \hline
+       Messbarkeit & Alle Funktionen welche in der Ist-Situation dokumentiert wurden, sind nach der Implementation immer noch vorhanden. \\
+       \hline
+       Testart & Manuell und Automatisiert \\
+       \hline
+     \end{tabular}
+     \caption{Funktionale Anforderung 1}
+\end{table}
 
+\begin{table}[h!]
+   \begin{tabular}{|L{0.3\textwidth}|L{0.6\textwidth}|}
+       \hline
+       \rowcolor{puzzleblue} \multicolumn{2}{|l|}{\color{white}\textbf{Funktionale Anforderung 2}} \\[4pt]
+       \hline
+       Beschreibung & Neue Filterkriterien können mit dem Hinzufüge-Button hinzugefügt werden. \\
+       \hline
+       Messbarkeit & Die beschriebene Funktion kann in der Benutzerschnittstelle ausgeführt werden. \\
+       \hline
+       Testart & Manuell und Automatisiert \\
+       \hline
+     \end{tabular}
+     \caption{Funktionale Anforderung 2}
+\end{table}
+
+\begin{table}[h!]
+   \begin{tabular}{|L{0.3\textwidth}|L{0.6\textwidth}|}
+       \hline
+       \rowcolor{puzzleblue} \multicolumn{2}{|l|}{\color{white}\textbf{Funktionale Anforderung 3}} \\[4pt]
+       \hline
+       Beschreibung & Die Bedingungen der Filterkriterien können über den Bearbeiten-Button editiert werden.  \\
+       \hline
+       Messbarkeit & Die beschriebene Funktion kann in der Benutzerschnittstelle ausgeführt werden. \\
+       \hline
+       Testart & Manuell und Automatisiert \\
+       \hline
+     \end{tabular}
+     \caption{Funktionale Anforderung 3}
+\end{table}
+
+\begin{table}[h!]
+   \begin{tabular}{|L{0.3\textwidth}|L{0.6\textwidth}|}
+       \hline
+       \rowcolor{puzzleblue} \multicolumn{2}{|l|}{\color{white}\textbf{Funktionale Anforderung 4}} \\[4pt]
+       \hline
+       Beschreibung & Neue Filterkriterien werden in Boxen anstatt von Dropdowns angezeigt\\
+       \hline
+       Messbarkeit & Die beschriebene Funktion ist in der Benutzerschnittstelle ersichtlich. \\
+       \hline
+       Testart & Manuell und Automatisiert \\
+       \hline
+     \end{tabular}
+     \caption{Funktionale Anforderung 4}
+\end{table}
+
+\begin{table}[h!]
+   \begin{tabular}{|L{0.3\textwidth}|L{0.6\textwidth}|}
+       \hline
+       \rowcolor{puzzleblue} \multicolumn{2}{|l|}{\color{white}\textbf{Funktionale Anforderung 5}} \\[4pt]
+       \hline
+       Beschreibung & Das Filterkriterium ``Sprache'' wurde im Filterkriterium ``Felder'' untergebracht. Gemäss \hyperref[bed2]{\color{blue}Bedürfnis 2} aus Bedürfnisserhebung \\
+       \hline
+       Messbarkeit & Es besteht kein eigenes Filterkriterium ``Sprache'' mehr im Dropdown. \\
+       \hline
+       Testart & Manuell und Automatisiert \\
+       \hline
+     \end{tabular}
+     \caption{Funktionale Anforderung 5}
+\end{table}
 
 \section{Abgrenzung}
+Das Ziel dieser Arbeit ist es, eine komplette Überarbeitung der Benutzerschnittstelle von Personen- und Abonnementenfilter im Hitobito einzubauen.
+Sämtliches Testing wird nur für die neue Benutzerschnittstelle gemacht, kaputte oder alte Tests werden deaktiviert und
+kommentiert, sofern diese nichts mit der Implementation des Produktes zu tun haben. Diese Arbeit beschränkt sich auf die Überarbeitung der Benutzerschnittstelle des Personenfilters
+und der Benutzerschnittstelle der globalen Bedingungen von Abonnementen. Andere Benutzerschnittstelle welche mit der Filterung verbunden sind,
+werden erst nach der IPA überarbeitet.
+
+Während dieser IPA wird die Funktionalität nur mit dem hitobito und hitobito\_generic Wagon garantiert. Alle anderen Wagons 
+werden erst nach der IPA überprüft und ergänzt.
 
 \section{Benötigter Rahmen}
 \subsection{Fehlende Informationen}
 
 \section{Persönliche Vorgehensziele}
-
-\input{risikoanalyse.tex}
 
 \chapter{Entwurf}
 \section{Anwendungskonzept}
