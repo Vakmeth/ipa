@@ -1,0 +1,70 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (X11; Linux x86_64; rv:132.0) Gecko/20100101 Firefox/132.0" version="26.1.0">
+  <diagram name="Page-1" id="5vI43nsWF8VHGp6P4rDW">
+    <mxGraphModel dx="1647" dy="955" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="WA3splhdx5T686gSZD9D-1" value="Benutzer" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" parent="1" vertex="1">
+          <mxGeometry x="200" y="280" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="WA3splhdx5T686gSZD9D-11" value="" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" target="WA3splhdx5T686gSZD9D-6" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="240" y="300" as="sourcePoint" />
+            <mxPoint x="370" y="580" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="WA3splhdx5T686gSZD9D-12" value="" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" target="WA3splhdx5T686gSZD9D-8" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="240" y="300" as="sourcePoint" />
+            <mxPoint x="370" y="580" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="WA3splhdx5T686gSZD9D-20" value="" style="group" parent="1" vertex="1" connectable="0">
+          <mxGeometry x="370" y="390" width="310" height="260" as="geometry" />
+        </mxCell>
+        <mxCell id="WA3splhdx5T686gSZD9D-8" value="" style="rounded=1;whiteSpace=wrap;html=1;" parent="WA3splhdx5T686gSZD9D-20" vertex="1">
+          <mxGeometry width="270" height="260" as="geometry" />
+        </mxCell>
+        <mxCell id="WA3splhdx5T686gSZD9D-9" value="Abonnementenlistenfilter" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=2" parent="WA3splhdx5T686gSZD9D-20" vertex="1">
+          <mxGeometry x="102" y="16.19047619047619" width="60" height="24.285714285714285" as="geometry" />
+        </mxCell>
+        <mxCell id="m1REyn7SPVTO-D67BTTW-2" value="" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="WA3splhdx5T686gSZD9D-20">
+          <mxGeometry x="37.5" y="50" width="192.5" height="190" as="geometry" />
+        </mxCell>
+        <mxCell id="m1REyn7SPVTO-D67BTTW-3" value="Globale Bedingungen" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=2" vertex="1" parent="WA3splhdx5T686gSZD9D-20">
+          <mxGeometry x="67.5" y="60" width="132.5" height="24.29" as="geometry" />
+        </mxCell>
+        <mxCell id="m1REyn7SPVTO-D67BTTW-12" value="Anzeigen" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="WA3splhdx5T686gSZD9D-20">
+          <mxGeometry x="86.07" y="90" width="95.35" height="37" as="geometry" />
+        </mxCell>
+        <mxCell id="m1REyn7SPVTO-D67BTTW-13" value="Bearbeiten" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="WA3splhdx5T686gSZD9D-20">
+          <mxGeometry x="86.07" y="140" width="95.35" height="37" as="geometry" />
+        </mxCell>
+        <mxCell id="m1REyn7SPVTO-D67BTTW-14" value="Speichern" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="WA3splhdx5T686gSZD9D-20">
+          <mxGeometry x="88.32" y="190" width="95.35" height="37" as="geometry" />
+        </mxCell>
+        <mxCell id="WA3splhdx5T686gSZD9D-21" value="" style="group" parent="1" vertex="1" connectable="0">
+          <mxGeometry x="370" y="90" width="270" height="250" as="geometry" />
+        </mxCell>
+        <mxCell id="WA3splhdx5T686gSZD9D-6" value="" style="rounded=1;whiteSpace=wrap;html=1;" parent="WA3splhdx5T686gSZD9D-21" vertex="1">
+          <mxGeometry y="-10" width="270" height="260" as="geometry" />
+        </mxCell>
+        <mxCell id="WA3splhdx5T686gSZD9D-7" value="Personenfilter" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=2" parent="WA3splhdx5T686gSZD9D-21" vertex="1">
+          <mxGeometry x="96.42857142857144" width="77.14285714285715" height="33" as="geometry" />
+        </mxCell>
+        <mxCell id="m1REyn7SPVTO-D67BTTW-8" value="Anzeigen" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="WA3splhdx5T686gSZD9D-21">
+          <mxGeometry x="81.36000000000001" y="33" width="107.26875" height="37" as="geometry" />
+        </mxCell>
+        <mxCell id="m1REyn7SPVTO-D67BTTW-10" value="Speichern" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="WA3splhdx5T686gSZD9D-21">
+          <mxGeometry x="85.85999999999999" y="130" width="107.26875" height="37" as="geometry" />
+        </mxCell>
+        <mxCell id="m1REyn7SPVTO-D67BTTW-11" value="Gefilterte Personen anzeigen" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="WA3splhdx5T686gSZD9D-21">
+          <mxGeometry x="64.30499999999999" y="176" width="154.89000000000001" height="57" as="geometry" />
+        </mxCell>
+        <mxCell id="m1REyn7SPVTO-D67BTTW-9" value="Bearbeiten" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="460.32" y="170" width="95.35" height="37" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
