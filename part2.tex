@@ -916,10 +916,104 @@ läuft.
    \caption{Anwendungsfall: Personen filtern}
 \end{table}
 
+\newpage
+
 \section{Systemkonzept}
+Bei dieser Arbeit wird mit einem bestehenden System gearbeitet, dieses muss entsprechend angepasst werden. 
+Um die nötigen Anpassungen besser sichtbar zu machen, werden im folgenden Abschnitt die Betroffenen Services identifiziert.
+Anschliessen werden mögliche Lösungsvarianten konzeptioniert. Aus den Lösungsvarianten wird per Variantenentscheid eine Lösungsvariante ausgearbeitet.
+
+\begin{figure}[h]
+   \centering
+   \includegraphics[width=1\textwidth,]{hitobito_systemarchitektur.drawio.png}
+   \caption{Services}
+\end{figure}
+
 \subsection{Betroffene Services}
-\subsection{Status quo}
+Hitobito wird in zwei Services unterteilt, der Rails Applikation und der Postgres Datenbank.
+
+\textbf{Rails Applikation / Webserver}
+
+Die Rails Applikation verwaltet die Geschäftslogik von Hitobito. Die Erweiterugnen dieser Arbeit
+werden alle in diesem Service vorgenommen. Je nach Kunde werden hier Codeteile aus den anderen Wagons verwendet.
+In dieser Arbeit wird ausschliesslich der Core und der Generic Wagon angepasst.
+
+\textbf{Postgres Datenbank}
+
+Die Datenbank von Hitobito läuft auf PostgreSQL. Sämtliche Abfragen auf die PostgreSQL Datenbank werden via SQL-Queries
+gemacht. Als ORM (Object Relational Mapping) wird Active Record verwendet.
+
+\newpage
+
 \subsection{Lösungsvarianten}
+
+\textbf{Lösungsvariante 1}
+
+Die Idee des nachfolgenden Konzeptes ist die Aufteilung des Mockups in Elemente, welche später durch 
+Turbo angesteuert werden können. Hierbei sollen nur Turbo-Streams verwendet werden. Diese ermöglichen uns Element nur mit der ID 
+eines Divs, zu diesem Div hinzuzufügen.  
+
+\begin{figure}[h]
+   \centering
+   \includegraphics[width=1\textwidth,]{variant_one_turbo.png}
+   \caption{Lösungsvariante 1: Turbo-Konzept}
+\end{figure}
+
+So werden keine Turboframes benötigt und es müssen lediglich nur noch die Endpoints angepasst werden.
+
+\newpage
+
+Das daraus resultierende Klassendiagramm sieht so aus:
+
+\begin{figure}[h]
+   \centering
+   \includegraphics[width=1\textwidth,]{variant_one_class_structure.png}
+   \caption{Lösungsvariante 1: Klassendiagramm}
+\end{figure}
+
+Rot markierte Felder stehen dabei für Funktionen, welche entfernt werden. Grün steht für Funktionen, welche hinzugefüt werden.
+Gelb steht für Funktionen oder Dateien, welche bearbeitet werden müssen.
+
+Im \texttt{PeopleFilterController} wie im \texttt{FilterController} werden zusätzliche Endpoints angelegt
+welche die jeweilgen Partials als Turbostream zurückgeben. Mit den Turbo Streams werden die Partials einem texttt{div} angehängt oder
+von diesem entfernt. Da die Filterkriterien mittels der Turbostream angezeigt werden, wird der Endpoint ``new'' im \texttt{PeopleFilterController}
+nicht mehr benötig. Die View \texttt{\_filter.html.haml} muss so geändert werden, dass sie alle Boxen welche durch die Filterungskriterien
+auf der Benutzerschnittstelle darstellen, in ein \texttt{Div} verpackt. Dieses \texttt{Div} kann später in den 
+Turbostreams referenziert werden.
+
+\newpage
+
+\textbf{Lösungsvariante 2}
+
+In der zweiten Lösungsvariante wird mit Turboframes statt der Turbostreams gearbeitet. Für jedes Partial besteht zu Beginn ein
+Turboframe. Wird im Dropdown auf eines der Filterkriterien geklickt, der Inhalt des Turboframes mit dem Formular für das jeweilige 
+Filterkriterium befüllt.
+
+\begin{figure}[h]
+   \centering
+   \includegraphics[width=1\textwidth,]{variant_two_turbo_concept.png}
+   \caption{Lösungsvariante 2: Turbo-Konzept}
+\end{figure}
+
+Die Option im Dropdown wird durch einen Stimulus Controller entfernt. So muss kein zusätzliches 
+Turboframe für das Dropdown angelegt werden. 
+
+\newpage
+
+Eine Umsetzung dieses Turbo-Konzeptes führt zu folgendem Klassendiagramm.
+
+\begin{figure}[h]
+   \centering
+   \includegraphics[width=1\textwidth,]{variant_two_class_structure.png}
+   \caption{Lösungsvariante 2: Klassendiagramm}
+\end{figure}
+
+Massgebend ist der Unterschied, dass hier keine Turbostreams benötigt werden. Es wird nach wie vor für jedes Filterkriterium ein
+ein Endpoint erstellt. Diese liefern allerdings die bereits bestehenden Partials zurück. An den Partials selbst muss ein Turboframe eingebaut werden.
+So wird jedes Form eines Filterkriteriums von einem Turboframe umschlossen. Als zusätzliche Klasse entsteht in dieser Variante der \texttt{FilterDropdownController}.
+Die Aufgabe dieses Controllers ist es, die Filterkriterien bei der Auswahl aus dem Dropdown zu entfernen. Wurden alle Filterkriterien ausgewählt blendet der Controller das
+Dropdown komplett aus. 
+
 \subsection{Variantenentscheid}
 
 \section{Sicherheitskonzept}
