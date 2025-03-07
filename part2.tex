@@ -1230,7 +1230,28 @@ in Hitobito abgefangen. Im Rahmen dieser IPA kann diese Exception vorkommen, wen
 von Personen einzusehen auf welche er keine Berechtigungen hat. Im Rahmen dieser IPA wird auf das bestehende Exceptionhandling zurückgegriffen.
 Es wird kein zusätzliches Exceptionhandling benötigt.
 
+\newpage
+
 \section{Testsetup}
+Um im Hitobito Tests ausführen zu können wird folgendes Setup benötigt:
+
+\begin{itemize}
+   \item Bash-Konsole
+   \item Docker oder Docker Desktop bei Windows als OS. 
+   \item Geklontes Github Repository von \url{https://github.com/hitobito/development.git}.
+   \item Core Wagon wurde in das Verzeichnis \texttt{/app} unter dem geklonten Development Repository eingefügt. Core Wagon kann unter \url{https://github.com/hitobito/hitobito.git} geklont werden.
+   \item Generic Wagon wurde in das Verzeichnis \texttt{/app} unter dem geklonten Development Repository eingefügt. Generic Wagon kann unter \url{https://github.com/hitobito/hitobito_generic.git} geklont werden.
+\end{itemize}
+
+Besteht das beschriebene Setup muss zur Ausführung der Tests in das Development Repository navigiert werden. Dort müssen folgende Befehle der Reihe nach wie hier 
+beschrieben ausgeführt werden:
+
+\begin{itemize}
+   \item \texttt{bin/dev-env.sh} - Startet Hitobito Konsole
+   \item \texttt{hit test prep} - Bereitet Tests vor, kompiled Assets
+   \item \texttt{hit test} - Führt Migrationen durch, bereitet Testumgebung vor
+   \item \texttt{rspec <path\_to\_tests>} Variable in Klammern muss durch den Pfad zu den Tests ersetzt werden. Wird ein Ordner unter dem Pfad angegeben, werden alle Tests unter diesem Ordner ausgeführt.
+\end{itemize}
 
 \section{Testkonzept}
 \subsection{Testinfrastruktur}
