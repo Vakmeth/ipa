@@ -1139,10 +1139,53 @@ Für die Implementation wird fortlaufend die Lösungsvariante 2 verwendet.
 \newpage
 
 \section{Sicherheitskonzept}
+Um die Sicherheit im Umbau der Filter sicherzustellen wird ein Sicherheitskonzept
+benötigt. Das Ziel dieses Konzeptes ist es mögliche Angriffe aufzuführen
+und die Blockade dieser Angriffe zu dokumentieren. 
+
 \subsection{SQL-Injection}
+Die Einzigen Benutzereingabe welche in dieser IPA auftritt, ist die Texteingabe im Filterkriterium ``Felder''. 
+Da die Eingabe des Benutzers nicht direkt in die Postgres Datenbank gespeichert wird,
+ist diese Eingabe nicht für eine SQL-Injection gefährdet. Selbst wenn die SQL-Abfrage direkt gemacht würde,
+verhindert das ORM ActiveRecord mit seinen Standardmethoden, dass schädliche Eingaben abgespeichert werden.
+Dies geschieht unter anderem durch das Escapen der Strings.
+
 \subsection{Cross-Site Scripting}
+Da in dieser Erweiterung Benutzereingaben an das Rails-Backend gesendet werden muss der Cross-Site Scripting Angriff ebenfalls
+berücksichtig werden. Rails selbst bietet dafür einen eingebauten Abwehrmechanismus. Eine solcher XSS-Angriff kann folgendermassen aussehen:
+
+\begin{lstlisting}[language=HTML]
+   <h2>Welcome <script>alert("This is a XSS attack!")</script></h2>
+\end{lstlisting}
+
+Standardmässig escaped Rails diese Eingaben und ändert die Spezialbuchstaben. So wird aus der Eingabe oben:
+
+\begin{lstlisting}[language=HTML]
+   <h2>Welcome &lt;script&gt;alert\
+   (&quot;This is a XSS attack!&quot;)&lt;/script&gt;</h2>
+\end{lstlisting}
+
 \subsection{URL Interpretation}
+Bei der URL-Interpretation fabriziert der Angreifer eine URL um damit auf die persönlichen
+Daten eines Benutzers zuzugreifen. Dabei kann der Angreifer versuchen die URL zu erraten. 
+Dieser Angriff wird in Hitobito mit dem Gem \texttt{can-can-can} verhindert. Mit diesem Gem wird sichergestellt,
+das der Absender der Anfrage die nötigen Berechtigungen für das Einsehen der Informationen hat. Die Prüfung der Berechtigungen sieht wie folgt
+aus: 
+
+\begin{lstlisting}[language=Ruby]
+   class Ability include CanCan::Ability
+      def define_root_abilities
+         can :manage, :all
+         # root cannot change her email, because this is what makes her root.
+         cannot :update_email, Person do |p|
+            p.root?
+      end
+   end
+\end{lstlisting}
+   
 \subsection{Kommunikation HTTP/S}
+Die Umgebungen auf der Integration und Produktion kommunizieren via HTTPS. Somit ist
+die verschlüsselte Kommunikation beim Transfer von produktiven Daten gesichert.
 
 \section{Fehlerbehandlungskonzept}
 \subsection{Nutzereingabe}
