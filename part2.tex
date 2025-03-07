@@ -1187,8 +1187,6 @@ aus:
 Die Umgebungen auf der Integration und Produktion kommunizieren via HTTPS. Somit ist
 die verschlüsselte Kommunikation beim Transfer von produktiven Daten gesichert.
 
-\newpage
-
 \section{Fehlerbehandlungskonzept}
 Bei der Entwicklung und während der Laufzeit können stets Fehler oder nicht vorgesehene Probleme entstehen.
 Im folgenden Abschnitt wird dokumentiert, wie mit diesen Fällen umgegangen wird.
@@ -1203,8 +1201,6 @@ Umgebung von Hitobito aufgezeigt. Im Sentry werden zusätzlich die aufgetretenen
 den Entwicklern eine Übersicht über allfällige Bugs zu geben. Gesammelte Exceptions können einem Entwickler
 zugewiesen oder wenn sie gefixed wurden, vom Sentry entfernt werden. Für diese IPA ist keine Modifizierung an der 
 Sentry Umgebung nötig.
-
-\newpage
 
 \subsection{Exception Handling}
 In Ruby können Exception mit \texttt{rescue} abgefangen werden. Das folgende Beispiel macht das Exceptionhandling anhand eines 403 Fehlers bei
@@ -1246,6 +1242,7 @@ Um im Hitobito Tests ausführen zu können wird folgendes Setup benötigt:
 Besteht das beschriebene Setup muss zur Ausführung der Tests in das Development Repository navigiert werden. Dort müssen folgende Befehle der Reihe nach wie hier 
 beschrieben ausgeführt werden:
 
+\label{testsetup}
 \begin{itemize}
    \item \texttt{bin/dev-env.sh} - Startet Hitobito Konsole
    \item \texttt{hit test prep} - Bereitet Tests vor, kompiled Assets
@@ -1253,10 +1250,212 @@ beschrieben ausgeführt werden:
    \item \texttt{rspec <path\_to\_tests>} Variable in Klammern muss durch den Pfad zu den Tests ersetzt werden. Wird ein Ordner unter dem Pfad angegeben, werden alle Tests unter diesem Ordner ausgeführt.
 \end{itemize}
 
+\newpage
+
 \section{Testkonzept}
 \subsection{Testinfrastruktur}
+Es gibt zwei Arten von Tests, welche in dieser Arbeit relevant sind:
+
+\begin{itemize}
+   \item \textbf{Feature Tests:} Testet eine Funktion über die Benutzerschnittstelle
+   \item \textbf{Controller Tests:} Testet den Endpoint eines Controllers
+   \item \textbf{Manuelles Testen:} Testet das gesamte Feature
+\end{itemize}
+
+Hitobito verwendet für das Ausführen lokaler Tests RSpec 3.13.0. Für die manuellen Tests wird Firefox 80.0 (64-bit) verwendet. Als Gerät wird ein Laptop mit Pop!\_OS 22.04 LTS verwendet.
+
+Die bestehenden Tests welche die Funktionalität der gesamten Applikation sicherstellen werden für das Testing vernachlässigt. Es werden keine Anpassungen
+an diesen Tests vorgenommen. Die bestehenden Tests werden aus zeitlichen Rahmen bei Fehlschlagen auskommentiert und ignoriert. Im Rahmen dieser Arbeit sind
+auschliesslich die selbst verfassten Tests relevant.
+
 \subsection{Fehlerklassen}
+\begin{table}[h!]
+   \begin{tabular}{|L{0.2\textwidth}|L{0.4\textwidth}|L{0.4\textwidth}|}
+       \hline
+       \rowcolor{puzzleblue} \color{white}\textbf{Bezeichnung} & \color{white}\textbf{Fehlerklasse} & \color{white}\textbf{Beschreibung} \\[12pt]
+       \hline
+       FK0 & Fehlerfrei & Keine Fehler \\
+       \hline
+       FK1 & Nicht erfolgsgefährdend & Kleine Fehler, beeinträchtigen Funktion nur bedingt. \\
+       \hline
+       FK2 & Erfolgsgefährdend & Fehler welche die Funktion beeinträchtigen. \\
+       \hline
+     \end{tabular}
+     \caption{Fehlerklassen}
+\end{table}
+
 \subsection{Manuelle Tests}
+Die manuellen Tests werden lokal, mit den Testdaten von Hitobito durchgeführt. Die Testdaten können in der Hitobito-Konsole
+mit \texttt{hit rails wagon seed} eingespielt werden. Bei Fragen zur Aktvierung der Hitobito Konsole, den \hyperref[testsetup]{\color{blue}Beschrieb zum Testsetup} einsehen.
+
+\newpage
+
+Mit dem generic Wagon bieten sich drei Mögliche Benutzer-Accounts für das Login an:
+
+\begin{table}[h!]
+   \begin{tabular}{|L{0.4\textwidth}|L{0.2\textwidth}|L{0.4\textwidth}|}
+       \hline
+       \rowcolor{puzzleblue} \color{white}\textbf{Username} & \color{white}\textbf{Passwort} & \color{white}\textbf{Berechtigungen}\\[12pt]
+       \hline
+        admin@hitobito.ch & demo & Administrator mit vollem Zugriff \\
+       \hline
+       leitung@hitobito.ch & demo & Rolle Leitung einer lokalen Gruppe\\
+       \hline
+       mitglied@hitobito.ch & demo & Einfaches Gruppenmitglied \\
+       \hline
+     \end{tabular}
+     \caption{Accounts für manuelle Tests}
+\end{table}
+
+Bei den manuellen Tests muss stets einer der oben beschriebenen Accounts verwendet werden.
+In den Testszenarien wird der Account mit ``Als \{Account\} anmelden'' beschrieben. \{ Account \} steht hierbei als
+Platzhalter für den Account des jeweiligen Benutzer. 
+Das Login basiert auf folgendem Ablauf:
+
+\begin{itemize}
+   \item Navigation auf \texttt{localhost:3000/users/sign\_in}
+   \item Anmeldedaten des Accounts eingeben
+   \item Auf Anmelde-Button klicken
+\end{itemize}
+
+\newpage
+
+\begin{table}[h!]
+   \rowcolors{2}{puzzleblue!30}{white}
+   \begin{tabular}{|L{0.4\textwidth}|L{0.6\textwidth}|}
+       \hline
+       \rowcolor{puzzleblue} \multicolumn{2}{|l|}{\color{white}\textbf{Testfall Nr. 1}} \\[12pt]
+       \hline
+        Testname & Personenfilter anzeigen \\
+       \hline
+       Testmethode & Manuell \\
+       \hline
+        Anforderung & \begin{itemize}
+         \item Nicht funktionale Anforderung 6
+         \item Funktionale Anforderung 1
+         \item Funktionale Anforderung 4
+         \end{itemize}  \\
+       \hline
+       Voraussetzungen & Ein eigener Personenfilter wurde erfasst und gespeichert \\
+       \hline
+       Testszenario & 
+       \begin{itemize}
+         \item Als Admin anmelden
+         \item Mittels Reiter ``Personen'' auf Personenliste navigieren
+         \item Maus Im Filter Dropdown über dem Namen des Filters positionieren
+         \item Erscheinende Option ``Bearbeiten'' auswählen
+       \end{itemize} \\
+       \hline
+       Erwartetes Resultat & 
+       \begin{itemize}
+         \item Alle Filterkriterien un deren Bedingungen werden angezeigt
+      \end{itemize} \\
+      \hline
+     \end{tabular}
+     \caption{Testfall 1}
+\end{table}
+
+\newpage
+
+\begin{table}[h!]
+   \rowcolors{2}{puzzleblue!30}{white}
+   \begin{tabular}{|L{0.4\textwidth}|L{0.6\textwidth}|}
+       \hline
+       \rowcolor{puzzleblue} \multicolumn{2}{|l|}{\color{white}\textbf{Testfall Nr. 2}} \\[12pt]
+       \hline
+        Testname & Filterkriterium ``Tags'' bearbeiten \\
+       \hline
+       Testmethode & Manuell \\
+       \hline
+        Anforderung & 
+        \begin{itemize}
+         \item Nicht funktionale Anforderung 6
+         \item Funktionale Anforderung 1
+         \item Funktionale Anforderung 3
+         \end{itemize}  \\
+       \hline
+       Voraussetzungen & Ein eigener Personenfilter wurde erfasst und gespeichert \\
+       \hline
+       Testszenario & 
+       \begin{itemize}
+         \item Als Admin anmelden
+         \item Mittels Reiter ``Personen'' auf Personenliste navigieren
+         \item Maus Im Filter Dropdown über dem Namen des Filters positionieren
+         \item Erscheinende Option ``Bearbeiten'' auswählen
+         \item Auf Box des Filterkriteriums ``Tags'' navigieren
+         \item Bearbeiten-Button in der oberen rechten Ecke klicken
+         \item ``Puzzle ITC'' als ``Tag'' bei dem Eingabefeld ``Einschliessen'' hinzufügen
+         \item Speichern-Button innerhalb der Box des Filterkriteriums klicken
+       \end{itemize} \\
+       \hline
+       Erwartetes Resultat & 
+       \begin{itemize}
+         \item Box des Filterkriteriums ``Tags'' wird mit dem Tag ``Puzzle ITC'' ergänzt.
+      \end{itemize} \\
+      \hline
+     \end{tabular}
+     \caption{Testfall 2}
+\end{table}
+
+\newpage
+
+\begin{table}[h!]
+   \rowcolors{2}{puzzleblue!30}{white}
+   \begin{tabular}{|L{0.4\textwidth}|L{0.6\textwidth}|}
+       \hline
+       \rowcolor{puzzleblue} \multicolumn{2}{|l|}{\color{white}\textbf{Testfall Nr. 3}} \\[12pt]
+       \hline
+        Testname & Filterkriterium ``Rollen'' bearbeiten \\
+       \hline
+       Testmethode & Manuell \\
+       \hline
+        Anforderung & 
+        \begin{itemize}
+         \item Nicht funktionale Anforderung 6
+         \item Funktionale Anforderung 1
+         \item Funktionale Anforderung 3
+         \end{itemize}  \\
+       \hline
+       Voraussetzungen & Ein eigener Personenfilter wurde erfasst und gespeichert \\
+       \hline
+       Testszenario & 
+       \begin{itemize}
+         \item Als Admin anmelden
+         \item Mittels Reiter ``Personen'' auf Personenliste navigieren
+         \item Maus Im Filter Dropdown über dem Namen des Filters positionieren
+         \item Erscheinende Option ``Bearbeiten'' auswählen
+         \item Auf Box des Filterkriteriums ``Rollen'' navigieren
+         \item Bearbeiten-Button in der oberen rechten Ecke klicken
+         \item ``Hauptebene'' bei dem Eingabefeld ``Gruppen'' hinzufügen
+         \item ``Region/Kanton - Präsident*in'' bei dem Eingabefeld ``Rollen'' hinzufügen
+         \item ``Aktive'' beim Eingabefeld ``Gültigkeit'' erfassen
+         \item ``18.05.2006'' beim ersten Eingabefeld neben dem Stichdatum hinzufügen
+       \end{itemize} \\
+      \hline
+     \end{tabular}
+     \caption{Testfall 3}
+\end{table}
+
+\newpage
+
+\begin{table}[h!]
+   \rowcolors{2}{puzzleblue!30}{white}
+   \begin{tabular}{|L{0.4\textwidth}|L{0.6\textwidth}|}
+      \hline
+       Testszenario & 
+       \begin{itemize}
+         \item ``20.05.2006'' beim zweiten Eingabefeld neben dem Stichdatum hinzufügen
+         \item Speichern-Button innerhalb der Box des Filterkriteriums klicken
+       \end{itemize} \\
+       \hline
+       Erwartetes Resultat & 
+       \begin{itemize}
+         \item Box des Filterkriteriums ``Rollen'' wird mit den eingegebenen Informationen ergänzt.
+      \end{itemize} \\
+      \hline
+     \end{tabular}
+     \caption{Testfall 3}
+\end{table}
 
 \chapter{Ausführung}
 \section{Einsatz von KI-Modellen}
