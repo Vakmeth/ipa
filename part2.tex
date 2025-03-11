@@ -665,7 +665,7 @@ werden als gleichwertig bewertet. Somit erhält die erste nicht funktionale Anfo
        \hline
        \rowcolor{puzzleblue} \multicolumn{2}{|l|}{\color{white}\textbf{Nicht funktionale Anforderung 3}} \\[4pt]
        \hline
-       Beschreibung & Filterung soll ausschliesslich verfizierte Daten, basiert auf \color{blue}\hyperref[sec1]{\color{blue} Sicherheitsrisiko 1}\color{black}  \\
+       Beschreibung & Filterung soll ausschliesslich verfizierte Daten anzeigen, basiert auf \color{blue}\hyperref[sec1]{\color{blue} Sicherheitsrisiko 1}\color{black}  \\
        \hline
        Messbarkeit & Benutzer können keine Daten einsehen, auf welche sie keine Berechtigungen haben.  \\
        \hline
@@ -1258,7 +1258,6 @@ Es gibt zwei Arten von Tests, welche in dieser Arbeit relevant sind:
 
 \begin{itemize}
    \item \textbf{Feature Tests:} Testet eine Funktion über die Benutzerschnittstelle
-   \item \textbf{Controller Tests:} Testet den Endpoint eines Controllers
    \item \textbf{Manuelles Testen:} Testet das gesamte Feature
 \end{itemize}
 
@@ -1290,18 +1289,14 @@ mit \texttt{hit rails wagon seed} eingespielt werden. Bei Fragen zur Aktvierung 
 
 \newpage
 
-Mit dem generic Wagon bieten sich drei Mögliche Benutzer-Accounts für das Login an:
+Mit dem generic Wagon bietet sich ein Benutzer-Account für das Login an:
 
 \begin{table}[h!]
-   \begin{tabular}{|L{0.4\textwidth}|L{0.2\textwidth}|L{0.4\textwidth}|}
+   \begin{tabular}{|L{0.2\textwidth}|L{0.3\textwidth}|L{0.2\textwidth}|L{0.4\textwidth}|}
        \hline
-       \rowcolor{puzzleblue} \color{white}\textbf{Username} & \color{white}\textbf{Passwort} & \color{white}\textbf{Berechtigungen}\\[12pt]
+       \rowcolor{puzzleblue} \color{white}\textbf{Bezeichnung} & \color{white}\textbf{Username} & \color{white}\textbf{Passwort} & \color{white}\textbf{Berechtigungen}\\[12pt]
        \hline
-        admin@hitobito.ch & demo & Administrator mit vollem Zugriff \\
-       \hline
-       leitung@hitobito.ch & demo & Rolle Leitung einer lokalen Gruppe\\
-       \hline
-       mitglied@hitobito.ch & demo & Einfaches Gruppenmitglied \\
+        Admin & admin@hitobito.ch & demo & Administrator mit vollem Zugriff \\
        \hline
      \end{tabular}
      \caption{Accounts für manuelle Tests}
@@ -1456,6 +1451,630 @@ Das Login basiert auf folgendem Ablauf:
      \end{tabular}
      \caption{Testfall 3}
 \end{table}
+
+\newpage
+
+\begin{table}[h!]
+   \rowcolors{2}{puzzleblue!30}{white}
+   \begin{tabular}{|L{0.4\textwidth}|L{0.6\textwidth}|}
+       \hline
+       \rowcolor{puzzleblue} \multicolumn{2}{|l|}{\color{white}\textbf{Testfall Nr. 4}} \\[12pt]
+       \hline
+        Testname & Filterkriterium ``Qualifikationen'' bearbeiten \\
+       \hline
+       Testmethode & Manuell \\
+       \hline
+        Anforderung & 
+        \begin{itemize}
+         \item Nicht funktionale Anforderung 6
+         \item Funktionale Anforderung 1
+         \item Funktionale Anforderung 3
+         \end{itemize}  \\
+       \hline
+       Voraussetzungen & Ein eigener Personenfilter wurde erfasst und gespeichert \\
+       \hline
+       Testszenario & 
+       \begin{itemize}
+         \item Als Admin anmelden
+         \item Mittels Reiter ``Personen'' auf Personenliste navigieren
+         \item Maus Im Filter Dropdown über dem Namen des Filters positionieren
+         \item Erscheinende Option ``Bearbeiten'' auswählen
+         \item Auf Box des Filterkriteriums ``Qualifikationen'' navigieren
+         \item Bearbeiten-Button in der oberen rechten Ecke klicken
+         \item ``Leitung'' bei dem Eingabefeld ``Qualifikationen'' hinzufügen
+         \item ``Person hat alle'' bei der Radio-Buttons Gruppe ``Kriterium'' answählen
+         \item ``Gültige'' beim Eingabefeld ``Gültigkeit'' auswählen
+         \item Das Eingabefeld ``Stichdatum'' leer lassen
+       \end{itemize} \\
+       \hline
+     \end{tabular}
+     \caption{Testfall 4}
+\end{table}
+
+\newpage
+\newpage
+
+\begin{table}[h!]
+   \rowcolors{2}{puzzleblue!30}{white}
+   \begin{tabular}{|L{0.4\textwidth}|L{0.6\textwidth}|}
+      \rowcolor{puzzleblue} \multicolumn{2}{|l|}{\color{white}\textbf{Testfall Nr. 4}} \\[12pt]
+      \hline
+      Testszenario & 
+      \begin{itemize}
+         \item Speichern-Button innerhalb der Box des Filterkriteriums klicken
+      \end{itemize} \\
+       \hline
+       Erwartetes Resultat & 
+       \begin{itemize}
+         \item Box des Filterkriteriums ``Qualifikationen'' wird mit den eingegebenen Informatinen ergänzt.
+      \end{itemize} \\
+      \hline
+     \end{tabular}
+     \caption{Testfall 4}
+\end{table}
+
+\newpage
+
+\begin{table}[h!]
+   \rowcolors{2}{puzzleblue!30}{white}
+   \begin{tabular}{|L{0.4\textwidth}|L{0.6\textwidth}|}
+       \hline
+       \rowcolor{puzzleblue} \multicolumn{2}{|l|}{\color{white}\textbf{Testfall Nr. 5}} \\[12pt]
+       \hline
+        Testname & Filterkriterium ``Felder'' bearbeiten \\
+       \hline
+       Testmethode & Manuell \\
+       \hline
+        Anforderung & 
+        \begin{itemize}
+         \item Nicht funktionale Anforderung 6
+         \item Funktionale Anforderung 1
+         \item Funktionale Anforderung 3
+         \end{itemize}  \\
+       \hline
+       Voraussetzungen & Ein eigener Personenfilter wurde erfasst und gespeichert \\
+       \hline
+       Testszenario & 
+       \begin{itemize}
+         \item Als Admin anmelden
+         \item Mittels Reiter ``Personen'' auf Personenliste navigieren
+         \item Maus Im Filter Dropdown über dem Namen des Filters positionieren
+         \item Erscheinende Option ``Bearbeiten'' auswählen
+         \item Auf Box des Filterkriteriums ``Felder'' navigieren
+         \item Bearbeiten-Button in der oberen rechten Ecke klicken
+         \item ``Alter'' bei dem Eingabefeld ``Attribut'' hinzufügen
+         \item ``42'' bei dem Eingabefeld ``Wert'' eingeben
+         \item ``\textgreater='' beim Eingabefeld ``Genaugikeit'' auswählen
+         \item Auf Hinzufügen-Button klicken
+         \item ``Firmennamen'' bei dem zweiten Eingabefeld ``Attribut'' hinzufügen
+       \end{itemize} \\
+       \hline
+     \end{tabular}
+     \caption{Testfall 5}
+\end{table}
+
+\newpage
+
+\begin{table}[h!]
+   \rowcolors{2}{puzzleblue!30}{white}
+   \begin{tabular}{|L{0.4\textwidth}|L{0.6\textwidth}|}
+       \hline
+       \rowcolor{puzzleblue} \multicolumn{2}{|l|}{\color{white}\textbf{Testfall Nr. 5}} \\[12pt]
+       Testszenario & 
+       \begin{itemize}
+         \item ``Puzzle ITC'' bei dem zweiten Eingabefeld ``Wert'' eintragen  
+         \item Speichern-Button innerhalb der Box des Filterkriteriums klicken
+       \end{itemize} \\
+       \hline
+       Erwartetes Resultat & 
+       \begin{itemize}
+         \item Box des Filterkriteriums ``Felder'' wird mit den eingegebenen Informatinen ergänzt.
+      \end{itemize} \\
+     \hline 
+     \end{tabular}
+     \caption{Testfall 5}
+\end{table}
+
+\newpage
+
+\begin{table}[h!]
+   \rowcolors{2}{puzzleblue!30}{white}
+   \begin{tabular}{|L{0.4\textwidth}|L{0.6\textwidth}|}
+       \hline
+       \rowcolor{puzzleblue} \multicolumn{2}{|l|}{\color{white}\textbf{Testfall Nr. 6}} \\[12pt]
+       \hline
+        Testname & Sprache einschränken \\
+       \hline
+       Testmethode & Manuell \\
+       \hline
+        Anforderung & 
+        \begin{itemize}
+         \item Funktionale Anforderung 5
+         \end{itemize}  \\
+       \hline
+       Voraussetzungen & Ein eigener Personenfilter wurde erfasst und gespeichert \\
+       \hline
+       Testszenario & 
+       \begin{itemize}
+         \item Als Admin anmelden
+         \item Mittels Reiter ``Personen'' auf Personenliste navigieren
+         \item Maus Im Filter Dropdown über dem Namen des Filters positionieren
+         \item Erscheinende Option ``Bearbeiten'' auswählen
+         \item Auf Box des Filterkriteriums ``Felder'' navigieren
+         \item Bearbeiten-Button in der oberen rechten Ecke klicken
+         \item ``Sprache'' bei dem Eingabefeld ``Attribut'' hinzufügen
+         \item ``Deutsch'' bei dem Eingabefeld ``Wert'' eingeben
+         \item Speichern-Button innerhalb der Box des Filterkriteriums klicken
+       \end{itemize} \\
+       \hline
+       Erwartetes Resultat & Box des Filterkriteriums wird mit Bedingung zur Sprache ergänzt \\
+     \hline
+     \end{tabular}
+     \caption{Testfall 6}
+\end{table}
+
+\newpage
+
+\begin{table}[h!]
+   \rowcolors{2}{puzzleblue!30}{white}
+   \begin{tabular}{|L{0.4\textwidth}|L{0.6\textwidth}|}
+       \hline
+       \rowcolor{puzzleblue} \multicolumn{2}{|l|}{\color{white}\textbf{Testfall Nr. 7}} \\[12pt]
+       \hline
+        Testname & Filterkriterium ``Tags'' hinzufügen \\
+       \hline
+       Testmethode & Manuell \\
+       \hline
+        Anforderung & 
+        \begin{itemize}
+         \item Funktionale Anforderung 2
+         \end{itemize}  \\
+       \hline
+       Voraussetzungen & Keine \\
+       \hline
+       Testszenario & 
+       \begin{itemize}
+         \item Als Admin anmelden
+         \item Mittels Reiter ``Personen'' auf Personenliste navigieren
+         \item Im Filter Dropdown Option ``Neuer Filter...'' auswählen
+         \item Hinzufüge-Button in der unteren rechten Ecke klicken
+         \item ``Tags'' aus dem Dropdown auswählen
+       \end{itemize} \\
+       \hline
+       Erwartetes Resultat & 
+       \begin{itemize}
+         \item Box des Filterkriteriums ``Tags'' erscheint
+         \item Option ``Tags'' ist aus dem Dropdown zum Hinzufügen von Filterkriterien verschwunden
+       \end{itemize} \\
+     \hline
+     \end{tabular}
+     \caption{Testfall 7}
+\end{table}
+
+\newpage
+
+\subsection{Automatisierte Tests}
+Alle Tests werden mit Testdaten ausgeführt, diese werden entweder erst per Fixtures gesetzt oder im Test dynamisch generiert.
+In den Testfällen werden teils auf Testdaten verwiesen, diese sind hier dokumentiert:
+
+\begin{table}[h!]
+   \begin{tabular}{|L{0.4\textwidth}|L{0.6\textwidth}|}
+       \hline
+       \rowcolor{puzzleblue} \color{white}\textbf{Bezeichnung} & \color{white}\textbf{Bemerkung}  \\[12pt]
+       \hline
+       \texttt{top\_leader} & Admin Rechte, hat Zugriff auf Personen- und Abonnementenfilterung \\
+       \hline
+       \texttt{bottom\_member} & Kein Zugriff auf Personen- und Abonnementenfilterung \\
+       \hline
+     \end{tabular}
+     \caption{Testdaten}
+\end{table}
+
+\newpage
+
+\textbf{Feature Test}
+
+Die Feature Tests werden mittels \texttt{\$ rspec spec/features} ausgeführt
+
+\begin{table}[h!]
+   \rowcolors{2}{puzzleblue!30}{white}
+   \begin{tabular}{|L{0.4\textwidth}|L{0.6\textwidth}|}
+       \hline
+       \rowcolor{puzzleblue} \multicolumn{2}{|l|}{\color{white}\textbf{Testfall Nr. 8}} \\[12pt]
+       \hline
+        Testname & Erfolgreiche Filterung nach Tags \\
+       \hline
+       Testmethode & Rspec Feature Test \\
+       \hline
+        Anforderung & 
+        \begin{itemize}
+         \item Funktionale Anforderung 2
+         \end{itemize}  \\
+       \hline
+       Voraussetzungen & \texttt{sign\_in top\_leader} \\
+       \hline
+       Testszenario & 
+       \begin{itemize}
+         \item Personenlisten nach Tags filtern
+       \end{itemize} \\
+       \hline
+       Parameter & 
+       \begin{itemize}
+         \item Tagname
+         \item Boolean Wert: Tag einschliessen oder ausschliessen
+       \end{itemize} \\
+       Erwartetes Resultat & 
+       \begin{itemize}
+         \item Alle Personen in der resultierenden Personenliste weisen das gefilterte Tag auf
+       \end{itemize} \\
+     \hline
+     \end{tabular}
+     \caption{Testfall 8}
+\end{table}
+
+\newpage
+
+\begin{table}[h!]
+   \rowcolors{2}{puzzleblue!30}{white}
+   \begin{tabular}{|L{0.4\textwidth}|L{0.6\textwidth}|}
+       \hline
+       \rowcolor{puzzleblue} \multicolumn{2}{|l|}{\color{white}\textbf{Testfall Nr. 9}} \\[12pt]
+       \hline
+        Testname & Erfolgreiche Filterung nach Rollen \\
+       \hline
+       Testmethode & Rspec Feature Test \\
+       \hline
+        Anforderung & 
+        \begin{itemize}
+         \item Funktionale Anforderung 1
+         \end{itemize}  \\
+       \hline
+       Voraussetzungen & \texttt{sign\_in top\_leader} \\
+       \hline
+       Testszenario & 
+       \begin{itemize}
+         \item Personenlisten nach Rollen filtern
+       \end{itemize} \\
+       \hline
+       Parameter & 
+       \begin{itemize}
+         \item Gruppenname
+         \item Rollennamen
+         \item Gültigkeit 
+         \item Stichdatum
+       \end{itemize}
+       \\
+       \hline
+       Erwartetes Resultat & 
+       \begin{itemize}
+         \item Alle Personen in der resultierenden Personenliste weisen die gefilterte Rolle auf
+       \end{itemize} \\
+     \hline
+     \end{tabular}
+     \caption{Testfall 9}
+\end{table}
+
+\newpage
+
+\begin{table}[h!]
+   \rowcolors{2}{puzzleblue!30}{white}
+   \begin{tabular}{|L{0.4\textwidth}|L{0.6\textwidth}|}
+       \hline
+       \rowcolor{puzzleblue} \multicolumn{2}{|l|}{\color{white}\textbf{Testfall Nr. 10}} \\[12pt]
+       \hline
+        Testname & Erfolgreiche Filterung nach Qualifikationen \\
+       \hline
+       Testmethode & Rspec Feature Test \\
+       \hline
+        Anforderung & 
+        \begin{itemize}
+         \item Funktionale Anforderung 1
+         \end{itemize}  \\
+       \hline
+       Voraussetzungen & \texttt{sign\_in top\_leader} \\
+       \hline
+       Testszenario & 
+       \begin{itemize}
+         \item Personenlisten nach Rollen filtern
+       \end{itemize} \\
+       \hline
+       Parameter & 
+       \begin{itemize}
+         \item Name der zu filternden Qualifikationen
+         \item Kriterium (Person hat alle oder mind. eine der Qualifikationen)
+         \item Gültigkeit
+         \item Stichdatum
+       \end{itemize} \\
+       \hline
+       Erwartetes Resultat & 
+       \begin{itemize}
+         \item Alle Personen in der resultierenden Personenliste weisen die gefilterte Qualifikationen auf
+       \end{itemize} \\
+     \hline
+     \end{tabular}
+     \caption{Testfall 10}
+\end{table}
+
+\newpage
+
+\begin{table}[h!]
+   \rowcolors{2}{puzzleblue!30}{white}
+   \begin{tabular}{|L{0.4\textwidth}|L{0.6\textwidth}|}
+       \hline
+       \rowcolor{puzzleblue} \multicolumn{2}{|l|}{\color{white}\textbf{Testfall Nr. 11}} \\[12pt]
+       \hline
+        Testname & Erfolgreiche Filterung nach Feldern \\
+       \hline
+       Testmethode & Rspec Feature Test \\
+       \hline
+        Anforderung & 
+        \begin{itemize}
+         \item Funktionale Anforderung 1
+         \end{itemize}  \\
+       \hline
+       Voraussetzungen & \texttt{sign\_in top\_leader} \\
+       \hline
+       Testszenario & 
+       \begin{itemize}
+         \item Personenlisten nach Feldern filtern
+       \end{itemize} \\
+       \hline
+       Parameter & 
+       \begin{itemize}
+         \item Name der zu filternden Felder
+         \item Wert der Felder
+         \item Genaugikeit
+       \end{itemize} \\
+       \hline
+       Erwartetes Resultat & 
+       \begin{itemize}
+         \item Alle Personen in der resultierenden Personenliste weisen die gefilterte Felder auf
+       \end{itemize} \\
+     \hline
+     \end{tabular}
+     \caption{Testfall 11}
+\end{table}
+
+\newpage
+
+\begin{table}[h!]
+   \rowcolors{2}{puzzleblue!30}{white}
+   \begin{tabular}{|L{0.4\textwidth}|L{0.6\textwidth}|}
+       \hline
+       \rowcolor{puzzleblue} \multicolumn{2}{|l|}{\color{white}\textbf{Testfall Nr. 12}} \\[12pt]
+       \hline
+        Testname & Mitglied hat keinen Zugriff auf die Personenfilterung \\
+       \hline
+       Testmethode & Rspec Feature Test \\
+       \hline
+        Anforderung & 
+        \begin{itemize}
+         \item Nicht funktionale Anforderung 3
+         \end{itemize}  \\
+       \hline
+       Voraussetzungen & \texttt{sign\_in bottom\_member} \\
+       \hline
+       Testszenario & 
+       \begin{itemize}
+         \item Auf Personenliste navigieren
+       \end{itemize} \\
+       \hline
+       Parameter & Keine \\
+       \hline
+       Erwartetes Resultat & 
+       \begin{itemize}
+         \item Personenliste wird dem Benutzer nicht angezeigt
+       \end{itemize} \\
+     \hline
+     \end{tabular}
+     \caption{Testfall 12}
+\end{table}
+
+\newpage
+
+\begin{table}[h!]
+   \rowcolors{2}{puzzleblue!30}{white}
+   \begin{tabular}{|L{0.4\textwidth}|L{0.6\textwidth}|}
+       \hline
+       \rowcolor{puzzleblue} \multicolumn{2}{|l|}{\color{white}\textbf{Testfall Nr. 13}} \\[12pt]
+       \hline
+        Testname & XSS-Angriff \\
+       \hline
+       Testmethode & Rspec Feature Test \\
+       \hline
+        Anforderung & 
+        \begin{itemize}
+         \item Nicht funktionale Anforderung 1
+         \end{itemize}  \\
+       \hline
+       Voraussetzungen & \texttt{sign\_in top\_leader} \\
+       \hline
+       Testszenario & 
+       \begin{itemize}
+         \item Personenlisten nach Feldern filtern
+         \item XSS-Eingabe tätigen
+       \end{itemize} \\
+       \hline
+       Parameter & 
+       \begin{itemize}
+         \item Name der zu filternden Felder
+         \item Javascript Befehl (XSS-Eingabe)
+       \end{itemize} \\
+       \hline
+       Erwartetes Resultat & 
+       \begin{itemize}
+         \item XSS-Eingabe wird als String interpretiert
+       \end{itemize} \\
+     \hline
+     \end{tabular}
+     \caption{Testfall 13}
+\end{table}
+
+\newpage
+
+\begin{table}[h!]
+   \rowcolors{2}{puzzleblue!30}{white}
+   \begin{tabular}{|L{0.4\textwidth}|L{0.6\textwidth}|}
+       \hline
+       \rowcolor{puzzleblue} \multicolumn{2}{|l|}{\color{white}\textbf{Testfall Nr. 14}} \\[12pt]
+       \hline
+        Testname & Globale Bedingungen der Abonnemente können angepasst werden. \\
+       \hline
+       Testmethode & Rspec Feature Test \\
+       \hline
+        Anforderung & 
+        \begin{itemize}
+         \item Funktionale Anforderung 1
+         \end{itemize}  \\
+       \hline
+       Voraussetzungen & \texttt{sign\_in top\_leader} \\
+       \hline
+       Testszenario & 
+       \begin{itemize}
+         \item Globale Bedingungen in Abonnementen erfassen
+       \end{itemize} \\
+       \hline
+       Parameter & \begin{itemize}
+         \item Name der zu filternden Felder
+         \item Wert der Felder
+         \item Genaugikeit
+       \end{itemize} \\
+       \hline
+       Erwartetes Resultat & 
+       \begin{itemize}
+         \item Export der Abonnementen als CSV beinhaltet alle Personen welche die Globalen Bedingungen erfüllen.
+       \end{itemize} \\
+     \hline
+     \end{tabular}
+     \caption{Testfall 14}
+\end{table}
+
+\newpage
+
+\begin{table}[h!]
+   \rowcolors{2}{puzzleblue!30}{white}
+   \begin{tabular}{|L{0.4\textwidth}|L{0.6\textwidth}|}
+       \hline
+       \rowcolor{puzzleblue} \multicolumn{2}{|l|}{\color{white}\textbf{Testfall Nr. 15}} \\[12pt]
+       \hline
+        Testname & Mitglied hat keinen Zugriff auf die Filterung der Abonnemente \\
+       \hline
+       Testmethode & Rspec Feature Test \\
+       \hline
+        Anforderung & 
+        \begin{itemize}
+         \item Nicht funktionale Anforderung 3
+         \end{itemize}  \\
+       \hline
+       Voraussetzungen & \texttt{sign\_in top\_leader} \\
+       \hline
+       Testszenario & 
+       \begin{itemize}
+         \item Auf globale Bedingungen der Abonnemente navigieren
+       \end{itemize} \\
+       \hline
+       Parameter & Keine \\
+       \hline
+       Erwartetes Resultat & 
+       \begin{itemize}
+         \item Globale Bedingungen können vom Benutzer nicht bearbeitet werden.
+       \end{itemize} \\
+     \hline
+     \end{tabular}
+     \caption{Testfall 15}
+\end{table}
+
+\newpage
+
+\begin{table}[h!]
+   \rowcolors{2}{puzzleblue!30}{white}
+   \begin{tabular}{|L{0.4\textwidth}|L{0.6\textwidth}|}
+       \hline
+       \rowcolor{puzzleblue} \multicolumn{2}{|l|}{\color{white}\textbf{Testfall Nr. 16}} \\[12pt]
+       \hline
+        Testname & Personenfilter kann abgespeichert werden \\
+       \hline
+       Testmethode & Rspec Feature Test \\
+       \hline
+        Anforderung & 
+        \begin{itemize}
+         \item Funktionale Anforderung 1
+         \end{itemize}  \\
+       \hline
+       Voraussetzungen & \texttt{sign\_in top\_leader} \\
+       \hline
+       Testszenario & 
+       \begin{itemize}
+         \item Neuen Personenfilter erfassen
+         \item Personenfilter abspeichern
+       \end{itemize} \\
+       \hline
+       Parameter & \begin{itemize}
+         \item Name des Personenfilters
+         \item Parameter für das jeweilige Filterkriterium
+       \end{itemize} \\
+       \hline
+       Erwartetes Resultat & 
+       \begin{itemize}
+         \item Personenfilter wurde abgespeichert und kann wiederverwendet werden
+       \end{itemize} \\
+     \hline
+     \end{tabular}
+     \caption{Testfall 16}
+\end{table}
+
+\newpage
+
+\begin{table}[h!]
+   \rowcolors{2}{puzzleblue!30}{white}
+   \begin{tabular}{|L{0.4\textwidth}|L{0.6\textwidth}|}
+       \hline
+       \rowcolor{puzzleblue} \multicolumn{2}{|l|}{\color{white}\textbf{Testfall Nr. 17}} \\[12pt]
+       \hline
+        Testname & Mitglied kann Personenfilter nicht abspeichern \\
+       \hline
+       Testmethode & Rspec Feature Test \\
+       \hline
+        Anforderung & 
+        \begin{itemize}
+         \item Nicht funktionale Anforderung 4
+         \end{itemize}  \\
+       \hline
+       Voraussetzungen & \texttt{sign\_in bottom\_member} \\
+       \hline
+       Testszenario & 
+       \begin{itemize}
+         \item Auf Personenliste navigieren
+       \end{itemize} \\
+       \hline
+       Parameter & Keine \\
+       \hline
+       Erwartetes Resultat & 
+       \begin{itemize}
+         \item Personenlisten werden nicht angezeigt und Benutzer kann somit keinen neuen Personenfilter erfassen.
+       \end{itemize} \\
+     \hline
+     \end{tabular}
+     \caption{Testfall 17}
+\end{table}
+
+\subsection{Begründung der Testwahl}
+Die Idee hinter dem verfassten Testkonzept, ist leicht auszumachende visuelle Änderungen manuell zu testen. Überprüfungen
+welche die Richtigkeit der Filterung sicherstellen, werden mit Featuretests abgehandelt, da die Richtigkeit bei einem grossen Datensatz
+durch manuelles Testen nicht garantiert werden kann.
+
+Des weiteren wird vermerkt, dass folgende Anforderungen nicht durch Tests abgedeckt wurden:
+
+\begin{itemize}
+   \item Nicht funktionale Anforderung 2
+   \item Nicht funktionale Anforderung 5
+\end{itemize}
+
+Da diese Anforderungen nicht durch Feature oder manuelle Tests abgedeckt werden können, werden diese Anforderungen
+durch regelmässige Eigenüberprüfung des Entwicklers sichergestellt. Abweichungen werden im Arbeitsjournal dokumentiert. 
+
+
+\newpage
 
 \chapter{Ausführung}
 \section{Einsatz von KI-Modellen}
