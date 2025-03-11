@@ -114,35 +114,39 @@
 \contentsline {subsection}{\numberline {13.6.3}Manuelle Tests}{106}{subsection.13.6.3}%
 \contentsline {subsection}{\numberline {13.6.4}Automatisierte Tests}{118}{subsection.13.6.4}%
 \contentsline {subsection}{\numberline {13.6.5}Begründung der Testwahl}{128}{subsection.13.6.5}%
-\contentsline {chapter}{\numberline {14}Ausführung}{129}{chapter.14}%
-\contentsline {section}{\numberline {14.1}Einsatz von KI-Modellen}{129}{section.14.1}%
-\contentsline {section}{\numberline {14.2}Gems}{129}{section.14.2}%
-\contentsline {subsection}{\numberline {14.2.1}can-can-can}{129}{subsection.14.2.1}%
-\contentsline {subsection}{\numberline {14.2.2}dry-crud}{129}{subsection.14.2.2}%
-\contentsline {chapter}{\numberline {15}Einführung}{130}{chapter.15}%
-\contentsline {section}{\numberline {15.1}Instruktion}{130}{section.15.1}%
-\contentsline {section}{\numberline {15.2}Unvorhergesehene Änderungen}{130}{section.15.2}%
-\contentsline {subsection}{\numberline {15.2.1}application.rb}{130}{subsection.15.2.1}%
-\contentsline {subsection}{\numberline {15.2.2}\_list.html.haml}{130}{subsection.15.2.2}%
-\contentsline {chapter}{\numberline {16}Sprintabschlüsse}{131}{chapter.16}%
-\contentsline {section}{\numberline {16.1}Abschluss Sprint Initialisierung}{131}{section.16.1}%
-\contentsline {subsection}{\numberline {16.1.1}Backlog}{131}{subsection.16.1.1}%
-\contentsline {section}{\numberline {16.2}Abschluss Sprint Umsetzung}{131}{section.16.2}%
-\contentsline {subsection}{\numberline {16.2.1}Backlog}{131}{subsection.16.2.1}%
-\contentsline {section}{\numberline {16.3}Abschluss Sprint Finalisierung}{131}{section.16.3}%
-\contentsline {subsection}{\numberline {16.3.1}Backlog}{131}{subsection.16.3.1}%
-\contentsline {part}{III\hspace {1em}Anhang und Verzeichnise}{132}{part.3}%
-\contentsline {chapter}{\numberline {17}Verzeichnise}{133}{chapter.17}%
-\contentsline {section}{\numberline {17.1}Code}{133}{section.17.1}%
-\contentsline {section}{\numberline {17.2}Tabellenverzeichnis}{133}{section.17.2}%
-\contentsline {section}{\numberline {17.3}Abbildungsverzeichnis}{135}{section.17.3}%
-\contentsline {subsection}{Quellenverzeichnis}{138}{chapter*.196}%
-\contentsline {chapter}{\numberline {18}Verwendete Abkürzungen}{139}{chapter.18}%
-\contentsline {chapter}{\numberline {19}Glossar}{140}{chapter.19}%
-\contentsline {chapter}{\numberline {20}Anhänge}{141}{chapter.20}%
-\contentsline {section}{\numberline {20.1}Git Commit Message Convention}{141}{section.20.1}%
-\contentsline {section}{\numberline {20.2}Sitzungsprotokolle}{142}{section.20.2}%
-\contentsline {subsection}{\numberline {20.2.1}Sitzung 1}{142}{subsection.20.2.1}%
-\contentsline {section}{\numberline {20.3}Git commit convention}{143}{section.20.3}%
-\contentsline {section}{\numberline {20.4}Security conventions}{143}{section.20.4}%
+\contentsline {chapter}{\numberline {14}Abschluss Sprint 1}{129}{chapter.14}%
+\contentsline {section}{\numberline {14.1}Sprint Diagramme}{130}{section.14.1}%
+\contentsline {subsection}{\numberline {14.1.1}Burnup}{130}{subsection.14.1.1}%
+\contentsline {subsection}{\numberline {14.1.2}User Story chart}{130}{subsection.14.1.2}%
+\contentsline {chapter}{\numberline {15}Ausführung}{131}{chapter.15}%
+\contentsline {section}{\numberline {15.1}Einsatz von KI-Modellen}{131}{section.15.1}%
+\contentsline {section}{\numberline {15.2}Gems}{131}{section.15.2}%
+\contentsline {subsection}{\numberline {15.2.1}can-can-can}{131}{subsection.15.2.1}%
+\contentsline {subsection}{\numberline {15.2.2}dry-crud}{131}{subsection.15.2.2}%
+\contentsline {chapter}{\numberline {16}Einführung}{132}{chapter.16}%
+\contentsline {section}{\numberline {16.1}Instruktion}{132}{section.16.1}%
+\contentsline {section}{\numberline {16.2}Unvorhergesehene Änderungen}{132}{section.16.2}%
+\contentsline {subsection}{\numberline {16.2.1}application.rb}{132}{subsection.16.2.1}%
+\contentsline {subsection}{\numberline {16.2.2}\_list.html.haml}{132}{subsection.16.2.2}%
+\contentsline {chapter}{\numberline {17}Sprintabschlüsse}{133}{chapter.17}%
+\contentsline {section}{\numberline {17.1}Abschluss Sprint Initialisierung}{133}{section.17.1}%
+\contentsline {subsection}{\numberline {17.1.1}Backlog}{133}{subsection.17.1.1}%
+\contentsline {section}{\numberline {17.2}Abschluss Sprint Umsetzung}{133}{section.17.2}%
+\contentsline {subsection}{\numberline {17.2.1}Backlog}{133}{subsection.17.2.1}%
+\contentsline {section}{\numberline {17.3}Abschluss Sprint Finalisierung}{133}{section.17.3}%
+\contentsline {subsection}{\numberline {17.3.1}Backlog}{133}{subsection.17.3.1}%
+\contentsline {part}{III\hspace {1em}Anhang und Verzeichnise}{134}{part.3}%
+\contentsline {chapter}{\numberline {18}Verzeichnise}{135}{chapter.18}%
+\contentsline {section}{\numberline {18.1}Code}{135}{section.18.1}%
+\contentsline {section}{\numberline {18.2}Tabellenverzeichnis}{135}{section.18.2}%
+\contentsline {section}{\numberline {18.3}Abbildungsverzeichnis}{137}{section.18.3}%
+\contentsline {subsection}{Quellenverzeichnis}{140}{chapter*.199}%
+\contentsline {chapter}{\numberline {19}Verwendete Abkürzungen}{141}{chapter.19}%
+\contentsline {chapter}{\numberline {20}Glossar}{142}{chapter.20}%
+\contentsline {chapter}{\numberline {21}Anhänge}{143}{chapter.21}%
+\contentsline {section}{\numberline {21.1}Git Commit Message Convention}{143}{section.21.1}%
+\contentsline {section}{\numberline {21.2}Sitzungsprotokolle}{144}{section.21.2}%
+\contentsline {subsection}{\numberline {21.2.1}Sitzung 1}{144}{subsection.21.2.1}%
+\contentsline {section}{\numberline {21.3}Git commit convention}{145}{section.21.3}%
+\contentsline {section}{\numberline {21.4}Security conventions}{145}{section.21.4}%
 \contentsfinish 
