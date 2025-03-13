@@ -2157,11 +2157,39 @@ Als Fazit werden im obenstehenden Bild die Verteilung der Status aller User Stor
 \section{Schnittstellen}
 Im Entwurf wurde definiert, dass pro Filterkriterium eine Schnittstelle (Endpoint) definiert wird. Während des Implementierens wurde diese Definition geändert.
 Grund dafür war die Erkenntniss, dass alle Filterkriterien über die gleichen Schnittstelle geladen werden können. Die Aufgabe der Schnittstelle ist es, 
-nur ein Partial zu rendern. Welches Partial gerendert werden muss, wird über einen mitgegebenen Parameter entschieden, welcher den Namen des Filterkriteriums trägt.
+ein Partial zu rendern. Welches Partial gerendert werden muss, wird über einen mitgegebenen Parameter entschieden, welcher den Namen des Filterkriteriums trägt.
 
-Ein Beispiel für einen Request auf diese Schnittstelle: 
+Die dafür implementierte Controller-Action wurde so definiert:
+\newline
 
-\texttt{https:://localhost 3000/people\_filters/tag} 
+\begin{lstlisting}[language=Ruby]
+   def filter_criterion
+    compose_role_lists
+    possible_tags
+    @filter_criterion = params[:filter_criterion]
+    if @filter_criteria.include?(@filter_criterion.to_sym)
+      respond_to do |format|
+        format.turbo_stream { render 'create', status: :ok }
+      end
+    end
+  end
+\end{lstlisting}
+
+Das Filterkriterium wird über den Parameter ``filter\_criterion'' identifiziert. Die Action wird bei jedem Request auf die Route 
+\texttt{http://localhost:3000/de/groups/1/people\_filters/:filter\_criterion} ausgeführt. Die Route wurde entsprechend in der Datei
+\texttt{routes.rb} hinterlegt
+\newline
+
+\begin{lstlisting}[language=Ruby]
+   # Turbo Routes
+   get 'people_filters/:filter_criterion' => 'people_filters#filter_criterion'
+\end{lstlisting}
+
+\newpage
+
+Ein Beispiel für einen Request auf diese Schnittstelle ist folgende Abfrage: 
+
+\texttt{https:://localhost:3000/people\_filters/tag} 
 
 Der Request kann folgendermassen aufgelöst werden:
 
@@ -2183,8 +2211,83 @@ Der Request kann folgendermassen aufgelöst werden:
 \end{table}
 
 Nach dem Muster des oben beschriebenen Requests können sämtliche Partials weiterer Kriterien gerendert werden.
-Alle Requests werden dabei von einer Controller-Action behandelt welche durch den Parameter \texttt{filter\_criterion}
-entscheidet welches Partial zurückgegeben wird.
+Um das Partial eines anderen Filterkriteriums zu rendern muss lediglich der Wert des Parameters ``filter\_criterion'' auf
+den Namen des anderen Filterkriteriums angepasst werden. Durch diese Implementation, müssen nicht wie ursprünglich geplant
+vier verschiedene Schnittstellen implementiert werden sondern nur eine Schnittstelle welche die Unterscheidung mit einem Parameter regelt.
+
+\newpage
+
+\section{Hinzufüge-Button}
+Während des Entwickelns traten auch beim Hinzufüge-Button Änderungen am Konzept auf. Das Hauptproblem war, dass 
+das der Button, nachdem alle Filterkriterien hinzugefügt wurden, nicht mit den Turbostreams entfernt werden konnte. 
+Als Alternative wurde der Stimulus Controller verwendet, der in der Variante 2 des Variantenentscheides vorgeschlagen wurde.
+
+Der Stimulus Controller wurde nach folgendem Schema aufgebaut:
+
+\begin{figure}[h]
+   \centering
+   \fbox{\includegraphics[width=0.6\textwidth,]{stimulus_controller.png}}
+   \caption{FilterDropdownController}
+\end{figure}
+
+
+Der Controller überwacht Änderungen am Hinzufüge-Dropdown. Wenn eine Option im Dropdown durch
+einen Turbostream entfernt wird, dann bekommt der Stimulus Controller diese Änderung mit. Der Controller prüft anschliessend ob das Dropdown andere Optionen besitzt.
+Wenn nicht, wird der Hinzufüge-Button entfernt. Der Controller kann die Änderungen nur erkennen wenn dieser korrekt im Template
+referenziert wird:
+\newline
+
+\begin{lstlisting}[language=Ruby]
+   %div.dropdown.ml-3{"data-controller": "filter-dropdown"}
+      %button.btn.dropdown-toggle{ type: 'button',  "data-bs-toggle": "dropdown", "aria-expanded": "false"}
+        %i.fa.fa-plus
+      %ul.dropdown-menu{"data-filter-dropdown-target": "menu"}
+        - @filter_criteria.each do |filter_criterion|
+          = link_to t("people_filters.#{filter_criterion}.title"), "/groups/#{@group.id}/people_filters/#{filter_criterion}",
+          class: "dropdown-item", id: "dropdown_option_#{filter_criterion}", data: {turbo_stream: true}
+\end{lstlisting}
+
+\newpage
+
+Auf Zeile 1 wird mit dem ``data-controller'' der Stimulus Controller registriert. Sobald diese Refernz einem Controller zugeordnet werden kann, wird 
+die \texttt{connect()}-Methode dieses Controllers ausgeführt.
+\newline
+
+\begin{lstlisting}[language=JavaScript]
+   connect() {
+    this.observer = new MutationObserver(this.checkIfEmpty.bind(this));
+    if (this.hasMenuTarget) {
+      this.observer.observe(this.menuTarget, { childList: true });
+    }
+  }
+\end{lstlisting}
+
+In unserem Fall wird ein MutationsObserver registriert, welcher prüft ob das registrierte Element
+leer ist. Damit dieser MutationsObserver auf die Dropdownliste der Filterkriterien registriert werden kann, muss
+die Dropdownliste mit allen Filterkriterien als ``Target'' erfasst werden.
+
+Dieses Target kann im Controller folgendermassen definiert werden:
+\newline
+
+\begin{lstlisting}[language=JavaScript]
+   static targets = ["menu"];
+\end{lstlisting}
+
+Wurde das Target sowohl im Stimulus Controller wie im Template mit dem gleichen Namen definiert, in diesem Fall ``menu'',
+kann das Target innerhalb des Stimulus Controller mit \texttt{this.menuTarget} angesprochen werden.
+Im Falle der Implementation, wird der MutationsObserver auf diesem Target registriert. Wann immer eine Änderung 
+an diesem Target durchgeführt wird, wird nach der Registrierung die Methode `checkIfEmpty()' ausgeführt:
+\newline
+
+\begin{lstlisting}[language=JavaScript]
+   checkIfEmpty() {
+    if (this.menuTarget.children.length === 0) {
+      this.element.remove();
+    }
+  }
+\end{lstlisting}
+
+Diese Methode entfernt den Hinzufüge-Button und das Dropdown mit allen Filterkriterien, sobald keine Optionen mehr darin verfügbar sind.
 
 
 \section{Einsatz von KI-Modellen}
