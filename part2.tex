@@ -2153,6 +2153,40 @@ Als Fazit werden im obenstehenden Bild die Verteilung der Status aller User Stor
 \newpage
 
 \chapter{Umsetzung}
+
+\section{Schnittstellen}
+Im Entwurf wurde definiert, dass pro Filterkriterium eine Schnittstelle (Endpoint) definiert wird. Während des Implementierens wurde diese Definition geändert.
+Grund dafür war die Erkenntniss, dass alle Filterkriterien über die gleichen Schnittstelle geladen werden können. Die Aufgabe der Schnittstelle ist es, 
+nur ein Partial zu rendern. Welches Partial gerendert werden muss, wird über einen mitgegebenen Parameter entschieden, welcher den Namen des Filterkriteriums trägt.
+
+Ein Beispiel für einen Request auf diese Schnittstelle: 
+
+\texttt{https:://localhost 3000/people\_filters/tag} 
+
+Der Request kann folgendermassen aufgelöst werden:
+
+\begin{table}[h!]
+   \begin{tabular}{|L{0.4\textwidth}|L{0.6\textwidth}|}
+       \hline
+       \rowcolor{puzzleblue} \multicolumn{2}{|l|}{\color{white}\textbf{Turbo Request}} \\[12pt]
+       \hline
+        Host & https://localhost:3000 \\
+       \hline
+       Ressource & /people\_filters \\
+       \hline
+        Wert des Parameters \texttt{filter\_criterion} & /tag \\
+       \hline
+       Funktion & Rendert das Tag-Partial \\
+     \hline
+     \end{tabular}
+     \caption{Turbo Request}
+\end{table}
+
+Nach dem Muster des oben beschriebenen Requests können sämtliche Partials weiterer Kriterien gerendert werden.
+Alle Requests werden dabei von einer Controller-Action behandelt welche durch den Parameter \texttt{filter\_criterion}
+entscheidet welches Partial zurückgegeben wird.
+
+
 \section{Einsatz von KI-Modellen}
 \section{Gems}
 \subsection{can-can-can}
