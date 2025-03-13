@@ -151,6 +151,6 @@
 \contentsline {section}{\numberline {22.1}Git Commit Message Convention}{153}{section.22.1}%
 \contentsline {section}{\numberline {22.2}Sitzungsprotokolle}{154}{section.22.2}%
 \contentsline {subsection}{\numberline {22.2.1}Sitzung 1}{154}{subsection.22.2.1}%
-\contentsline {section}{\numberline {22.3}Git commit convention}{155}{section.22.3}%
-\contentsline {section}{\numberline {22.4}Security conventions}{155}{section.22.4}%
+\contentsline {section}{\numberline {22.3}Git commit convention}{157}{section.22.3}%
+\contentsline {section}{\numberline {22.4}Security conventions}{157}{section.22.4}%
 \contentsfinish 
