@@ -2391,6 +2391,29 @@ Um das richtige Format zu übermitteln wurde das ``Name'' Attribut manuell in de
 Durch die Sicherstellung des korrekten Formats kann das Fitlerkriterium ``Felder'' erneut vom Controller interpertiert und 
 gespeichert werden.
 
+\section{Globale Bedingungen}
+Die Globalen Bedinungen der Abonnemente und der Personenfilter verwenden die gleichen Benutzerschnittstelle für das Filterkriterium ``Felder''.
+Durch die Anpassung der Benutzerschnittstelle des Filterkriteriums wurden die globalen Bedingungen dadurch indirekt auch angepasst.
+
+\begin{figure}[h]
+   \centering
+   \fbox{\includegraphics[width=0.8\textwidth,]{trash_icon.png}}
+   \caption{Globale Bedinungen}
+\end{figure}
+
+Anders als bei beim Personenfilter gibt es ist es nicht möglich, das Filterkriterium zu entfernen.
+Dies wurde so implementiert, um die alte Funktionalität nicht zu verändern sondern nur die Benutzerschnittstelle selbst anzupassen.
+Das Mülleimer-Symbol wie es bei den Filterkriterien des Personenfilters abgebildet ist, wurde durch eine Variable aus der Ansicht der globalen
+Bedingungen ausgeblendet:
+\newline
+
+\begin{lstlisting}[language=Ruby]
+   = render(layout: 'layouts/filter', locals: { entry: @mailing_list, type: :attributes, delete: false}) do
+\end{lstlisting}
+
+Die Variable ``delete'' gibt an ob das Symbol zur Löschung auf der Benutzerschnittstelle verfügbar sein soll. Beim Wert ``false''
+wir das Symbol ausgeblendet. Im Personenfilter ist die Variable stets auf ``true'' gesetzt.
+
 \section{Einsatz von KI-Modellen}
 \section{Gems}
 \subsection{can-can-can}
@@ -2399,10 +2422,6 @@ gespeichert werden.
 \chapter{Einführung}
 
 \section{Instruktion}
-
-\section{Unvorhergesehene Änderungen}
-\subsection{application.rb}
-\subsection{\_list.html.haml}
 
 \chapter{Sprintabschlüsse}
 
