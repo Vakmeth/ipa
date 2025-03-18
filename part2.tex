@@ -2233,7 +2233,11 @@ Der Stimulus Controller wurde nach folgendem Schema aufgebaut:
 
 Der Controller überwacht Änderungen am Hinzufüge-Dropdown. Wenn eine Option im Dropdown durch
 einen Turbostream entfernt wird, dann bekommt der Stimulus Controller diese Änderung mit. Der Controller prüft anschliessend ob das Dropdown andere Optionen besitzt.
-Wenn nicht, wird der Hinzufüge-Button entfernt. Der Controller kann die Änderungen nur erkennen wenn dieser korrekt im Template
+Wenn nicht, wird der Hinzufüge-Button entfernt. 
+
+\newpage
+
+Der Controller kann die Änderungen nur erkennen wenn dieser korrekt im Template
 referenziert wird:
 \newline
 
@@ -2246,8 +2250,6 @@ referenziert wird:
           = link_to t("people_filters.#{filter_criterion}.title"), "/groups/#{@group.id}/people_filters/#{filter_criterion}",
           class: "dropdown-item", id: "dropdown_option_#{filter_criterion}", data: {turbo_stream: true}
 \end{lstlisting}
-
-\newpage
 
 Auf Zeile 1 wird mit dem ``data-controller'' der Stimulus Controller registriert. Sobald diese Refernz einem Controller zugeordnet werden kann, wird 
 die \texttt{connect()}-Methode dieses Controllers ausgeführt.
@@ -2273,6 +2275,8 @@ Dieses Target kann im Controller folgendermassen definiert werden:
    static targets = ["menu"];
 \end{lstlisting}
 
+\newpage
+
 Wurde das Target sowohl im Stimulus Controller wie im Template mit dem gleichen Namen definiert, in diesem Fall ``menu'',
 kann das Target innerhalb des Stimulus Controller mit \texttt{this.menuTarget} angesprochen werden.
 Im Falle der Implementation, wird der MutationsObserver auf diesem Target registriert. Wann immer eine Änderung 
@@ -2289,6 +2293,103 @@ an diesem Target durchgeführt wird, wird nach der Registrierung die Methode `ch
 
 Diese Methode entfernt den Hinzufüge-Button und das Dropdown mit allen Filterkriterien, sobald keine Optionen mehr darin verfügbar sind.
 
+\section{Turbostreams}
+Mittels der Turbostreams wurden die einzelnen Ansichten der Filterkriterien aktualisiert. Wie im Abschnitt ``Schnittstellen'' erklärt waren im Entwurf
+ursprünglich für jedes Filterkriterium ein Turbostream angedacht. Durch die Verwendung nur einer Schnittstelle, wurde dementsprechen nur ein generischer Turbostream für 
+das Hinzufügen eines Filterkriteriums auf der Übersicht implementiert: 
+\newline
+
+\begin{lstlisting}[language=Ruby]
+   = turbo_stream.prepend "overview" do
+   %div{id: "#{@filter_criterion}-configuration"}
+      = render(layout: 'layouts/filter', locals: { type: @filter_criterion.to_sym }) do
+         = render @filter_criterion
+
+   = turbo_stream.remove "dropdown-option-#{@filter_criterion}"
+   = turbo_stream.remove "filter-advice"
+\end{lstlisting}
+
+Der Turbostream identifiziert das Filterkriterium mit der ``@filter\_criterion'' Variable.
+Anschliessend fügt der das Partial des identifizierten Filterkriteriums zur Übersicht hinzu und entfernt das Filterkriterium
+aus dem Hinzufüge-Dropdown. Zuletzt wird der Hinweis zur Benutzung des Hinzufüge-Dropdowns, bei noch nicht definierten Filterkriterien, entfernt.
+
+\newpage
+
+Nebst dem Turbostream welcher ein Filterkriterium zur Übersicht hinzufügt, wird ein Turbostream für die gegenteilige Aktion 
+benötigt:
+\newline
+
+\begin{lstlisting}[language=Ruby]
+   = turbo_stream.remove "#{@filter_criterion}-configuration"
+
+   = turbo_stream.append "filter-criteria-dropdown" do
+   = link_to t("people_filters.#{@filter_criterion}.title"), "/groups/#{@group.id}/people_filters/#{@filter_criterion}",
+            class: "dropdown-item", id: "dropdown-option-#{@filter_criterion}", data: {turbo_stream: true}
+\end{lstlisting}
+
+Dieser Turbostream entfernt das Filterkriterium aus der Übersicht und fügt es dem Hinzufüge-Dropdown hinzu.
+Die Aktion wird durch ein Mülleimer-Symbol auf der Box des Filterkriteriums ausgelöst:
+
+\begin{figure}[h]
+   \centering
+   \fbox{\includegraphics[width=0.8\textwidth,]{trash_icon.png}}
+   \caption{Filterkriterium ``Tag'' mit Mülleimer-Symbol}
+\end{figure}
+
+Somit sind zwei Turbostreams für alle vier Filterkriterien verantwortlich. Welche der beiden Turbostreams
+ausgeführt werden muss wird im Controller definiert. Die Definition basiert auf der HTTP-Methode des Requests.
+
+\subsection{Partials}
+Nebst der Implementation der Turbostreams wurden die Benutzerschnittstellen der Filterkriterien überarbeitet. Die Anpassungen
+wurden dem Mockup entsprechend durchgeführt. Alle Änderungen am Mockup wurden gemäss der Absprachen im Daily im Arbeitsjournal dokumentiert.
+
+\newpage
+
+\subsection{Name-Attribut auf dem Select-Feld}
+Um ein Dropdown in Ruby darzustellen wird ein ``select''-Element verwendet. Dieses Element wurde mehrfach für die Benutzerschnittstellen der 
+Filterkriterien verwendet. Für das Filterkriterium ``Felder'' wird dieses Element über Rubycode generiert und nicht als HAML in einem 
+Template hinterlegt. Während der Implementation wurde bekannt, dass dieses Element nicht mit der neuen Umsetzung funktioniert.
+Der Grund dafür lag beim Name-Attribut:
+\newline
+
+\begin{lstlisting}[language=Ruby]
+   select(:filters, "attributes[#{time}][constraint]",
+      filters,
+      {selected: constraint},
+      html_options.merge(class:
+                        'attribute_constraint_dropdown
+                                    ms-3 form-select form-select-sm'))   
+\end{lstlisting}
+
+Nach auf der Zeile 1 wird mit ``attributes[\#{time}][constraint]'' der ``Name'' dieses Elements definiert.
+Jedoch wird durch das Symbol ``:filters'' angegeben, dass es sich bei diesem Dropdown um ein Filter-Dropdown handelt.
+
+Rails generiert das ``Name'' Attribut aus diesen zwei Angaben. Die Ausgabe des ``Name'' Attributs kommt nach dieser 
+Generation so daher: 
+\newline
+
+\begin{lstlisting}[language=Javascript]
+    filters[attributes[time][constraint]] = value
+\end{lstlisting}
+
+Der Controller erwartet aber das Format:
+\newline
+
+\begin{lstlisting}[language=Javascript]
+   filters[attributes][time][constraint] = value
+\end{lstlisting}
+
+Man notiere, dass in dem zweiten Beispiel die Werte ``attributes'', ``time'' und ``constraint'' nicht
+im ``filters'' Array gespeichert sind.
+Um das richtige Format zu übermitteln wurde das ``Name'' Attribut manuell in den HTML Optionen überschrieben:
+\newline
+
+\begin{lstlisting}[language=Ruby]
+   html_options.merge(name: "filters[attributes][#{time}][constraint]")
+\end{lstlisting}
+
+Durch die Sicherstellung des korrekten Formats kann das Fitlerkriterium ``Felder'' erneut vom Controller interpertiert und 
+gespeichert werden.
 
 \section{Einsatz von KI-Modellen}
 \section{Gems}
