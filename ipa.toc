@@ -132,28 +132,30 @@
 \contentsline {section}{\numberline {16.6}Gems}{153}{section.16.6}%
 \contentsline {subsection}{\numberline {16.6.1}can-can-can}{153}{subsection.16.6.1}%
 \contentsline {subsection}{\numberline {16.6.2}dry-crud}{153}{subsection.16.6.2}%
-\contentsline {chapter}{\numberline {17}Einführung}{154}{chapter.17}%
-\contentsline {section}{\numberline {17.1}Instruktion}{154}{section.17.1}%
-\contentsline {chapter}{\numberline {18}Sprintabschlüsse}{155}{chapter.18}%
-\contentsline {section}{\numberline {18.1}Abschluss Sprint Initialisierung}{155}{section.18.1}%
-\contentsline {subsection}{\numberline {18.1.1}Backlog}{155}{subsection.18.1.1}%
-\contentsline {section}{\numberline {18.2}Abschluss Sprint Umsetzung}{155}{section.18.2}%
-\contentsline {subsection}{\numberline {18.2.1}Backlog}{155}{subsection.18.2.1}%
-\contentsline {section}{\numberline {18.3}Abschluss Sprint Finalisierung}{155}{section.18.3}%
-\contentsline {subsection}{\numberline {18.3.1}Backlog}{155}{subsection.18.3.1}%
-\contentsline {part}{III\hspace {1em}Anhang und Verzeichnise}{156}{part.3}%
-\contentsline {chapter}{\numberline {19}Verzeichnise}{157}{chapter.19}%
-\contentsline {section}{\numberline {19.1}Code}{157}{section.19.1}%
-\contentsline {section}{\numberline {19.2}Tabellenverzeichnis}{157}{section.19.2}%
-\contentsline {section}{\numberline {19.3}Abbildungsverzeichnis}{159}{section.19.3}%
-\contentsline {subsection}{Quellenverzeichnis}{163}{chapter*.206}%
-\contentsline {chapter}{\numberline {20}Verwendete Abkürzungen}{164}{chapter.20}%
-\contentsline {chapter}{\numberline {21}Glossar}{165}{chapter.21}%
-\contentsline {chapter}{\numberline {22}Anhänge}{166}{chapter.22}%
-\contentsline {section}{\numberline {22.1}Git Commit Message Convention}{166}{section.22.1}%
-\contentsline {section}{\numberline {22.2}Sitzungsprotokolle}{167}{section.22.2}%
-\contentsline {subsection}{\numberline {22.2.1}Sitzung 1}{167}{subsection.22.2.1}%
-\contentsline {subsection}{\numberline {22.2.2}Sitzung 2}{169}{subsection.22.2.2}%
-\contentsline {section}{\numberline {22.3}Git commit convention}{170}{section.22.3}%
-\contentsline {section}{\numberline {22.4}Security conventions}{170}{section.22.4}%
+\contentsline {section}{\numberline {16.7}Instruktion}{153}{section.16.7}%
+\contentsline {section}{\numberline {16.8}Testprotokoll}{153}{section.16.8}%
+\contentsline {subsection}{\numberline {16.8.1}Manuelle Tests}{153}{subsection.16.8.1}%
+\contentsline {subsection}{\numberline {16.8.2}Feature Tests}{156}{subsection.16.8.2}%
+\contentsline {subsection}{\numberline {16.8.3}Fazit}{160}{subsection.16.8.3}%
+\contentsline {chapter}{\numberline {17}Abschluss Sprint Umsetzung}{161}{chapter.17}%
+\contentsline {section}{\numberline {17.1}Backlog}{161}{section.17.1}%
+\contentsline {chapter}{\numberline {18}Einführung}{162}{chapter.18}%
+\contentsline {chapter}{\numberline {19}Abschluss Sprint Finalisierung}{163}{chapter.19}%
+\contentsline {section}{\numberline {19.1}Backlog}{163}{section.19.1}%
+\contentsline {chapter}{\numberline {20}Sprintabschlüsse}{164}{chapter.20}%
+\contentsline {part}{III\hspace {1em}Anhang und Verzeichnise}{165}{part.3}%
+\contentsline {chapter}{\numberline {21}Verzeichnise}{166}{chapter.21}%
+\contentsline {section}{\numberline {21.1}Code}{166}{section.21.1}%
+\contentsline {section}{\numberline {21.2}Tabellenverzeichnis}{166}{section.21.2}%
+\contentsline {section}{\numberline {21.3}Abbildungsverzeichnis}{168}{section.21.3}%
+\contentsline {subsection}{Quellenverzeichnis}{172}{chapter*.223}%
+\contentsline {chapter}{\numberline {22}Verwendete Abkürzungen}{173}{chapter.22}%
+\contentsline {chapter}{\numberline {23}Glossar}{174}{chapter.23}%
+\contentsline {chapter}{\numberline {24}Anhänge}{175}{chapter.24}%
+\contentsline {section}{\numberline {24.1}Git Commit Message Convention}{175}{section.24.1}%
+\contentsline {section}{\numberline {24.2}Sitzungsprotokolle}{176}{section.24.2}%
+\contentsline {subsection}{\numberline {24.2.1}Sitzung 1}{176}{subsection.24.2.1}%
+\contentsline {subsection}{\numberline {24.2.2}Sitzung 2}{178}{subsection.24.2.2}%
+\contentsline {section}{\numberline {24.3}Git commit convention}{179}{section.24.3}%
+\contentsline {section}{\numberline {24.4}Security conventions}{179}{section.24.4}%
 \contentsfinish 

@@ -65,5 +65,7 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {22.1}{\ignorespaces Puzzle ITC Git commit conventions\relax }}{166}{figure.caption.209}%
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {24.1}{\ignorespaces Puzzle ITC Git commit conventions\relax }}{175}{figure.caption.226}%
 \contentsfinish 
