@@ -1,32 +1,80 @@
-\section{Tag 9: Datum}
+\section{Tag 9: 18.03}
 \begin{table}[H]
     \begin{tabular}{|L{0.4\textwidth}|C{60pt}|C{60pt}|C{60pt}|}
         \hline
         \rowcolor{puzzleblue}\color{white}Tätigkeiten & \color{white}Beteiligte \color{white}Personen & \color{white}Aufwand Geplant (std) & \color{white}Aufwand Effektiv (std) \\
         \hline
-         Tätigkeit & Personen & Stunden soll & Stunden ist \\
+         Turbostreams implementieren & Marc Egli & 0 & 0.75 \\
         \hline
-        \textbf{Total} &  & Gesamtstunden soll & Gesamtstunden ist \\
+        Daily abhalten & Marc Egli & 0.25 & 0.25 \\
+        \hline
+        Globale Bedingungen bearbeiten & Marc Egli & 0 & 1 \\
+        \hline
+        Feature Tests schreiben & Marc Egli & 3.25 & 4 \\
+        \hline
+        Manuelle Tests durchführen & Marc Egli & 1 & 1 \\
+        \hline
+        KI-Dokumentation schreiben & Marc Egli & 2 & 0.5 \\
+        \hline
+        Instruktion schreiben und durchführen & Marc Egli & 1 & 0 \\
+        \hline
+        Arbeitsjournal schreiben & Marc Egli & 0.25 & 0.25 \\
+        \hline
+        \textbf{Total} &  & 7.75  & 7.75 \\
         \hline
     \end{tabular}
-    \caption{Tätigkeiten Tag 1}
+    \caption{Tätigkeiten Tag 9}
 \end{table}
 
 \subsection*{Tagesablauf}
+Heute begann ich mit den letzten Anpassungen an den Turbostreams. Diese waren recht schnell erledigt und ich konnte alle restlichen funktionalen und nicht
+funktionalen Anforderungen meines Anforderungskatalogs abdecken. Dann starteten wir wie immer mit dem Daily um 09:00 Uhr.
+Im Daily sprach ich zu Beginn eine Anpassung am Mockup an, welche mir im Schlaf über das Wochenende zugekommen ist. Es wäre für den Benutzer doch viel sinnvoller, 
+wenn er die Eingaben direkt im Formular machen könnte, ohne zuerst auf ein Bearbeiten-Symbol zu klicken. So müsste er nur auf die Benutzerschnittstelle der Filterung navigieren
+und anschliessend die neuen Werte eingeben. Daniel Illi meinte zu der Idee, das er sie als Stakeholder so akzeptiert. 
+Des weiteren habe ich mit Daniel Illi einen Termin für das Durchführen der Instruktion vereinbart. 
+
+Nach dem Daily begann ich mit dem Bearbeiten der globalen Bedingungen. Ich bekam diese schnell durch und startete direkt mit den Featuretests.
+Während dem Schreiben der Tests hatte ich stets mein Testkonzept zur Hand. Bei dem Testfall Nr. 17 merkte ich, dass dieser nicht nötig ist, da bereits der Testfall Nr. 12
+den Zugriff des Benutzers auf die Personenfilterung abdeckt. Falls der Zugriff nicht gegeben ist, kann der Benutzer auch den Personenfilter in der Benutzerschnittstelle nicht einsehen.
+Dementsprechend habe ich den Testfall verworfen und dies im Testprotokoll so dokumentiert. 
+
+Später kam bei mir dann noch eine Frage bezüglich dem Stubben von Umgebungsvariablen auf. Ein Fehleralert wird im Hitobito nur angezeigt,
+falls die Umgebung auf Produktion gestellt ist. Da mir nicht klar war, wie ich diese Umgebungsvariable stubben kann, schrieb ich Daniel Illi auf dem Puzzle Chat und bat ihn um 
+Hilfe. Da er im Moment noch ein Meeting hatte, schrieb er mir, dass er später persönlich vorbei komme. Mit Daniel Illi konnte ich das Problem anschliessend lösen und 
+die restlichen Tests implementieren.
+
+Zuletzt führte ich die manuellen Tests durch und begann mit der Dokumentation der Verwendung von KI in dieser IPA.
 
 \subsection*{Hilfestellungen}
 \begin{itemize}
-    \item Person: Hilfestellung
+    \item Daniel Illi und Robin Steiner: Mockup Änderung und Terminvereinbarung Instruktion
+    \item Daniel Illi: Stubbing von Umgebungsvariablen
 \end{itemize}
 
 \subsection*{Reflexion}
 
 \subsubsection*{Was lief gut}
+Trotz des Verzuges im Zeitplan konnte ich die Implementation meiner IPA abschliessen. Der Code steht und funktioniert auch, was durch meine
+Tests bewiesen wird. Dies erleichtert mich sehr, da ich von diesem Teil der IPA am meisten Respekt hatte. Zudem bin ich im Zeitplan wieder auf Kurs
+und denke das ich das Ende wie geplant. 
 
 \subsubsection*{Was lief weniger gut}
+Ein Teil von mir hatte gehofft, mit den Featuretests schnell fertig zu werden, um noch mehr Zeit zu gewinnen. Allerdings, hatte ich während des Schreibens der Tests
+immer wieder Konzentrationsprobleme. Das Testen ist für mich schlichtweg nicht der schöne Teil der Entwickelerarbeit. Umso erleichterter bin ich nun, 
+da alle Testfälle nach Testkonzept umgesetzt werden konnten. 
 
 \subsubsection*{Meine Erkenntnisse von heute}
+Wie ich realisiert habe, wurde der Zeitblock für die User-Story ``Turbostreams implementieren'' im Zeitplan massiv zu gross. Im Nachhinein, wäre es 
+besser gewesen ich hätte diese User-Story in weitere, kleinere User Stories unterteilt. Zum Beispiel hätte ich 
+eine User-Story für die Turbostreams und dann für jede Überabeitung der Benutzerschnittstelle eines Filterkriteriums eine User Story machen können.
+Meine Erkenntniss dadurch ist, nicht probieren allzu viele Aufgaben in einem Ticket zusammenzufassen. Besser ist es, kleine Blöcke zu machen.
+Das macht die Abnahme der Akzeptanzkriterien im Sprint Review auch einfacher.
 
 \subsection*{Nächste Schritte}
+Morgen werde ich zuerst die Dokumentation zur Verwendung von KI in meiner IPA fertigstellen.
+Danach bereite ich die Instruktion vor. Wenn beides erledigt ist, mache ich den Sprintabschluss für die Umsetzungsphase. 
+Ich werde danach das Sprintplanning für den letzten Sprint durchführen und alle Tickets für die Detailarbeiten an der Dokumentation verfassen.
+Das Ziel für morgen ist es, den Umsetzungssprint abzuschliessen und alles bereit für den letzten Sprint der Finalisierung zu haben.
 
 \pagebreak
