@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2025.1.13)  19 MAR 2025 12:12
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2025.1.13)  20 MAR 2025 08:51
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -2224,7 +2224,22 @@ Overfull \hbox (26.79134pt too wide) has occurred while \output is active
  [][]|
  []
 
-[58] (./journal/tag10.tex)
+[58] (./journal/tag10.tex
+File: bilder//puzzle_tagline_blau.png Graphic file (type png)
+<use bilder//puzzle_tagline_blau.png>
+Package pdftex.def Info: bilder//puzzle_tagline_blau.png  used on input line 45.
+(pdftex.def)             Requested size: 82.51282pt x 21.55902pt.
+
+Overfull \hbox (26.79134pt too wide) has occurred while \output is active
+[][]|  
+ []
+
+
+Overfull \hbox (26.79134pt too wide) has occurred while \output is active
+ [][]|
+ []
+
+[59])
 File: bilder//puzzle_tagline_blau.png Graphic file (type png)
 <use bilder//puzzle_tagline_blau.png>
 Package pdftex.def Info: bilder//puzzle_tagline_blau.png  used on input line 583.
@@ -2239,7 +2254,7 @@ Overfull \hbox (26.79134pt too wide) has occurred while \output is active
  [][]|
  []
 
-[59] (./journal/tag11.tex)
+[60] (./journal/tag11.tex)
 File: bilder//puzzle_tagline_blau.png Graphic file (type png)
 <use bilder//puzzle_tagline_blau.png>
 Package pdftex.def Info: bilder//puzzle_tagline_blau.png  used on input line 584.
@@ -2254,7 +2269,7 @@ Overfull \hbox (26.79134pt too wide) has occurred while \output is active
  [][]|
  []
 
-[60] (./journal/tag12.tex)
+[61] (./journal/tag12.tex)
 File: bilder//puzzle_tagline_blau.png Graphic file (type png)
 <use bilder//puzzle_tagline_blau.png>
 Package pdftex.def Info: bilder//puzzle_tagline_blau.png  used on input line 585.
@@ -2269,7 +2284,7 @@ Overfull \hbox (26.79134pt too wide) has occurred while \output is active
  [][]|
  []
 
-[61]
+[62]
 Kapitel 10.
 )
 File: bilder//puzzle_tagline_blau.png Graphic file (type png)
@@ -2286,7 +2301,7 @@ Overfull \hbox (26.79134pt too wide) has occurred while \output is active
  [][]|
  []
 
-[62
+[63
 
 ]
 \openout2 = `part2.aux'.
@@ -2312,14 +2327,14 @@ Overfull \hbox (26.79134pt too wide) has occurred while \output is active
  [][]|
  []
 
-[63
+[64
 
 
 
 
 ]
 Kapitel 11.
-<bilder//puzzle-house.png, id=1274, 983.675pt x 554.07pt>
+<bilder//puzzle-house.png, id=1278, 983.675pt x 554.07pt>
 File: bilder//puzzle-house.png Graphic file (type png)
 <use bilder//puzzle-house.png>
 Package pdftex.def Info: bilder//puzzle-house.png  used on input line 18.
@@ -2338,7 +2353,7 @@ Overfull \hbox (26.79134pt too wide) has occurred while \output is active
  [][]|
  []
 
-[64
+[65
 
  <./bilder//puzzle-house.png>]
 File: bilder//puzzle_tagline_blau.png Graphic file (type png)
@@ -2355,9 +2370,9 @@ Overfull \hbox (26.79134pt too wide) has occurred while \output is active
  [][]|
  []
 
-[65]
+[66]
 Kapitel 12.
-<bilder//group_overview.png, id=1285, 1136.245pt x 442.65375pt>
+<bilder//group_overview.png, id=1290, 1136.245pt x 442.65375pt>
 File: bilder//group_overview.png Graphic file (type png)
 <use bilder//group_overview.png>
 Package pdftex.def Info: bilder//group_overview.png  used on input line 62.
@@ -2381,10 +2396,10 @@ Overfull \hbox (26.79134pt too wide) has occurred while \output is active
  [][]|
  []
 
-[66
+[67
 
  <./bilder//group_overview.png>]
-<bilder//people_overview.png, id=1293, 1364.09625pt x 430.60875pt>
+<bilder//people_overview.png, id=1297, 1364.09625pt x 430.60875pt>
 File: bilder//people_overview.png Graphic file (type png)
 <use bilder//people_overview.png>
 Package pdftex.def Info: bilder//people_overview.png  used on input line 71.
@@ -2394,7 +2409,7 @@ Overfull \hbox (6.79999pt too wide) in paragraph at lines 71--72
  [][] 
  []
 
-<bilder//filter_selection.png, id=1294, 1364.09625pt x 430.60875pt>
+<bilder//filter_selection.png, id=1298, 1364.09625pt x 430.60875pt>
 File: bilder//filter_selection.png Graphic file (type png)
 <use bilder//filter_selection.png>
 Package pdftex.def Info: bilder//filter_selection.png  used on input line 80.
@@ -2418,8 +2433,8 @@ Overfull \hbox (26.79134pt too wide) has occurred while \output is active
  [][]|
  []
 
-[67 <./bilder//people_overview.png> <./bilder//filter_selection.png>]
-<bilder//filter_overview.png, id=1303, 1364.09625pt x 717.68124pt>
+[68 <./bilder//people_overview.png> <./bilder//filter_selection.png>]
+<bilder//filter_overview.png, id=1307, 1364.09625pt x 717.68124pt>
 File: bilder//filter_overview.png Graphic file (type png)
 <use bilder//filter_overview.png>
 Package pdftex.def Info: bilder//filter_overview.png  used on input line 95.
@@ -2443,8 +2458,8 @@ Overfull \hbox (26.79134pt too wide) has occurred while \output is active
  [][]|
  []
 
-[68 <./bilder//filter_overview.png>]
-<bilder//role_overview.png, id=1310, 1364.09625pt x 752.8125pt>
+[69 <./bilder//filter_overview.png>]
+<bilder//role_overview.png, id=1315, 1364.09625pt x 752.8125pt>
 File: bilder//role_overview.png Graphic file (type png)
 <use bilder//role_overview.png>
 Package pdftex.def Info: bilder//role_overview.png  used on input line 113.
@@ -2454,7 +2469,7 @@ Overfull \hbox (6.79999pt too wide) in paragraph at lines 113--114
  [][] 
  []
 
-<bilder//additional_role_options.png, id=1311, 1364.09625pt x 210.7875pt>
+<bilder//additional_role_options.png, id=1316, 1364.09625pt x 210.7875pt>
 File: bilder//additional_role_options.png Graphic file (type png)
 <use bilder//additional_role_options.png>
 Package pdftex.def Info: bilder//additional_role_options.png  used on input line 119.
@@ -2478,8 +2493,8 @@ Overfull \hbox (26.79134pt too wide) has occurred while \output is active
  [][]|
  []
 
-[69 <./bilder//role_overview.png> <./bilder//additional_role_options.png>]
-<bilder//qualification_overview.png, id=1321, 1364.09625pt x 782.925pt>
+[70 <./bilder//role_overview.png> <./bilder//additional_role_options.png>]
+<bilder//qualification_overview.png, id=1325, 1364.09625pt x 782.925pt>
 File: bilder//qualification_overview.png Graphic file (type png)
 <use bilder//qualification_overview.png>
 Package pdftex.def Info: bilder//qualification_overview.png  used on input line 134.
@@ -2489,7 +2504,7 @@ Overfull \hbox (6.79999pt too wide) in paragraph at lines 134--135
  [][] 
  []
 
-<bilder//field_overview.png, id=1322, 1364.09625pt x 471.7625pt>
+<bilder//field_overview.png, id=1326, 1364.09625pt x 471.7625pt>
 File: bilder//field_overview.png Graphic file (type png)
 <use bilder//field_overview.png>
 Package pdftex.def Info: bilder//field_overview.png  used on input line 143.
@@ -2513,7 +2528,7 @@ Overfull \hbox (26.79134pt too wide) has occurred while \output is active
  [][]|
  []
 
-[70 <./bilder//qualification_overview.png> <./bilder//field_overview.png>]
+[71 <./bilder//qualification_overview.png> <./bilder//field_overview.png>]
 Overfull \hbox (25.19998pt too wide) in paragraph at lines 152--187
 [][] 
  []
@@ -2532,8 +2547,8 @@ Overfull \hbox (26.79134pt too wide) has occurred while \output is active
  [][]|
  []
 
-[71]
-<bilder//language_overview.png, id=1336, 1364.09625pt x 423.5825pt>
+[72]
+<bilder//language_overview.png, id=1341, 1364.09625pt x 423.5825pt>
 File: bilder//language_overview.png Graphic file (type png)
 <use bilder//language_overview.png>
 Package pdftex.def Info: bilder//language_overview.png  used on input line 218.
@@ -2543,7 +2558,7 @@ Overfull \hbox (6.79999pt too wide) in paragraph at lines 218--219
  [][] 
  []
 
-<bilder//tag_overview.png, id=1337, 1364.09625pt x 600.2425pt>
+<bilder//tag_overview.png, id=1342, 1364.09625pt x 600.2425pt>
 File: bilder//tag_overview.png Graphic file (type png)
 <use bilder//tag_overview.png>
 Package pdftex.def Info: bilder//tag_overview.png  used on input line 229.
@@ -2567,8 +2582,8 @@ Overfull \hbox (26.79134pt too wide) has occurred while \output is active
  [][]|
  []
 
-[72 <./bilder//language_overview.png> <./bilder//tag_overview.png>]
-<bilder//saving_filter.png, id=1347, 1364.09625pt x 577.15625pt>
+[73 <./bilder//language_overview.png> <./bilder//tag_overview.png>]
+<bilder//saving_filter.png, id=1351, 1364.09625pt x 577.15625pt>
 File: bilder//saving_filter.png Graphic file (type png)
 <use bilder//saving_filter.png>
 Package pdftex.def Info: bilder//saving_filter.png  used on input line 242.
@@ -2592,7 +2607,7 @@ Overfull \hbox (26.79134pt too wide) has occurred while \output is active
  [][]|
  []
 
-[73 <./bilder//saving_filter.png>]
+[74 <./bilder//saving_filter.png>]
 File: bilder//group_overview.png Graphic file (type png)
 <use bilder//group_overview.png>
 Package pdftex.def Info: bilder//group_overview.png  used on input line 257.
@@ -2602,7 +2617,7 @@ Overfull \hbox (6.79999pt too wide) in paragraph at lines 257--258
  [][] 
  []
 
-<bilder//subscription_overview.png, id=1354, 1363.0925pt x 378.41376pt>
+<bilder//subscription_overview.png, id=1358, 1363.0925pt x 378.41376pt>
 File: bilder//subscription_overview.png Graphic file (type png)
 <use bilder//subscription_overview.png>
 Package pdftex.def Info: bilder//subscription_overview.png  used on input line 265.
@@ -2626,8 +2641,8 @@ Overfull \hbox (26.79134pt too wide) has occurred while \output is active
  [][]|
  []
 
-[74 <./bilder//subscription_overview.png>]
-<bilder//single_subscription_overview.png, id=1362, 1363.0925pt x 348.30125pt>
+[75 <./bilder//subscription_overview.png>]
+<bilder//single_subscription_overview.png, id=1366, 1363.0925pt x 348.30125pt>
 File: bilder//single_subscription_overview.png Graphic file (type png)
 <use bilder//single_subscription_overview.png>
 Package pdftex.def Info: bilder//single_subscription_overview.png  used on input line 278.
@@ -2637,7 +2652,7 @@ Overfull \hbox (6.79999pt too wide) in paragraph at lines 278--279
  [][] 
  []
 
-<bilder//subscription_filter_overview.png, id=1363, 1363.0925pt x 886.31125pt>
+<bilder//subscription_filter_overview.png, id=1367, 1363.0925pt x 886.31125pt>
 File: bilder//subscription_filter_overview.png Graphic file (type png)
 <use bilder//subscription_filter_overview.png>
 Package pdftex.def Info: bilder//subscription_filter_overview.png  used on input line 288.
@@ -2661,8 +2676,8 @@ Overfull \hbox (26.79134pt too wide) has occurred while \output is active
  [][]|
  []
 
-[75 <./bilder//single_subscription_overview.png> <./bilder//subscription_filter_overview.png>]
-<bilder//global_conditions_overview.png, id=1372, 1363.0925pt x 560.0925pt>
+[76 <./bilder//single_subscription_overview.png> <./bilder//subscription_filter_overview.png>]
+<bilder//global_conditions_overview.png, id=1376, 1363.0925pt x 560.0925pt>
 File: bilder//global_conditions_overview.png Graphic file (type png)
 <use bilder//global_conditions_overview.png>
 Package pdftex.def Info: bilder//global_conditions_overview.png  used on input line 302.
@@ -2686,8 +2701,8 @@ Overfull \hbox (26.79134pt too wide) has occurred while \output is active
  [][]|
  []
 
-[76 <./bilder//global_conditions_overview.png>]
-<bilder//mockup_nofilter_overview.png, id=1379, 745.78625pt x 671.50874pt>
+[77 <./bilder//global_conditions_overview.png>]
+<bilder//mockup_nofilter_overview.png, id=1383, 745.78625pt x 671.50874pt>
 File: bilder//mockup_nofilter_overview.png Graphic file (type png)
 <use bilder//mockup_nofilter_overview.png>
 Package pdftex.def Info: bilder//mockup_nofilter_overview.png  used on input line 321.
@@ -2706,8 +2721,8 @@ Overfull \hbox (26.79134pt too wide) has occurred while \output is active
  [][]|
  []
 
-[77 <./bilder//mockup_nofilter_overview.png>]
-<bilder//mockup_two_filters.png, id=1386, 748.7975pt x 857.2025pt>
+[78 <./bilder//mockup_nofilter_overview.png>]
+<bilder//mockup_two_filters.png, id=1391, 748.7975pt x 857.2025pt>
 File: bilder//mockup_two_filters.png Graphic file (type png)
 <use bilder//mockup_two_filters.png>
 Package pdftex.def Info: bilder//mockup_two_filters.png  used on input line 338.
@@ -2726,8 +2741,8 @@ Overfull \hbox (26.79134pt too wide) has occurred while \output is active
  [][]|
  []
 
-[78 <./bilder//mockup_two_filters.png>]
-<bilder//mockup_roles_qualifications.png, id=1394, 695.59875pt x 877.2775pt>
+[79 <./bilder//mockup_two_filters.png>]
+<bilder//mockup_roles_qualifications.png, id=1398, 695.59875pt x 877.2775pt>
 File: bilder//mockup_roles_qualifications.png Graphic file (type png)
 <use bilder//mockup_roles_qualifications.png>
 Package pdftex.def Info: bilder//mockup_roles_qualifications.png  used on input line 353.
@@ -2746,8 +2761,8 @@ Overfull \hbox (26.79134pt too wide) has occurred while \output is active
  [][]|
  []
 
-[79 <./bilder//mockup_roles_qualifications.png>]
-<bilder//mockup_attributes.png, id=1401, 674.52pt x 238.8925pt>
+[80 <./bilder//mockup_roles_qualifications.png>]
+<bilder//mockup_attributes.png, id=1405, 674.52pt x 238.8925pt>
 File: bilder//mockup_attributes.png Graphic file (type png)
 <use bilder//mockup_attributes.png>
 Package pdftex.def Info: bilder//mockup_attributes.png  used on input line 369.
@@ -2766,8 +2781,8 @@ Overfull \hbox (26.79134pt too wide) has occurred while \output is active
  [][]|
  []
 
-[80 <./bilder//mockup_attributes.png>]
-<bilder//mockup_roles.png, id=1408, 674.52pt x 351.3125pt>
+[81 <./bilder//mockup_attributes.png>]
+<bilder//mockup_roles.png, id=1412, 674.52pt x 351.3125pt>
 File: bilder//mockup_roles.png Graphic file (type png)
 <use bilder//mockup_roles.png>
 Package pdftex.def Info: bilder//mockup_roles.png  used on input line 385.
@@ -2786,13 +2801,13 @@ Overfull \hbox (26.79134pt too wide) has occurred while \output is active
  [][]|
  []
 
-[81 <./bilder//mockup_roles.png>]
-<bilder//mockup_qualifications.png, id=1415, 674.52pt x 348.30125pt>
+[82 <./bilder//mockup_roles.png>]
+<bilder//mockup_qualifications.png, id=1419, 674.52pt x 348.30125pt>
 File: bilder//mockup_qualifications.png Graphic file (type png)
 <use bilder//mockup_qualifications.png>
 Package pdftex.def Info: bilder//mockup_qualifications.png  used on input line 399.
 (pdftex.def)             Requested size: 320.00122pt x 165.24286pt.
-<bilder//mockup_tags.png, id=1416, 674.52pt x 194.7275pt>
+<bilder//mockup_tags.png, id=1420, 674.52pt x 194.7275pt>
 File: bilder//mockup_tags.png Graphic file (type png)
 <use bilder//mockup_tags.png>
 Package pdftex.def Info: bilder//mockup_tags.png  used on input line 409.
@@ -2811,7 +2826,7 @@ Overfull \hbox (26.79134pt too wide) has occurred while \output is active
  [][]|
  []
 
-[82 <./bilder//mockup_qualifications.png> <./bilder//mockup_tags.png>]
+[83 <./bilder//mockup_qualifications.png> <./bilder//mockup_tags.png>]
 File: bilder//puzzle_tagline_blau.png Graphic file (type png)
 <use bilder//puzzle_tagline_blau.png>
 Package pdftex.def Info: bilder//puzzle_tagline_blau.png  used on input line 421.
@@ -2826,7 +2841,7 @@ Overfull \hbox (26.79134pt too wide) has occurred while \output is active
  [][]|
  []
 
-[83]
+[84]
 File: bilder//puzzle_tagline_blau.png Graphic file (type png)
 <use bilder//puzzle_tagline_blau.png>
 Package pdftex.def Info: bilder//puzzle_tagline_blau.png  used on input line 448.
@@ -2841,7 +2856,7 @@ Overfull \hbox (26.79134pt too wide) has occurred while \output is active
  [][]|
  []
 
-[84]
+[85]
 File: bilder//puzzle_tagline_blau.png Graphic file (type png)
 <use bilder//puzzle_tagline_blau.png>
 Package pdftex.def Info: bilder//puzzle_tagline_blau.png  used on input line 475.
@@ -2856,7 +2871,7 @@ Overfull \hbox (26.79134pt too wide) has occurred while \output is active
  [][]|
  []
 
-[85]
+[86]
 File: bilder//puzzle_tagline_blau.png Graphic file (type png)
 <use bilder//puzzle_tagline_blau.png>
 Package pdftex.def Info: bilder//puzzle_tagline_blau.png  used on input line 506.
@@ -2871,7 +2886,7 @@ Overfull \hbox (26.79134pt too wide) has occurred while \output is active
  [][]|
  []
 
-[86]
+[87]
 File: bilder//puzzle_tagline_blau.png Graphic file (type png)
 <use bilder//puzzle_tagline_blau.png>
 Package pdftex.def Info: bilder//puzzle_tagline_blau.png  used on input line 530.
@@ -2886,7 +2901,7 @@ Overfull \hbox (26.79134pt too wide) has occurred while \output is active
  [][]|
  []
 
-[87]
+[88]
 File: bilder//puzzle_tagline_blau.png Graphic file (type png)
 <use bilder//puzzle_tagline_blau.png>
 Package pdftex.def Info: bilder//puzzle_tagline_blau.png  used on input line 553.
@@ -2901,7 +2916,7 @@ Overfull \hbox (26.79134pt too wide) has occurred while \output is active
  [][]|
  []
 
-[88]
+[89]
 File: bilder//puzzle_tagline_blau.png Graphic file (type png)
 <use bilder//puzzle_tagline_blau.png>
 Package pdftex.def Info: bilder//puzzle_tagline_blau.png  used on input line 574.
@@ -2916,7 +2931,7 @@ Overfull \hbox (26.79134pt too wide) has occurred while \output is active
  [][]|
  []
 
-[89]
+[90]
 File: bilder//puzzle_tagline_blau.png Graphic file (type png)
 <use bilder//puzzle_tagline_blau.png>
 Package pdftex.def Info: bilder//puzzle_tagline_blau.png  used on input line 595.
@@ -2931,7 +2946,7 @@ Overfull \hbox (26.79134pt too wide) has occurred while \output is active
  [][]|
  []
 
-[90]
+[91]
 File: bilder//puzzle_tagline_blau.png Graphic file (type png)
 <use bilder//puzzle_tagline_blau.png>
 Package pdftex.def Info: bilder//puzzle_tagline_blau.png  used on input line 613.
@@ -2946,7 +2961,7 @@ Overfull \hbox (26.79134pt too wide) has occurred while \output is active
  [][]|
  []
 
-[91]
+[92]
 File: bilder//puzzle_tagline_blau.png Graphic file (type png)
 <use bilder//puzzle_tagline_blau.png>
 Package pdftex.def Info: bilder//puzzle_tagline_blau.png  used on input line 635.
@@ -2961,7 +2976,7 @@ Overfull \hbox (26.79134pt too wide) has occurred while \output is active
  [][]|
  []
 
-[92]
+[93]
 Overfull \hbox (10.00363pt too wide) in paragraph at lines 639--653
 [][] 
  []
@@ -2981,7 +2996,7 @@ Overfull \hbox (26.79134pt too wide) has occurred while \output is active
  [][]|
  []
 
-[93]
+[94]
 Kapitel 13.
 File: bilder//puzzle_tagline_blau.png Graphic file (type png)
 <use bilder//puzzle_tagline_blau.png>
@@ -2997,7 +3012,7 @@ Overfull \hbox (26.79134pt too wide) has occurred while \output is active
  [][]|
  []
 
-[94
+[95
 
 ]
 Overfull \hbox (65.20242pt too wide) in paragraph at lines 25--41
@@ -3018,8 +3033,8 @@ Overfull \hbox (26.79134pt too wide) has occurred while \output is active
  [][]|
  []
 
-[95]
-<bilder//permissions_1.png, id=1491, 713.66624pt x 492.84125pt>
+[96]
+<bilder//permissions_1.png, id=1496, 713.66624pt x 492.84125pt>
 File: bilder//permissions_1.png Graphic file (type png)
 <use bilder//permissions_1.png>
 Package pdftex.def Info: bilder//permissions_1.png  used on input line 52.
@@ -3038,8 +3053,8 @@ Overfull \hbox (26.79134pt too wide) has occurred while \output is active
  [][]|
  []
 
-[96 <./bilder//permissions_1.png>]
-<bilder//permissions_heinz.png, id=1499, 713.66624pt x 492.84125pt>
+[97 <./bilder//permissions_1.png>]
+<bilder//permissions_heinz.png, id=1503, 713.66624pt x 492.84125pt>
 File: bilder//permissions_heinz.png Graphic file (type png)
 <use bilder//permissions_heinz.png>
 Package pdftex.def Info: bilder//permissions_heinz.png  used on input line 65.
@@ -3058,8 +3073,8 @@ Overfull \hbox (26.79134pt too wide) has occurred while \output is active
  [][]|
  []
 
-[97 <./bilder//permissions_heinz.png>]
-<bilder//permissions_tim.png, id=1506, 713.66624pt x 492.84125pt>
+[98 <./bilder//permissions_heinz.png>]
+<bilder//permissions_tim.png, id=1510, 713.66624pt x 492.84125pt>
 File: bilder//permissions_tim.png Graphic file (type png)
 <use bilder//permissions_tim.png>
 Package pdftex.def Info: bilder//permissions_tim.png  used on input line 79.
@@ -3078,8 +3093,8 @@ Overfull \hbox (26.79134pt too wide) has occurred while \output is active
  [][]|
  []
 
-[98 <./bilder//permissions_tim.png>]
-<bilder//permissions_rudolf.png, id=1513, 713.66624pt x 492.84125pt>
+[99 <./bilder//permissions_tim.png>]
+<bilder//permissions_rudolf.png, id=1517, 713.66624pt x 492.84125pt>
 File: bilder//permissions_rudolf.png Graphic file (type png)
 <use bilder//permissions_rudolf.png>
 Package pdftex.def Info: bilder//permissions_rudolf.png  used on input line 93.
@@ -3107,7 +3122,7 @@ Overfull \hbox (26.79134pt too wide) has occurred while \output is active
  [][]|
  []
 
-[99 <./bilder//permissions_rudolf.png>]
+[100 <./bilder//permissions_rudolf.png>]
 
 Package typearea Warning: Bad type area settings!
 (typearea)                The detected line width is about 116%
@@ -3205,7 +3220,7 @@ Overfull \hbox (26.79134pt too wide) has occurred while \output is active
  [][]|
  []
 
-[100]
+[101]
 
 Package typearea Warning: \riskvalues used at group level 2.
 (typearea)                Using \riskvalues inside any group, e.g.
@@ -3229,7 +3244,7 @@ Overfull \hbox (26.79134pt too wide) has occurred while \output is active
  [][]|
  []
 
-[101
+[102
 
 ]
 
@@ -3255,34 +3270,19 @@ Overfull \hbox (26.79134pt too wide) has occurred while \output is active
  [][]|
  []
 
-[102]
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-File: bilder//puzzle_tagline_blau.png Graphic file (type png)
-<use bilder//puzzle_tagline_blau.png>
-Package pdftex.def Info: bilder//puzzle_tagline_blau.png  used on input line 837.
-(pdftex.def)             Requested size: 82.51282pt x 21.55902pt.
-
-Overfull \hbox (26.79134pt too wide) has occurred while \output is active
-[][]|  
- []
-
-
-Overfull \hbox (26.79134pt too wide) has occurred while \output is active
- [][]|
- []
-
 [103]
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
 File: bilder//puzzle_tagline_blau.png Graphic file (type png)
 <use bilder//puzzle_tagline_blau.png>
 Package pdftex.def Info: bilder//puzzle_tagline_blau.png  used on input line 837.
@@ -3300,7 +3300,7 @@ Overfull \hbox (26.79134pt too wide) has occurred while \output is active
 [104]
 File: bilder//puzzle_tagline_blau.png Graphic file (type png)
 <use bilder//puzzle_tagline_blau.png>
-Package pdftex.def Info: bilder//puzzle_tagline_blau.png  used on input line 843.
+Package pdftex.def Info: bilder//puzzle_tagline_blau.png  used on input line 837.
 (pdftex.def)             Requested size: 82.51282pt x 21.55902pt.
 
 Overfull \hbox (26.79134pt too wide) has occurred while \output is active
@@ -3313,8 +3313,23 @@ Overfull \hbox (26.79134pt too wide) has occurred while \output is active
  []
 
 [105]
+File: bilder//puzzle_tagline_blau.png Graphic file (type png)
+<use bilder//puzzle_tagline_blau.png>
+Package pdftex.def Info: bilder//puzzle_tagline_blau.png  used on input line 843.
+(pdftex.def)             Requested size: 82.51282pt x 21.55902pt.
+
+Overfull \hbox (26.79134pt too wide) has occurred while \output is active
+[][]|  
+ []
+
+
+Overfull \hbox (26.79134pt too wide) has occurred while \output is active
+ [][]|
+ []
+
+[106]
 Kapitel 14.
-<bilder//hitobito_use_case_diagram.png, id=1565, 490.83376pt x 573.14125pt>
+<bilder//hitobito_use_case_diagram.png, id=1569, 490.83376pt x 573.14125pt>
 File: bilder//hitobito_use_case_diagram.png Graphic file (type png)
 <use bilder//hitobito_use_case_diagram.png>
 Package pdftex.def Info: bilder//hitobito_use_case_diagram.png  used on input line 850.
@@ -3333,7 +3348,7 @@ Overfull \hbox (26.79134pt too wide) has occurred while \output is active
  [][]|
  []
 
-[106
+[107
 
  <./bilder//hitobito_use_case_diagram.png>]
 File: bilder//puzzle_tagline_blau.png Graphic file (type png)
@@ -3350,7 +3365,7 @@ Overfull \hbox (26.79134pt too wide) has occurred while \output is active
  [][]|
  []
 
-[107]
+[108]
 File: bilder//puzzle_tagline_blau.png Graphic file (type png)
 <use bilder//puzzle_tagline_blau.png>
 Package pdftex.def Info: bilder//puzzle_tagline_blau.png  used on input line 955.
@@ -3365,8 +3380,8 @@ Overfull \hbox (26.79134pt too wide) has occurred while \output is active
  [][]|
  []
 
-[108]
-<bilder//hitobito_systemarchitektur.drawio.png, id=1592, 603.25375pt x 81.30376pt>
+[109]
+<bilder//hitobito_systemarchitektur.drawio.png, id=1596, 603.25375pt x 81.30376pt>
 File: bilder//hitobito_systemarchitektur.drawio.png Graphic file (type png)
 <use bilder//hitobito_systemarchitektur.drawio.png>
 Package pdftex.def Info: bilder//hitobito_systemarchitektur.drawio.png  used on input line 964.
@@ -3385,8 +3400,8 @@ Overfull \hbox (26.79134pt too wide) has occurred while \output is active
  [][]|
  []
 
-[109 <./bilder//hitobito_systemarchitektur.drawio.png>]
-<bilder//variant_one_turbo.png, id=1599, 637.38126pt x 445.665pt>
+[110 <./bilder//hitobito_systemarchitektur.drawio.png>]
+<bilder//variant_one_turbo.png, id=1603, 637.38126pt x 445.665pt>
 File: bilder//variant_one_turbo.png Graphic file (type png)
 <use bilder//variant_one_turbo.png>
 Package pdftex.def Info: bilder//variant_one_turbo.png  used on input line 994.
@@ -3405,8 +3420,8 @@ Overfull \hbox (26.79134pt too wide) has occurred while \output is active
  [][]|
  []
 
-[110 <./bilder//variant_one_turbo.png>]
-<bilder//variant_one_class_structure.png, id=1606, 963.6pt x 360.34625pt>
+[111 <./bilder//variant_one_turbo.png>]
+<bilder//variant_one_class_structure.png, id=1610, 963.6pt x 360.34625pt>
 File: bilder//variant_one_class_structure.png Graphic file (type png)
 <use bilder//variant_one_class_structure.png>
 Package pdftex.def Info: bilder//variant_one_class_structure.png  used on input line 1006.
@@ -3425,8 +3440,8 @@ Overfull \hbox (26.79134pt too wide) has occurred while \output is active
  [][]|
  []
 
-[111 <./bilder//variant_one_class_structure.png>]
-<bilder//variant_two_turbo_concept.png, id=1613, 692.5875pt x 523.9575pt>
+[112 <./bilder//variant_one_class_structure.png>]
+<bilder//variant_two_turbo_concept.png, id=1617, 692.5875pt x 523.9575pt>
 File: bilder//variant_two_turbo_concept.png Graphic file (type png)
 <use bilder//variant_two_turbo_concept.png>
 Package pdftex.def Info: bilder//variant_two_turbo_concept.png  used on input line 1030.
@@ -3445,8 +3460,8 @@ Overfull \hbox (26.79134pt too wide) has occurred while \output is active
  [][]|
  []
 
-[112 <./bilder//variant_two_turbo_concept.png>]
-<bilder//variant_two_class_structure.png, id=1620, 963.6pt x 360.34625pt>
+[113 <./bilder//variant_two_turbo_concept.png>]
+<bilder//variant_two_class_structure.png, id=1624, 963.6pt x 360.34625pt>
 File: bilder//variant_two_class_structure.png Graphic file (type png)
 <use bilder//variant_two_class_structure.png>
 Package pdftex.def Info: bilder//variant_two_class_structure.png  used on input line 1043.
@@ -3465,7 +3480,7 @@ Overfull \hbox (26.79134pt too wide) has occurred while \output is active
  [][]|
  []
 
-[113 <./bilder//variant_two_class_structure.png>]
+[114 <./bilder//variant_two_class_structure.png>]
 Overfull \hbox (9.99753pt too wide) in paragraph at lines 1063--1081
 [][] 
  []
@@ -3484,7 +3499,7 @@ Overfull \hbox (26.79134pt too wide) has occurred while \output is active
  [][]|
  []
 
-[114]
+[115]
 Overfull \hbox (37.59998pt too wide) in paragraph at lines 1103--1116
 [][] 
  []
@@ -3503,7 +3518,7 @@ Overfull \hbox (26.79134pt too wide) has occurred while \output is active
  [][]|
  []
 
-[115]
+[116]
 Overfull \hbox (37.59998pt too wide) in paragraph at lines 1124--1137
 [][] 
  []
@@ -3522,7 +3537,7 @@ Overfull \hbox (26.79134pt too wide) has occurred while \output is active
  [][]|
  []
 
-[116]
+[117]
 
 Package typearea Warning: \typearea used at group level 2.
 (typearea)                Using \typearea inside any group, e.g.
@@ -3623,7 +3638,7 @@ Overfull \hbox (26.79134pt too wide) has occurred while \output is active
  [][]|
  []
 
-[117]
+[118]
 
 Package typearea Warning: \bruteforceanalysis used at group level 2.
 (typearea)                Using \bruteforceanalysis inside any group, e.g.
@@ -3651,7 +3666,7 @@ Overfull \hbox (26.79134pt too wide) has occurred while \output is active
  [][]|
  []
 
-[118
+[119
 
 ]
 File: bilder//puzzle_tagline_blau.png Graphic file (type png)
@@ -3668,7 +3683,7 @@ Overfull \hbox (26.79134pt too wide) has occurred while \output is active
  [][]|
  []
 
-[119]
+[120]
 File: bilder//puzzle_tagline_blau.png Graphic file (type png)
 <use bilder//puzzle_tagline_blau.png>
 Package pdftex.def Info: bilder//puzzle_tagline_blau.png  used on input line 1265.
@@ -3683,7 +3698,7 @@ Overfull \hbox (26.79134pt too wide) has occurred while \output is active
  [][]|
  []
 
-[120]
+[121]
 LaTeX Font Info:    Font shape `OT1/zi4/m/n' will be
 (Font)              scaled to size 6.0pt on input line 1275.
 File: bilder//puzzle_tagline_blau.png Graphic file (type png)
@@ -3700,7 +3715,7 @@ Overfull \hbox (26.79134pt too wide) has occurred while \output is active
  [][]|
  []
 
-[121]
+[122]
 Overfull \hbox (37.59387pt too wide) in paragraph at lines 1308--1319
 [][] 
  []
@@ -3719,7 +3734,7 @@ Overfull \hbox (26.79134pt too wide) has occurred while \output is active
  [][]|
  []
 
-[122]
+[123]
 Overfull \hbox (89.9963pt too wide) in paragraph at lines 1331--1338
 [][] 
  []
@@ -3744,7 +3759,7 @@ Overfull \hbox (26.79134pt too wide) has occurred while \output is active
  [][]|
  []
 
-[123]
+[124]
 Overfull \hbox (25.19998pt too wide) in paragraph at lines 1356--1386
 [][] 
  []
@@ -3763,7 +3778,7 @@ Overfull \hbox (26.79134pt too wide) has occurred while \output is active
  [][]|
  []
 
-[124]
+[125]
 Overfull \hbox (25.19998pt too wide) in paragraph at lines 1393--1428
 [][] 
  []
@@ -3782,7 +3797,7 @@ Overfull \hbox (26.79134pt too wide) has occurred while \output is active
  [][]|
  []
 
-[125]
+[126]
 Overfull \hbox (25.19998pt too wide) in paragraph at lines 1435--1467
 [][] 
  []
@@ -3801,7 +3816,7 @@ Overfull \hbox (26.79134pt too wide) has occurred while \output is active
  [][]|
  []
 
-[126]
+[127]
 Overfull \hbox (25.19998pt too wide) in paragraph at lines 1474--1488
 [][] 
  []
@@ -3820,7 +3835,7 @@ Overfull \hbox (26.79134pt too wide) has occurred while \output is active
  [][]|
  []
 
-[127]
+[128]
 Overfull \hbox (25.19998pt too wide) in paragraph at lines 1495--1527
 [][] 
  []
@@ -3839,7 +3854,7 @@ Overfull \hbox (26.79134pt too wide) has occurred while \output is active
  [][]|
  []
 
-[128]
+[129]
 Overfull \hbox (25.19998pt too wide) in paragraph at lines 1535--1549
 [][] 
  []
@@ -3858,7 +3873,7 @@ Overfull \hbox (26.79134pt too wide) has occurred while \output is active
  [][]|
  []
 
-[129]
+[130]
 LaTeX Font Info:    Trying to load font information for OML+lmr on input line 1583.
  (/usr/share/texmf/tex/latex/lm/omllmr.fd
 File: omllmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
@@ -3884,7 +3899,7 @@ Overfull \hbox (26.79134pt too wide) has occurred while \output is active
  [][]|
  []
 
-[130]
+[131]
 Overfull \hbox (25.19998pt too wide) in paragraph at lines 1596--1611
 [][] 
  []
@@ -3903,7 +3918,7 @@ Overfull \hbox (26.79134pt too wide) has occurred while \output is active
  [][]|
  []
 
-[131]
+[132]
 Overfull \hbox (25.19998pt too wide) in paragraph at lines 1618--1649
 [][] 
  []
@@ -3922,7 +3937,7 @@ Overfull \hbox (26.79134pt too wide) has occurred while \output is active
  [][]|
  []
 
-[132]
+[133]
 Overfull \hbox (25.19998pt too wide) in paragraph at lines 1656--1687
 [][] 
  []
@@ -3941,7 +3956,7 @@ Overfull \hbox (26.79134pt too wide) has occurred while \output is active
  [][]|
  []
 
-[133]
+[134]
 Overfull \hbox (25.19998pt too wide) in paragraph at lines 1697--1706
 [][] 
  []
@@ -3960,7 +3975,7 @@ Overfull \hbox (26.79134pt too wide) has occurred while \output is active
  [][]|
  []
 
-[134]
+[135]
 LaTeX Font Info:    Trying to load font information for TS1+zi4 on input line 1713.
  (/usr/share/texlive/texmf-dist/tex/latex/inconsolata/ts1zi4.fd
 File: ts1zi4.fd 2018/01/14 TS1/zi4 (Inconsolata)
@@ -3986,7 +4001,7 @@ Overfull \hbox (26.79134pt too wide) has occurred while \output is active
  [][]|
  []
 
-[135]
+[136]
 Overfull \hbox (25.19998pt too wide) in paragraph at lines 1755--1790
 [][] 
  []
@@ -4005,7 +4020,7 @@ Overfull \hbox (26.79134pt too wide) has occurred while \output is active
  [][]|
  []
 
-[136]
+[137]
 Overfull \hbox (25.19998pt too wide) in paragraph at lines 1797--1831
 [][] 
  []
@@ -4024,7 +4039,7 @@ Overfull \hbox (26.79134pt too wide) has occurred while \output is active
  [][]|
  []
 
-[137]
+[138]
 Overfull \hbox (25.19998pt too wide) in paragraph at lines 1838--1871
 [][] 
  []
@@ -4043,7 +4058,7 @@ Overfull \hbox (26.79134pt too wide) has occurred while \output is active
  [][]|
  []
 
-[138]
+[139]
 Overfull \hbox (25.19998pt too wide) in paragraph at lines 1878--1906
 [][] 
  []
@@ -4062,7 +4077,7 @@ Overfull \hbox (26.79134pt too wide) has occurred while \output is active
  [][]|
  []
 
-[139]
+[140]
 Overfull \hbox (25.19998pt too wide) in paragraph at lines 1913--1946
 [][] 
  []
@@ -4081,7 +4096,7 @@ Overfull \hbox (26.79134pt too wide) has occurred while \output is active
  [][]|
  []
 
-[140]
+[141]
 Overfull \hbox (25.19998pt too wide) in paragraph at lines 1953--1985
 [][] 
  []
@@ -4100,7 +4115,7 @@ Overfull \hbox (26.79134pt too wide) has occurred while \output is active
  [][]|
  []
 
-[141]
+[142]
 Overfull \hbox (25.19998pt too wide) in paragraph at lines 1992--2020
 [][] 
  []
@@ -4119,7 +4134,7 @@ Overfull \hbox (26.79134pt too wide) has occurred while \output is active
  [][]|
  []
 
-[142]
+[143]
 Overfull \hbox (25.19998pt too wide) in paragraph at lines 2027--2059
 [][] 
  []
@@ -4138,7 +4153,7 @@ Overfull \hbox (26.79134pt too wide) has occurred while \output is active
  [][]|
  []
 
-[143]
+[144]
 Overfull \hbox (25.19998pt too wide) in paragraph at lines 2066--2094
 [][] 
  []
@@ -4157,9 +4172,9 @@ Overfull \hbox (26.79134pt too wide) has occurred while \output is active
  [][]|
  []
 
-[144]
+[145]
 Kapitel 15.
-<bilder//sprint1_backlog.png, id=1821, 1103.12125pt x 705.63625pt>
+<bilder//sprint1_backlog.png, id=1825, 1103.12125pt x 705.63625pt>
 File: bilder//sprint1_backlog.png Graphic file (type png)
 <use bilder//sprint1_backlog.png>
 Package pdftex.def Info: bilder//sprint1_backlog.png  used on input line 2119.
@@ -4183,15 +4198,15 @@ Overfull \hbox (26.79134pt too wide) has occurred while \output is active
  [][]|
  []
 
-[145
+[146
 
  <./bilder//sprint1_backlog.png>]
-<bilder//sprint1_burnup.png, id=1828, 1222.5675pt x 631.35875pt>
+<bilder//sprint1_burnup.png, id=1832, 1222.5675pt x 631.35875pt>
 File: bilder//sprint1_burnup.png Graphic file (type png)
 <use bilder//sprint1_burnup.png>
 Package pdftex.def Info: bilder//sprint1_burnup.png  used on input line 2136.
 (pdftex.def)             Requested size: 320.00122pt x 165.24765pt.
-<bilder//sprint1_status_chart.png, id=1829, 1217.54875pt x 638.385pt>
+<bilder//sprint1_status_chart.png, id=1833, 1217.54875pt x 638.385pt>
 File: bilder//sprint1_status_chart.png Graphic file (type png)
 <use bilder//sprint1_status_chart.png>
 Package pdftex.def Info: bilder//sprint1_status_chart.png  used on input line 2147.
@@ -4210,7 +4225,7 @@ Overfull \hbox (26.79134pt too wide) has occurred while \output is active
  [][]|
  []
 
-[146 <./bilder//sprint1_burnup.png> <./bilder//sprint1_status_chart.png>]
+[147 <./bilder//sprint1_burnup.png> <./bilder//sprint1_status_chart.png>]
 Kapitel 16.
 LaTeX Font Info:    Font shape `TS1/zi4/m/n' will be
 (Font)              scaled to size 8.0pt on input line 2172.
@@ -4228,7 +4243,7 @@ Overfull \hbox (26.79134pt too wide) has occurred while \output is active
  [][]|
  []
 
-[147
+[148
 
 ]
 Overfull \hbox (25.19998pt too wide) in paragraph at lines 2197--2210
@@ -4249,8 +4264,8 @@ Overfull \hbox (26.79134pt too wide) has occurred while \output is active
  [][]|
  []
 
-[148]
-<bilder//stimulus_controller.png, id=1861, 231.86626pt x 142.5325pt>
+[149]
+<bilder//stimulus_controller.png, id=1865, 231.86626pt x 142.5325pt>
 File: bilder//stimulus_controller.png Graphic file (type png)
 <use bilder//stimulus_controller.png>
 Package pdftex.def Info: bilder//stimulus_controller.png  used on input line 2229.
@@ -4269,7 +4284,7 @@ Overfull \hbox (26.79134pt too wide) has occurred while \output is active
  [][]|
  []
 
-[149 <./bilder//stimulus_controller.png>]
+[150 <./bilder//stimulus_controller.png>]
 LaTeX Font Info:    Font shape `OT1/zi4/b/n' will be
 (Font)              scaled to size 8.0pt on input line 2260.
 File: bilder//puzzle_tagline_blau.png Graphic file (type png)
@@ -4286,7 +4301,7 @@ Overfull \hbox (26.79134pt too wide) has occurred while \output is active
  [][]|
  []
 
-[150]
+[151]
 File: bilder//puzzle_tagline_blau.png Graphic file (type png)
 <use bilder//puzzle_tagline_blau.png>
 Package pdftex.def Info: bilder//puzzle_tagline_blau.png  used on input line 2316.
@@ -4301,8 +4316,8 @@ Overfull \hbox (26.79134pt too wide) has occurred while \output is active
  [][]|
  []
 
-[151]
-<bilder//trash_icon.png, id=1909, 1004.75375pt x 350.30875pt>
+[152]
+<bilder//trash_icon.png, id=1913, 1004.75375pt x 350.30875pt>
 File: bilder//trash_icon.png Graphic file (type png)
 <use bilder//trash_icon.png>
 Package pdftex.def Info: bilder//trash_icon.png  used on input line 2335.
@@ -4321,7 +4336,7 @@ Overfull \hbox (26.79134pt too wide) has occurred while \output is active
  [][]|
  []
 
-[152 <./bilder//trash_icon.png>]
+[153 <./bilder//trash_icon.png>]
 File: bilder//puzzle_tagline_blau.png Graphic file (type png)
 <use bilder//puzzle_tagline_blau.png>
 Package pdftex.def Info: bilder//puzzle_tagline_blau.png  used on input line 2397.
@@ -4336,7 +4351,7 @@ Overfull \hbox (26.79134pt too wide) has occurred while \output is active
  [][]|
  []
 
-[153]
+[154]
 File: bilder//trash_icon.png Graphic file (type png)
 <use bilder//trash_icon.png>
 Package pdftex.def Info: bilder//trash_icon.png  used on input line 2400.
@@ -4355,7 +4370,7 @@ Overfull \hbox (26.79134pt too wide) has occurred while \output is active
  [][]|
  []
 
-[154]
+[155]
 File: bilder//puzzle_tagline_blau.png Graphic file (type png)
 <use bilder//puzzle_tagline_blau.png>
 Package pdftex.def Info: bilder//puzzle_tagline_blau.png  used on input line 2455.
@@ -4370,7 +4385,7 @@ Overfull \hbox (26.79134pt too wide) has occurred while \output is active
  [][]|
  []
 
-[155]
+[156]
 File: bilder//puzzle_tagline_blau.png Graphic file (type png)
 <use bilder//puzzle_tagline_blau.png>
 Package pdftex.def Info: bilder//puzzle_tagline_blau.png  used on input line 2495.
@@ -4385,7 +4400,7 @@ Overfull \hbox (26.79134pt too wide) has occurred while \output is active
  [][]|
  []
 
-[156]
+[157]
 File: bilder//puzzle_tagline_blau.png Graphic file (type png)
 <use bilder//puzzle_tagline_blau.png>
 Package pdftex.def Info: bilder//puzzle_tagline_blau.png  used on input line 2515.
@@ -4400,7 +4415,7 @@ Overfull \hbox (26.79134pt too wide) has occurred while \output is active
  [][]|
  []
 
-[157]
+[158]
 File: bilder//puzzle_tagline_blau.png Graphic file (type png)
 <use bilder//puzzle_tagline_blau.png>
 Package pdftex.def Info: bilder//puzzle_tagline_blau.png  used on input line 2546.
@@ -4415,7 +4430,7 @@ Overfull \hbox (26.79134pt too wide) has occurred while \output is active
  [][]|
  []
 
-[158]
+[159]
 File: bilder//puzzle_tagline_blau.png Graphic file (type png)
 <use bilder//puzzle_tagline_blau.png>
 Package pdftex.def Info: bilder//puzzle_tagline_blau.png  used on input line 2547.
@@ -4430,7 +4445,7 @@ Overfull \hbox (26.79134pt too wide) has occurred while \output is active
  [][]|
  []
 
-[159] (./testprotokoll.tex
+[160] (./testprotokoll.tex
 Overfull \hbox (5.19876pt too wide) in paragraph at lines 7--31
 [][] 
  []
@@ -4459,7 +4474,7 @@ Overfull \hbox (26.79134pt too wide) has occurred while \output is active
  [][]|
  []
 
-[160]
+[161]
 Overfull \hbox (5.19876pt too wide) in paragraph at lines 94--118
 [][] 
  []
@@ -4483,7 +4498,7 @@ Overfull \hbox (26.79134pt too wide) has occurred while \output is active
  [][]|
  []
 
-[161]
+[162]
 Overfull \hbox (5.19876pt too wide) in paragraph at lines 152--174
 [][] 
  []
@@ -4512,7 +4527,7 @@ Overfull \hbox (26.79134pt too wide) has occurred while \output is active
  [][]|
  []
 
-[162]
+[163]
 Overfull \hbox (5.19876pt too wide) in paragraph at lines 235--257
 [][] 
  []
@@ -4541,7 +4556,7 @@ Overfull \hbox (26.79134pt too wide) has occurred while \output is active
  [][]|
  []
 
-[163]
+[164]
 Overfull \hbox (5.19876pt too wide) in paragraph at lines 316--338
 [][] 
  []
@@ -4570,7 +4585,7 @@ Overfull \hbox (26.79134pt too wide) has occurred while \output is active
  [][]|
  []
 
-[164]
+[165]
 Overfull \hbox (5.19876pt too wide) in paragraph at lines 397--419
 [][] 
  []
@@ -4599,7 +4614,7 @@ Overfull \hbox (26.79134pt too wide) has occurred while \output is active
  [][]|
  []
 
-[165])
+[166])
 File: bilder//puzzle_tagline_blau.png Graphic file (type png)
 <use bilder//puzzle_tagline_blau.png>
 Package pdftex.def Info: bilder//puzzle_tagline_blau.png  used on input line 2551.
@@ -4614,8 +4629,8 @@ Overfull \hbox (26.79134pt too wide) has occurred while \output is active
  [][]|
  []
 
-[166]
-<bilder//group_list.drawio.png, id=2040, 266.9975pt x 429.605pt>
+[167]
+<bilder//group_list.drawio.png, id=2044, 266.9975pt x 429.605pt>
 File: bilder//group_list.drawio.png Graphic file (type png)
 <use bilder//group_list.drawio.png>
 Package pdftex.def Info: bilder//group_list.drawio.png  used on input line 2566.
@@ -4634,8 +4649,8 @@ Overfull \hbox (26.79134pt too wide) has occurred while \output is active
  [][]|
  []
 
-[167 <./bilder//group_list.drawio.png>]
-<bilder//people_tab.drawio.png, id=2047, 751.80875pt x 179.67125pt>
+[168 <./bilder//group_list.drawio.png>]
+<bilder//people_tab.drawio.png, id=2052, 751.80875pt x 179.67125pt>
 File: bilder//people_tab.drawio.png Graphic file (type png)
 <use bilder//people_tab.drawio.png>
 Package pdftex.def Info: bilder//people_tab.drawio.png  used on input line 2577.
@@ -4645,7 +4660,7 @@ Overfull \hbox (6.79999pt too wide) in paragraph at lines 2577--2578
  [][] 
  []
 
-<bilder//new_filter.drawio.png, id=2048, 751.80875pt x 242.9075pt>
+<bilder//new_filter.drawio.png, id=2053, 751.80875pt x 242.9075pt>
 File: bilder//new_filter.drawio.png Graphic file (type png)
 <use bilder//new_filter.drawio.png>
 Package pdftex.def Info: bilder//new_filter.drawio.png  used on input line 2586.
@@ -4655,7 +4670,7 @@ Overfull \hbox (6.79999pt too wide) in paragraph at lines 2586--2587
  [][] 
  []
 
-<bilder//filter_citerion_add.drawio.png, id=2049, 244.915pt x 202.7575pt>
+<bilder//filter_citerion_add.drawio.png, id=2054, 244.915pt x 202.7575pt>
 File: bilder//filter_citerion_add.drawio.png Graphic file (type png)
 <use bilder//filter_citerion_add.drawio.png>
 Package pdftex.def Info: bilder//filter_citerion_add.drawio.png  used on input line 2596.
@@ -4674,8 +4689,8 @@ Overfull \hbox (26.79134pt too wide) has occurred while \output is active
  [][]|
  []
 
-[168 <./bilder//people_tab.drawio.png> <./bilder//new_filter.drawio.png> <./bilder//filter_citerion_add.drawio.png>]
-<bilder//filter_criterion_box.drawio.png, id=2061, 1021.8175pt x 230.8625pt>
+[169 <./bilder//people_tab.drawio.png> <./bilder//new_filter.drawio.png> <./bilder//filter_citerion_add.drawio.png>]
+<bilder//filter_criterion_box.drawio.png, id=2065, 1021.8175pt x 230.8625pt>
 File: bilder//filter_criterion_box.drawio.png Graphic file (type png)
 <use bilder//filter_criterion_box.drawio.png>
 Package pdftex.def Info: bilder//filter_criterion_box.drawio.png  used on input line 2609.
@@ -4685,7 +4700,7 @@ Overfull \hbox (6.79999pt too wide) in paragraph at lines 2609--2610
  [][] 
  []
 
-<bilder//save_filter.drawio.png, id=2062, 519.9425pt x 121.45375pt>
+<bilder//save_filter.drawio.png, id=2066, 519.9425pt x 121.45375pt>
 File: bilder//save_filter.drawio.png Graphic file (type png)
 <use bilder//save_filter.drawio.png>
 Package pdftex.def Info: bilder//save_filter.drawio.png  used on input line 2619.
@@ -4709,8 +4724,8 @@ Overfull \hbox (26.79134pt too wide) has occurred while \output is active
  [][]|
  []
 
-[169 <./bilder//filter_criterion_box.drawio.png> <./bilder//save_filter.drawio.png>]
-<bilder//saved_filter_option.drawio.png, id=2071, 513.92pt x 204.765pt>
+[170 <./bilder//filter_criterion_box.drawio.png> <./bilder//save_filter.drawio.png>]
+<bilder//saved_filter_option.drawio.png, id=2075, 513.92pt x 204.765pt>
 File: bilder//saved_filter_option.drawio.png Graphic file (type png)
 <use bilder//saved_filter_option.drawio.png>
 Package pdftex.def Info: bilder//saved_filter_option.drawio.png  used on input line 2631.
@@ -4729,12 +4744,12 @@ Overfull \hbox (26.79134pt too wide) has occurred while \output is active
  [][]|
  []
 
-[170 <./bilder//saved_filter_option.drawio.png>]
+[171 <./bilder//saved_filter_option.drawio.png>]
 File: bilder//group_list.drawio.png Graphic file (type png)
 <use bilder//group_list.drawio.png>
 Package pdftex.def Info: bilder//group_list.drawio.png  used on input line 2645.
 (pdftex.def)             Requested size: 200.0pt x 321.8162pt.
-<bilder//subsriptions_groups.drawio.png, id=2078, 749.80125pt x 212.795pt>
+<bilder//subsriptions_groups.drawio.png, id=2082, 749.80125pt x 212.795pt>
 File: bilder//subsriptions_groups.drawio.png Graphic file (type png)
 <use bilder//subsriptions_groups.drawio.png>
 Package pdftex.def Info: bilder//subsriptions_groups.drawio.png  used on input line 2654.
@@ -4753,8 +4768,8 @@ Overfull \hbox (26.79134pt too wide) has occurred while \output is active
  [][]|
  []
 
-[171 <./bilder//subsriptions_groups.drawio.png>]
-<bilder//subscription_detail.drawio.png, id=2086, 735.74875pt x 213.79875pt>
+[172 <./bilder//subsriptions_groups.drawio.png>]
+<bilder//subscription_detail.drawio.png, id=2090, 735.74875pt x 213.79875pt>
 File: bilder//subscription_detail.drawio.png Graphic file (type png)
 <use bilder//subscription_detail.drawio.png>
 Package pdftex.def Info: bilder//subscription_detail.drawio.png  used on input line 2663.
@@ -4764,7 +4779,7 @@ Overfull \hbox (6.79999pt too wide) in paragraph at lines 2663--2664
  [][] 
  []
 
-<bilder//global_conditions_edit.drawio.png, id=2087, 902.37125pt x 306.14375pt>
+<bilder//global_conditions_edit.drawio.png, id=2091, 902.37125pt x 306.14375pt>
 File: bilder//global_conditions_edit.drawio.png Graphic file (type png)
 <use bilder//global_conditions_edit.drawio.png>
 Package pdftex.def Info: bilder//global_conditions_edit.drawio.png  used on input line 2673.
@@ -4774,7 +4789,7 @@ Overfull \hbox (6.79999pt too wide) in paragraph at lines 2673--2674
  [][] 
  []
 
-<bilder//global_conditions_saved.drawio.png, id=2088, 266.9975pt x 74.2775pt>
+<bilder//global_conditions_saved.drawio.png, id=2092, 266.9975pt x 74.2775pt>
 File: bilder//global_conditions_saved.drawio.png Graphic file (type png)
 <use bilder//global_conditions_saved.drawio.png>
 Package pdftex.def Info: bilder//global_conditions_saved.drawio.png  used on input line 2682.
@@ -4793,7 +4808,7 @@ Overfull \hbox (26.79134pt too wide) has occurred while \output is active
  [][]|
  []
 
-[172 <./bilder//subscription_detail.drawio.png> <./bilder//global_conditions_edit.drawio.png> <./bilder//global_conditions_saved.drawio.png>]
+[173 <./bilder//subscription_detail.drawio.png> <./bilder//global_conditions_edit.drawio.png> <./bilder//global_conditions_saved.drawio.png>]
 Overfull \hbox (25.19998pt too wide) in paragraph at lines 2692--2721
 [][] 
  []
@@ -4812,7 +4827,7 @@ Overfull \hbox (26.79134pt too wide) has occurred while \output is active
  [][]|
  []
 
-[173]
+[174]
 Overfull \hbox (25.19998pt too wide) in paragraph at lines 2728--2756
 [][] 
  []
@@ -4831,9 +4846,9 @@ Overfull \hbox (26.79134pt too wide) has occurred while \output is active
  [][]|
  []
 
-[174]
+[175]
 Kapitel 17.
-<bilder//sprint2_backlog.png, id=2110, 1098.1025pt x 569.12625pt>
+<bilder//sprint2_backlog.png, id=2114, 1098.1025pt x 569.12625pt>
 File: bilder//sprint2_backlog.png Graphic file (type png)
 <use bilder//sprint2_backlog.png>
 Package pdftex.def Info: bilder//sprint2_backlog.png  used on input line 2767.
@@ -4857,15 +4872,15 @@ Overfull \hbox (26.79134pt too wide) has occurred while \output is active
  [][]|
  []
 
-[175
+[176
 
  <./bilder//sprint2_backlog.png>]
-<bilder//sprint2_burnup.png, id=2117, 1222.5675pt x 637.38126pt>
+<bilder//sprint2_burnup.png, id=2121, 1222.5675pt x 637.38126pt>
 File: bilder//sprint2_burnup.png Graphic file (type png)
 <use bilder//sprint2_burnup.png>
 Package pdftex.def Info: bilder//sprint2_burnup.png  used on input line 2785.
 (pdftex.def)             Requested size: 279.99878pt x 145.97215pt.
-<bilder//sprint2_status_chart.png, id=2118, 1222.5675pt x 626.34pt>
+<bilder//sprint2_status_chart.png, id=2122, 1222.5675pt x 626.34pt>
 File: bilder//sprint2_status_chart.png Graphic file (type png)
 <use bilder//sprint2_status_chart.png>
 Package pdftex.def Info: bilder//sprint2_status_chart.png  used on input line 2795.
@@ -4884,7 +4899,7 @@ Overfull \hbox (26.79134pt too wide) has occurred while \output is active
  [][]|
  []
 
-[176 <./bilder//sprint2_burnup.png> <./bilder//sprint2_status_chart.png>]
+[177 <./bilder//sprint2_burnup.png> <./bilder//sprint2_status_chart.png>]
 Kapitel 18.
 File: bilder//puzzle_tagline_blau.png Graphic file (type png)
 <use bilder//puzzle_tagline_blau.png>
@@ -4900,7 +4915,7 @@ Overfull \hbox (26.79134pt too wide) has occurred while \output is active
  [][]|
  []
 
-[177
+[178
 
 ]
 Kapitel 19.
@@ -4918,7 +4933,7 @@ Overfull \hbox (26.79134pt too wide) has occurred while \output is active
  [][]|
  []
 
-[178
+[179
 
 ]
 Kapitel 20.
@@ -4937,7 +4952,7 @@ Overfull \hbox (26.79134pt too wide) has occurred while \output is active
  [][]|
  []
 
-[179
+[180
 
 ]
 \openout2 = `part3.aux'.
@@ -4957,7 +4972,7 @@ Overfull \hbox (26.79134pt too wide) has occurred while \output is active
  [][]|
  []
 
-[180
+[181
 
 
 
@@ -4979,7 +4994,7 @@ Overfull \hbox (26.79134pt too wide) has occurred while \output is active
  [][]|
  []
 
-[181
+[182
 
 ]
 File: bilder//puzzle_tagline_blau.png Graphic file (type png)
@@ -4996,7 +5011,7 @@ Overfull \hbox (26.79134pt too wide) has occurred while \output is active
  [][]|
  []
 
-[182])
+[183])
 \tf@lot=\write6
 \openout6 = `ipa.lot'.
 
@@ -5015,7 +5030,7 @@ Overfull \hbox (26.79134pt too wide) has occurred while \output is active
  [][]|
  []
 
-[183]
+[184]
 File: bilder//puzzle_tagline_blau.png Graphic file (type png)
 <use bilder//puzzle_tagline_blau.png>
 Package pdftex.def Info: bilder//puzzle_tagline_blau.png  used on input line 69.
@@ -5030,7 +5045,7 @@ Overfull \hbox (26.79134pt too wide) has occurred while \output is active
  [][]|
  []
 
-[184])
+[185])
 \tf@lof=\write7
 \openout7 = `ipa.lof'.
 
@@ -5048,7 +5063,7 @@ Overfull \hbox (26.79134pt too wide) has occurred while \output is active
  [][]|
  []
 
-[185]
+[186]
 Underfull \hbox (badness 10000) in paragraph at lines 21--22
 [][][]$\OT1/zi4/m/n/12 https : / / docs . github . com /
  []
@@ -5152,7 +5167,7 @@ Overfull \hbox (26.79134pt too wide) has occurred while \output is active
  [][]|
  []
 
-[186
+[187
 
 pdfTeX warning (ext4): destination with the same identifier (name{cite.Github\040Docs}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
@@ -5298,7 +5313,7 @@ Overfull \hbox (26.79134pt too wide) has occurred while \output is active
  [][]|
  []
 
-[187pdfTeX warning (ext4): destination with the same identifier (name{cite.StackOverflow}) has been already used, duplicate ignored
+[188pdfTeX warning (ext4): destination with the same identifier (name{cite.StackOverflow}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
 l.49 ...tem[Turbostreams vs Turboframes]{Mix & Go}
@@ -5337,7 +5352,7 @@ Overfull \hbox (26.79134pt too wide) has occurred while \output is active
  [][]|
  []
 
-[188]
+[189]
 Kapitel 22.
 File: bilder//puzzle_tagline_blau.png Graphic file (type png)
 <use bilder//puzzle_tagline_blau.png>
@@ -5353,7 +5368,7 @@ Overfull \hbox (26.79134pt too wide) has occurred while \output is active
  [][]|
  []
 
-[189
+[190
 
 ]
 Kapitel 23.
@@ -5371,11 +5386,11 @@ Overfull \hbox (26.79134pt too wide) has occurred while \output is active
  [][]|
  []
 
-[190
+[191
 
 ]
 Kapitel 24.
-<bilder//git_commit_conventions.png, id=2434, 1030.85126pt x 500.87125pt>
+<bilder//git_commit_conventions.png, id=2438, 1030.85126pt x 500.87125pt>
 File: bilder//git_commit_conventions.png Graphic file (type png)
 <use bilder//git_commit_conventions.png>
 Package pdftex.def Info: bilder//git_commit_conventions.png  used on input line 87.
@@ -5404,7 +5419,7 @@ Overfull \hbox (26.79134pt too wide) has occurred while \output is active
  [][]|
  []
 
-[191
+[192
 
  <./bilder//git_commit_conventions.png>]
 File: bilder//puzzle_tagline_blau.png Graphic file (type png)
@@ -5421,7 +5436,7 @@ Overfull \hbox (26.79134pt too wide) has occurred while \output is active
  [][]|
  []
 
-[192]
+[193]
 Overfull \hbox (25.19998pt too wide) in paragraph at lines 133--155
 [][] 
  []
@@ -5440,7 +5455,7 @@ Overfull \hbox (26.79134pt too wide) has occurred while \output is active
  [][]|
  []
 
-[193]
+[194]
 Overfull \hbox (25.19998pt too wide) in paragraph at lines 163--194
 [][] 
  []
@@ -5459,7 +5474,7 @@ Overfull \hbox (26.79134pt too wide) has occurred while \output is active
  [][]|
  []
 
-[194]
+[195]
 Overfull \hbox (25.19998pt too wide) in paragraph at lines 200--220
 [][] 
  []
@@ -5479,7 +5494,7 @@ Overfull \hbox (26.79134pt too wide) has occurred while \output is active
  [][]|
  []
 
-[195] 
+[196] 
 AED: lastpage setting LastPage
 (./ipa.aux (./titlePage.aux) (./part1.aux) (./part2.aux) (./part3.aux))
 
@@ -5489,21 +5504,21 @@ LaTeX Warning: There were undefined references.
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `ipa.out' has not changed.
-(rerunfilecheck)             Checksum: C3C16AB7B497C047A6DE07F535ABD0C7;23627.
+(rerunfilecheck)             Checksum: E36D28F561F27FE1F062199019692299;23652.
  ) 
 Here is how much of TeX's memory you used:
- 33599 strings out of 478287
- 632776 string characters out of 5849289
+ 33600 strings out of 478287
+ 632784 string characters out of 5849289
  1272852 words of memory out of 5000000
  50280 multiletter control sequences out of 15000+600000
  526250 words of font info for 72 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  108i,18n,129p,605b,1800s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/inconsolata/i4-ot1-0.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/inconsolata/i4-ts1.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-ts1.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/inconsolata/Inconsolata-zi4b.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/inconsolata/Inconsolata-zi4r.pfb></usr/share/texmf/fonts/type1/public/lm/lmbx10.pfb></usr/share/texmf/fonts/type1/public/lm/lmbx12.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr17.pfb></usr/share/texmf/fonts/type1/public/lm/lmr6.pfb></usr/share/texmf/fonts/type1/public/lm/lmr9.pfb></usr/share/texmf/fonts/type1/public/lm/lmri12.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy6.pfb>
-Output written on ipa.pdf (196 pages, 2936444 bytes).
+Output written on ipa.pdf (197 pages, 2938823 bytes).
 PDF statistics:
- 2682 PDF objects out of 2984 (max. 8388607)
- 2295 compressed objects within 23 object streams
- 753 named destinations out of 1000 (max. 500000)
+ 2686 PDF objects out of 2984 (max. 8388607)
+ 2298 compressed objects within 23 object streams
+ 754 named destinations out of 1000 (max. 500000)
  1623 words of extra memory for PDF output out of 10000 (max. 10000000)
 
