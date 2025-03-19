@@ -2415,9 +2415,135 @@ Die Variable ``delete'' gibt an ob das Symbol zur Löschung auf der Benutzerschn
 wir das Symbol ausgeblendet. Im Personenfilter ist die Variable stets auf ``true'' gesetzt.
 
 \section{Einsatz von KI-Modellen}
-\section{Gems}
-\subsection{can-can-can}
-\subsection{dry-crud}
+Während des Implementierens wird das KI-Modell ChatGPT mit der gratis Version GPT-4o verwendet. 
+Das Modell soll dazu verwendet werden geschriebenen Code zu vereinfachen, Hinweise zu aufkommenden Problemen zu geben und
+Syntax Fehler zu beheben. Die Nutzung des Modelles und die Prüfung der Antowrten werden im weiteren Abschnitt beschrieben.
+
+\subsection{Eingabewerte}
+Bei der Verwendung von ChatGPT werden folgende Regeln für die Eingabewerte definiert:
+
+\begin{itemize}
+   \item Alle Eingabewerte sind in Englisch zu schreiben.
+   \item Es wird stets die Option zur Belegung der Quellen definiert, um die resultierenden Informationen anschliessend zu prüfen.
+   \item Es werden keine sicherheitsrelevanten Informationen wie Passwörter oder SSH-Keys an das Modell weitergegeben.
+   \item Bei der Verwendung des Modells für die Entscheidungsfindung, müssen die nötigen Informationen über das Umsystem angegeben werden.
+   \item Bei der Verwendung des Modells für die Syntaxvalidierung, muss die Programmiersprache des Eingabewertes definiert werden.
+\end{itemize}
+
+\subsection{Höhere Effizienz}
+Die höhere Effizienz durch die Verwendung des KI-Modells wird durch die Analyse von Syntaxfehlern gewährleistet. 
+Als Beispiel und Beweis dafür ist folgendes Beispiel aus der Umsetzungsphase dieser IPA zu betrachten:
+\newline
+
+\begin{lstlisting}[language=Ruby]
+   first(".btn.btn-primary", text: "Suchen").aclick
+   within(".table.table-striped.table-hover") do
+      # Head table row and table row of found user
+      expect(all("tr").size).to eq(2)
+      expect(page).to have_selector("#person_#{alice.id}")
+   end
+\end{lstlisting}
+
+Es wird die Zeile 1 betrachtet. Darin wird ein Button ausgemacht und anschliessend geklickt. Durch einen Tippfehler
+wurde anstatt die Methode ``.click'' die Methode ``.aclick'' angegeben, der Buchstabe ``a'' ist der Fehler. 
+Dieser Fehler wurde in der IDE des Kandidaten nicht angezeigt weswegend der Fehler nicht ausgemacht werden konnte.
+Durch den Einsatz von ChatGPT wurde der Tippfehler erkannt und konnte beseitigt werden. Das KI-Modell hat in diesem Fall verhindert,
+Ressourcen für das Finden dieses Problems aufzuwenden und gewährt dem Kandidaten dadurch eine höhere Effizienz in der Arbeitsweise.
+
+Mit den definierten Regeln für die Eingabewerte des Modells wurde die Syntaxvalidierung mit folgendem Eingabwert vorgenommen:
+
+\texttt{Setup:}
+
+\texttt{Programming language: Ruby}
+\texttt{Framework: Ruby on Rails (RoR)}
+\texttt{Testing Framework: Rspec}
+\texttt{Test Type: Feature Test}
+\newline
+
+\begin{lstlisting}[language=Ruby]
+I would like you validate the syntax of following code based on the above setup:
+
+first(".btn.btn-primary", text: "Suchen").aclick
+within(".table.table-striped.table-hover") do
+      # Head table row and table row of found user
+      expect(all("tr").size).to eq(2)
+      expect(page).to have_selector("#person_#{alice.id}")
+end
+\end{lstlisting}
+
+Die entsprechende Ausgabe von ChatGPT war folgende:
+\newline
+
+\texttt{Based on your setup-Ruby programming language, Ruby on Rails framework, RSpec for testing, and a feature test-the provided code has a minor syntax issue. The method aclick should be replaced with click to simulate a click action. 
+Here's the corrected code:}
+\newline
+
+\begin{lstlisting}[language=Ruby]
+   first(".btn.btn-primary", text: "Suchen").click
+   within(".table.table-striped.table-hover") do
+      # Head table row and table row of found user
+      expect(all("tr").size).to eq(2)
+      expect(page).to have_selector("#person_#{alice.id}")
+   end
+\end{lstlisting}
+
+\subsection{Höhere Effektivität}
+Während der Umsetzungsphase wurde ChatGPT die Meinung von ChatGPT zu den einzelnen Lösungsvarianten abgefragt.
+Das Ziel dahinter war, eine ``externe'' Einschätzung der Lösungen für das IPA-Produkt zu erhalten und potentielle Fehler in den Lösungsvarianten
+auszumachen. 
+
+\newpage
+
+Die Informationen wurden dem Modell mit folgendem Eingabewert übergeben:
+
+\texttt{Setup\:}
+
+\texttt{Programming language: Ruby}
+
+\texttt{Framework: Ruby on Rails (RoR), Hotwire}
+
+\texttt{Application: Server Side Rendered}
+
+\texttt{I would like you to to compare two of the described concepts below based on the above setup:}
+
+\texttt{Problem: The filtering inside a community management system should be reworked. Instead of reloading the whole page when adding filters, the filter configuration should work with hotwire to only reload parts of the user interface. Two concepts were created to solve this problem:}
+
+\texttt{Solution A: Every filter criterion has one turbo-stream. The partials of the filter-criterion are added to the overview via the turbo-stream append method. The user is able to trigger the turbostream with a dropdown which holds all filter criteria. Once the user clicks on one dropdown option, the turbostream is activated and removes the option from the dropdown. The user may also delete a filter criterion on the overview by click on a delete-symbol. Then, the reverse process is triggered.}
+
+\texttt{Solution B: Each filter criterion in the ui is surrounded by a turbo-frame. The user is able to add a filter criterion by clicking on a option in a dropdown which holds all filter criteria. A stimulus controller removes the option then of the dropdown and replaces the turbo frame with the configuration of the chosen filter criterion. }
+
+\newpage
+
+Die Ausgabe von ChatGPT war folgende:
+
+\texttt{Recommendation\:}
+
+\texttt{For the described filtering functionality, Solution B using Turbo Frames with Stimulus controllers is recommended. This approach allows each filter criterion to be independently managed and updated within its frame, providing a modular and maintainable structure. The use of Stimulus controllers enhances interactivity by handling client-side behaviors, such as removing options from the dropdown and updating frame content, without necessitating complex server-side logic.}
+
+\texttt{This method aligns with best practices for progressively enhancing user interfaces, starting with server-side rendered responses and adding interactivity as needed.}
+
+\textbf{Prüfung}
+
+Durch die Aktivierung der Option zur Quellenhinterlegung von ChatGPT wurde parallel zu dieser Antwort folgendes Video hinterlegt:
+\href{https://youtu.be/vnDWsGtzOCc}{Turbostreams vs Turboframes}. Während der Prüfung der Angaben, wurde durch das hinterlegte Video die Schwachstellen von Turboframes identifiziert:
+
+\begin{itemize}
+   \item Turboframes können nur ein Frame aktualisieren
+   \item Können nur Aktualisierungsaktionen auslösen, kein Hinzufügen oder Löschen
+   \item Keine Backend-Aktualisierungen können ausgelöst werden.
+\end{itemize}
+
+Obwohl ChatGPT die Lösung A preferierte, wurde aus den Angaben aus dem Video klar, dass die Lösung B die bessere Lösungsvariante sein wird. 
+Grund dafür ist, dass mehrere Aktionen zugleich ausgeführt werden müssen, dazu ist das Turboframe laut dem referenzierten Video von ChatGPT nicht fähig. 
+In diesem Fall hat ChatGPT die falsche Entscheidung getroffen, doch durch die Prüfung der Antwort konnte ein richtiger Schluss aus den Informationen des KI-Modells gezogen werden.
+
+\subsection{Fazit}
+Bei der Verwendung des KI-Modells ist es wichtig dieses nur für die definierten Fälle und mit den definierten Eingabewerten zu verwenden.
+Weiter wird im oberen Beispiel sichtbar, dass die Angaben von ChatGPT zu prüfen sind, um die richtigen Schlüsse für das eigene Projekt 
+zu ziehen. Die Prüfung kann durch eine zusätzliche Recherche oder die Aktivierung der Hinterlegung von Quellen in ChatGPT durchgeführt werden.
+Die Hinterlegten Quellen sollten dennoch nochmals vom Benutzer geprüft werde, um sicherzustellen das die Informationen mit den Projektanforderungen
+übereinstimmen. 
+
 \section{Instruktion}
 
 \input{testprotokoll.tex}

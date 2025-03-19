@@ -128,34 +128,35 @@
 \contentsline {subsection}{\numberline {16.3.1}Partials}{152}{subsection.16.3.1}%
 \contentsline {subsection}{\numberline {16.3.2}Name-Attribut auf dem Select-Feld}{153}{subsection.16.3.2}%
 \contentsline {section}{\numberline {16.4}Globale Bedingungen}{154}{section.16.4}%
-\contentsline {section}{\numberline {16.5}Einsatz von KI-Modellen}{155}{section.16.5}%
-\contentsline {section}{\numberline {16.6}Gems}{155}{section.16.6}%
-\contentsline {subsection}{\numberline {16.6.1}can-can-can}{155}{subsection.16.6.1}%
-\contentsline {subsection}{\numberline {16.6.2}dry-crud}{155}{subsection.16.6.2}%
-\contentsline {section}{\numberline {16.7}Instruktion}{155}{section.16.7}%
-\contentsline {section}{\numberline {16.8}Testprotokoll}{155}{section.16.8}%
-\contentsline {subsection}{\numberline {16.8.1}Manuelle Tests}{155}{subsection.16.8.1}%
-\contentsline {subsection}{\numberline {16.8.2}Feature Tests}{158}{subsection.16.8.2}%
-\contentsline {subsection}{\numberline {16.8.3}Fazit}{162}{subsection.16.8.3}%
-\contentsline {chapter}{\numberline {17}Abschluss Sprint Umsetzung}{163}{chapter.17}%
-\contentsline {section}{\numberline {17.1}Backlog}{163}{section.17.1}%
-\contentsline {chapter}{\numberline {18}Einführung}{164}{chapter.18}%
-\contentsline {chapter}{\numberline {19}Abschluss Sprint Finalisierung}{165}{chapter.19}%
-\contentsline {section}{\numberline {19.1}Backlog}{165}{section.19.1}%
-\contentsline {chapter}{\numberline {20}Sprintabschlüsse}{166}{chapter.20}%
-\contentsline {part}{III\hspace {1em}Anhang und Verzeichnise}{167}{part.3}%
-\contentsline {chapter}{\numberline {21}Verzeichnise}{168}{chapter.21}%
-\contentsline {section}{\numberline {21.1}Code}{168}{section.21.1}%
-\contentsline {section}{\numberline {21.2}Tabellenverzeichnis}{168}{section.21.2}%
-\contentsline {section}{\numberline {21.3}Abbildungsverzeichnis}{170}{section.21.3}%
-\contentsline {subsection}{Quellenverzeichnis}{174}{chapter*.223}%
-\contentsline {chapter}{\numberline {22}Verwendete Abkürzungen}{175}{chapter.22}%
-\contentsline {chapter}{\numberline {23}Glossar}{176}{chapter.23}%
-\contentsline {chapter}{\numberline {24}Anhänge}{177}{chapter.24}%
-\contentsline {section}{\numberline {24.1}Git Commit Message Convention}{177}{section.24.1}%
-\contentsline {section}{\numberline {24.2}Sitzungsprotokolle}{178}{section.24.2}%
-\contentsline {subsection}{\numberline {24.2.1}Sitzung 1}{178}{subsection.24.2.1}%
-\contentsline {subsection}{\numberline {24.2.2}Sitzung 2}{180}{subsection.24.2.2}%
-\contentsline {section}{\numberline {24.3}Git commit convention}{181}{section.24.3}%
-\contentsline {section}{\numberline {24.4}Security conventions}{181}{section.24.4}%
+\contentsline {section}{\numberline {16.5}Einsatz von KI-Modellen}{154}{section.16.5}%
+\contentsline {subsection}{\numberline {16.5.1}Eingabewerte}{155}{subsection.16.5.1}%
+\contentsline {subsection}{\numberline {16.5.2}Höhere Effizienz}{155}{subsection.16.5.2}%
+\contentsline {subsection}{\numberline {16.5.3}Höhere Effektivität}{156}{subsection.16.5.3}%
+\contentsline {subsection}{\numberline {16.5.4}Fazit}{158}{subsection.16.5.4}%
+\contentsline {section}{\numberline {16.6}Instruktion}{159}{section.16.6}%
+\contentsline {section}{\numberline {16.7}Testprotokoll}{159}{section.16.7}%
+\contentsline {subsection}{\numberline {16.7.1}Manuelle Tests}{159}{subsection.16.7.1}%
+\contentsline {subsection}{\numberline {16.7.2}Feature Tests}{162}{subsection.16.7.2}%
+\contentsline {subsection}{\numberline {16.7.3}Fazit}{166}{subsection.16.7.3}%
+\contentsline {chapter}{\numberline {17}Abschluss Sprint Umsetzung}{167}{chapter.17}%
+\contentsline {section}{\numberline {17.1}Backlog}{167}{section.17.1}%
+\contentsline {chapter}{\numberline {18}Einführung}{168}{chapter.18}%
+\contentsline {chapter}{\numberline {19}Abschluss Sprint Finalisierung}{169}{chapter.19}%
+\contentsline {section}{\numberline {19.1}Backlog}{169}{section.19.1}%
+\contentsline {chapter}{\numberline {20}Sprintabschlüsse}{170}{chapter.20}%
+\contentsline {part}{III\hspace {1em}Anhang und Verzeichnise}{171}{part.3}%
+\contentsline {chapter}{\numberline {21}Verzeichnise}{172}{chapter.21}%
+\contentsline {section}{\numberline {21.1}Code}{172}{section.21.1}%
+\contentsline {section}{\numberline {21.2}Tabellenverzeichnis}{172}{section.21.2}%
+\contentsline {section}{\numberline {21.3}Abbildungsverzeichnis}{174}{section.21.3}%
+\contentsline {subsection}{Quellenverzeichnis}{178}{chapter*.223}%
+\contentsline {chapter}{\numberline {22}Verwendete Abkürzungen}{179}{chapter.22}%
+\contentsline {chapter}{\numberline {23}Glossar}{180}{chapter.23}%
+\contentsline {chapter}{\numberline {24}Anhänge}{181}{chapter.24}%
+\contentsline {section}{\numberline {24.1}Git Commit Message Convention}{181}{section.24.1}%
+\contentsline {section}{\numberline {24.2}Sitzungsprotokolle}{182}{section.24.2}%
+\contentsline {subsection}{\numberline {24.2.1}Sitzung 1}{182}{subsection.24.2.1}%
+\contentsline {subsection}{\numberline {24.2.2}Sitzung 2}{184}{subsection.24.2.2}%
+\contentsline {section}{\numberline {24.3}Git commit convention}{185}{section.24.3}%
+\contentsline {section}{\numberline {24.4}Security conventions}{185}{section.24.4}%
 \contentsfinish 
