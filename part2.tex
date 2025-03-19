@@ -2544,9 +2544,219 @@ zu ziehen. Die Prüfung kann durch eine zusätzliche Recherche oder die Aktivier
 Die Hinterlegten Quellen sollten dennoch nochmals vom Benutzer geprüft werde, um sicherzustellen das die Informationen mit den Projektanforderungen
 übereinstimmen. 
 
-\section{Instruktion}
+\newpage
 
 \input{testprotokoll.tex}
+
+\newpage
+
+\section{Instruktion}
+Die Instruktion dient dem Benutzer zum Verständnis der Benutzerschnittstelle. Es ist eine Anleitung, welche den Benutzer bei der Arbeit 
+mit der Benutzerschnittstelle unterstützen soll. Im weiteren Abschnitt wird die Instruktion für dieses IPA-Feature bereitgestellt und durch eine
+Durchführung verfiziert.
+
+\subsection{Anleitungen}
+\textbf{Personenfilterung}
+
+In Hitobito ist es möglich alle Personen einer Ebene zu filtern. Navigieren Sie dazu zuerst auf die Gruppe auf welcher Sie die Personen filtern möchten.
+Dies können Sie über die Gruppenliste auf der linken Seiter der Anwendung.
+
+\begin{figure}[h]
+   \centering
+   \fbox{\includegraphics[width=0.5\textwidth,]{group_list.drawio.png}}
+   \caption{Gruppenliste}
+\end{figure}
+
+\newpage
+
+Haben Sie die Gruppe ausgewählt, können Sie über den Reiter ``Personen'' auf der Informationsseite alle Personen
+der Gruppe anzeigen. 
+
+\begin{figure}[h]
+   \centering
+   \fbox{\includegraphics[width=1.0\textwidth,]{people_tab.drawio.png}}
+   \caption{Personenreiter}
+\end{figure}
+
+Über das Dropdown ``Weitere Ansichten'' ist es Ihnen möglich einen Neuen Filter für die Personenliste zu erfassen.
+Klicken Sie dazu auf die Option ``Neuer Filter...''.
+
+\begin{figure}[h]
+   \centering
+   \fbox{\includegraphics[width=1.0\textwidth,]{new_filter.drawio.png}}
+   \caption{Neuer Filter erstellen}
+\end{figure}
+
+Auf der neuen Ansicht auf welcher Sie sich danach befinden, können Sie ihre Filter konfigurieren.
+Um ein neues Filterkriterium hinzuzufügen, navigieren Sie mit der Maus auf das ``+'' Zeichen. Alle auswählbaren
+Optionen werden ihnen als Dropdown unter dem ``+'' angezeigt. 
+
+\begin{figure}[h]
+   \centering
+   \fbox{\includegraphics[width=0.3\textwidth,]{filter_citerion_add.drawio.png}}
+   \caption{Filterkriterium hinzufügen}
+\end{figure}
+
+\newpage
+
+Das Filterkriterium wird nach dem Klick auf die Option im Drodpown als graue Box angezeigt.
+Innerhalb dieser Box finden sich diverse Eingabefelder zur Definition dieses Filterkriteriums. 
+Das Filterkriterium kann auch wieder entfernt werden. Klicken Sie dazu auf das Mülleimer-Symbol in 
+der rechten oberen Ecke der grauen Box.
+
+\begin{figure}[h]
+   \centering
+   \fbox{\includegraphics[width=1\textwidth,]{filter_criterion_box.drawio.png}}
+   \caption{Filterkriterium bearbeiten oder entfernen}
+\end{figure}
+
+Den Prozess des Hinzufügens und Löschens von Filterkriterien können Sie solange wiederholen, bis Sie die gewählten
+Einstellungen des Filters konfiguriert haben. Sind Sie mit der Konfiguration zufrieden, können sie den Personenfilter speichern oder
+nur danach suchen. Wenn Sie den Filter speichern möchten, muss diesem zuerst ein Name über das Eingabefeld zugewiesen werden.
+
+\begin{figure}[h]
+   \centering
+   \fbox{\includegraphics[width=1\textwidth,]{save_filter.drawio.png}}
+   \caption{Personenfilter speichern}
+\end{figure}
+
+\newpage
+
+Wenn Sie den Filter speichern, ist dieser unter dem Dropdown ``Weitere Anschten'' in der Personenansicht der Gruppe verfügbar und
+kann mit einem Klick auf den Namen des Filters wiederverwendet werden. Wenn nur nach den Filterkriterien gesucht wurde, kann der Filter nicht 
+wiederverwendet werden und der Filter wird einmalig auf die Personenliste angewendet.
+
+\begin{figure}[h]
+   \centering
+   \fbox{\includegraphics[width=0.5\textwidth,]{saved_filter_option.drawio.png}}
+   \caption{Wiederverwendung eines gespeicherten Filters}
+\end{figure}
+
+\newpage
+
+\textbf{Globale Bedinungen der Abonnemente}
+
+In Hitobito ist es möglich globale Bedingungen für Abonnemente zu definieren. Personen welche diese Bedinungen erfüllen, 
+werden den Abonnementen zugeteilt. Um auf die globalen Bedingungen eines Abonnements zu navigieren, muss zuerst eine Gruppe aus der Gruppenliste
+ganz links der Anwendung ausgewählt werden. 
+
+\begin{figure}[h]
+   \centering
+   \fbox{\includegraphics[width=0.5\textwidth,]{group_list.drawio.png}}
+   \caption{Gruppenliste}
+\end{figure}
+
+Klicken Sie anschliessend auf den Reiter ``Abonnemente'' um alle Abonnemente der Gruppe anzuzeigen. 
+In der Liste der Abonnemente klicken Sie anschliessend auf das Abonnement, in welchem Sie die globalen Bedingungen anpassen möchten.
+
+\begin{figure}[h]
+   \centering
+   \fbox{\includegraphics[width=0.5\textwidth,]{subsriptions_groups.drawio.png}}
+   \caption{Abonnementenübersicht der Gruppe}
+\end{figure}
+
+In der Detailansicht des einzelnen Abonnements, klicken Sie auf den Reiter ``Abonnente''. Anschliessend können Sie über das 
+Bearbeiten-Symbol die globalen Bedingungen des Abonnements bearbeiten.
+
+\begin{figure}[h]
+   \centering
+   \fbox{\includegraphics[width=1\textwidth,]{subscription_detail.drawio.png}}
+   \caption{Detailansicht eines Abonnements}
+\end{figure}
+
+In der Konfiguration der globalen Bedingungen können anschliessend alle Personenattribute mit eine Dropdown 
+hinzugefügt werden. Sind alle Konfigurationen zu ihrer Zufriedenheit, können sie die globalen Bedingungen über den ``Speichern''
+Button speicher.
+
+\begin{figure}[h]
+   \centering
+   \fbox{\includegraphics[width=1\textwidth,]{global_conditions_edit.drawio.png}}
+   \caption{Globale Bedingungen bearbeiten}
+\end{figure}
+
+Bei erfolgreicher Speicherung werden die Bedingungen in der Detailansicht des Abonnements als
+Text dargestellt.
+
+\begin{figure}[h]
+   \centering
+   \fbox{\includegraphics[width=0.5\textwidth,]{global_conditions_saved.drawio.png}}
+   \caption{Globale Bedingungen gespeichert}
+\end{figure}
+
+\newpage
+
+\subsection{Durchführung der Instruktion}
+
+\textbf{Personenfilterung}
+\begin{table}[h!]
+   \begin{tabular}{|L{0.4\textwidth}|L{0.6\textwidth}|}
+       \hline
+       \rowcolor{puzzleblue}\multicolumn{2}{|l|}{\color{white} Durchführungsprotokoll Instruktion Personenfilterung} \\
+       Datum & 20.03.2025 \\
+       \hline
+       Name des Instruktors & Marc Egli \\
+       \hline
+       Name der Testperson & Daniel Illi \\
+       \hline
+       Funktion der Testperson & Entwickler, Software Architekt in Hibobito \\
+       \hline
+       Aufgabe & 
+       \begin{itemize}
+         \item Auf der Gruppe ``Kontakte'' und der Ebene ``Dachverband'' soll ein neuer Personenfilter angelegt werden.
+         \item Der Personenfilter soll nach Personen mit den Tags ``Nevermind'' und ``Someone'' filtern.
+         \item Der Personenfilter soll nach den Rollen ``Group::TopLayerOffice::Manager'' und ``Group::Local::Leader'' filtern.
+         \item Das Stichdatum der Rollen ist vom 04.03.2025 bis zum 13.03.2025
+         \item Die Gültigkeit der Rollen soll ``Aktiv'' sein.
+         \item Der Personenfilter soll unter dem Namen ``Danis Filter'' abgespeichert werden.
+       \end{itemize} \\
+       \hline
+       Hilfsmittel & Der Testperson wird eine Ausgedruckte Version der Instruktion bereitgestellt. \\
+       \hline
+       Beobachtungen und Anmerkungen & 
+       \begin{itemize}
+         \item 
+       \end{itemize}   \\
+       \hline
+     \end{tabular}
+     \caption{Durchführungsprotokoll Instruktion Personenfilterung}
+\end{table}
+
+\newpage
+
+\textbf{Globale Bedingungen}
+\begin{table}[h!]
+   \begin{tabular}{|L{0.4\textwidth}|L{0.6\textwidth}|}
+       \hline
+       \rowcolor{puzzleblue}\multicolumn{2}{|l|}{\color{white} Durchführungsprotokoll Instruktion globale Bedingungen} \\
+       Datum & 20.03.2025 \\
+       \hline
+       Name des Instruktors & Marc Egli \\
+       \hline
+       Name der Testperson & Daniel Illi \\
+       \hline
+       Funktion der Testperson & Entwickler, Software Architekt in Hibobito \\
+       \hline
+       Aufgabe & 
+       \begin{itemize}
+         \item Auf der Gruppe ``Dachverband'' sollen die globalen Bedingungen angepasst werden.
+         \item Die globalen Bedingungen sollen nach Abonnenten mit dem Firmennamen ``Puzzle ITC'' mit der Genauigkeit ``ist genau'' filtern.
+         \item Der globalen Bedingungen sollen nach Abonnenten mit dem Alter grösser als 56 filtern.
+         \item Die globalen Bedingungen sollen nach Abonnenten mit dem Ort ``Riedbach'' filtern.
+         \item Die überarbeiteten globalen Bedingungen sollen anschliessend gespeichert werden.
+       \end{itemize} \\
+       \hline
+       Hilfsmittel & Der Testperson wird eine Ausgedruckte Version der Instruktion bereitgestellt. \\
+       \hline
+       Beobachtungen und Anmerkungen & 
+       \begin{itemize}
+         \item 
+       \end{itemize}   \\
+       \hline
+     \end{tabular}
+     \caption{Durchführungsprotokoll Instruktion globale Bedingungen}
+\end{table}
+
+\subsection{Fazit}
 
 \chapter{Abschluss Sprint Umsetzung}
 \section{Backlog}
