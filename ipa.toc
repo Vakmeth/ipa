@@ -117,10 +117,10 @@
 \contentsline {subsection}{\numberline {14.6.3}Manuelle Tests}{122}{subsection.14.6.3}%
 \contentsline {subsection}{\numberline {14.6.4}Automatisierte Tests}{134}{subsection.14.6.4}%
 \contentsline {subsection}{\numberline {14.6.5}Begründung der Testwahl}{144}{subsection.14.6.5}%
-\contentsline {chapter}{\numberline {15}Abschluss Sprint 1}{145}{chapter.15}%
+\contentsline {chapter}{\numberline {15}Abschluss Sprint Initialisierung}{145}{chapter.15}%
 \contentsline {section}{\numberline {15.1}Sprint Diagramme}{146}{section.15.1}%
 \contentsline {subsection}{\numberline {15.1.1}Burnup}{146}{subsection.15.1.1}%
-\contentsline {subsection}{\numberline {15.1.2}User Story chart}{146}{subsection.15.1.2}%
+\contentsline {subsection}{\numberline {15.1.2}User Story Chart}{146}{subsection.15.1.2}%
 \contentsline {chapter}{\numberline {16}Umsetzung}{147}{chapter.16}%
 \contentsline {section}{\numberline {16.1}Schnittstellen}{147}{section.16.1}%
 \contentsline {section}{\numberline {16.2}Hinzufüge-Button}{149}{section.16.2}%
@@ -142,24 +142,26 @@
 \contentsline {subsection}{\numberline {16.7.2}Durchführung der Instruktion}{173}{subsection.16.7.2}%
 \contentsline {subsection}{\numberline {16.7.3}Fazit}{174}{subsection.16.7.3}%
 \contentsline {chapter}{\numberline {17}Abschluss Sprint Umsetzung}{175}{chapter.17}%
-\contentsline {section}{\numberline {17.1}Backlog}{175}{section.17.1}%
-\contentsline {chapter}{\numberline {18}Einführung}{176}{chapter.18}%
-\contentsline {chapter}{\numberline {19}Abschluss Sprint Finalisierung}{177}{chapter.19}%
-\contentsline {section}{\numberline {19.1}Backlog}{177}{section.19.1}%
-\contentsline {chapter}{\numberline {20}Sprintabschlüsse}{178}{chapter.20}%
-\contentsline {part}{III\hspace {1em}Anhang und Verzeichnise}{179}{part.3}%
-\contentsline {chapter}{\numberline {21}Verzeichnise}{180}{chapter.21}%
-\contentsline {section}{\numberline {21.1}Code}{180}{section.21.1}%
-\contentsline {section}{\numberline {21.2}Tabellenverzeichnis}{180}{section.21.2}%
-\contentsline {section}{\numberline {21.3}Abbildungsverzeichnis}{182}{section.21.3}%
-\contentsline {subsection}{Quellenverzeichnis}{187}{chapter*.237}%
-\contentsline {chapter}{\numberline {22}Verwendete Abkürzungen}{188}{chapter.22}%
-\contentsline {chapter}{\numberline {23}Glossar}{189}{chapter.23}%
-\contentsline {chapter}{\numberline {24}Anhänge}{190}{chapter.24}%
-\contentsline {section}{\numberline {24.1}Git Commit Message Convention}{190}{section.24.1}%
-\contentsline {section}{\numberline {24.2}Sitzungsprotokolle}{191}{section.24.2}%
-\contentsline {subsection}{\numberline {24.2.1}Sitzung 1}{191}{subsection.24.2.1}%
-\contentsline {subsection}{\numberline {24.2.2}Sitzung 2}{193}{subsection.24.2.2}%
-\contentsline {section}{\numberline {24.3}Git commit convention}{194}{section.24.3}%
-\contentsline {section}{\numberline {24.4}Security conventions}{194}{section.24.4}%
+\contentsline {section}{\numberline {17.1}Sprint Diagramme}{176}{section.17.1}%
+\contentsline {subsection}{\numberline {17.1.1}Burnup}{176}{subsection.17.1.1}%
+\contentsline {subsection}{\numberline {17.1.2}User Story Chart}{176}{subsection.17.1.2}%
+\contentsline {chapter}{\numberline {18}Einführung}{177}{chapter.18}%
+\contentsline {chapter}{\numberline {19}Abschluss Sprint Finalisierung}{178}{chapter.19}%
+\contentsline {section}{\numberline {19.1}Backlog}{178}{section.19.1}%
+\contentsline {chapter}{\numberline {20}Sprintabschlüsse}{179}{chapter.20}%
+\contentsline {part}{III\hspace {1em}Anhang und Verzeichnise}{180}{part.3}%
+\contentsline {chapter}{\numberline {21}Verzeichnise}{181}{chapter.21}%
+\contentsline {section}{\numberline {21.1}Code}{181}{section.21.1}%
+\contentsline {section}{\numberline {21.2}Tabellenverzeichnis}{181}{section.21.2}%
+\contentsline {section}{\numberline {21.3}Abbildungsverzeichnis}{183}{section.21.3}%
+\contentsline {subsection}{Quellenverzeichnis}{188}{chapter*.240}%
+\contentsline {chapter}{\numberline {22}Verwendete Abkürzungen}{189}{chapter.22}%
+\contentsline {chapter}{\numberline {23}Glossar}{190}{chapter.23}%
+\contentsline {chapter}{\numberline {24}Anhänge}{191}{chapter.24}%
+\contentsline {section}{\numberline {24.1}Git Commit Message Convention}{191}{section.24.1}%
+\contentsline {section}{\numberline {24.2}Sitzungsprotokolle}{192}{section.24.2}%
+\contentsline {subsection}{\numberline {24.2.1}Sitzung 1}{192}{subsection.24.2.1}%
+\contentsline {subsection}{\numberline {24.2.2}Sitzung 2}{194}{subsection.24.2.2}%
+\contentsline {section}{\numberline {24.3}Git commit convention}{195}{section.24.3}%
+\contentsline {section}{\numberline {24.4}Security conventions}{195}{section.24.4}%
 \contentsfinish 

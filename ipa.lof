@@ -52,7 +52,7 @@
 \contentsline {figure}{\numberline {14.5}{\ignorespaces Lösungsvariante 2: Turbo-Konzept\relax }}{112}{figure.caption.170}%
 \contentsline {figure}{\numberline {14.6}{\ignorespaces Lösungsvariante 2: Klassendiagramm\relax }}{113}{figure.caption.171}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {15.1}{\ignorespaces Backlog nach Sprint 1\relax }}{145}{figure.caption.199}%
+\contentsline {figure}{\numberline {15.1}{\ignorespaces Backlog nach Sprint Initialisierung\relax }}{145}{figure.caption.199}%
 \contentsline {figure}{\numberline {15.2}{\ignorespaces Burnup nach Sprint 1\relax }}{146}{figure.caption.200}%
 \contentsline {figure}{\numberline {15.3}{\ignorespaces Charts nach Sprint 1\relax }}{146}{figure.caption.201}%
 \addvspace {10\p@ }
@@ -72,6 +72,9 @@
 \contentsline {figure}{\numberline {16.14}{\ignorespaces Globale Bedingungen bearbeiten\relax }}{172}{figure.caption.233}%
 \contentsline {figure}{\numberline {16.15}{\ignorespaces Globale Bedingungen gespeichert\relax }}{172}{figure.caption.234}%
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {17.1}{\ignorespaces Backlog nach Sprint Umsetzung\relax }}{175}{figure.caption.237}%
+\contentsline {figure}{\numberline {17.2}{\ignorespaces Burnup nach Sprint 2\relax }}{176}{figure.caption.238}%
+\contentsline {figure}{\numberline {17.3}{\ignorespaces Charts nach Sprint 2\relax }}{176}{figure.caption.239}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
@@ -79,5 +82,5 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {24.1}{\ignorespaces Puzzle ITC Git commit conventions\relax }}{190}{figure.caption.240}%
+\contentsline {figure}{\numberline {24.1}{\ignorespaces Puzzle ITC Git commit conventions\relax }}{191}{figure.caption.243}%
 \contentsfinish 
