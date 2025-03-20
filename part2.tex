@@ -854,6 +854,44 @@ Während dieser IPA wird die Funktionalität nur mit dem hitobito und hitobito\_
 werden erst nach der IPA überprüft und ergänzt.
 
 \section{Persönliche Vorgehensziele}
+\begin{table}[h!]
+   \begin{tabular}{|L{0.4\textwidth}|L{0.5\textwidth}|}
+       \hline
+       \rowcolor{puzzleblue} \multicolumn{2}{|l|}{\color{white}\textbf{Zeitrahmen}} \\[12pt]
+       \hline
+      Beschreibung & Der erstellte Zeitplan und Sprints werden erfolgreich eingehalten. \\
+       \hline
+       Messbarkeit & Die IPA wird komplett und in der definierten Frist abgeben. \\
+       \hline
+     \end{tabular}
+     \caption{Zeitrahmen}
+\end{table}
+
+\begin{table}[h!]
+   \begin{tabular}{|L{0.4\textwidth}|L{0.5\textwidth}|}
+       \hline
+       \rowcolor{puzzleblue} \multicolumn{2}{|l|}{\color{white}\textbf{Hotwire Kenntnisse}} \\[12pt]
+       \hline
+       Beschreibung & Das Wissen und die Fachkompetenz um Hotwire wird vertieft. \\
+       \hline
+       Messbarkeit & Das Wissen kann in zukünftigen Aufträgen angewendet werden. \\
+       \hline
+     \end{tabular}
+     \caption{Hotwire Kenntnisse}
+\end{table}
+
+\begin{table}[h!]
+   \begin{tabular}{|L{0.4\textwidth}|L{0.5\textwidth}|}
+       \hline
+       \rowcolor{puzzleblue} \multicolumn{2}{|l|}{\color{white}\textbf{Selbstständigkeit}} \\[12pt]
+       \hline
+       Beschreibung & Die Arbeit soll selbständig geführt werden, allfällige Fragen sind immer mit einem konkreten Lösungsvorschlag verbunden. \\
+       \hline
+       Messbarkeit & Es wird wenig und sinnvolle Hilfe von den verantwortlichen Fachkräften benötigt. \\
+       \hline
+     \end{tabular}
+     \caption{Selbstständigkeit}
+\end{table}
 
 \chapter{Entwurf}
 \section{Anwendungskonzept}
@@ -2706,7 +2744,7 @@ Text dargestellt.
 \begin{table}[h!]
    \begin{tabular}{|L{0.4\textwidth}|L{0.6\textwidth}|}
        \hline
-       \rowcolor{puzzleblue}\multicolumn{2}{|l|}{\color{white} Durchführungsprotokoll Instruktion Personenfilterung} \\
+       \rowcolor{puzzleblue}\multicolumn{2}{|l|}{\color{white} Durchführungsprotokoll Instruktion Personenfilterung 1.1} \\
        Datum & 20.03.2025 \\
        \hline
        Name des Instruktors & Marc Egli \\
@@ -2714,6 +2752,10 @@ Text dargestellt.
        Name der Testperson & Daniel Illi \\
        \hline
        Funktion der Testperson & Entwickler, Software Architekt in Hibobito \\
+       \hline
+       Testgerät & Lenovo ThinkPad \\
+       \hline
+       Betriebssystem & Pop!\_OS \\
        \hline
        Aufgabe & 
        \begin{itemize}
@@ -2729,11 +2771,28 @@ Text dargestellt.
        \hline
        Beobachtungen und Anmerkungen & 
        \begin{itemize}
-         \item 
+         \item Testperson findet sich durch die Angaben in der Instruktion zurecht.
+         \item Testperson benötigt einen Moment für das Finden des Dropdowns, findet dies danach.
        \end{itemize}   \\
        \hline
      \end{tabular}
-     \caption{Durchführungsprotokoll Instruktion Personenfilterung}
+     \caption{Durchführungsprotokoll Instruktion Personenfilterung 1.1}
+\end{table}
+
+\newpage
+
+\begin{table}[h!]
+   \begin{tabular}{|L{0.4\textwidth}|L{0.6\textwidth}|}
+       \hline
+       \rowcolor{puzzleblue}\multicolumn{2}{|l|}{\color{white} Durchführungsprotokoll Instruktion Personenfilterung 1.2} \\
+       Beobachtungen und Anmerkungen & 
+       \begin{itemize}
+         \item Testperson hat Probleme mit der Auswahl der Gruppe, mehrere Gruppen haben den gleichen Namen im Dropdown.
+         \item Testperson kann den Filter korrekt abspeichern.
+       \end{itemize}   \\
+       \hline
+     \end{tabular}
+     \caption{Durchführungsprotokoll Instruktion Personenfilterung 1.2}
 \end{table}
 
 \newpage
@@ -2751,6 +2810,10 @@ Text dargestellt.
        \hline
        Funktion der Testperson & Entwickler, Software Architekt in Hibobito \\
        \hline
+       Testgerät & Lenovo ThinkPad \\
+       \hline
+       Betriebssystem & Pop!\_OS \\
+       \hline
        Aufgabe & 
        \begin{itemize}
          \item Auf der Gruppe ``Dachverband'' sollen die globalen Bedingungen angepasst werden.
@@ -2764,7 +2827,9 @@ Text dargestellt.
        \hline
        Beobachtungen und Anmerkungen & 
        \begin{itemize}
-         \item 
+         \item Testperson findet zuerst das richtige Abonnent nicht. Dieses wurde nicht in der Aufgabenstellung definiert.
+         \item Testperson kann die globalen Bedingungen schnell bearbeiten.
+         \item Testperson konnte die globalen Bedinungen speichern.
        \end{itemize}   \\
        \hline
      \end{tabular}
@@ -2772,6 +2837,14 @@ Text dargestellt.
 \end{table}
 
 \subsection{Fazit}
+Durch die Durchführung der Instruktion konnte verfiziert werden, dass die erstellte Anleitung 
+dem Benutzer hilft die Grundfunktionalitäten des implementierten Features zu benutzen. Es wurde durch die Durchführung verfiziert
+das die Instruktion den Benutzer bei der Anwendung der Personenfilterung wie der Bearbeitung der globalen Bedingungen zum Erfolg führt.
+
+Während der Durchführung wurden zwei Probleme identifiziert: Die Aufgabenstellung zur Bearbeitung der globalen Bedinungen eines Abonnementes war zu ungenau.
+Hier hätte der Name des zu bearbeitenden Abonnementes hinterlegt werden müssen. Des weiteren wurde erkannt, das die Angaben der Rollen innerhalb des Filterungsdropdowns
+der Personenfilter zu ungenau ist. Um dies zu beheben könnte zusätzlich der Name der darüberliegenden Ebene angezeigt werden.
+
 
 \chapter{Abschluss Sprint Umsetzung}
 An dieser Stelle endet der erste Sprint welcher sich mit der Umsetzung der
@@ -2820,5 +2893,3 @@ Insgesamt wurden im Rahmen der IPA bis zu diesem Punkt 19 User Stories abgeschlo
 
 \chapter{Abschluss Sprint Finalisierung}
 \section{Backlog}
-
-\chapter{Sprintabschlüsse}

@@ -60,112 +60,111 @@
 \contentsline {chapter}{\numberline {10}Persönliches Fazit}{63}{chapter.10}%
 \contentsline {section}{\numberline {10.1}Was lief weniger gut}{63}{section.10.1}%
 \contentsline {section}{\numberline {10.2}Was lief gut}{63}{section.10.2}%
-\contentsline {section}{\numberline {10.3}Schlussreflexion}{63}{section.10.3}%
-\contentsline {part}{II\hspace {1em}Projektdokumentation}{64}{part.2}%
-\contentsline {chapter}{\numberline {11}Kurzfassung des IPA-Berichtes}{65}{chapter.11}%
-\contentsline {section}{\numberline {11.1}Ausgangssituation}{65}{section.11.1}%
-\contentsline {section}{\numberline {11.2}Umsetzung}{65}{section.11.2}%
-\contentsline {section}{\numberline {11.3}Ergebnis}{65}{section.11.3}%
-\contentsline {chapter}{\numberline {12}Einführung}{66}{chapter.12}%
-\contentsline {chapter}{\numberline {13}Analyse}{68}{chapter.13}%
-\contentsline {section}{\numberline {13.1}Ist-Zustand}{68}{section.13.1}%
-\contentsline {subsection}{\numberline {13.1.1}Personen}{68}{subsection.13.1.1}%
-\contentsline {subsection}{\numberline {13.1.2}Abonnemente}{76}{subsection.13.1.2}%
-\contentsline {section}{\numberline {13.2}Soll-Zustand}{79}{section.13.2}%
-\contentsline {subsection}{\numberline {13.2.1}Anzeigemasken}{79}{subsection.13.2.1}%
-\contentsline {subsection}{\numberline {13.2.2}Bearbeitungsmasken}{81}{subsection.13.2.2}%
-\contentsline {section}{\numberline {13.3}Fehlende Informationen}{85}{section.13.3}%
-\contentsline {section}{\numberline {13.4}Bedürfniserhebung}{86}{section.13.4}%
-\contentsline {subsection}{\numberline {13.4.1}Zielsetzung und Planung}{86}{subsection.13.4.1}%
-\contentsline {subsection}{\numberline {13.4.2}Methodenwahl}{86}{subsection.13.4.2}%
-\contentsline {subsection}{\numberline {13.4.3}Fragenkatalog}{88}{subsection.13.4.3}%
-\contentsline {subsection}{\numberline {13.4.4}Ablaufsprotokoll}{89}{subsection.13.4.4}%
-\contentsline {subsection}{\numberline {13.4.5}Auswertung}{94}{subsection.13.4.5}%
-\contentsline {chapter}{\numberline {14}Risikoanalyse und Sicherheitsmassnahmen}{96}{chapter.14}%
-\contentsline {section}{\numberline {14.1}Schnittstellen}{96}{section.14.1}%
-\contentsline {section}{\numberline {14.2}Benutzer und Datenzugriffe}{97}{section.14.2}%
-\contentsline {subsection}{\numberline {14.2.1}Datenstruktur}{98}{subsection.14.2.1}%
-\contentsline {subsection}{\numberline {14.2.2}Beispiel Zugriff Heinz}{99}{subsection.14.2.2}%
-\contentsline {subsection}{\numberline {14.2.3}Beispiel Zugriff Tim}{100}{subsection.14.2.3}%
-\contentsline {subsection}{\numberline {14.2.4}Beispiel Zugriff Rudolf}{101}{subsection.14.2.4}%
-\contentsline {subsection}{\numberline {14.2.5}Bedeutung für die Schnittstellen}{101}{subsection.14.2.5}%
-\contentsline {subsection}{\numberline {14.2.6}Risikoanalyse}{102}{subsection.14.2.6}%
-\contentsline {section}{\numberline {14.3}Risikomatrix}{103}{section.14.3}%
-\contentsline {section}{\numberline {14.4}Auswertung}{103}{section.14.4}%
-\contentsline {section}{\numberline {14.5}Anforderungen}{104}{section.14.5}%
-\contentsline {subsection}{\numberline {14.5.1}Nicht funktionale Anforderungen}{104}{subsection.14.5.1}%
-\contentsline {subsection}{\numberline {14.5.2}Funktionale Anforderungen}{105}{subsection.14.5.2}%
-\contentsline {section}{\numberline {14.6}Abgrenzung}{106}{section.14.6}%
-\contentsline {section}{\numberline {14.7}Persönliche Vorgehensziele}{107}{section.14.7}%
-\contentsline {chapter}{\numberline {15}Entwurf}{108}{chapter.15}%
-\contentsline {section}{\numberline {15.1}Anwendungskonzept}{108}{section.15.1}%
-\contentsline {subsection}{\numberline {15.1.1}Anwendungsdiagram}{108}{subsection.15.1.1}%
-\contentsline {subsection}{\numberline {15.1.2}Anwendungsfälle}{109}{subsection.15.1.2}%
-\contentsline {section}{\numberline {15.2}Systemkonzept}{111}{section.15.2}%
-\contentsline {subsection}{\numberline {15.2.1}Betroffene Services}{111}{subsection.15.2.1}%
-\contentsline {subsection}{\numberline {15.2.2}Lösungsvarianten}{112}{subsection.15.2.2}%
-\contentsline {subsection}{\numberline {15.2.3}Variantenentscheid}{116}{subsection.15.2.3}%
-\contentsline {section}{\numberline {15.3}Sicherheitskonzept}{120}{section.15.3}%
-\contentsline {subsection}{\numberline {15.3.1}SQL-Injection}{120}{subsection.15.3.1}%
-\contentsline {subsection}{\numberline {15.3.2}Cross-Site Scripting}{120}{subsection.15.3.2}%
-\contentsline {subsection}{\numberline {15.3.3}URL Interpretation}{120}{subsection.15.3.3}%
-\contentsline {subsection}{\numberline {15.3.4}Kommunikation HTTP/S}{121}{subsection.15.3.4}%
-\contentsline {section}{\numberline {15.4}Fehlerbehandlungskonzept}{121}{section.15.4}%
-\contentsline {subsection}{\numberline {15.4.1}Nutzereingabe}{121}{subsection.15.4.1}%
-\contentsline {subsection}{\numberline {15.4.2}Laufzeitfehler}{121}{subsection.15.4.2}%
-\contentsline {subsection}{\numberline {15.4.3}Exception Handling}{122}{subsection.15.4.3}%
-\contentsline {section}{\numberline {15.5}Testsetup}{123}{section.15.5}%
-\contentsline {section}{\numberline {15.6}Testkonzept}{124}{section.15.6}%
-\contentsline {subsection}{\numberline {15.6.1}Testinfrastruktur}{124}{subsection.15.6.1}%
-\contentsline {subsection}{\numberline {15.6.2}Fehlerklassen}{124}{subsection.15.6.2}%
-\contentsline {subsection}{\numberline {15.6.3}Manuelle Tests}{124}{subsection.15.6.3}%
-\contentsline {subsection}{\numberline {15.6.4}Automatisierte Tests}{136}{subsection.15.6.4}%
-\contentsline {subsection}{\numberline {15.6.5}Begründung der Testwahl}{146}{subsection.15.6.5}%
-\contentsline {chapter}{\numberline {16}Abschluss Sprint Initialisierung}{147}{chapter.16}%
-\contentsline {section}{\numberline {16.1}Sprint Diagramme}{148}{section.16.1}%
-\contentsline {subsection}{\numberline {16.1.1}Burnup}{148}{subsection.16.1.1}%
-\contentsline {subsection}{\numberline {16.1.2}User Story Chart}{148}{subsection.16.1.2}%
-\contentsline {chapter}{\numberline {17}Umsetzung}{149}{chapter.17}%
-\contentsline {section}{\numberline {17.1}Schnittstellen}{149}{section.17.1}%
-\contentsline {section}{\numberline {17.2}Hinzufüge-Button}{151}{section.17.2}%
-\contentsline {section}{\numberline {17.3}Turbostreams}{153}{section.17.3}%
-\contentsline {subsection}{\numberline {17.3.1}Partials}{154}{subsection.17.3.1}%
-\contentsline {subsection}{\numberline {17.3.2}Name-Attribut auf dem Select-Feld}{155}{subsection.17.3.2}%
-\contentsline {section}{\numberline {17.4}Globale Bedingungen}{156}{section.17.4}%
-\contentsline {section}{\numberline {17.5}Einsatz von KI-Modellen}{156}{section.17.5}%
-\contentsline {subsection}{\numberline {17.5.1}Eingabewerte}{157}{subsection.17.5.1}%
-\contentsline {subsection}{\numberline {17.5.2}Höhere Effizienz}{157}{subsection.17.5.2}%
-\contentsline {subsection}{\numberline {17.5.3}Höhere Effektivität}{158}{subsection.17.5.3}%
-\contentsline {subsection}{\numberline {17.5.4}Fazit}{160}{subsection.17.5.4}%
-\contentsline {section}{\numberline {17.6}Testprotokoll}{162}{section.17.6}%
-\contentsline {subsection}{\numberline {17.6.1}Manuelle Tests}{162}{subsection.17.6.1}%
-\contentsline {subsection}{\numberline {17.6.2}Feature Tests}{165}{subsection.17.6.2}%
-\contentsline {subsection}{\numberline {17.6.3}Fazit}{168}{subsection.17.6.3}%
-\contentsline {section}{\numberline {17.7}Instruktion}{169}{section.17.7}%
-\contentsline {subsection}{\numberline {17.7.1}Anleitungen}{169}{subsection.17.7.1}%
-\contentsline {subsection}{\numberline {17.7.2}Durchführung der Instruktion}{175}{subsection.17.7.2}%
-\contentsline {subsection}{\numberline {17.7.3}Fazit}{176}{subsection.17.7.3}%
-\contentsline {chapter}{\numberline {18}Abschluss Sprint Umsetzung}{177}{chapter.18}%
-\contentsline {section}{\numberline {18.1}Sprint Diagramme}{178}{section.18.1}%
-\contentsline {subsection}{\numberline {18.1.1}Burnup}{178}{subsection.18.1.1}%
-\contentsline {subsection}{\numberline {18.1.2}User Story Chart}{178}{subsection.18.1.2}%
-\contentsline {chapter}{\numberline {19}Einführung}{179}{chapter.19}%
-\contentsline {chapter}{\numberline {20}Abschluss Sprint Finalisierung}{180}{chapter.20}%
-\contentsline {section}{\numberline {20.1}Backlog}{180}{section.20.1}%
-\contentsline {chapter}{\numberline {21}Sprintabschlüsse}{181}{chapter.21}%
-\contentsline {part}{III\hspace {1em}Anhang und Verzeichnise}{182}{part.3}%
-\contentsline {chapter}{\numberline {22}Verzeichnise}{183}{chapter.22}%
-\contentsline {section}{\numberline {22.1}Code}{183}{section.22.1}%
-\contentsline {section}{\numberline {22.2}Tabellenverzeichnis}{183}{section.22.2}%
-\contentsline {section}{\numberline {22.3}Abbildungsverzeichnis}{185}{section.22.3}%
-\contentsline {subsection}{Quellenverzeichnis}{190}{chapter*.240}%
-\contentsline {chapter}{\numberline {23}Verwendete Abkürzungen}{191}{chapter.23}%
-\contentsline {chapter}{\numberline {24}Glossar}{192}{chapter.24}%
-\contentsline {chapter}{\numberline {25}Anhänge}{193}{chapter.25}%
-\contentsline {section}{\numberline {25.1}Git Commit Message Convention}{193}{section.25.1}%
-\contentsline {section}{\numberline {25.2}Sitzungsprotokolle}{194}{section.25.2}%
-\contentsline {subsection}{\numberline {25.2.1}Sitzung 1}{194}{subsection.25.2.1}%
-\contentsline {subsection}{\numberline {25.2.2}Sitzung 2}{196}{subsection.25.2.2}%
-\contentsline {section}{\numberline {25.3}Git commit convention}{197}{section.25.3}%
-\contentsline {section}{\numberline {25.4}Security conventions}{197}{section.25.4}%
+\contentsline {section}{\numberline {10.3}Schlussreflexion}{64}{section.10.3}%
+\contentsline {part}{II\hspace {1em}Projektdokumentation}{65}{part.2}%
+\contentsline {chapter}{\numberline {11}Kurzfassung des IPA-Berichtes}{66}{chapter.11}%
+\contentsline {section}{\numberline {11.1}Ausgangssituation}{66}{section.11.1}%
+\contentsline {section}{\numberline {11.2}Umsetzung}{66}{section.11.2}%
+\contentsline {section}{\numberline {11.3}Ergebnis}{66}{section.11.3}%
+\contentsline {chapter}{\numberline {12}Einführung}{67}{chapter.12}%
+\contentsline {chapter}{\numberline {13}Analyse}{69}{chapter.13}%
+\contentsline {section}{\numberline {13.1}Ist-Zustand}{69}{section.13.1}%
+\contentsline {subsection}{\numberline {13.1.1}Personen}{69}{subsection.13.1.1}%
+\contentsline {subsection}{\numberline {13.1.2}Abonnemente}{77}{subsection.13.1.2}%
+\contentsline {section}{\numberline {13.2}Soll-Zustand}{80}{section.13.2}%
+\contentsline {subsection}{\numberline {13.2.1}Anzeigemasken}{80}{subsection.13.2.1}%
+\contentsline {subsection}{\numberline {13.2.2}Bearbeitungsmasken}{82}{subsection.13.2.2}%
+\contentsline {section}{\numberline {13.3}Fehlende Informationen}{86}{section.13.3}%
+\contentsline {section}{\numberline {13.4}Bedürfniserhebung}{87}{section.13.4}%
+\contentsline {subsection}{\numberline {13.4.1}Zielsetzung und Planung}{87}{subsection.13.4.1}%
+\contentsline {subsection}{\numberline {13.4.2}Methodenwahl}{87}{subsection.13.4.2}%
+\contentsline {subsection}{\numberline {13.4.3}Fragenkatalog}{89}{subsection.13.4.3}%
+\contentsline {subsection}{\numberline {13.4.4}Ablaufsprotokoll}{90}{subsection.13.4.4}%
+\contentsline {subsection}{\numberline {13.4.5}Auswertung}{95}{subsection.13.4.5}%
+\contentsline {chapter}{\numberline {14}Risikoanalyse und Sicherheitsmassnahmen}{97}{chapter.14}%
+\contentsline {section}{\numberline {14.1}Schnittstellen}{97}{section.14.1}%
+\contentsline {section}{\numberline {14.2}Benutzer und Datenzugriffe}{98}{section.14.2}%
+\contentsline {subsection}{\numberline {14.2.1}Datenstruktur}{99}{subsection.14.2.1}%
+\contentsline {subsection}{\numberline {14.2.2}Beispiel Zugriff Heinz}{100}{subsection.14.2.2}%
+\contentsline {subsection}{\numberline {14.2.3}Beispiel Zugriff Tim}{101}{subsection.14.2.3}%
+\contentsline {subsection}{\numberline {14.2.4}Beispiel Zugriff Rudolf}{102}{subsection.14.2.4}%
+\contentsline {subsection}{\numberline {14.2.5}Bedeutung für die Schnittstellen}{102}{subsection.14.2.5}%
+\contentsline {subsection}{\numberline {14.2.6}Risikoanalyse}{103}{subsection.14.2.6}%
+\contentsline {section}{\numberline {14.3}Risikomatrix}{104}{section.14.3}%
+\contentsline {section}{\numberline {14.4}Auswertung}{104}{section.14.4}%
+\contentsline {section}{\numberline {14.5}Anforderungen}{105}{section.14.5}%
+\contentsline {subsection}{\numberline {14.5.1}Nicht funktionale Anforderungen}{105}{subsection.14.5.1}%
+\contentsline {subsection}{\numberline {14.5.2}Funktionale Anforderungen}{106}{subsection.14.5.2}%
+\contentsline {section}{\numberline {14.6}Abgrenzung}{107}{section.14.6}%
+\contentsline {section}{\numberline {14.7}Persönliche Vorgehensziele}{108}{section.14.7}%
+\contentsline {chapter}{\numberline {15}Entwurf}{109}{chapter.15}%
+\contentsline {section}{\numberline {15.1}Anwendungskonzept}{109}{section.15.1}%
+\contentsline {subsection}{\numberline {15.1.1}Anwendungsdiagram}{109}{subsection.15.1.1}%
+\contentsline {subsection}{\numberline {15.1.2}Anwendungsfälle}{110}{subsection.15.1.2}%
+\contentsline {section}{\numberline {15.2}Systemkonzept}{112}{section.15.2}%
+\contentsline {subsection}{\numberline {15.2.1}Betroffene Services}{112}{subsection.15.2.1}%
+\contentsline {subsection}{\numberline {15.2.2}Lösungsvarianten}{113}{subsection.15.2.2}%
+\contentsline {subsection}{\numberline {15.2.3}Variantenentscheid}{117}{subsection.15.2.3}%
+\contentsline {section}{\numberline {15.3}Sicherheitskonzept}{121}{section.15.3}%
+\contentsline {subsection}{\numberline {15.3.1}SQL-Injection}{121}{subsection.15.3.1}%
+\contentsline {subsection}{\numberline {15.3.2}Cross-Site Scripting}{121}{subsection.15.3.2}%
+\contentsline {subsection}{\numberline {15.3.3}URL Interpretation}{121}{subsection.15.3.3}%
+\contentsline {subsection}{\numberline {15.3.4}Kommunikation HTTP/S}{122}{subsection.15.3.4}%
+\contentsline {section}{\numberline {15.4}Fehlerbehandlungskonzept}{122}{section.15.4}%
+\contentsline {subsection}{\numberline {15.4.1}Nutzereingabe}{122}{subsection.15.4.1}%
+\contentsline {subsection}{\numberline {15.4.2}Laufzeitfehler}{122}{subsection.15.4.2}%
+\contentsline {subsection}{\numberline {15.4.3}Exception Handling}{123}{subsection.15.4.3}%
+\contentsline {section}{\numberline {15.5}Testsetup}{124}{section.15.5}%
+\contentsline {section}{\numberline {15.6}Testkonzept}{125}{section.15.6}%
+\contentsline {subsection}{\numberline {15.6.1}Testinfrastruktur}{125}{subsection.15.6.1}%
+\contentsline {subsection}{\numberline {15.6.2}Fehlerklassen}{125}{subsection.15.6.2}%
+\contentsline {subsection}{\numberline {15.6.3}Manuelle Tests}{125}{subsection.15.6.3}%
+\contentsline {subsection}{\numberline {15.6.4}Automatisierte Tests}{137}{subsection.15.6.4}%
+\contentsline {subsection}{\numberline {15.6.5}Begründung der Testwahl}{147}{subsection.15.6.5}%
+\contentsline {chapter}{\numberline {16}Abschluss Sprint Initialisierung}{148}{chapter.16}%
+\contentsline {section}{\numberline {16.1}Sprint Diagramme}{149}{section.16.1}%
+\contentsline {subsection}{\numberline {16.1.1}Burnup}{149}{subsection.16.1.1}%
+\contentsline {subsection}{\numberline {16.1.2}User Story Chart}{149}{subsection.16.1.2}%
+\contentsline {chapter}{\numberline {17}Umsetzung}{150}{chapter.17}%
+\contentsline {section}{\numberline {17.1}Schnittstellen}{150}{section.17.1}%
+\contentsline {section}{\numberline {17.2}Hinzufüge-Button}{152}{section.17.2}%
+\contentsline {section}{\numberline {17.3}Turbostreams}{154}{section.17.3}%
+\contentsline {subsection}{\numberline {17.3.1}Partials}{155}{subsection.17.3.1}%
+\contentsline {subsection}{\numberline {17.3.2}Name-Attribut auf dem Select-Feld}{156}{subsection.17.3.2}%
+\contentsline {section}{\numberline {17.4}Globale Bedingungen}{157}{section.17.4}%
+\contentsline {section}{\numberline {17.5}Einsatz von KI-Modellen}{157}{section.17.5}%
+\contentsline {subsection}{\numberline {17.5.1}Eingabewerte}{158}{subsection.17.5.1}%
+\contentsline {subsection}{\numberline {17.5.2}Höhere Effizienz}{158}{subsection.17.5.2}%
+\contentsline {subsection}{\numberline {17.5.3}Höhere Effektivität}{159}{subsection.17.5.3}%
+\contentsline {subsection}{\numberline {17.5.4}Fazit}{161}{subsection.17.5.4}%
+\contentsline {section}{\numberline {17.6}Testprotokoll}{163}{section.17.6}%
+\contentsline {subsection}{\numberline {17.6.1}Manuelle Tests}{163}{subsection.17.6.1}%
+\contentsline {subsection}{\numberline {17.6.2}Feature Tests}{166}{subsection.17.6.2}%
+\contentsline {subsection}{\numberline {17.6.3}Fazit}{169}{subsection.17.6.3}%
+\contentsline {section}{\numberline {17.7}Instruktion}{170}{section.17.7}%
+\contentsline {subsection}{\numberline {17.7.1}Anleitungen}{170}{subsection.17.7.1}%
+\contentsline {subsection}{\numberline {17.7.2}Durchführung der Instruktion}{176}{subsection.17.7.2}%
+\contentsline {subsection}{\numberline {17.7.3}Fazit}{179}{subsection.17.7.3}%
+\contentsline {chapter}{\numberline {18}Abschluss Sprint Umsetzung}{180}{chapter.18}%
+\contentsline {section}{\numberline {18.1}Sprint Diagramme}{181}{section.18.1}%
+\contentsline {subsection}{\numberline {18.1.1}Burnup}{181}{subsection.18.1.1}%
+\contentsline {subsection}{\numberline {18.1.2}User Story Chart}{181}{subsection.18.1.2}%
+\contentsline {chapter}{\numberline {19}Einführung}{182}{chapter.19}%
+\contentsline {chapter}{\numberline {20}Abschluss Sprint Finalisierung}{183}{chapter.20}%
+\contentsline {section}{\numberline {20.1}Backlog}{183}{section.20.1}%
+\contentsline {part}{III\hspace {1em}Anhang und Verzeichnise}{184}{part.3}%
+\contentsline {chapter}{\numberline {21}Verzeichnise}{185}{chapter.21}%
+\contentsline {section}{\numberline {21.1}Code}{185}{section.21.1}%
+\contentsline {section}{\numberline {21.2}Tabellenverzeichnis}{185}{section.21.2}%
+\contentsline {section}{\numberline {21.3}Abbildungsverzeichnis}{187}{section.21.3}%
+\contentsline {subsection}{Quellenverzeichnis}{192}{chapter*.244}%
+\contentsline {chapter}{\numberline {22}Verwendete Abkürzungen}{193}{chapter.22}%
+\contentsline {chapter}{\numberline {23}Glossar}{194}{chapter.23}%
+\contentsline {chapter}{\numberline {24}Anhänge}{195}{chapter.24}%
+\contentsline {section}{\numberline {24.1}Git Commit Message Convention}{195}{section.24.1}%
+\contentsline {section}{\numberline {24.2}Sitzungsprotokolle}{196}{section.24.2}%
+\contentsline {subsection}{\numberline {24.2.1}Sitzung 1}{196}{subsection.24.2.1}%
+\contentsline {subsection}{\numberline {24.2.2}Sitzung 2}{198}{subsection.24.2.2}%
+\contentsline {section}{\numberline {24.3}Git commit convention}{199}{section.24.3}%
+\contentsline {section}{\numberline {24.4}Security conventions}{199}{section.24.4}%
 \contentsfinish 
