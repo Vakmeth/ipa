@@ -36,7 +36,7 @@ tritt Puzzle dabei immer seine Grundwerte nach aussen, welche im Puzzlehouse abg
 
 Hitobito ist eines der Angebote von Puzzle. Es ist ein Community-Management Tool und
 als Open-Source Projekt auf Github zu finden. Das Tool wird von zahlreichen Verbänden, Parteien
-und Organisationen verwendet und befindet sich darum in einer kontinuerilichen Weiterentwicklung. Mit dem Wagons-Gem
+und Organisationen verwendet und befindet sich darum in einer kontinuierlichen Weiterentwicklung. Mit dem Wagons-Gem
 ermöglicht es Hitobito zudem spezielle Kundenanpassungen in einem eigenen ``Wagon'' zu vollziehen, ohne die Software anderer
 Kunden mit-anzupassen.
 
@@ -44,24 +44,24 @@ Ich selbst arbeite jetzt seit einem halben Jahr im Hitobito und nahm darin vor a
 bspw. das Upgrade von RoR (Ruby on Rails) von 6.1 auf 7.1 vornehmen oder die Migration von MySQL auf PostgreSQL vollziehen.
 
 Da Hitobito von zahlreichen Kunden verwendet wird, ist die Applikation über die Jahre gewachsen. Viele Features wurden implementiert,
-um sie schnell dem Kunden zur Verfügung zu stellen. Mit einem immer wachsenden Anforderungskatalog ergaben sich dadurch komplexe Arbeitsabläufe
-welche im Tool etabliert wurden. Einer dieser komplexen Abläufe ist die Filterung nach Personen oder Abonnemente.
+um sie schnell dem Kunden zur Verfügung zu stellen. Mit einem immer wachsenden Anforderungskatalog, ergaben sich dadurch komplexe Arbeitsabläufe,
+welche im Tool etabliert wurden. Einer dieser komplexen Abläufe, ist die Filterung nach Personen oder Abonnennten.
 
 Mit dieser IPA eine neue Benutzerschnittstelle entworfen werden eine besser User Experience für den Benutzer zu schaffen.
 
-In einer Zeit in welcher Unternehmen mehr den je Wert auf ein sauberes Design und der User Experience von Webseiten und Applikationen geben, das auch
+In einer Zeit, in welcher Unternehmen mehr den je Wert auf ein sauberes Design und der User Experience von Webseiten und Applikationen geben, das auch
 in einer älteren Applikation zu etablieren. Gerade bei einem Community-Management Tool wie Hitobito, welches tagtäglich von 
-Personen bedient werden, welche nicht das technische Know-How dahinter besitzen, ist es wichtig Arbeitsabläufe so einfach wie möglich zu entwerfen, um 
-maximale Effizienz für diese Personen zu garantieren. Durch eine Vereinfachung der Hitobito-Filter machen wir damit einen ersten Schritt in die richtige
+Personen bedient wird, welche nicht das technische Know-How dahinter besitzen, ist es wichtig, Arbeitsabläufe so einfach wie möglich zu entwerfen, um 
+maximale Effizienz für diese Personen zu garantieren. Durch eine Vereinfachung der Hitobito-Filter, machen wir damit einen ersten Schritt in die richtige
 Richtung.
 
 \chapter{Analyse}
-In der Analyse der IPA wird der Rahmen geschaffen in welchem der Kandidat später während des Implementierens arbeitet. 
-Sie befasst sich mit der Aufnahme von Ist- und Zielzustand des Produktes. Ausserdem werden darin Funktionale und nicht funktionale Anforderungen erfasst.
-Es wird definiert wo sich die IPA abgrenzt. 
+In der Analyse der IPA wird der Rahmen geschaffen, in welchem der Kandidat später während des Implementierens arbeitet. 
+Sie befasst sich mit der Aufnahme von Ist- und Zielzustand des Produktes. Ausserdem werden darin funktionale und nicht funktionale Anforderungen erfasst.
+Es wird definiert, wo sich die IPA abgrenzt. 
 
 \section{Ist-Zustand}
-Im folgenden Abschnitt wird erklärt wie die Filterung von Personen und Abonnementen im Hitobito zum
+Im folgenden Abschnitt wird erklärt, wie die Filterung von Personen und Abonnenten im Hitobito zum
 jetzigen Stand abläuft.
 
 \subsection{Personen}
@@ -94,10 +94,10 @@ oder einen neuen Personenfilter erstellen. Der neue Personenfilter kann unter de
 
 \newpage
 
-Nach dem Klick auf diese Option wird der Benutzer auf eine Filterübersicht weitergeleitet. Die Filterübersicht besteht aus Buttons für die Speicher und Suche, drei Radio-Buttons und fünf Dropdowns.
+Nach dem Klick auf diese Option, wird der Benutzer auf eine Filterübersicht weitergeleitet. Die Filterübersicht besteht aus Buttons für die Speicher und Suche, drei Radio-Buttons und fünf Dropdowns.
 
-Die drei Radio-Buttons zu Beginn definieren auf welcher Ebene gesucht wird.
-Jedes Dropdown bietet dem Benutzer die Möglichkeit Filterkriterien zu definieren. Die Art des Filterkriteriums ist durch
+Die drei Radio-Buttons am Anfang, definieren auf welcher Ebene gesucht wird.
+Jedes Dropdown bietet dem Benutzer die Möglichkeit, Filterkriterien zu definieren. Die Art des Filterkriteriums ist durch
 den Dropdownnamen gegeben.
 
 
@@ -111,12 +111,12 @@ den Dropdownnamen gegeben.
 
 Im Dropdown ``Rollen'' werden alle Rollen pro Ebene aufgelistet. Der Benutzer kann per Klick auf eine Checkbox
 die Rollen auswählen, welche Personen durch die Filterung aufweisen müssen. Möchte der Benutzer alle Rollen einer Ebene auswählen,
-kann er die mit einem Klick auf den Namen einer Ebene tun. In diesem Beispiel wäre das ein Klick auf ``Hauptebene''. Nach dem Klick auf den
+kann er dies mit einem Klick auf den Namen einer Ebene tun. In diesem Beispiel wäre das ein Klick auf ``Hauptebene''. Nach dem Klick auf den
 Ebenennamen werden alle Checkboxen abgehakt. Somit wurden alle Rollen der angeklickten Eben ausgewählt.
 
-Für die Rollen kann des weiteren ein Gültigkeits-Zeitraum definiert werden. Die Gültigkeit
+Des weiteren kann für die Rollen ein Gültigkeits-Zeitraum definiert werden. Die Gültigkeit
 wird vom Benutzer via Radio-Buttons ausgewählt. Zuletzt kann im ``Rollen'' Dropdown entschieden werden, ob 
-archivierte Rollen bei der Filterung berücksichtigt werden. Das UI bietet dem Benutzer dafür eine weiter selbststehende
+archivierte Rollen bei der Filterung berücksichtigt werden. Das UI bietet dem Benutzer dafür eine weitere selbststehende
 Checkbox.
 
 \begin{figure}[h]
@@ -146,7 +146,7 @@ per Input-Feld definiert werden.
    \caption{Filterkriterium Qualifikationen}
 \end{figure}
 
-Beim Filterkriterium ``Felder'' handelt es sich um zusätzliche Personenattribute welche in
+Beim Filterkriterium ``Felder'' handelt es sich um zusätzliche Personenattribute, welche in
 die Filterung miteinbezogen werden.
 
 \begin{figure}[h]
@@ -199,7 +199,7 @@ Unter die Kategorie der ``Felder'' fallen folgende Personenattribute:
 \end{table}
 
 Die Attribute können über ein Dropdown ausgewählt werden. Wurde das Attribut ausgewählt kann zusätzlich die Genauigkeit
-des Filterkriterums definiert werden.
+des Filterkriteriums definiert werden.
 
 Für Textwerte bieten sich folgende Genauigkeiten an:
 
@@ -222,7 +222,7 @@ So kann der Benutzer bestimmen wie genau sein eingegebener Wert dem ausgewählte
 \newpage
 
 Das Filterkriterium ``Sprachen'' bietet die Möglichkeit aus den Optionen Deutsch, Englisch oder Französisch auszuwählen.
-Es können auch mehrer Sprachen ausgewählt werden. Die Auswahl erfolgt über Checkboxen.
+Es können auch mehrere Sprachen ausgewählt werden. Die Auswahl erfolgt über Checkboxen.
 
 \begin{figure}[h]
    \centering
@@ -231,9 +231,9 @@ Es können auch mehrer Sprachen ausgewählt werden. Die Auswahl erfolgt über Ch
 \end{figure}
 
 
-Das Filterkriterium ``Tags'' macht es möglich Personen nach gegebenen Tags zu suchen. Über zwei 
+Das Filterkriterium ``Tags'' macht es möglich, Personen nach gegebenen Tags zu suchen. Über zwei 
 Inputfelder kann definiert werden, welche Tags eine Person haben oder nicht haben muss. Die Input-Felder sind
-Dropdowns welche dem Benutzer die Eingabe vervollständigen wenn dieser nach einem Tag sucht.
+Dropdowns welche dem Benutzer die Eingabe vervollständigen, wenn dieser nach einem Tag sucht.
 
 \begin{figure}[h]
    \centering
@@ -243,9 +243,9 @@ Dropdowns welche dem Benutzer die Eingabe vervollständigen wenn dieser nach ein
 
 \newpage
 
-Wurden alle Filterkriterien vom Benutzer definiert kann dieser die Konfiguration des Personenfilters speichern. 
+Wurden alle Filterkriterien vom Benutzer definiert, kann dieser die Konfiguration des Personenfilters speichern. 
 Dazu muss ein Name des Filters definiert werden. Will der Benutzer den Filter nicht speichern, kann der auf den Button ``Suchen'' klicken. Anschliessend
-werden auf der Personenübersicht nur Personen angezeigt welche die Filterkriterien erfüllen. Wird der Filter nicht gespeichert, 
+werden auf der Personenübersicht nur Personen angezeigt, welche die Filterkriterien erfüllen. Wird der Filter nicht gespeichert, 
 muss dieser erneut von Hand zusammengestellt werden.
 
 \begin{figure}[h]
@@ -256,12 +256,12 @@ muss dieser erneut von Hand zusammengestellt werden.
 
 \newpage
 
-\subsection{Abonnemente}
-Die Abonnementenfilterung kann nicht im Hitobito wie die Personenfilterung angezeigt werden. Stattdessen
-wird die Filterung bei einem Export von Abonnementen als CSV angewendet. So werden im resultierenden CSV nur Personen
+\subsection{Abonnente}
+Die Abonnentenfilterung kann nicht im Hitobito wie die Personenfilterung angezeigt werden. Stattdessen
+wird die Filterung bei einem Export der Abonnenten als CSV angewendet. So werden im resultierenden CSV nur Personen
 angezeigt, welche den Filterkriterien entsprechen.
 
-Die Abonnementenfilterung kann erneut über die Gruppenübersicht ausgemacht werden.
+Die Abonnentenfilterung kann erneut über die Gruppenübersicht ausgemacht werden.
 
 \begin{figure}[h]
    \centering
@@ -281,8 +281,8 @@ Auf dieser Ansicht kann der Benutzer per Klick ein Abonnement auswählen.
 
 \newpage
 
-Daraufhin wird der Benutzer auf die Infoseite des Abonnements weitergeleitet. Um die Abonnementenfilterung
-einzusehen muss nun auf den Reiter ``Abonnenten'' navigiert werden.
+Daraufhin wird der Benutzer auf die Infoseite des Abonnements weitergeleitet. Um die Abonnentenfilterung
+einzusehen, muss nun auf den Reiter ``Abonnenten'' navigiert, werden.
 
 \begin{figure}[h]
    \centering
@@ -290,27 +290,27 @@ einzusehen muss nun auf den Reiter ``Abonnenten'' navigiert werden.
    \caption{Übersicht einzelnes Abonnementes}
 \end{figure}
 
-Unter dieser Ansicht ist es dem Benutzer möglich diverse Filterkriterien für das Abonnement zu definieren.
+In dieser Ansicht ist es dem Benutzer möglich, diverse Filterkriterien für die Abonnenten zu definieren.
 Im Rahmen dieser IPA werden ausschliesslich die globalen Bedingungen überarbeitet, weswegen die anderen Filterkriterien
 zu vernachlässigen sind. Die globalen Bedingungen können über das Bearbeitungssymbol angepasst werden.
 
 \begin{figure}[h]
    \centering
    \fbox{\includegraphics[width=1\textwidth,]{subscription_filter_overview.png}}
-   \caption{Abonnementenübersicht}
+   \caption{Abonnentenübersicht}
 \end{figure}
 
 \newpage
 
-In den globalen Bedingungen bieten sich zwei Filterkriterien: Felder und Sprache. Die Funktionsweise
+In den globalen Bedingungen bieten sich zwei Filterkriterien an: Felder und Sprache. Die Funktionsweise
 ist dabei die gleiche, wie die der Personenfilter (weiter oben beschrieben).
 
-Der Benutzer wählt die Filterkriterien aus und Speichert diese anschliessend. Die gespeicherten Bedingungen 
-werden in der Textbox unter dem Titel ``Globale Bedingungen'' auf der Abonnementenübersicht angezeigt.
+Der Benutzer wählt die Filterkriterien aus und speichert diese anschliessend. Die gespeicherten Bedingungen 
+werden in der Textbox unter dem Titel ``Globale Bedingungen'' auf der Abonnentenübersicht angezeigt.
 \begin{figure}[h]
    \centering
    \fbox{\includegraphics[width=1\textwidth,]{global_conditions_overview.png}}
-   \caption{Globale Filterungsbedingungen für Abonnemente}
+   \caption{Globale Filterungsbedingungen für Abonnenten}
 \end{figure}
 
 \newpage
@@ -333,16 +333,16 @@ Sobald der Benutzer auf ``Neuer Filter...'' in der Personenübersicht einer Grup
    \caption{Mockup Filterübersicht}
 \end{figure}
 
-Die Übersicht enthält die Radio-Buttons der alten Benutzerschnittstelle. Die massgäbliche Änderung zum Soll-Zustand betrifft den hinzufügen Button.
-Dieser befindet agiert als Dropdown, sobald der Benutzer auf ihn klickt. Das Dropdown besitzt vier Filterungskriterien, nicht mehr die fünf wie sie momentan
+Die Übersicht enthält die Radio-Buttons der alten Benutzerschnittstelle. Die massgebliche Änderung zum Soll-Zustand, betrifft den Hinzufügen-Button.
+Dieser agiert als Dropdown, sobald der Benutzer auf ihn klickt. Das Dropdown besitzt vier Filterungskriterien, nicht mehr die fünf, wie sie momentan
 im Hitobito anzutreffen sind. Sind noch keine Filterkriterien erfasst, wird dies dem Benutzer mit einem Text signalisiert.
 Die Speicherungskomponente des Filters bleibt bestehen.
 
 \textbf{Filterübersicht mit Tags und Felder}
 
 Hat der Benutzer seine Filterkriterien definiert, werden diese in Boxen angezeigt.
-Die definierte Filterkriterien verschwinden aus dem Dropdown unter dem Hinzufüge-Button. Stattdessen können 
-die definierten Filterkriterien über den Stif in der oberen, rechten Ecke einer Box bearbeitete werden.
+Die definierten Filterkriterien verschwinden aus dem Dropdown unter dem Hinzufügen-Button. Stattdessen können 
+die definierten Filterkriterien über den Stift in der oberen, rechten Ecke einer Box, bearbeitete werden.
 
 \begin{figure}[h]
    \centering
@@ -351,7 +351,7 @@ die definierten Filterkriterien über den Stif in der oberen, rechten Ecke einer
 \end{figure}
 
 In dieser Ansicht hat der Benutzer das Filterkriterium ``Tags'' und ``Felder'' definiert. Diese Optionen verschwinden
-somit aus dem Dropdown. Wurden zu jedem Filterkriterium Bedingungen erfasst, verschwindet der gesamte Hinzufüge-Button.
+somit aus dem Dropdown. Wurden zu jedem Filterkriterium Bedingungen erfasst, verschwindet der gesamte Hinzufügen-Button.
 
 \newpage
 
@@ -367,13 +367,13 @@ Im folgenden Bild hat der Benutzer Tags, Rollen und Qualifikationen als Filterkr
 
 \subsection{Bearbeitungsmasken}
 Nachfolgend werden die Anzeigen vorgestellt, welche der Benutzer bearbeiten kann. Diese sind für den Benutzer zugänglich, indem er
-ein Filterkriterium entweder per Hinzufüge-Button hinzufügt oder per Editier-Button (Stift in der oberen rechten Ecke der Box) bearbeitet.
+ein Filterkriterium entweder per Hinzufügen-Button hinzufügt oder per Editier-Button, Stift in der oberen rechten Ecke der Box, bearbeitet.
 
 \textbf{Felder}
 
-Die Felder können im neuen Mockup durch ein Dropdown ausgewählt werden. Danach wird kann wie zuvor die Genauigkeit bestimmen werden.
-Will der Benutzer ein weiteres Attribut zu seinen Suchbedingungen hinzufügen, kann er dies über den Hinzufüge-Butten in der rechten unteren Ecke. Auf dieser
-Benutzerschnittstelle ist es möglich die Sprache als Attribut auszuwählen. Für die Sprache kann standardmässig keine Genauigkeit definiert werden.
+Die Felder können im neuen Mockup durch ein Dropdown ausgewählt werden. Danach kann wie zuvor die Genauigkeit bestimmt werden.
+Will der Benutzer ein weiteres Attribut zu seinen Suchbedingungen hinzufügen, kann er dies über den Hinzufügen-Button in der rechten unteren Ecke. Auf dieser
+Benutzerschnittstelle ist es möglich, die Sprache als Attribut auszuwählen. Für die Sprache kann standardmässig keine Genauigkeit definiert werden.
 
 \begin{figure}[h]
    \centering
@@ -387,9 +387,9 @@ Benutzerschnittstelle ist es möglich die Sprache als Attribut auszuwählen. Fü
 
 Die Rolle kann über die Gruppe oder den Rollennamen definiert werden. Wird unter dem Eingabefeld ``Gruppen'' eine Gruppe hinterlegt,
 werden alle dazugehörigen Rollen dieser Gruppe in die Filterung miteinbezogen. Will der User nur einzelne Rollen
-in die Filterung miteinbeziehen, kann er dies über das Rollen-Eingabefeld. Die Gültigkeit der Rolle wird kann über ein suchbares dropdown ausgewählt werden.
-Das Element der Stichdatum bleibt bestehen. Die Checkbox für die archivierten Rollen wird im Mockup vernachlässigt und standardmässig werden alle Rollen,
-sofern diese die Gültigkeitsbedingungen erfüllen, miteinbezogen.
+in die Filterung miteinbeziehen, kann er dies über das Rollen-Eingabefeld. Die Gültigkeit der Rolle wird kann über ein suchbares Dropdown ausgewählt werden.
+Das Element des Stichdatums bleibt bestehen. Die Checkbox für die archivierten Rollen wird im Mockup vernachlässigt und alle Rollen werden standardmässig, sofern
+diese die Gültigkeitsbedingungen erfüllen, miteinbezogen.
 
 \begin{figure}[h]
    \centering
@@ -413,7 +413,7 @@ ein suchbares Stichdatum ausgewählt werden.
 
 \textbf{Tags}
 
-Die Definition der Tags bleibt bestehen wie in der Soll-Situation beschrieben
+Die Definition der Tags bleibt bestehen, wie in der Soll-Situation beschrieben
 
 \begin{figure}[h]
    \centering
@@ -424,10 +424,10 @@ Die Definition der Tags bleibt bestehen wie in der Soll-Situation beschrieben
 \newpage
 
 \section{Fehlende Informationen}
-Alle bekannten Informationen bei Beginn der IPA wurden in der Ist-Situation und der Soll-Situation beschrieben.
+Alle bekannten Informationen bei Beginn der IPA, wurden in der Ist-Situation und der Soll-Situation beschrieben.
 Als unbekannte Informationen gelten: Die Bedürfnisse des Benutzers, Sicherheitsrisiken, sowie die daraus resultierenden Produktanforderungen.
-Die genannten Bereiche werden in den kommenden Abschniten aufgenommen und analysiert. Alle unbekannten Informationen welche einzelne 
-Definitionen oder Abläufe betreffen wurden über das Internet oder KI recherchiert und anschliessend im Anhang unter dem Datum der Verwendung hinterlegt.
+Die genannten Bereiche werden in den kommenden Abschnitten aufgenommen und analysiert. Alle unbekannten Informationen, welche einzelne 
+Definitionen oder Abläufe betreffen, wurden über das Internet oder KI recherchiert und anschliessend im Anhang unter dem Datum der Verwendung hinterlegt.
 
 \newpage
 
@@ -445,8 +445,8 @@ Diese werden im folgenden Abschnitt dokumentiert.
 \newpage
 
 \section{Bedürfniserhebung}
-Um die Bedürfnisse der Kunden vor der Entwicklung zu identifizieren wird eine Bedürfniserhebung durchgeführt. 
-Angewendete Modelle, Befragungstechniken und Erhebungen werden im folgenden Abschnitt dokumentiert. Es wird zuerst die Zielsetzung und Planung definiert,
+Um die Bedürfnisse der Kunden vor der Entwicklung zu identifizieren, wird eine Bedürfniserhebung durchgeführt. 
+Angewendete Modelle, Befragungstechniken und Erhebungen, werden im folgenden Abschnitt dokumentiert. Es wird zuerst die Zielsetzung und Planung definiert,
 danach die Methode der Erhebung ausgewählt, die Erhebung durchgeführt und zuletzt alle Daten und identifizierten Bedürfnisse analyisert.
 
 \subsection{Zielsetzung und Planung}
@@ -478,7 +478,7 @@ In dieser Arbeit wurde als Methode das Interview gewählt. Die Begründung resul
        \hline
        \rowcolor{puzzleblue}\color{white}Methode & \color{white} Gedankengänge & \color{white} Verwendung \\
        \hline
-       Umfragen & Hiefür wird eine grosse Benutzergruppe benötigt um ein aussagekräftiges Resultat daraus zu ziehen. 
+       Umfragen & Hierfür wird eine grosse Benutzergruppe benötigt, um ein aussagekräftiges Resultat daraus zu ziehen. 
        Für die Organisation einer solchen Benutzergruppe besteht keine Zeit. & Nein \\
        \hline
        Interviews und Fokusgruppen & Durch ein Interview können mehr Informationen gewonnen werden als einer Umfrage.
@@ -486,7 +486,7 @@ In dieser Arbeit wurde als Methode das Interview gewählt. Die Begründung resul
        nicht zu verletzen, müsste das Inteview mit nur einer Person durchgeführt werden. & Ja \\
        \hline
        Beobachtungen & Um Bedürfnisse mit einer Beobachtung durchzuführen, muss zuerst ein Testskript geschrieben werden.
-       In einem Testskript muss jeder Schritt und die daraus folgenden Aufgabe klar definiert sein. Dies gelöscht
+       In einem Testskript muss jeder Schritt und die daraus folgenden Aufgabe klar definiert sein. Dies geht
        mit einem hohen Zeitaufwand für die Verfassung des Testskripts einher. & Nein \\
        \hline
        Dokumentenanalyse & Die Dokumentenanalyse kann mit dem Benutzerhandbuch von Hitobito durchgeführt werden.
@@ -500,7 +500,7 @@ In dieser Arbeit wurde als Methode das Interview gewählt. Die Begründung resul
 
 \subsection{Fragenkatalog}
 Die Fragen im Interview basieren auf dieser \href{https://kreativ.mfg.de/digitale-kultur/kompass-digitale-kultur/prozess/nutzerinnen-gruppe/bedarfsanalyse-interviews/}{Anleitung}.
-Während des Interviews werden die nachkommenden Fragen gestellt:
+Während des Interviews, werden die nachkommenden Fragen gestellt:
 
 \textbf{Offene Einleitungsfragen}
 \begin{itemize}
@@ -518,12 +518,12 @@ Während des Interviews werden die nachkommenden Fragen gestellt:
 
 \textbf{Fragen zur Hitobito Filterung}
 \begin{itemize}
-   \item Frage 7: Welche Erfahrungen hast du mit der Filterung von Personen und Abonnemente in Hitobito gemacht?
+   \item Frage 7: Welche Erfahrungen hast du mit der Filterung von Personen und Abonnenten in Hitobito gemacht?
    \item Frage 8: Was stört dich an dieser Filterung?
-   \item Frage 9: Was würdest du an dieser ändern Filterung?
+   \item Frage 9: Was würdest du an dieser Filterung ändern?
    \item Frage 10: Welche zusätzlichen Funktionen wünschst du dir für diese Filterung?
    \item Frage 11: Wie würdest du alle Mängel und zusätzlichen Features auf priorisieren?
-   \item Frage 12: Welchen Dringlichkeit hat eine Überarbeitung der Filterung für dich?
+   \item Frage 12: Welche Dringlichkeit hat eine Überarbeitung der Filterung für dich?
    \item Frage 13: Welche Kosten wärst du maximal bereit zu zahlen?
 \end{itemize}
 
@@ -537,14 +537,14 @@ Während des Interviews werden die nachkommenden Fragen gestellt:
        \hline
        Begrüssung der Testperson & Danke vielmals für die Einladung. & Testperson scheint positiv eingestimmt zu sein, ein bisschen nervös. \\
        \hline
-       Erklärung des Ablaufs & Perfekt, ja das stimmt so für mich. & Testperson richtet Blick aufmerksam auf den Befrager. \\
+       Erklärung des Ablaufs & Perfekt, ja das stimmt so für mich. & Testperson richtet den Blick aufmerksam auf den Befrager. \\
        \hline
-       Frage 1 & Ich bin Product Owner von Hitobito teilweise. Eigentlich ist Oliver Dietschi der Product Owner, aber ich höre von vielen Kunden was ihre Bedürfnisse sind. & Testperson Lächelt leicht. \\
+       Frage 1 & Ich bin teilweise Product Owner von Hitobito. Eigentlich ist Oliver Dietschi der Product Owner, aber ich höre von vielen Kunden, was ihre Bedürfnisse sind. & Testperson Lächelt leicht. \\
        \hline
-       Frage 2 & Im Moment ist mir Nachhaltigkeit unheimlich wichtig. Bei allen Bereichen, Beziehungen und Freundschaften. Auch was ich kaufe und wie ich leben. & Testperson wird ernster. Stimme senkt sich. \\
+       Frage 2 & Im Moment ist mir Nachhaltigkeit unheimlich wichtig. In allen Bereichen, Beziehungen und Freundschaften. Auch was ich kaufe und wie ich lebe. & Testperson wird ernster. Stimme senkt sich. \\
        \hline
        Frage 3 & Ich habe ursprünglich das KV beim Inter Discount gemacht. Im Detailhandel. Danach habe ich bei der Swisscom gearbeiten und später gemerkt, dass das wohl doch nichts für mich ist. Danach habe ich ein
-       Wirtschaftsstudium an der BFH gemacht. Dort habe ich gemerkt das mir Projektmanagement sehr zusagt. Anschliessend habe ich im Bereich Ausbildung und in der Stahlindustrie gearbeitet, dort als Projektmanager.
+       Wirtschaftsstudium an der BFH gemacht. Dort habe ich gemerkt, dass mir Projektmanagement sehr zusagt. Anschliessend habe ich im Bereich Ausbildung und in der Stahlindustrie als Projektmanager gearbeitet.
        Schlussendlich bin ich in der IT gelandet. & Testperson ist ernster zu Beginn der Antwort, lächelt beim Übergang zu der IT.   \\
        \hline
      \end{tabular}
@@ -558,10 +558,10 @@ Während des Interviews werden die nachkommenden Fragen gestellt:
        \hline
        \rowcolor{puzzleblue}\color{white}Tätigkeit & \color{white} Antwort der Testperson & \color{white} Mimik und Gestik \\
        \hline
-       Frage 4 & Ich war selber ein sehr engagierter Pfadiler. Ich wusste noch gar nicht wie Hitobito funktioniert. Ein Kollege von mir, Tobi Hinderling, hatte
-       dann von einer Firma namens Puzzle ITC gehört welche Hitobito betreibt. Er sagt sie sein super cool organisiert und er wolle unbedingt dort arbeiten. Das machte er
-       dann auch und hatte das Projektmanagement bei Hitobito inne. Tobias und ich, wir waren immer wieder am Aareböttle zusammen und da hat er mir gesagt ich soll doch auch zu Puzzle kommen,
-       denn ihn würde mer das UX als das Projektmanagement interessiern. Wir könnten dann intern die Rollen wechseln und genau so ist es geschehen. & Testperson Lacht bei der Anektote zu Tobias Hinderling. \\
+       Frage 4 & Ich war selber ein sehr engagierter Pfadfinder. Ich wusste noch gar nicht, wie Hitobito funktioniert. Ein Kollege von mir, Tobi Hinderling, hatte
+       dann von einer Firma namens Puzzle ITC gehört, welche Hitobito betreibt. Er sagte sie sei super cool organisiert und er wolle unbedingt dort arbeiten. Das machte er
+       dann auch und hatte das Projektmanagement bei Hitobito inne. Tobias und ich, wir waren immer wieder am ``Aare böttle'' zusammen und da hat er mir gesagt, ich soll doch auch zu Puzzle kommen,
+       denn ihn würde mehr das UX als das Projektmanagement interessieren. Wir könnten dann intern die Rollen wechseln und genau so ist es geschehen. & Testperson Lacht bei der Anektote zu Tobias Hinderling. \\
        \hline
        Frage 5 & Die Kunden faszinieren mich an Hitobito. Wir haben eine sehr breite Kundenpalette. Wir streben auch eine langfristige Kunden an und nehmen nicht jeden.
        Wir haben sehr viele Non-Profit Gruppen und generell auch sehr angenehme Kunden. & Denkt kurz nach, ist ernster bei der Antwort. \\
@@ -581,10 +581,10 @@ Während des Interviews werden die nachkommenden Fragen gestellt:
        \hline
        \rowcolor{puzzleblue}\color{white}Tätigkeit & \color{white} Antwort der Testperson & \color{white} Mimik und Gestik \\
        \hline
-       Frage 8 & Was mich am meisten stört ist das UI. Alles ist ein bisschen verzettelt. Du weist nicht genau wo du suchen musst. Niemand weiss genau
+       Frage 8 & Was mich am meisten stört ist das UI. Alles ist ein bisschen verzettelt. Du weist nicht genau, wo du suchen musst. Niemand weiss genau,
        was man suchen kann. Die Filter können unheimlich viel, aber du musst ein bisschen suchen. & Gestikuliert in Richtung Laptop, Stimme wird lauter. \\
        \hline
-       Frage 9 & Ich würde versuchen, alles zu vereinheitlichen. Evtl. z.B. die Felder und Sprache zusammennehmen. Auch die Rollen
+       Frage 9 & Ich würde versuchen, alles zu vereinheitlichen. Evtl. die Felder und Sprache zusammennehmen. Auch die Rollen
        haben eine coole Funktion bei der Anwahl der Hauptebene. Aber diese Funktion kennt einfach niemand. Das müsste irgendwo genauer erklärt werden.
        Funktional ist enorm viel drin. Aber sie hegen einen gewissen Pain. & Testperson wird ruhiger, überlegt, Stimme wird leiser. \\
        \hline
@@ -602,13 +602,13 @@ Während des Interviews werden die nachkommenden Fragen gestellt:
        \hline
        \rowcolor{puzzleblue}\color{white}Tätigkeit & \color{white} Antwort der Testperson & \color{white} Mimik und Gestik \\
        \hline
-       Frage 11 & Als erstes das Sprachen Dropdown aus der Landschaft entfernen und unter Felder anordnen. Der nervt mich tatsächlich sehr. So, wieso haben wir für jedes
-       Attribut ein Dropdown in den Feldern aber für die Sprachen hängt es hier einfach so herum? Ansonsten finden
-       ich alles andere OK. Geschlecht ist etwas anderes was mich stört. Dort muss du wenn du ein Mann bist ``m'' eingeben und wenn du eine Frau bist ``w''. 
-       Auch ``w''' wenn du die Sprache auf Französisch eingestellt hast. Und weist du was? Wenn du kein Geschlecht hast musst du das Feld leer lassen, dass weiss einfach
-       niemand. & Testperson regt sich auf, Gestikuliert in Richtung Hitobito Filterung auf Laptop. \\
+       Frage 11 & Als erstes das Sprachen Dropdown aus der Landschaft entfernen und unter Felder anordnen. Der nervt mich tatsächlich sehr. Sowieso haben wir für jedes
+       Attribut ein Dropdown in den Feldern, aber für die Sprachen hängt es hier einfach so herum? Ansonsten finde
+       ich alles andere ok. Geschlecht ist etwas anderes was mich stört. Als Mann musst du dort ein ``m'' eingeben und als Frau ein ``w''. 
+       Auch ``w''' wenn du die Sprache auf französisch eingestellt hast. Und weisst du was? Wenn du kein Geschlecht hast, musst du das Feld leer lassen, was einfach
+       niemand weiss. & Testperson regt sich auf, Gestikuliert in Richtung Hitobito Filterung auf Laptop. \\
        \hline
-       Frage 12 & Da kommt bei mir der Ökonom durch. Alles ist nice to have. Wir haben in Hitobito im Moment noch andere Bausteine, welche ich noch dringender priorisier. Die Filterung
+       Frage 12 & Da kommt bei mir der Ökonom durch. Alles ist nice to have. Wir haben in Hitobito im Moment noch andere Bausteine, welche ich noch dringender priorisiere. Die Filterung
        ist unschön und nicht toll, aber sie funktioniert. Das ist das Wichtigste. Da gibt es andere Sachen, Code welcher älter ist oder aktiv zu Bugs führt. Da sehe ich momentan mehr Probleme. 
        & Stimme der Testperson wird ruhiger und überlegter. \\
      \hline
@@ -624,11 +624,11 @@ Während des Interviews werden die nachkommenden Fragen gestellt:
        \rowcolor{puzzleblue}\color{white}Tätigkeit & \color{white} Antwort der Testperson & \color{white} Mimik und Gestik \\
        \hline
        Frage 13 & Das ist eine Scheissfrage. Jeder Kunde sagt, dass er ein festes Budget habe und will nicht mehr ausgeben. Jeder Kunde würde vermutlich nichts zahlen, da
-       aus seiner Sicht das Feature funktionieren müsste. Da es ein OpenSource Projekt ist, ist die Finanzierung eh noch schwieriger geregelt. Wir sagen wir sind OpenSource und
+       aus seiner Sicht das Feature funktionieren müsste. Da es ein OpenSource Projekt ist, ist die Finanzierung eh noch schwieriger geregelt. Wir sagen, wir sind OpenSource und
        entwickeln das Produkt dann einfach im Auftrag von Kunden weiter.
-         & Testperson lacht zu Beginn seiner Antwort. Lachen mündet in Lächeln und verschindet gegen Ende der Antwort. Person gestikuliert mittelmässig. \\
+         & Testperson lacht zu Beginn seiner Antwort. Lachen mündet in Lächeln und verschwindet gegen Ende der Antwort. Person gestikuliert mittelmässig. \\
        \hline
-       Verabschiedung & Vielen Dank dir. Wenn du Fragen oder noch weiteres wissen musst kannst du gerne nochmals zu mir kommen. & Testperson lächelt und verabschiedet sich mit einer kurzem Wink. \\
+       Verabschiedung & Vielen Dank dir. Wenn du Fragen oder noch weiteres wissen musst, kannst du gerne nochmals zu mir kommen. & Testperson lächelt und verabschiedet sich mit einem kurzem Wink. \\
      \hline
      \end{tabular}
      \caption{Ablaufprotokoll Teil 5}
@@ -638,7 +638,7 @@ Während des Interviews werden die nachkommenden Fragen gestellt:
 
 \subsection{Auswertung}
 Im kommenden Abschnitt werden die wichtigsten Bedürfnisse aufgelistet. Die Bedürfnisse werden
-nach Dringlichkeit und Relevanz priorisiert. Die Datengrundlage dafür bietet das hinterlegte Ablaufprotokoll.
+nach Dringlichkeit und Relevanz priorisiert. Die Datengrundlage dafür, bietet das hinterlegte Ablaufprotokoll.
 
 Die Dringlichkeit wird mit den Stufen D1-D3 definiert. Die Stufen sind folgendermassen zu beurteilen:
 \begin{table}[h!]
@@ -648,9 +648,9 @@ Die Dringlichkeit wird mit den Stufen D1-D3 definiert. Die Stufen sind folgender
        \hline
        D1 & Höchste Dringlichkeit. Bedürfnis muss in den nächsten Wochen umgesetzt werden. Nicht Erfüllung führt zu hohen Nutzerverlust. \\
       \hline
-       D2 & Mittlere Dringlichkeit. Bedürfnis muss in den nächsten Monaten umgesetzt werden. Nicht Erfüllung führt zu überschauberem Nutzerverlust. \\
+       D2 & Mittlere Dringlichkeit. Bedürfnis muss in den nächsten Monaten umgesetzt werden. Nicht Erfüllung führt zu überschaubarem Nutzerverlust. \\
       \hline
-       D3 & Niedrige Dringlichkeit. Bedürfnis muss im nächsten Jahr umgesetzt werden. Nicht Erfüllung führ zu keinem Nutzerverlust. \\
+       D3 & Niedrige Dringlichkeit. Bedürfnis muss im nächsten Jahr umgesetzt werden. Nicht Erfüllung führt zu keinem Nutzerverlust. \\
      \hline
      \end{tabular}
      \caption{Dringlichkeitsstufen}
@@ -665,7 +665,7 @@ Die Reihenfolge der Bedürfnisse in der Tabelle entspricht ihrer Priorisierung
        \rowcolor{puzzleblue}\color{white}Bedürfnis & \color{white} Störfaktor & \color{white} Dringlichkeit & \color{white} Begründung \\
        \hline
        \label{bed1} Modularer Aufbau & Das Filterungs UI ist unübersichtlich und der Benutzer kann nicht verstehen, welche Optionen zur Filterung zur Verfügung 
-       stehen. Die Filterung soll einem modularen Aufbau folgen, welcher den User durch die Filterung führt. & D1 & Durch den unübersichtliche Aufbau der Filterung und die Reaktion der Testperson wird diesem Bedürfnis die höchste Priorität zugeschrieben. \\
+       stehen. Die Filterung soll einem modularen Aufbau folgen, welcher den User durch die Filterung führt. & D1 & Durch den unübersichtlichen Aufbau der Filterung und die Reaktion der Testperson, wird diesem Bedürfnis die höchste Priorität zugeschrieben. \\
        \hline
        \label{bed2} Filterkriterium ``Sprache'' & Das Filterkriterium ``Sprache'' soll mit dem Filterkriterium ``Felder'' vereinheitlicht werden & D2 & Testperson hat das Bedürfnis zur Vereinheitlichung der Filterkriterien
        während des Inteviews mehrmals wiederholt, weswegen dieses Bedürfnis die zweithöchste Priorität einnimmt.  \\
@@ -725,7 +725,7 @@ werden als gleichwertig bewertet. Somit erhält die erste nicht funktionale Anfo
        \hline
        \rowcolor{puzzleblue} \multicolumn{2}{|l|}{\color{white}\textbf{Nicht funktionale Anforderung 3}} \\[4pt]
        \hline
-       Beschreibung & Filterung soll ausschliesslich verfizierte Daten anzeigen, basiert auf \color{blue}\hyperref[sec1]{\color{blue} Sicherheitsrisiko 1}\color{black}  \\
+       Beschreibung & Filterung soll ausschliesslich verifizierte Daten anzeigen, basiert auf \color{blue}\hyperref[sec1]{\color{blue} Sicherheitsrisiko 1}\color{black}  \\
        \hline
        Messbarkeit & Benutzer können keine Daten einsehen, auf welche sie keine Berechtigungen haben.  \\
        \hline
@@ -752,7 +752,7 @@ werden als gleichwertig bewertet. Somit erhält die erste nicht funktionale Anfo
        \rowcolor{puzzleblue} \multicolumn{2}{|l|}{\color{white}\textbf{Nicht funktionale Anforderung 5}} \\[4pt]
        \hline
        Beschreibung & Die gewählte Implementation der Überarbeit der Benutzerschnittstelle berücksichtigt, dass zukünftig
-       weitere Filterkriterien dazu kommen können. \\
+       weitere Filterkriterien dazukommen können. \\
        \hline
        Messbarkeit & Es wird eine generische Methode zur Implementation gewählt, so dass zukünftige Filterkriterien nach dem 
        vorgegebenen Muster implementiert werden können.  \\
@@ -768,7 +768,7 @@ werden als gleichwertig bewertet. Somit erhält die erste nicht funktionale Anfo
        \hline
        Beschreibung & Die Benutzerschnittstelle ist visuell ansprechend implementiert und folgt einem modularem Aufbau. Gemäss \hyperref[bed1]{Bedürfnis} aus Bedürfniserhebung \\
        \hline
-       Messbarkeit & Es ist dem Benutzer möglich durch die hinterlegte Instruktion das Produkt zweckmässig zu verwenden.  \\
+       Messbarkeit & Es ist dem Benutzer möglich, durch die hinterlegte Instruktion, das Produkt zweckmässig zu verwenden.  \\
        \hline
      \end{tabular}
      \caption{Nicht funktionale Anforderung 6}
@@ -784,9 +784,9 @@ werden als gleichwertig bewertet. Somit erhält die erste nicht funktionale Anfo
        \hline
        Beschreibung & Die Filterung bietet mit der neuen Implementation die gleiche Grundfunktionalität wie bisher. \\
        \hline
-       Messbarkeit & Alle Funktionen welche in der Ist-Situation dokumentiert wurden, sind nach der Implementation immer noch vorhanden. \\
+       Messbarkeit & Alle Funktionen, welche in der Ist-Situation dokumentiert wurden, sind nach der Implementation immer noch vorhanden. \\
        \hline
-       Testart & Manuell und Automatisiert \\
+       Testart & Manuell und automatisiert \\
        \hline
      \end{tabular}
      \caption{Funktionale Anforderung 1}
@@ -797,11 +797,11 @@ werden als gleichwertig bewertet. Somit erhält die erste nicht funktionale Anfo
        \hline
        \rowcolor{puzzleblue} \multicolumn{2}{|l|}{\color{white}\textbf{Funktionale Anforderung 2}} \\[4pt]
        \hline
-       Beschreibung & Neue Filterkriterien können mit dem Hinzufüge-Button hinzugefügt werden. \\
+       Beschreibung & Neue Filterkriterien können mit dem Hinzufügen-Button hinzugefügt werden. \\
        \hline
        Messbarkeit & Die beschriebene Funktion kann in der Benutzerschnittstelle ausgeführt werden. \\
        \hline
-       Testart & Manuell und Automatisiert \\
+       Testart & Manuell und automatisiert \\
        \hline
      \end{tabular}
      \caption{Funktionale Anforderung 2}
@@ -816,7 +816,7 @@ werden als gleichwertig bewertet. Somit erhält die erste nicht funktionale Anfo
        \hline
        Messbarkeit & Die beschriebene Funktion kann in der Benutzerschnittstelle ausgeführt werden. \\
        \hline
-       Testart & Manuell und Automatisiert \\
+       Testart & Manuell und automatisiert \\
        \hline
      \end{tabular}
      \caption{Funktionale Anforderung 3}
@@ -831,7 +831,7 @@ werden als gleichwertig bewertet. Somit erhält die erste nicht funktionale Anfo
        \hline
        Messbarkeit & Die beschriebene Funktion ist in der Benutzerschnittstelle ersichtlich. \\
        \hline
-       Testart & Manuell und Automatisiert \\
+       Testart & Manuell und automatisiert \\
        \hline
      \end{tabular}
      \caption{Funktionale Anforderung 4}
@@ -846,7 +846,7 @@ werden als gleichwertig bewertet. Somit erhält die erste nicht funktionale Anfo
        \hline
        Messbarkeit & Es besteht kein eigenes Filterkriterium ``Sprache'' mehr im Dropdown. \\
        \hline
-       Testart & Manuell und Automatisiert \\
+       Testart & Manuell und automatisiert \\
        \hline
      \end{tabular}
      \caption{Funktionale Anforderung 5}
@@ -856,10 +856,10 @@ werden als gleichwertig bewertet. Somit erhält die erste nicht funktionale Anfo
 Das Ziel dieser Arbeit ist es, eine komplette Überarbeitung der Benutzerschnittstelle von Personen- und Abonnementenfilter im Hitobito einzubauen.
 Sämtliches Testing wird nur für die neue Benutzerschnittstelle gemacht, kaputte oder alte Tests werden deaktiviert und
 kommentiert, sofern diese nichts mit der Implementation des Produktes zu tun haben. Diese Arbeit beschränkt sich auf die Überarbeitung der Benutzerschnittstelle des Personenfilters
-und der Benutzerschnittstelle der globalen Bedingungen von Abonnementen. Andere Benutzerschnittstelle welche mit der Filterung verbunden sind,
+und der Benutzerschnittstelle der globalen Bedingungen der Abonnenten. Andere Benutzerschnittstellen, welche mit der Filterung verbunden sind,
 werden erst nach der IPA überarbeitet.
 
-Während dieser IPA wird die Funktionalität nur mit dem hitobito und hitobito\_generic Wagon garantiert. Alle anderen Wagons 
+Während dieser IPA wird die Funktionalität nur mit dem Hitobito und Hitobito-Generic Wagon garantiert. Alle anderen Wagons 
 werden erst nach der IPA überprüft und ergänzt.
 
 \section{Persönliche Vorgehensziele}
@@ -929,13 +929,13 @@ läuft.
        \hline
        Vorbedingungen & 
        \begin{itemize}
-         \item Der Benutzer besitzt die nötigen Rechte um eine Filter zu erstellen
+         \item Der Benutzer besitzt die nötigen Rechte um einen Filter zu erstellen
          \item Mind. ein Filterkriterium wurde ausgewählt
        \end{itemize} \\
        \hline
        Ablauf & \begin{enumerate}
          \item Benutzer benennt den Filter, optional und nur bei der Filterung von Personen
-         \item Benutzer klickt auf Speichern
+         \item Benutzer klickt auf speichern
        \end{enumerate}  \\
        \hline
        Resultat & Der Filter wurde in der Datenbank persistiert und ein Success-Alert wird ausgegeben. \\
@@ -973,7 +973,7 @@ läuft.
       \hline
       \rowcolor{puzzleblue} \multicolumn{2}{|l|}{\color{white}\textbf{Filterkriterien bearbeiten}} \\[4pt]
       \hline
-      Kurzbeschreibung & Der Benutzer kann die Filterkriterien die Filterkriterien bearbeiten. \\
+      Kurzbeschreibung & Der Benutzer kann die Filterkriterien bearbeiten. \\
       \hline
       Vorbedingungen & 
       \begin{itemize}
@@ -1019,7 +1019,7 @@ läuft.
 \section{Systemkonzept}
 Bei dieser Arbeit wird mit einem bestehenden System gearbeitet, dieses muss entsprechend angepasst werden. 
 Um die nötigen Anpassungen besser sichtbar zu machen, werden im folgenden Abschnitt die Betroffenen Services identifiziert.
-Anschliessen werden mögliche Lösungsvarianten konzeptioniert. Aus den Lösungsvarianten wird per Variantenentscheid eine Lösungsvariante ausgearbeitet.
+Anschliessend werden mögliche Lösungsvarianten konzeptioniert. Aus den Lösungsvarianten wird per Variantenentscheid eine Lösungsvariante ausgearbeitet.
 
 \begin{figure}[h]
    \centering
@@ -1032,8 +1032,8 @@ Hitobito wird in zwei Services unterteilt, der Rails Applikation und der Postgre
 
 \textbf{Rails Applikation / Webserver}
 
-Die Rails Applikation verwaltet die Geschäftslogik von Hitobito. Die Erweiterugnen dieser Arbeit
-werden alle in diesem Service vorgenommen. Je nach Kunde werden hier Codeteile aus den anderen Wagons verwendet.
+Die Rails Applikation verwaltet die Geschäftslogik von Hitobito. Die Erweiterungen dieser Arbeit
+werden alle in diesem Service vorgenommen. Je nach Kunde, werden hier Codeteile aus den anderen Wagons verwendet.
 In dieser Arbeit wird ausschliesslich der Core und der Generic Wagon angepasst.
 
 \textbf{Postgres Datenbank}
@@ -1048,7 +1048,7 @@ gemacht. Als ORM (Object Relational Mapping) wird Active Record verwendet.
 \textbf{Lösungsvariante 1}
 
 Die Idee des nachfolgenden Konzeptes ist die Aufteilung des Mockups in Elemente, welche später durch 
-Turbo angesteuert werden können. Hierbei sollen nur Turbo-Streams verwendet werden. Diese ermöglichen uns Element nur mit der ID 
+Turbo angesteuert werden können. Hierbei sollen nur Turbostreams verwendet werden. Diese ermöglichen es, Elemente im HAML mit der ID 
 eines Divs, zu diesem Div hinzuzufügen.  
 
 \begin{figure}[h]
@@ -1069,14 +1069,14 @@ Das daraus resultierende Klassendiagramm sieht so aus:
    \caption{Lösungsvariante 1: Klassendiagramm}
 \end{figure}
 
-Rot markierte Felder stehen dabei für Funktionen, welche entfernt werden. Grün steht für Funktionen, welche hinzugefüt werden.
+Rot markierte Felder stehen dabei für Funktionen, welche entfernt werden. Grün steht für Funktionen, welche hinzugefügt werden.
 Gelb steht für Funktionen oder Dateien, welche bearbeitet werden müssen.
 
-Im \texttt{PeopleFilterController} wie im \texttt{FilterController} werden zusätzliche Endpoints angelegt
+Im \texttt{PeopleFilterController} wie im \texttt{FilterController} werden zusätzliche Endpoints angelegt,
 welche die jeweilgen Partials als Turbostream zurückgeben. Mit den Turbo Streams werden die Partials einem texttt{div} angehängt oder
-von diesem entfernt. Da die Filterkriterien mittels der Turbostream angezeigt werden, wird der Endpoint ``new'' im \texttt{PeopleFilterController}
-nicht mehr benötig. Die View \texttt{\_filter.html.haml} muss so geändert werden, dass sie alle Boxen welche durch die Filterungskriterien
-auf der Benutzerschnittstelle darstellen, in ein \texttt{Div} verpackt. Dieses \texttt{Div} kann später in den 
+von diesem entfernt. Da die Filterkriterien mittels der Turbostreams angezeigt werden, wird der Endpoint ``new'' im \texttt{PeopleFilterController}
+nicht mehr benötig. Die View \texttt{\_filter.html.haml} muss so geändert werden, dass sie alle Boxen, welche durch die Filterkriterien
+auf der Benutzerschnittstelle darstellen, in ein \texttt{Div} verpacken. Dieses \texttt{Div} kann später in den 
 Turbostreams referenziert werden.
 
 \newpage
@@ -1084,7 +1084,7 @@ Turbostreams referenziert werden.
 \textbf{Lösungsvariante 2}
 
 In der zweiten Lösungsvariante wird mit Turboframes statt der Turbostreams gearbeitet. Für jedes Partial besteht zu Beginn ein
-Turboframe. Wird im Dropdown auf eines der Filterkriterien geklickt, der Inhalt des Turboframes mit dem Formular für das jeweilige 
+Turboframe. Wird im Dropdown auf eines der Filterkriterien geklickt, wird der Inhalt des Turboframes mit dem Formular für das jeweilige 
 Filterkriterium befüllt.
 
 \begin{figure}[h]
@@ -1106,10 +1106,10 @@ Eine Umsetzung dieses Turbo-Konzeptes führt zu folgendem Klassendiagramm.
    \caption{Lösungsvariante 2: Klassendiagramm}
 \end{figure}
 
-Massgebend ist der Unterschied, dass hier keine Turbostreams benötigt werden. Es wird nach wie vor für jedes Filterkriterium ein
-ein Endpoint erstellt. Diese liefern allerdings die bereits bestehenden Partials zurück. An den Partials selbst muss ein Turboframe eingebaut werden.
-So wird jedes Form eines Filterkriteriums von einem Turboframe umschlossen. Als zusätzliche Klasse entsteht in dieser Variante der \texttt{FilterDropdownController}.
-Die Aufgabe dieses Controllers ist es, die Filterkriterien bei der Auswahl aus dem Dropdown zu entfernen. Wurden alle Filterkriterien ausgewählt blendet der Controller das
+Massgebend ist der Unterschied, dass hier keine Turbostreams benötigt werden. Es wird nach wie vor für jedes Filterkriterium
+ein Endpoint erstellt. Dieser liefert allerdings die bereits bestehenden Partials zurück. An den Partials selbst muss ein Turboframe eingebaut werden.
+So wird jedes Formular eines Filterkriteriums von einem Turboframe umschlossen. Als zusätzliche Klasse entsteht in dieser Variante der \texttt{FilterDropdownController}.
+Die Aufgabe dieses Controllers ist es, die Filterkriterien bei der Auswahl aus dem Dropdown zu entfernen. Wurden alle Filterkriterien ausgewählt, blendet der Controller das
 Dropdown komplett aus. 
 
 \newpage
@@ -1135,7 +1135,7 @@ Folgende Kriterien wurden definiert:
       Anforderungen & Kann mit dieser Variante jede Anforderung erfüllt werden?
       & Mehrere Anforderung können nicht erfüllt werden. & Alle Anforderunge können erfüllt werden. \\
       \hline
-      Performanz & Ist das Konzept performant? Spart das Konzept Zeit / Requests? 
+      Performance & Ist das Konzept performant? Spart das Konzept Zeit / Requests? 
       & Konzept ist nicht performant, Filterungen sind durch Implementation deutlich langsamer.
       & Es wird viel Zeit durch die Implementation des Konzepts gespart.\\
       \hline
@@ -1147,16 +1147,16 @@ Folgende Kriterien wurden definiert:
 
 \textbf{Bewertungen}
 
-Im folgenden Abschnitt werden den definierten Kriterien Gewichtungen hinzugefüht, da nicht jedes Kriterium gleich wichtig für
+Im folgenden Abschnitt werden den definierten Kriterien Gewichtungen hinzugefügt, da nicht jedes Kriterium gleich wichtig für
 diese IPA ist.
 
 \textbf{Gewichtungen in \%}
 
 \begin{itemize}
    \item \textbf{Zeitaufwand 40\%:} Um eine funktionelle Lösung am Ende der IPA aufweisen zu können, wird dem Zeitaufwand eine hohe Gewichtung zugerodnet.
-   \item \textbf{Einführung 20\%:} Es ist wichtig eine Lösung zu implementieren welche schnell ihren Weg in die produktive Umgebung finden, da die Einführung von der IPA ausgenommen ist, wird diesem Kriterium eine geringere Gewichtung zugeordnet.
+   \item \textbf{Einführung 20\%:} Es ist wichtig eine Lösung zu implementieren, welche schnell ihren Weg in die produktive Umgebung findet, da die Einführung von der IPA ausgenommen ist, wird diesem Kriterium eine geringere Gewichtung zugeordnet.
    \item \textbf{Anforderungen 30\%:} Damit die definierten Anforderungen an das Produkt erfüllt werden können und die Erfüllung zur Endnote der IPA beiträgt, wird diesem Kriterium eine hohe Gewichtung zugeordnet. 
-   \item \textbf{Performanz 10\%: } Ist eine Applikation zu langsam und benötigt mehrere Minute bis sie Resultate geladen hat, kann das den Benutzer schnell vor den Kopf stossen und dafür führen das dieser die Applikation in Zukunft nicht mehr verwendet.
+   \item \textbf{Performanz 10\%: } Ist eine Applikation zu langsam und benötigt mehrere Minuten bis sie Resultate geladen hat, kann das den Benutzer schnell vor den Kopf stossen und dazu führen, dass dieser die Applikation in Zukunft nicht mehr verwendet.
 \end{itemize}
 
 \textbf{Lösungsvariante 1}
@@ -1172,7 +1172,7 @@ diese IPA ist.
       \hline 
       Anforderungen & 10 & Alle Anforderung können potentiell durch diese Lösungsvariante erfüllt werden. \\
       \hline
-      Performance & 8 & Performanz wird optimiert. \\
+      Performance & 8 & Performance wird optimiert. \\
       \hline
    \end{tabular}
    \caption{Bewertung Lösungsvariante 1}
@@ -1229,6 +1229,7 @@ diese IPA ist.
 \end{table}
 
 \textbf{Fazit}
+
 Durch die bessere Möglichkeit zur Einführung und der erhöhten Performanz hat die Lösungsvariante 1 die Lösungsvariante 2 in der Endbewertung knapp übertroffen.
 Für die Implementation wird fortlaufend die Lösungsvariante 2 verwendet.
 
@@ -1237,26 +1238,28 @@ Für die Implementation wird fortlaufend die Lösungsvariante 2 verwendet.
 \newpage
 
 \section{Sicherheitskonzept}
-Um die Sicherheit im Umbau der Filter sicherzustellen wird ein Sicherheitskonzept
-benötigt. Das Ziel dieses Konzeptes ist es mögliche Angriffe aufzuführen
+Um die Sicherheit im Umbau der Filter sicherzustellen, wird ein Sicherheitskonzept
+benötigt. Das Ziel dieses Konzeptes ist es, mögliche Angriffe aufzuführen
 und die Blockade dieser Angriffe zu dokumentieren. 
 
 \subsection{SQL-Injection}
-Die Einzigen Benutzereingabe welche in dieser IPA auftritt, ist die Texteingabe im Filterkriterium ``Felder''. 
+Die einzigen Benutzereingabe, welche in dieser IPA auftritt, ist die Texteingabe im Filterkriterium ``Felder''. 
 Da die Eingabe des Benutzers nicht direkt in die Postgres Datenbank gespeichert wird,
 ist diese Eingabe nicht für eine SQL-Injection gefährdet. Selbst wenn die SQL-Abfrage direkt gemacht würde,
 verhindert das ORM ActiveRecord mit seinen Standardmethoden, dass schädliche Eingaben abgespeichert werden.
 Dies geschieht unter anderem durch das Escapen der Strings.
 
 \subsection{Cross-Site Scripting}
-Da in dieser Erweiterung Benutzereingaben an das Rails-Backend gesendet werden muss der Cross-Site Scripting Angriff ebenfalls
-berücksichtig werden. Rails selbst bietet dafür einen eingebauten Abwehrmechanismus. Eine solcher XSS-Angriff kann folgendermassen aussehen:
+Da in dieser Erweiterung Benutzereingaben an das Rails-Backend gesendet werde,n muss der Cross-Site Scripting Angriff ebenfalls
+berücksichtig werden. Rails selbst bietet dafür einen eingebauten Abwehrmechanismus. Ein solcher XSS-Angriff kann folgendermassen aussehen:
+\newline
 
 \begin{lstlisting}[language=HTML]
    <h2>Welcome <script>alert("This is a XSS attack!")</script></h2>
 \end{lstlisting}
 
 Standardmässig escaped Rails diese Eingaben und ändert die Spezialbuchstaben. So wird aus der Eingabe oben:
+\newline
 
 \begin{lstlisting}[language=HTML]
    <h2>Welcome &lt;script&gt;alert\
@@ -1264,10 +1267,10 @@ Standardmässig escaped Rails diese Eingaben und ändert die Spezialbuchstaben. 
 \end{lstlisting}
 
 \subsection{URL Interpretation}
-Bei der URL-Interpretation fabriziert der Angreifer eine URL um damit auf die persönlichen
-Daten eines Benutzers zuzugreifen. Dabei kann der Angreifer versuchen die URL zu erraten. 
+Bei der URL-Interpretation fabriziert der Angreifer eine URL, um damit auf die persönlichen
+Daten eines Benutzers zuzugreifen. Dabei kann der Angreifer versuchen, die URL zu erraten. 
 Dieser Angriff wird in Hitobito mit dem Gem \texttt{can-can-can} verhindert. Mit diesem Gem wird sichergestellt,
-das der Absender der Anfrage die nötigen Berechtigungen für das Einsehen der Informationen hat. Die Prüfung der Berechtigungen sieht wie folgt
+dass der Absender der Anfrage die nötigen Berechtigungen für das Einsehen der Informationen hat. Die Prüfung der Berechtigungen sieht wie folgt
 aus: 
 
 \begin{lstlisting}[language=Ruby]
@@ -1321,7 +1324,7 @@ Zugriff auf einen nicht erlaubten Endpoint sichtbar.
 
 Sobald die \texttt{AccessDenied} Exception geworfen wird, wird diese vom \texttt{ApplicationController}
 in Hitobito abgefangen. Im Rahmen dieser IPA kann diese Exception vorkommen, wenn ein Benutzer versucht, die Filterung
-von Personen einzusehen auf welche er keine Berechtigungen hat. Im Rahmen dieser IPA wird auf das bestehende Exceptionhandling zurückgegriffen.
+von Personen einzusehen, auf welche er keine Berechtigungen hat. Im Rahmen dieser IPA wird auf das bestehende Exceptionhandling zurückgegriffen.
 Es wird kein zusätzliches Exceptionhandling benötigt.
 
 \newpage
@@ -1337,8 +1340,8 @@ Um im Hitobito Tests ausführen zu können wird folgendes Setup benötigt:
    \item Generic Wagon wurde in das Verzeichnis \texttt{/app} unter dem geklonten Development Repository eingefügt. Generic Wagon kann unter \url{https://github.com/hitobito/hitobito_generic.git} geklont werden.
 \end{itemize}
 
-Besteht das beschriebene Setup muss zur Ausführung der Tests in das Development Repository navigiert werden. Dort müssen folgende Befehle der Reihe nach wie hier 
-beschrieben ausgeführt werden:
+Besteht das beschriebene Setup, muss zur Ausführung der Tests, in das Development Repository navigiert werden. Dort müssen folgende Befehle der Reihe nach, wie hier 
+beschrieben, ausgeführt werden:
 
 \label{testsetup}
 \begin{itemize}
@@ -1361,9 +1364,9 @@ Es gibt zwei Arten von Tests, welche in dieser Arbeit relevant sind:
 
 Hitobito verwendet für das Ausführen lokaler Tests RSpec 3.13.0. Für die manuellen Tests wird Firefox 80.0 (64-bit) verwendet. Als Gerät wird ein Laptop mit Pop!\_OS 22.04 LTS verwendet.
 
-Die bestehenden Tests welche die Funktionalität der gesamten Applikation sicherstellen werden für das Testing vernachlässigt. Es werden keine Anpassungen
-an diesen Tests vorgenommen. Die bestehenden Tests werden aus zeitlichen Rahmen bei Fehlschlagen auskommentiert und ignoriert. Im Rahmen dieser Arbeit sind
-auschliesslich die selbst verfassten Tests relevant.
+Die bestehenden Tests, welche die Funktionalität der gesamten Applikation sicherstellen, werden für das Testing vernachlässigt. Es werden keine Anpassungen
+an diesen Tests vorgenommen. Die bestehenden Tests werden aus zeitlichen Gründen bei Fehlschlagen auskommentiert und ignoriert. Im Rahmen dieser Arbeit, sind
+auschliesslich die selbstverfassten Tests relevant.
 
 \subsection{Fehlerklassen}
 \begin{table}[h!]
@@ -1387,7 +1390,7 @@ mit \texttt{hit rails wagon seed} eingespielt werden. Bei Fragen zur Aktvierung 
 
 \newpage
 
-Mit dem generic Wagon bietet sich ein Benutzer-Account für das Login an:
+Mit dem Generic Wagon bietet sich ein Benutzer-Account für das Login an:
 
 \begin{table}[h!]
    \begin{tabular}{|L{0.2\textwidth}|L{0.3\textwidth}|L{0.2\textwidth}|L{0.4\textwidth}|}
@@ -1666,7 +1669,7 @@ Das Login basiert auf folgendem Ablauf:
        \hline
        Erwartetes Resultat & 
        \begin{itemize}
-         \item Box des Filterkriteriums ``Felder'' wird mit den eingegebenen Informatinen ergänzt.
+         \item Box des Filterkriteriums ``Felder'' wird mit den eingegebenen Informationen ergänzt.
       \end{itemize} \\
      \hline 
      \end{tabular}
@@ -1735,7 +1738,7 @@ Das Login basiert auf folgendem Ablauf:
          \item Als Admin anmelden
          \item Mittels Reiter ``Personen'' auf Personenliste navigieren
          \item Im Filter Dropdown Option ``Neuer Filter...'' auswählen
-         \item Hinzufüge-Button in der unteren rechten Ecke klicken
+         \item Hinzufügen-Button in der unteren rechten Ecke klicken
          \item ``Tags'' aus dem Dropdown auswählen
        \end{itemize} \\
        \hline
@@ -1753,7 +1756,7 @@ Das Login basiert auf folgendem Ablauf:
 
 \subsection{Automatisierte Tests}
 Alle Tests werden mit Testdaten ausgeführt, diese werden entweder erst per Fixtures gesetzt oder im Test dynamisch generiert.
-In den Testfällen werden teils auf Testdaten verwiesen, diese sind hier dokumentiert:
+In den Testfällen werden teils auf Testdaten verwiesen, welche hier dokumentiert sind:
 
 \begin{table}[h!]
    \begin{tabular}{|L{0.4\textwidth}|L{0.6\textwidth}|}
@@ -1926,7 +1929,7 @@ Die Feature Tests werden mittels \texttt{\$ rspec spec/features} ausgeführt
        \hline
        Erwartetes Resultat & 
        \begin{itemize}
-         \item Alle Personen in der resultierenden Personenliste weisen die gefilterte Felder auf
+         \item Alle Personen in der resultierenden Personenliste weisen die gefilterten Felder auf
        \end{itemize} \\
      \hline
      \end{tabular}
@@ -2040,7 +2043,7 @@ Die Feature Tests werden mittels \texttt{\$ rspec spec/features} ausgeführt
        \hline
        Erwartetes Resultat & 
        \begin{itemize}
-         \item Export der Abonnementen als CSV beinhaltet alle Personen welche die Globalen Bedingungen erfüllen.
+         \item Export der Abonnenten als CSV beinhaltet alle Personen, welche die globalen Bedingungen erfüllen.
        \end{itemize} \\
      \hline
      \end{tabular}
@@ -2157,18 +2160,18 @@ Die Feature Tests werden mittels \texttt{\$ rspec spec/features} ausgeführt
 \end{table}
 
 \subsection{Begründung der Testwahl}
-Die Idee hinter dem verfassten Testkonzept, ist leicht auszumachende visuelle Änderungen manuell zu testen. Überprüfungen
+Die Idee hinter dem verfassten Testkonzept, ist leicht auszumachende visuelle Änderungen manuell zu testen. Überprüfungen,
 welche die Richtigkeit der Filterung sicherstellen, werden mit Featuretests abgehandelt, da die Richtigkeit bei einem grossen Datensatz
 durch manuelles Testen nicht garantiert werden kann.
 
-Des weiteren wird vermerkt, dass folgende Anforderungen nicht durch Tests abgedeckt wurden:
+Des Weiteren wird vermerkt, dass folgende Anforderungen nicht durch Tests abgedeckt wurden:
 
 \begin{itemize}
    \item Nicht funktionale Anforderung 2
    \item Nicht funktionale Anforderung 5
 \end{itemize}
 
-Da diese Anforderungen nicht durch Feature oder manuelle Tests abgedeckt werden können, werden diese Anforderungen
+Da diese Anforderungen nicht durch Features oder manuelle Tests abgedeckt werden können, werden diese Anforderungen
 durch regelmässige Eigenüberprüfung des Entwicklers sichergestellt. Abweichungen werden im Arbeitsjournal dokumentiert. 
 
 
@@ -2184,7 +2187,7 @@ Arbeit befasste. Der Sprint dauerte vom 04.03.2025 bis am 11.03.2025.
 
 Im Sprint konnten ausgenommen einer User Story alle Stories umgesetzt werden. 
 Die User Story ``Tasks / Standards'' konnte nicht vollständig umgesetzt werden. 
-Grund dafür ist das die Abschnitte ``Schutzbedarfsanalyse'', ``Einführung'' und ``Risikoanalyse für Projektrisiken'' in der Dokumentation noch nicht beschrieben wurden. 
+Grund dafür ist, dass die Abschnitte ``Schutzbedarfsanalyse'', ``Einführung'' und ``Risikoanalyse für Projektrisiken'' in der Dokumentation noch nicht beschrieben wurden. 
 Gemäss dem Vorgehen wird die User Story zurück in die Spalte "Refinement" gesetzt und im kommenden Sprint Planning im neuen Sprint eingeteilt.
 
 \newpage
@@ -2273,15 +2276,15 @@ Der Request kann folgendermassen aufgelöst werden:
 \end{table}
 
 Nach dem Muster des oben beschriebenen Requests können sämtliche Partials weiterer Kriterien gerendert werden.
-Um das Partial eines anderen Filterkriteriums zu rendern muss lediglich der Wert des Parameters ``filter\_criterion'' auf
+Um das Partial eines anderen Filterkriteriums zu rendern, muss lediglich der Wert des Parameters ``filter\_criterion'' auf
 den Namen des anderen Filterkriteriums angepasst werden. Durch diese Implementation, müssen nicht wie ursprünglich geplant
-vier verschiedene Schnittstellen implementiert werden sondern nur eine Schnittstelle welche die Unterscheidung mit einem Parameter regelt.
+vier verschiedene Schnittstellen implementiert werden sondern nur eine Schnittstelle, welche die Unterscheidung mit einem Parameter regelt.
 
 \newpage
 
-\section{Hinzufüge-Button}
-Während des Entwickelns traten auch beim Hinzufüge-Button Änderungen am Konzept auf. Das Hauptproblem war, dass 
-das der Button, nachdem alle Filterkriterien hinzugefügt wurden, nicht mit den Turbostreams entfernt werden konnte. 
+\section{Hinzufügen-Button}
+Während des Entwickelns, traten auch beim Hinzufügen-Button Änderungen am Konzept auf. Das Hauptproblem war, dass 
+der Button, nachdem alle Filterkriterien hinzugefügt wurden, nicht mit den Turbostreams entfernt werden konnte. 
 Als Alternative wurde der Stimulus Controller verwendet, der in der Variante 2 des Variantenentscheides vorgeschlagen wurde.
 
 Der Stimulus Controller wurde nach folgendem Schema aufgebaut:
@@ -2299,7 +2302,7 @@ Wenn nicht, wird der Hinzufüge-Button entfernt.
 
 \newpage
 
-Der Controller kann die Änderungen nur erkennen wenn dieser korrekt im Template
+Der Controller kann die Änderungen nur erkennen, wenn dieser korrekt im Template
 referenziert wird:
 \newline
 
@@ -2326,7 +2329,7 @@ die \texttt{connect()}-Methode dieses Controllers ausgeführt.
   }
 \end{lstlisting}
 
-In unserem Fall wird ein MutationsObserver registriert, welcher prüft ob das registrierte Element
+In diesem Fall wird ein MutationsObserver registriert, welcher prüft ob das registrierte Element
 leer ist. Damit dieser MutationsObserver auf die Dropdownliste der Filterkriterien registriert werden kann, muss
 die Dropdownliste mit allen Filterkriterien als ``Target'' erfasst werden.
 
@@ -2356,8 +2359,8 @@ an diesem Target durchgeführt wird, wird nach der Registrierung die Methode `ch
 Diese Methode entfernt den Hinzufüge-Button und das Dropdown mit allen Filterkriterien, sobald keine Optionen mehr darin verfügbar sind.
 
 \section{Turbostreams}
-Mittels der Turbostreams wurden die einzelnen Ansichten der Filterkriterien aktualisiert. Wie im Abschnitt ``Schnittstellen'' erklärt waren im Entwurf
-ursprünglich für jedes Filterkriterium ein Turbostream angedacht. Durch die Verwendung nur einer Schnittstelle, wurde dementsprechen nur ein generischer Turbostream für 
+Mittels der Turbostreams wurden die einzelnen Ansichten der Filterkriterien aktualisiert. Wie im Abschnitt ``Schnittstellen'' erklärt, waren im Entwurf
+ursprünglich für jedes Filterkriterium ein Turbostream angedacht. Durch die Verwendung nur einer Schnittstelle, wurde entsprechend nur ein generischer Turbostream für 
 das Hinzufügen eines Filterkriteriums auf der Übersicht implementiert: 
 \newline
 
@@ -2377,7 +2380,7 @@ aus dem Hinzufüge-Dropdown. Zuletzt wird der Hinweis zur Benutzung des Hinzufü
 
 \newpage
 
-Nebst dem Turbostream welcher ein Filterkriterium zur Übersicht hinzufügt, wird ein Turbostream für die gegenteilige Aktion 
+Nebst dem Turbostream, welcher ein Filterkriterium zur Übersicht hinzufügt, wird ein Turbostream für die gegenteilige Aktion 
 benötigt:
 \newline
 
@@ -2399,7 +2402,7 @@ Die Aktion wird durch ein Mülleimer-Symbol auf der Box des Filterkriteriums aus
 \end{figure}
 
 Somit sind zwei Turbostreams für alle vier Filterkriterien verantwortlich. Welche der beiden Turbostreams
-ausgeführt werden muss wird im Controller definiert. Die Definition basiert auf der HTTP-Methode des Requests.
+ausgeführt werden muss, wird im Controller definiert. Die Definition basiert auf der HTTP-Methode des Requests.
 
 \subsection{Partials}
 Nebst der Implementation der Turbostreams wurden die Benutzerschnittstellen der Filterkriterien überarbeitet. Die Anpassungen
@@ -2408,7 +2411,7 @@ wurden dem Mockup entsprechend durchgeführt. Alle Änderungen am Mockup wurden 
 \newpage
 
 \subsection{Name-Attribut auf dem Select-Feld}
-Um ein Dropdown in Ruby darzustellen wird ein ``select''-Element verwendet. Dieses Element wurde mehrfach für die Benutzerschnittstellen der 
+Um ein Dropdown in Ruby darzustellen, wird ein ``select''-Element verwendet. Dieses Element wurde mehrfach für die Benutzerschnittstellen der 
 Filterkriterien verwendet. Für das Filterkriterium ``Felder'' wird dieses Element über Rubycode generiert und nicht als HAML in einem 
 Template hinterlegt. Während der Implementation wurde bekannt, dass dieses Element nicht mit der neuen Umsetzung funktioniert.
 Der Grund dafür lag beim Name-Attribut:
@@ -2443,19 +2446,19 @@ Der Controller erwartet aber das Format:
 
 Man notiere, dass in dem zweiten Beispiel die Werte ``attributes'', ``time'' und ``constraint'' nicht
 im ``filters'' Array gespeichert sind.
-Um das richtige Format zu übermitteln wurde das ``Name'' Attribut manuell in den HTML Optionen überschrieben:
+Um das richtige Format zu übermitteln, wurde das ``Name'' Attribut manuell in den HTML Optionen überschrieben:
 \newline
 
 \begin{lstlisting}[language=Ruby]
    html_options.merge(name: "filters[attributes][#{time}][constraint]")
 \end{lstlisting}
 
-Durch die Sicherstellung des korrekten Formats kann das Fitlerkriterium ``Felder'' erneut vom Controller interpertiert und 
+Durch die Sicherstellung des korrekten Formates, kann das Filterkriterium ``Felder'' erneut vom Controller interpertiert und 
 gespeichert werden.
 
 \section{Globale Bedingungen}
-Die Globalen Bedingungen der Abonnemente und der Personenfilter verwenden die gleichen Benutzerschnittstelle für das Filterkriterium ``Felder''.
-Durch die Anpassung der Benutzerschnittstelle des Filterkriteriums wurden die globalen Bedingungen dadurch indirekt auch angepasst.
+Die globalen Bedingungen der Abonnenten und der Personenfilter, verwenden die gleichen Benutzerschnittstellen für das Filterkriterium ``Felder''.
+Durch die Anpassung der Benutzerschnittstelle des Filterkriteriums, wurden die globalen Bedingungen indirekt auch angepasst.
 
 \begin{figure}[h]
    \centering
@@ -2463,7 +2466,7 @@ Durch die Anpassung der Benutzerschnittstelle des Filterkriteriums wurden die gl
    \caption{Globale Bedinungen}
 \end{figure}
 
-Anders als bei beim Personenfilter gibt es ist es nicht möglich, das Filterkriterium zu entfernen.
+Anders als beim Personenfilter, ist es nicht möglich, das Filterkriterium zu entfernen.
 Dies wurde so implementiert, um die alte Funktionalität nicht zu verändern sondern nur die Benutzerschnittstelle selbst anzupassen.
 Das Mülleimer-Symbol wie es bei den Filterkriterien des Personenfilters abgebildet ist, wurde durch eine Variable aus der Ansicht der globalen
 Bedingungen ausgeblendet:
@@ -2473,8 +2476,8 @@ Bedingungen ausgeblendet:
    = render(layout: 'layouts/filter', locals: { entry: @mailing_list, type: :attributes, delete: false}) do
 \end{lstlisting}
 
-Die Variable ``delete'' gibt an ob das Symbol zur Löschung auf der Benutzerschnittstelle verfügbar sein soll. Beim Wert ``false''
-wir das Symbol ausgeblendet. Im Personenfilter ist die Variable stets auf ``true'' gesetzt.
+Die Variable ``delete'' gibt an, ob das Symbol zur Löschung auf der Benutzerschnittstelle verfügbar sein soll. Beim Wert ``false'',
+wird das Symbol ausgeblendet. Im Personenfilter ist die Variable stets auf ``true'' gesetzt.
 
 \section{Einsatz von KI-Modellen}
 Während des Implementierens wird das KI-Modell ChatGPT mit der gratis Version GPT-4o verwendet. 
@@ -2696,9 +2699,9 @@ wiederverwendet werden und der Filter wird einmalig auf die Personenliste angewe
 
 \newpage
 
-\textbf{Globale Bedinungen der Abonnemente}
+\textbf{Globale Bedinungen der Abonnenten}
 
-In Hitobito ist es möglich globale Bedingungen für Abonnemente zu definieren. Personen welche diese Bedinungen erfüllen, 
+In Hitobito ist es möglich globale Bedingungen für Abonnenten zu definieren. Personen welche diese Bedinungen erfüllen, 
 werden den Abonnementen zugeteilt. Um auf die globalen Bedingungen eines Abonnements zu navigieren, muss zuerst eine Gruppe aus der Gruppenliste
 ganz links der Anwendung ausgewählt werden. 
 

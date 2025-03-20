@@ -23,39 +23,39 @@
 Den Morgen begann ich wie geplant mit der Überabeitung des Partials für die Qualifikationen. Danach fand das Daily statt, für welches ich wieder
 bestimmte Fragen notiert habe.
 
-Die erste Frage befasste sich mit dem Dropdown Problem der Tags welches ich gestern hatte. Die Dropdowns für die Auswahl von Tags oder Rollen wurde nicht korrekt
+Die erste Frage befasste sich mit dem Dropdown Problem der Tags, welches ich gestern hatte. Die Dropdowns für die Auswahl von Tags oder Rollen wurde nicht korrekt
 auf meiner View dargestellt und ich konnte den Fehler schlichtweg nicht finden. Daniel Illi wies mich im Daily daraufhin, dass
-das Dropdown evtl. zuerst per Javascript registriert werden muss. Daniel Illi zeigte mir ausserdem in welcher Datei ich suchen muss.
+das Dropdown evtl. zuerst per Javascript registriert werden muss. Daniel Illi zeigte mir ausserdem, in welcher Datei ich suchen muss.
 
 Danach stellte ich eine weitere Frage zur Inklusion von Stylesheets. Ich hatte für die Filter ein eigenes Stylesheet unter dem Ordner \texttt{/components}
-angelegt, jedoch wurden meine Styles nicht geladen. Daniel Illi antwortet mir, dass die Stylesheets in der Datei \texttt{\_main.scss} importiert werden müssen,
-damit auf die CSS-Klassen zugegriffen werden kann. Zum Schluss schlug ich die gestern dokumentierte Änderung des Mockups für das Filterkriterium ``Felder vor''.
-Daniel Illi war mit der Änderung einverstanden, somit werde ich die alte Benutzerschnittstelle für die Felder übernehmen und nur noch richtig anordnen.
+angelegt, jedoch wurden meine Styles nicht geladen. Daniel Illi antwortete mir, dass die Stylesheets in der Datei \texttt{\_main.scss} importiert werden müssen,
+damit auf die CSS-Klassen zugegriffen werden kann. Zum Schluss schlug ich die gestern dokumentierte Änderung des Mockups für das Filterkriterium ``Felder'' vor.
+Daniel Illi war mit der Änderung einverstanden. Somit werde ich die alte Benutzerschnittstelle für die Felder übernehmen und nur noch richtig anordnen.
 
 Nach dem Daily, folgte ich der Anweisung von Daniel Illi und begann die Datei zu untersuchen, welche das Dropdown der Rollen und Tagfilter im JavaScript registriert.
 Ich erkannte hierbei, dass auf dem sogenannten Tom-Select diese JavaScript Aktion steets ausgeführt wurde. Für Turbo Aktionen wurde dabei mit einem Hook gearbeitet, welcher
 ``turbo:load'' heisst. Das Problem: In meinem Fall werden die Tom-Selects mit einem Turbostream hinzugefügt, welcher nicht von diesem Hook abegefangen wird.
 Nach Recherche in der Dokumentation von Turbo und dem Abfangen von Events: \href{Dokumentation}{https://turbo.hotwired.dev/reference/events} wusste ich nun auch, dass
 es kein Event gibt, welches erst nach dem Rendern eines Turbostreams ausgelöst wird. Vor dem Rendern hätte ich auf den Hook ``turbo:before-stream-render'' brauchen können,
-allerdings bringt mir das nichts, wenn das Tom-Select noch nicht gerendert wurde. Schliesslich muss ich die JavaScript action auf dem gerenderten Element ausführen.
+allerdings bringt mir das nichts, wenn das Tom-Select noch nicht gerendert wurde. Schliesslich muss ich die JavaScript Aktion auf dem gerenderten Element ausführen.
 
 Als Alternative habe ich mir folgendes überlegt: Theoretisch müsste es doch möglich sein einen Stimulus Controller zu implementieren, der nur die \texttt{connect()} Methode
 besitzt (Methode welche ausgeführt wird, wenn dieser Controller regsitriert wird). Es wäre dann möglich diesen Controller immer auf dem jeweiligen Tom-Select zu registrieren.
 Wird dann der Turbostream ausgeführt und fügt der Seite das Tom-Select hinzu, wird gleichzeitig der Stimulus Controller auf dem Tom-Select registriert. Danach wird die \texttt{connect()}
-Methode des Controller ausgeführt und dementsprechend die JavaScript Action auf dem Element. Nach dieser Überlegung habe ich diesen Stimulus-Controller 
-erstellt und es hat tatsächlich wie angedacht funtioniert.
+Methode des Controllers ausgeführt und dementsprechend die JavaScript Aktion auf dem Element. Nach dieser Überlegung, habe ich diesen Stimulus-Controller 
+erstellt und es hat tatsächlich wie angedacht funktioniert.
 
-Nach dem Beheben dieses Problems arbeitet ich weiter an der Darstellung und Bearbeitung der Filterkriterien durch Turbostreams.
+Nach dem Beheben dieses Problems, arbeitet ich weiter an der Darstellung und Bearbeitung der Filterkriterien durch Turbostreams.
 Ich bemerkte zwischendurch, dass ich den Zeitplan massiv übertrete. Im Moment war dies aber irrelevant, da die Funktionalitäten an welchen ich 
 arbeite so oder so implementiert werden mussten.
 
 Ein weiteres Problem hatte ich mit der Darstellung der Rollen. Wie soll ich sie dem Benutzter anzeigen? Zuerst wollte ich alle Rollen zum zusammengesetzten
-String aus ihren Ebenen, Gruppen und der Rolle selbst mappen. Allerdings hätte das viel zu viel Zeit gebraucht, die Performanz hätte aufgrund der vielen Rollen in
-Hitobito massiv von dieser Entscheidung gelitten. Deswegen, zeigte ich vorerst dem Benutzer nur das Label der Rolle an um nicht zu viel Ladezeit zu benötigen.
+String aus ihren Ebenen, Gruppen und der Rolle selbst mappen. Allerdings hätte das viel zu viel Zeit gebraucht, die Performance hätte aufgrund der vielen Rollen in
+Hitobito massiv von dieser Entscheidung gelitten. Deswegen zeigte ich dem Benutzer vorerst nur das Label der Rolle an, um nicht zu viel Ladezeit zu benötigen.
 
-Gegen das Ende des Tages überprüfte ich den heutigen Stand der Implementation nach dem Beispiel von gestern mit meinem Anforderungskatalog. Bis jetzt sind weiterhin
-alle Anforderungen erfüllt und ich bin auf einem guten Weg. Wenn ich am kommenden Dienstag die restlichen Funktionalitäten in den globalen Bedingungen der Abonnemente
-festhalte, wäre dann sogar die Funktonale Anforderung 1 erfüllt und alle Grundfunktionalitäten vor dem Umbau wären wieder vorhanden.  Zudem konnte ich mit der heutigen Arbeit 
+Gegen das Ende des Tages, überprüfte ich den heutigen Stand der Implementation nach dem Beispiel von gestern mit meinem Anforderungskatalog. Bis jetzt sind weiterhin
+alle Anforderungen erfüllt und ich bin auf einem guten Weg. Wenn ich am kommenden Dienstag die restlichen funktionalitäten in den globalen Bedingungen der Abonnemente
+festhalte, wäre dann sogar die funktonale Anforderung 1 erfüllt und alle Grundfunktionalitäten vor dem Umbau, wären wieder vorhanden.  Zudem konnte ich mit der heutigen Arbeit 
 die funktionale Anforderung 3 erfüllen. Die Filterkriterien sind nun bearbeitbar.
 
 \subsection*{Hilfestellungen}
@@ -70,17 +70,17 @@ die funktionale Anforderung 3 erfüllen. Die Filterkriterien sind nun bearbeitba
 \subsubsection*{Was funktionierte gut}
 Der Stand des Projektes ist definitiv etwas Positives vom heutigen Tag. Die Grundfunktionalitäten sind schon fast wieder vorhanden
 und die Implementation ist fast deckungsgleich mit dem Mockup (ausgenommen der dokumentierten Änderungen daran). Zusätzlich konnte ich mit der Hilfe
-von Daniel Illi meine gestrigen Probleme beheben, womit ich mich heute umso schneller vorankam.
+von Daniel Illi meine gestrigen Probleme beheben, was mir half, heute umso schneller vorwärts zu kommen.
 
 \subsubsection*{Was funktionierte weniger gut}
 Auch wenn der Stand des Projektes gut ist, darf ich dennoch den Stand der gesamten IPA nicht vergessen.
-Im Zeitplan bin ich durch den viel grösseren Aufwand nicht auf Kurs. Die ganzen Partials zu überarbeiten und
+Aufgrund des viel grösseren Aufwands, bin ich mit dem Zeitplan nicht auf Kurs. Die ganzen Partials zu überarbeiten und
 die Turbostreams dazu zu erstellen waren definitv sehr viel mehr Arbeit, als ich zuerst gedacht habe.
 
 \subsubsection*{Meine heutigen Erkenntnisse}
-Wichtig ist es nun, dass ich versuche so viel Zeit wie möglich zu sparen. Die globalen Bedingunge müssen noch angepasst werden und
-zusätzlich sollten noch Featuretests geschrieben werden. Meine Erkenntniss ist es, versuchn diese Aufgaben spetitifer anzugehen, um dort die 
-aufgebrauchte Zeit von heute wieder reinzuholen. Wenn dies nicht funktoniert, werde ich zusätzliche Überstunden einplanen. Momentan habe ich den Zeitplan
+Wichtig ist es nun, dass ich versuche, so viel Zeit wie möglich zu sparen. Die globalen Bedingunge müssen noch angepasst werden und
+zusätzlich sollten noch Featuretests geschrieben werden. Meine Erkenntnis ist, diese Aufgaben spetitiver anzugehen, um dort die 
+aufgebrauchte Zeit von heute wieder aufzuholen. Wenn dies nicht funktoniert, werde ich zusätzliche Überstunden einplanen. Momentan habe ich den Zeitplan
 wie von Lorenz Müller gewünscht auf 80 Stunden eingplant. Durch den Spielraum den mir die Anpassung von 90 Stunden auf 80 Stunden verschafft, kann ich
 nun 10 weitere Stunden planen (natürlich nur falls nötig). Dementsprechend froh bin ich, dass mir mein Hauptexperte zu dieser Änderung geraten hat, 
 da ich von dieser jetzt im Notfall nur profitieren kann.

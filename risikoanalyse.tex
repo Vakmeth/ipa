@@ -30,7 +30,7 @@ Benutzer im Hitobito besitzen immer eine Rolle. Die Rolle des Benutzers bestimmt
       \hline
       Group\_Read & Hat Leserechte auf seiner Gruppe  \\
       \hline
-      Layer\_Full & Hat Schreib- und Leserechte auf seiner Gruppe und den Gruppen welche der Ebene dieser Gruppe unterliegen. \\
+      Layer\_Full & Hat Schreib- und Leserechte auf seiner Gruppe und den Gruppen, welche der Ebene dieser Gruppe unterliegen. \\
       \hline
       Layer\_Read & Hat Leserechte auf seiner Gruppe und den Gruppen welche der Ebene dieser Gruppe unterliegen. \\
       \hline
@@ -54,7 +54,7 @@ Um die Berechtigungen besser verständlich zu machen, dienen folgende Diagramme:
   \caption{Gruppen und Ebenen, selbstgezeichnet mit Draw.io}
 \end{figure}
 
-Die Berechtigunge verwalten den Zugriff auf Layer und Gruppen. Ein Layer kann mehrere Gruppen haben,
+Die Berechtigungen verwalten den Zugriff auf Layer und Gruppen. Ein Layer kann mehrere Gruppen haben,
 eine Gruppe besitzt mehrere Rollen und eine Rolle kann wiederum mehrere Personen besitzen. Personen können
 mehrere Rollen und somit eine Vielzahl von Berechtigungen besitzen.
 
@@ -67,8 +67,8 @@ mehrere Rollen und somit eine Vielzahl von Berechtigungen besitzen.
   \caption{Beispiel Berechtigungen von Heinz, selbstgezeichnet mit Draw.io}
 \end{figure}
 
-Dieses Diagram erklärt das Beispiel der Berechtigung "Group\_Full". Wir haben einen User namens Heinz
-in unserem System. Heinz besitzt eine Rolle welche mit der Heinz-Gruppe verknüpft ist. Die Rolle besitzt die Berechtigung "Group\_Full".
+Dieses Diagramm erklärt das Beispiel der Berechtigung "Group\_Full". Wir haben einen User namens Heinz
+in unserem System. Heinz besitzt eine Rolle, welche mit der Heinz-Gruppe verknüpft ist. Die Rolle besitzt die Berechtigung "Group\_Full".
 
 Dank dieser Verknüpfung besitzt Heinz Schreib- und Leserechte auf die Heinz-Gruppe.
 
@@ -81,8 +81,8 @@ Dank dieser Verknüpfung besitzt Heinz Schreib- und Leserechte auf die Heinz-Gru
   \caption{Beispiel Berechtigungen von Tim, selbstgezeichnet mit Draw.io}
 \end{figure}
 
-Dieses Diagram erklärt das Beipsiel der Berechtigung "Layer\_Full".  Wir haben einen User names Tim in unserem System.
-Tim besitzt eine Rolle welche mit der Tim-Gruppe verknüft ist. Die Rolle besitzt die Berechtigung "Layer\_Full".
+Dieses Diagramm erklärt das Beipsiel der Berechtigung "Layer\_Full".  Wir haben einen User names Tim in unserem System.
+Tim besitzt eine Rolle, welche mit der Tim-Gruppe verknüpft ist. Die Rolle besitzt die Berechtigung "Layer\_Full".
 
 Durch diese Verknüpfung hat Tim Schreib- und Leserechte auf alle Gruppen, welche dem Layer seiner Gruppe unterliegen. 
 
@@ -95,13 +95,13 @@ Durch diese Verknüpfung hat Tim Schreib- und Leserechte auf alle Gruppen, welch
   \caption{Beispiel Berechtigungen von Tim, selbstgezeichnet mit Draw.io}
 \end{figure}
 
-Dieses Diagram erklärt das Beipsiel der Berechtigung "Layer\_Full\_And\_Below".  Wir haben einen User names Rudolf in unserem System.
-Rudolf besitzt eine Rolle welche mit der Rudolf-Gruppe verknüft ist. Die Rolle besitzt die Berechtigung "Layer\_Full\_And\_Below".
+Dieses Diagramm erklärt das Beispiel der Berechtigung "Layer\_Full\_And\_Below".  Wir haben einen Benutzer names Rudolf in unserem System.
+Rudolf besitzt eine Rolle, welche mit der Rudolf-Gruppe verknüpft ist. Die Rolle besitzt die Berechtigung "Layer\_Full\_And\_Below".
 
-Durch diese Verknüpfung hat Rudolf Schreib- und Leserechte auf alle Elemente, Layer und Gruppen welche dem Layer der Rudolf-Gruppe unterliegen.
+Durch diese Verknüpfung hat Rudolf Schreib- und Leserechte auf alle Elemente, Layer und Gruppen, welche dem Layer der Rudolf-Gruppe unterliegen.
 
 \subsection{Bedeutung für die Schnittstellen}
-Durch die erklärten Berechtigungen welche von den Rollen der Benutzern gegeben sind, werden die Rückgabewerte der Schnittstellen gefiltert.
+Durch die erklärten Berechtigungen, welche von den Rollen der Benutzern gegeben sind, werden die Rückgabewerte der Schnittstellen gefiltert.
 Da im Rahmen dieser IPA eine Frontendanpassung gemacht wird, müssen bei der Berechtigungslogik keine Anpassungen gemacht werden. Die Berechtigungslogik wird
 wie beschrieben verwendet.
 
@@ -132,7 +132,7 @@ wie beschrieben verwendet.
       4 & \label{sec4} Bash-Injection in ein Filter Eingabefeld (XSS) & Schädliche Befehle werden serverseitig ausgeführt & W3 & S4 & \cellcolor{red}Hoch & Risikominderung 
       & Alle Eingaben des Benutzers escapen & W2 & S1 & \cellcolor{green}Niedrig & Risikoakzeptanz \\
       \hline
-      5 & \label{sec5} Falsche Verwending einer Library & Schwachstelle der Library kann von Angreifern ausgenutzt werden & W2 & S3 & \cellcolor{yellow}Mttel & Risikominderung 
+      5 & \label{sec5} Falsche Verwendung einer Library & Schwachstelle der Library kann von Angreifern ausgenutzt werden & W2 & S3 & \cellcolor{yellow}Mttel & Risikominderung 
       & Dokumentation der Libraries gut durchgehen, Libraries verwenden welche in der Rails Landschaft etabliert sind
        & W2 & S2 & \cellcolor{green} Niedrig & Risikoakzeptanz \\
       \hline
