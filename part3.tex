@@ -9,9 +9,6 @@
 
 \chapter{Verzeichnisse}
 
-\section{Code}
-
-
 \listoftables
 
 \listoffigures
@@ -151,8 +148,6 @@
     \caption{Git commit Message Konvention}
 \end{figure}
 
-\section{Security Konvention}
-
 \section{Sitzungsprotokolle}
 \subsection{Sitzung 1}
 
@@ -284,6 +279,1183 @@
     \caption{Protokoll Sitzung 2.2}
 \end{table}
 
+\section{Code}
+
+\subsection{people\_filter\_ability.rb}
+\begin{lstlisting}[language=Ruby]
+class PeopleFilterAbility < AbilityDsl::Base
+   on(::PeopleFilter) do
+     permission(:contact_data).may(:new).all
+     permission(:group_read).may(:new).in_same_group
++    permission(:group_read).may(:filter_criterion).in_same_group
+     permission(:group_and_below_read).may(:new).in_same_group_or_below
++    permission(:group_and_below_read).may(:filter_criterion).in_same_group_or_below
+     permission(:layer_read).may(:new).in_same_layer
++    permission(:layer_read).may(:filter_criterion).in_same_layer
+     permission(:layer_full).may(:create, :destroy, :edit, :update).in_same_layer
+     permission(:layer_and_below_read).may(:new).in_same_layer_or_below
++    permission(:layer_and_below_read).may(:filter_criterion).in_same_layer_or_below
+     permission(:layer_and_below_full).may(:create, :destroy, :edit, :update).in_same_layer_or_below
+   end
+end
+\end{lstlisting}
+
+\newpage
+
+\subsection{people\_readables.rb}
+\begin{lstlisting}[language=Ruby]
+class PersonReadables < GroupBasedReadables
+    attr_reader :group
+  
+ -  def initialize(user, group = nil)
+ +  def initialize(user, group = nil, roles_join = nil)
+      super(user)
+  
+ +    @roles_join = roles_join || {roles: :group}
+      @group = group
+  
+      if @group.nil?
+    end
+
+    def accessible_people
+      if user.root?
+        Person.only_public_data.then do |scope|
+ -        group ? scope.joins(roles: :group).distinct : scope
+ +        group ? scope.joins(@roles_join).distinct : scope
+        end
+      else
+        scope = Person.only_public_data.where(accessible_conditions.to_a).distinct
+        if has_group_based_conditions?
+          # Only add these joins when really necessary, because they are extremely expensive to
+          # compute when there are a lot of people and roles
+ -        scope = scope.joins(roles: :group).where(groups: {deleted_at: nil})
+ +        scope = scope.joins(@roles_join).where(groups: {deleted_at: nil})
+        end
+        scope
+    end
+end    
+\end{lstlisting}
+
+\newpage
+
+\subsection{people\_filters\_controller.rb}
+\begin{lstlisting}[language=Ruby]
+class PeopleFiltersController < CrudController
+    skip_authorize_resource only: [:create]
+  
+ +  before_action :set_filter_criteria, except: [:destroy]
+ +
+ +  def filter_criterion
+ +    compose_role_lists
+ +    possible_tags
+ +    @filter_criterion = params[:filter_criterion]
+ +    if @filter_criteria.include?(@filter_criterion.to_sym)
+ +      respond_to do |format|
+ +        if request.method == "GET"
+ +          format.turbo_stream { render "create", status: :ok }
+ +        end
+ +        if request.method == "POST"
+ +          format.turbo_stream { render "delete" }
+ +        end
+ +      end
+ +    end
+ +  end
+ +
+ +  def set_filter_criteria
+ +    @filter_criteria = [:tag, :role, :qualification, :attributes]
+ +  end
+
+    def compose_role_lists
+        @role_types = Role::TypeList.new(group.class)
+        @qualification_kinds = QualificationKind.list.without_deleted
++           .map { |qualification|
++           [qualification.label, qualification.id, qualification.id]
++       }
++       @roles = Role.all.map { |role| [role.type, role.id, role.id] }
++       @kinds = Person::Filter::Role::KINDS.each_with_index
++           .map { |kind, index|
++           [t("people_filters.form.filters_role_kind.#{kind}"),
++           t("people_filters.form.filters_role_kind.#{kind}"),
++           index + 1]
++       }
++       @validities = [
++           [t("people_filters.qualification.validity_label.active"), "active", 1],
++           [t("people_filters.qualification.validity_label.reactivateable"), "reactivateable", 2],
++           [t("people_filters.qualification.validity_label.not_active_but_reactivateable"), "not_active_but_reactivateable", 3],
++           [t("people_filters.qualification.validity_label.not_active"), "not_active", 4],
++           [t("people_filters.qualification.validity_label.all"), "all", 5],
++           [t("people_filters.qualification.validity_label.none"), "none", 6],
++           [t("people_filters.qualification.validity_label.only_expired"), "only_expired", 7]
++       ]
+    end
+end    
+\end{lstlisting}
+
+\newpage
+
+\subsection{people\_filter\_helper.rb}
+\begin{lstlisting}[language=Ruby]
+module PeopleFilterHelper
+       content << content_tag(:div, class: "flex-none") do
+-        select_tag("filters[attributes][#{time}][key]",
+-          options_from_collection_for_select(people_filter_attributes_for_select, :last, :first, key),
++        select(:filters, "attributes[#{time}][key]",
++          people_filter_attributes_for_select,
++          {selected: key},
+           html_options.merge(disabled: true,
+             class: 'attribute_key_dropdown form-select
+                                                   form-select-sm'))
+       end
+ 
+       content << content_tag(:div, class: "flex-none") do
+-        select_tag("filters[attributes][#{time}][constraint]",
+-          options_from_collection_for_select(filters, :last, :first, constraint),
++        select(:filters, "attributes[#{time}][constraint]",
++          filters,
++          {selected: constraint},
+           html_options.merge(class:
+-                             'attribute_constraint_dropdown
+-                                         ms-3 form-select form-select-sm'))
++                               'attribute_constraint_dropdown
++                                         ms-3 form-select form-select-sm', name: "filters[attributes][#{time}][constraint]"))
+       end
+end
+\end{lstlisting}
+
+\newpage
+
+\subsection{filter\_dropdown\_controller.js}
+\begin{lstlisting}[language=JavaScript]
++// Copyright (c) 2023, Schweizer Alpen-Club. This file is part of
++// hitobito_sac_cas and licensed under the Affero General Public License version 3
++// or later. See the COPYING file at the top-level directory or at
++// https://github.com/hitobito/hitobito
++
++import { Controller } from "@hotwired/stimulus";
++
++export default class extends Controller {
++   static targets = ["menu"];
++
++  connect() {
++    this.observer = new MutationObserver(this.checkIfEmpty.bind(this));
++    if (this.hasMenuTarget) {
++      this.observer.observe(this.menuTarget, { childList: true });
++    }
++  }
++
++  disconnect() {
++    if (this.observer) {
++      this.observer.disconnect();
++    }
++  }
++
++  checkIfEmpty() {
++    if (this.menuTarget.children.length === 0) {
++      this.element.style.visibility = "hidden";
++    } else {
++      this.element.style.visibility = "visible";
++    }
++  }
++}
+\end{lstlisting}
+
+\newpage
+
+\subsection{form\_field\_toggle\_controller.js}
+\begin{lstlisting}[language=JavaScript]
+export default class extends Controller {
+        static targets = ["toggle"];
+      
+        toggle(event) {
+-           if(event.target.tagName === "SELECT") {
+-               const selected = 
+                    event.target.options[event.target.options.selectedIndex];
++               const selected = 
+                    event.target.options[event.target.options.selectedIndex];
+      
+-           if (selected.dataset.visibility === "true") {
+-               this.toggleTarget.classList.remove("hidden");
+-           } else {
+-               this.toggleTarget.classList.add("hidden");
+-           }
+-           } else {
++               if (selected.dataset.visibility === "true") {
+                    this.toggleTarget.classList.remove("hidden");
++               } else {
++                   this.toggleTarget.classList.add("hidden");
+                }
+            }
+-
+-           untoggle() {
+-               this.toggleTarget.classList.add("hidden");
+-           }
+    }    
+}    
+\end{lstlisting}
+
+\newpage
+
+\subsection{form\_select\_controller.js}
+\begin{lstlisting}[language=JavaScript]
+    +import {Controller} from "@hotwired/stimulus";
+    +
+    +
+    +export default class extends Controller {
+    +
+    +  connect() {
+    +    this.elementAdded(this.element)
+    +  }
+    +
+    +  elementAdded(element) {
+    +    var app;
+    +
+    +    app = window.App || (window.App = {});
+    +    app.tomSelects = {};
+    +
+    +    app.tomSelects[element.id] = new TomSelect(`#${element.id}`, {
+    +      plugins: element.multiple ? ["remove_button"] : [],
+    +      create: false,
+    +      onItemAdd() {
+    +        this.setTextboxValue("");
+    +        if(!this.dropdown.classList.contains("single") ) {
+    +          this.refreshOptions();
+    +        }
+    +      },
+    +      render: {
+    +        no_results() {
+    +          // Render localized "no results" message
+    +          const message = this.input.dataset.chosenNoResults || "No results found";
+    +          return `<div class="no-results">${message}</div>`;
+    +        },
+    +      }
+    +    });
+    +  }
+    +}    
+\end{lstlisting}
+
+\subsection{\_filter.scss}
+\begin{lstlisting}[language=JavaScript]
++.w-10 {
++  width: 10%;
++}
++
++.w-90 {
++  width: 90%;
++}
+\end{lstlisting}
+
+\newpage
+
+\subsection{\_filter.html.haml}
+\begin{lstlisting}[language=JavaScript]
+    +- caption ||= t("people_filters.#{type}.title")
+    +%div.well
+    +  %div.d-flex.flex-row
+    +    %h3.w-50.mb-3= caption
+    +    - if delete
+    +      %div.w-50.d-flex.justify-content-end
+    +        = link_to "/groups/#{@group.id}/people_filters/turbo/#{type.to_s}", class: "button btn", data: {turbo_method: :delete} do
+    +          %i.fa.fa-trash
+    +  = yield
+    -- id = type.to_s.pluralize
+    -- caption ||= t("people_filters.#{type}.title")
+    -- open_class = "show" if entry.filter_chain[type.to_sym].present?
+    -
+    -.accordion-item
+    -  .accordion-header
+    -    %a.accordion-button.p-2.bg-white.text-black{ href: "##{id}", data: { bs_toggle: :collapse } }
+    -      = caption
+    -
+    -  .accordion-collapse.collapse{ id: id, class: open_class }
+    -    .accordion-body
+    -      = yield
+\end{lstlisting}
+
+\newpage
+
+\subsection{people\_filters/\_form.html.haml}
+\begin{lstlisting}[language=JavaScript]
++= standard_form(path_args(entry), noindent: true, stacked: true) do |form|
++
++  = render 'search_or_save_buttons', f: form
++
++  = render_extensions :form, locals: { f: form }
++  = form.error_messages
++
++  = render 'range', f: form
++
++  .mt-3.mb-3.ml-3#overview
++    - if action_name == 'edit'
++      %div{id: "role-configuration"}
++        - if entry.filter_chain[:role]
++          = render(layout: 'layouts/filter', locals: { type: :role }) do
++            = render 'role', f: form
++
++      - if @qualification_kinds.present?
++        - if entry.filter_chain[:qualification]
++          %div{id: "qualification-configuration"}
++            = render(layout: 'layouts/filter', locals: { type: :qualification }) do
++              = render 'qualification', f: form
++
++      - if entry.filter_chain[:attributes]
++        %div{id: "attributes-configuration"}
++          = render(layout: 'layouts/filter', locals: { type: :attributes }) do
++            = render 'attributes', f: form
++      - if entry.filter_chain[:tag]
++        %div{id: "tag-configuration"}
++          = render(layout: 'layouts/filter', locals: { type: :tag }) do
++            .label-columns
++              = render 'tag'
++
++    - if action_name == 'new'
++      %h3#filter-advice t("people_filters.filter_advice")
++    %div.dropdown.ml-3{"data-controller": "filter-dropdown"}
++      %button.btn.dropdown-toggle{ type: 'button',  "data-bs-toggle": "dropdown", "aria-expanded": "false"}
++        %i.fa.fa-plus
++      %ul.dropdown-menu#filter-criteria-dropdown{"data-filter-dropdown-target": "menu"}
++        - @filter_criteria.each do |filter_criterion|
++          - if entry.filter_chain[filter_criterion.to_sym].nil?
++            = link_to t("people_filters.#{filter_criterion}.title"), "/groups/#{@group.id}/people_filters/#{filter_criterion}",
++            class: "dropdown-item", id: "dropdown-option-#{filter_criterion}", data: {turbo_stream: true}
+ 
+   - if can?(:create, entry)
+     %label.required=PeopleFilter.human_attribute_name(:name)
+-    = f.input_field :name, placeholder: t('.save_filter_placeholder'), class: 'mb-3 ', required: false
++    = form.input_field :name, placeholder: t('.save_filter_placeholder'), class: 'mb-3 ', required: false
+ 
+-  = render 'search_or_save_buttons', f: f
++  = render 'search_or_save_buttons', f: form   
+\end{lstlisting}
+
+\newpage
 
 
+\subsection{people\_filters/\_form.html.haml}
+\begin{lstlisting}[language=JavaScript]
+    += standard_form(path_args(entry), noindent: true, stacked: true) do |form|
+    +
+    +  = render 'search_or_save_buttons', f: form
+    +
+    +  = render_extensions :form, locals: { f: form }
+    +  = form.error_messages
+    +
+    +  = render 'range', f: form
+    +
+    +  .mt-3.mb-3.ml-3#overview
+    +    - if action_name == 'edit'
+    +      %div{id: "role-configuration"}
+    +        - if entry.filter_chain[:role]
+    +          = render(layout: 'layouts/filter', locals: { type: :role }) do
+    +            = render 'role', f: form
+    +
+    +      - if @qualification_kinds.present?
+    +        - if entry.filter_chain[:qualification]
+    +          %div{id: "qualification-configuration"}
+    +            = render(layout: 'layouts/filter', locals: { type: :qualification }) do
+    +              = render 'qualification', f: form
+    +
+    +      - if entry.filter_chain[:attributes]
+    +        %div{id: "attributes-configuration"}
+    +          = render(layout: 'layouts/filter', locals: { type: :attributes }) do
+    +            = render 'attributes', f: form
+    +      - if entry.filter_chain[:tag]
+    +        %div{id: "tag-configuration"}
+    +          = render(layout: 'layouts/filter', locals: { type: :tag }) do
+    +            .label-columns
+    +              = render 'tag'
+    +
+    +    - if action_name == 'new'
+    +      %h3#filter-advice Um eine Filterkriterium auszuwaehlen, bitte klicke auf den Hinzufuege-Button
+    +    %div.dropdown.ml-3{"data-controller": "filter-dropdown"}
+    +      %button.btn.dropdown-toggle{ type: 'button',  "data-bs-toggle": "dropdown", "aria-expanded": "false"}
+    +        %i.fa.fa-plus
+    +      %ul.dropdown-menu#filter-criteria-dropdown{"data-filter-dropdown-target": "menu"}
+    +        - @filter_criteria.each do |filter_criterion|
+    +          - if entry.filter_chain[filter_criterion.to_sym].nil?
+    +            = link_to t("people_filters.#{filter_criterion}.title"), "/groups/#{@group.id}/people_filters/#{filter_criterion}",
+    +            class: "dropdown-item", id: "dropdown-option-#{filter_criterion}", data: {turbo_stream: true}    
+\end{lstlisting}
 
+\newpage
+
+\subsection{\_qualification.html.haml}
+\begin{lstlisting}[language=JavaScript]
+-- filter = entry.filter_chain[:qualification]
+-- filter_args = filter ? filter.args : {}
++- filter_qualifications = entry.filter_chain[:qualification]
++- filter_args = filter_qualifications ? filter_qualifications.args : {}
++- present_selected_qualifications = filter_qualifications.present? ? filter_qualifications.to_hash[:qualification_kind_ids] : []
++- qualification_options = options_from_collection_for_select(@qualification_kinds, :second, :first, present_selected_qualifications)
+ 
+-.label-columns
+-  = field_set_tag(t('.prompt_qualification_selection')) do
+-    - unless can?(:index_full_people, @group)
+-      .alert.alert-warning= t('.not_enough_permissions')
++- present_selected_validity = filter_qualifications.present? ? filter_qualifications.to_hash[:validity] : []
++- validity_options = options_from_collection_for_select(@validities, :second, :first, present_selected_validity)
+ 
+-    .controls
+-      - @qualification_kinds.each do |kind|
+-        - dom_id = "qualification_kind_id_#{kind.id}"
+-        = label_tag(dom_id, class: 'checkbox inline') do
+-          = check_box_tag("filters[qualification][qualification_kind_ids][]",
+-                          kind.id,
+-                          filter && filter.args[:qualification_kind_ids].include?(kind.id),
+-                          id: dom_id)
+-          = kind.to_s
+ 
++.label-columns.mr-5
++  - unless can?(:index_full_people, @group)
++    .alert.alert-warning= t('.not_enough_permissions')
+ 
+-    .controls
+-      &nbsp;
++  .d-flex.flex-row.align-items-center.mb-2
++    .w-10
++      %label= t("people_filters.qualification.title")
++    .w-90.shown{"data-controller": "form-select"}
++      = select_tag('filters[qualification][qualification_kind_ids][]',
++                      qualification_options,
++                      class: 'form-control tom-select w-100',
++                      id: 'qualification-select',
++                      "data-controller": "form-select",
++                      multiple: true,
++                      data: { chosen_no_results: t('global.chosen_no_results'),
++                      placeholder: t("people_filters.qualification.prompt_qualification_placeholder") } )
++  .d-flex.flex-row.align-items-center.mb-2
++    .w-10
++      %label= t("people_filters.qualification.criterion")
++    .w-90.shown.d-flex.flex-column
++      .d-flex.flex-row
++        = label_tag('filters_qualification_match_one', class: 'radio inline') do
++          = radio_button_tag('filters[qualification][match]', 'one', true)
++          = t('people_filters.simple_radio.match.one')
++      .d-flex.flex-row
++        = label_tag('filters_qualification_match_all', class: 'radio inline') do
++          = radio_button_tag('filters[qualification][match]', 'all', filter_args[:match] == 'all', %w(not_active none only_expired).include?(filter_args[:validity]) ? { disabled: true } : {})
++          = t('people_filters.simple_radio.match.all')
+\end{lstlisting}
+
+\subsection{\_qualification.html.haml}
+\begin{lstlisting}[language=JavaScript]
+-    .controls
+-      = label_tag('filters_qualification_match_one', class: 'radio inline') do
+-        = radio_button_tag('filters[qualification][match]', 'one', true)
+-        = t('people_filters.simple_radio.match.one')
+-      = label_tag('filters_qualification_match_all', class: 'radio inline') do
+-        = radio_button_tag('filters[qualification][match]', 'all', filter_args[:match] == 'all', %w(not_active none only_expired).include?(filter_args[:validity]) ? { disabled: true } : {})
+-        = t('people_filters.simple_radio.match.all')
+-
+-  = field_set_tag(t('.prompt_validity')) do
+-    %div.row
+-      = render 'simple_radio',
+-                attr: "filters[qualification][validity]",
+-                value: 'active',
+-                checked: true # first item is checked per default
+-      = render 'simple_radio',
+-                attr: "filters[qualification][validity]",
+-                value: 'reactivateable',
+-                checked: filter_args[:validity] == 'reactivateable'
+-      = render 'simple_radio',
+-                attr: "filters[qualification][validity]",
+-                value: 'not_active_but_reactivateable',
+-                checked: filter_args[:validity] == 'not_active_but_reactivateable'
+-      = render 'simple_radio',
+-                attr: "filters[qualification][validity]",
+-                value: 'not_active',
+-                checked: filter_args[:validity] == 'not_active'
+-      = render 'simple_radio',
+-                attr: "filters[qualification][validity]",
+-                value: 'all',
+-                checked: filter_args[:validity] == 'all'
+-      = render 'simple_radio',
+-                attr: "filters[qualification][validity]",
+-                value: 'none',
+-                checked: filter_args[:validity] == 'none'
+-      = render 'simple_radio',
+-                attr: "filters[qualification][validity]",
+-                value: 'only_expired',
+-                checked: filter_args[:validity] == 'only_expired'
+
+-= field_set_tag(t('.prompt_date'), id: 'reference-date', class: 'form-horizontal', style: "display: #{%w(all none).include?(filter_args[:validity]) ? 'none' : 'block'};") do
+-  .control-group.row
+-    .col-2
+-      .input-group
++  .d-flex.flex-row.align-items-center.mb-2
++    .w-10
++      %label= t("people_filters.qualification.validity")
++    .w-90.shown.d-flex.flex-column{"data-controller": "form-select"}
++      = select_tag('filters[qualification][validity]',
++                      validity_options,
++                      class: 'form-control tom-select w-100',
++                      "data-controller": "form-select",
++                      id: 'qualification-validity-select',
++                      multiple: false,
++                      data: { chosen_no_results: t('global.chosen_no_results'),
++                      placeholder: t("people_filters.qualification.prompt_qualification_validity_placeholder") } )
+\end{lstlisting}
+
+\newpage
+
+\subsection{\_qualification.html.haml}
+\begin{lstlisting}[language=JavaScript]
++  .d-flex.flex-row.align-items-center.mb-2
++    .w-10
++      %label= t('.prompt_date')
++    .w-90.shown.d-flex.flex-row{"data-controller": "form-select"}
++      .input-group.w-75.mr-3
+         %span.input-group-text= icon(:'calendar-alt')
+         = text_field_tag("filters[qualification][reference_date]", filter_args[:reference_date], class: 'date form-control form-control-sm')
+-    .col-10.col-form-label
+-      = t('.reference_date_help_inline')
+-
+-
+-= field_set_tag(t('.prompt_year'), id: 'year-scope', class: 'form-horizontal', style: "display: #{filter_args[:validity] == 'all' ? 'block' : 'none'};") do
+-  .control-group.row
+-    = label_tag(:start_at_year_from, t('.start_at_year_label'), class: 'control-label col-form-label col-2')
+-    .col-2
+-      = number_field_tag("filters[qualification][start_at_year_from]", filter_args[:start_at_year_from], class: 'form-control form-control-sm', placeholder: 'YYYY' )
+-    .col-1.col-form-label
+-      = t('.start_at_year_infix')
+-    .col-2
+-      = number_field_tag("filters[qualification][start_at_year_until]", filter_args[:start_at_year_until], class: 'form-control form-control-sm', placeholder: 'YYYY')
+-  .control-group.row
+-    = label_tag(:finish_at_year_from, t('.finish_at_year_label'), class: 'control-label col-form-label col-2')
+-    .col-2
+-      = number_field_tag("filters[qualification][finish_at_year_from]", filter_args[:finish_at_year_from], class: 'form-control form-control-sm', placeholder: 'YYYY')
+-    .col-1.col-form-label
+-      = t('.finish_at_year_infix')
+-    .col-2
+-      = number_field_tag("filters[qualification][finish_at_year_until]", filter_args[:finish_at_year_until], class: 'form-control form-control-sm', placeholder: 'YYYY'  )
++      .w-25.col-form-label
++        = t('.reference_date_help_inline')
+\end{lstlisting}
+
+\newpage
+
+\subsection{\_role.html.haml}
+\begin{lstlisting}[language=JavaScript]
+-- filter = entry.filter_chain[:role]
++- filter_roles = entry.filter_chain[:role]
++- present_selected_roles = filter_roles.present? ? filter_roles.to_hash[:role_type_ids] : []
++- role_options = options_from_collection_for_select(@roles, :second, :first, present_selected_roles)
+ 
+-.label-columns
+-  = field_set_tag(t('.prompt_role_selection')) do
+-    - @role_types.each do |layer, groups|
+-      .layer{ class: [@group.klass.label, @group.layer_group.class.label].include?(layer) && 'same-layer' }
+-        %h4.filter-toggle= layer
+-        - groups.each do |group, role_types|
+-          .group.control-group{ class: group == @group.klass.label && 'same-group' }
+-            %h5.filter-toggle= group
+-            .controls
+-              - role_types.each do |role_type|
+-                - id = "filters_role_role_type_ids_#{role_type.id}"
+-                = label_tag(nil, id, class: 'checkbox inline') do
+-                  = check_box_tag("filters[role][role_type_ids][]",
+-                                  role_type.id,
+-                                  filter && filter.to_hash[:role_types].include?(role_type.to_s),
+-                                  id: id)
+-                  = role_type.label
++- present_selected_kinds = filter_roles.present? ? filter_roles.to_hash[:kind] : []
++- kind_options = options_from_collection_for_select(@kinds, :second, :first, present_selected_kinds)
+ 
+-  = field_set_tag(t('.prompt_role_duration_selection')) do
+-    .row.control-group.mt-3
+-      = render 'simple_radio',
+-               attr: "filters[role][kind]",
+-               value: 'active_today',
+-               checked: !filter || !Person::Filter::Role::KINDS.include?(filter.args[:kind])
+-    .row.control-group.mt-2
+-      .d-flex.col-xl-6
+-        %label.mt-1.nowrap.w-50=t('.prompt_role_duration_from')
+-        .input-group.w-50
+-          %span.input-group-text= icon(:'calendar-alt')
+-          = text_field_tag("filters[role][start_at]", filter && filter.args[:start_at], class: 'date col-2 form-control form-control-sm')
+-        %label.mx-2.mt-1.w-50=t('.prompt_role_duration_until')
+-        .input-group.w-50
+-          %span.input-group-text= icon(:'calendar-alt')
+-          = text_field_tag("filters[role][finish_at]", filter && filter.args[:finish_at], class: 'date col-2 form-control form-control-sm')
+-    .row.control-group.mt-2
+-      - Person::Filter::Role::KINDS.each do |key|
+-        = render 'simple_radio',
+-            attr: "filters[role][kind]",
+-            value: key,
+-            checked: filter && filter.args[:kind] == key
+-    .row.control-group.mt-3
+-      = label_tag(nil, 'filters_role_include_archived', class: 'checkbox inline mt-2') do
+-        = check_box_tag('filters[role][include_archived]', true, filter && true?(filter.args[:include_archived]))
+-        = t('.include_archived')
+
+\end{lstlisting}
+
+\newpage
+
+\subsection{\_role.html.haml}
+\begin{lstlisting}[language=JavaScript]
++.label-columns.mr-5
++  .d-flex.flex-row.align-items-center.mb-2
++    .w-10
++      %label= t("people_filters.role.title")
++    .w-90
++      = select_tag('filters[role][role_type_ids][]',
++                        role_options,
++                        class: 'form-control tom-select w-100',
++                        "data-controller": "form-select",
++                        id: 'role-select',
++                        multiple: true,
++                        data: { chosen_no_results: t('global.chosen_no_results'), placeholder: t('.prompt_role_placeholder') } )
++  .d-flex.flex-row.align-items-center.control-group.mb-2
++    .w-10
++      %label= t("people_filters.role.duration_title")
++    .w-90.d-flex.flex-row.align-items-center
++      .input-group.w-50
++        %span.input-group-text= icon(:'calendar-alt')
++        = text_field_tag("filters[role][start_at]", filter_roles && filter_roles.args[:start_at], class: 'date form-control')
++        %label.mx-2.mt-1=t('.prompt_role_duration_until')
++      .input-group.w-50
++        %span.input-group-text= icon(:'calendar-alt')
++        = text_field_tag("filters[role][finish_at]", filter_roles && filter_roles.args[:finish_at], class: 'date form-control')
++  .d-flex.flex-row.align-items-center
++    .w-10
++      %label= t("people_filters.role.role_kind_title")
++    .w-90{"data-controller": "form-select"}
++      = select_tag('filters[role][kind][]',
++                        kind_options,
++                        class: 'form-control tom-select w-100',
++                        "data-controller": "form-select",
++                        id: 'role-kind-select',
++                        multiple: true,
++                        data: { chosen_no_results: t('global.chosen_no_results'), placeholder: t('.prompt_role_kind_placeholder') } )
+
+\end{lstlisting}
+
+\newpage
+
+\subsection{\_tag.html.haml}
+\begin{lstlisting}[language=JavaScript]
+-- filter = entry.filter_chain[:tag]
+-- selected = filter ? filter.to_hash[:names] : []
+-- options = options_from_collection_for_select(@possible_tags, :second, :first, selected)
++- present_filter_tags = entry.filter_chain[:tag]
++- present_selected = present_filter_tags ? present_filter_tags.to_hash[:names] : []
++- present_options = options_from_collection_for_select(@possible_tags, :second, :first, present_selected)
+ 
+-%p= t('.prompt_tag_selection')
++- absent_filter = entry.filter_chain[:tag_absence]
++- absent_selected = absent_filter ? absent_filter.to_hash[:names] : []
++- absent_options = options_from_collection_for_select(@possible_tags, :second, :first, absent_selected)
+ 
+-.shown
+-  = select_tag('filters[tag][names][]',
+-                options,
+-                class: 'form-control tom-select',
+-                multiple: true,
+-                data: { chosen_no_results: t('global.chosen_no_results'), placeholder: t('.prompt_tag_placeholder') } )
++.d-flex.flex-column
++  .d-flex.flex-row.align-items-center.mb-2
++    .w-10
++      %label= t('.prompt_tag_selection')
++    .w-90.shown
++      = select_tag('filters[tag][names][]',
++                    present_options,
++                    class: 'form-control tom-select w-100',
++                    "data-controller": "form-select",
++                    id: 'present-tag-select',
++                    multiple: true,
++                    data: { chosen_no_results: t('global.chosen_no_results'), placeholder: t('.prompt_tag_placeholder') } )
++  .d-flex.flex-row.align-items-center
++    .w-10
++      %label= t('.prompt_tag_absence_selection')
++    .w-90.shown
++      = select_tag('filters[tag_absence][names][]',
++                    absent_options,
++                    class: 'form-control tom-select w-100',
++                    id: 'absent-tag-select',
++                    "data-controller": "form-select",
++                    multiple: true,
++                    data: { chosen_no_results: t('global.chosen_no_results'), placeholder: t('.prompt_tag_placeholder') } )
+\end{lstlisting}
+
+\newpage
+
+\subsection{create.turbo\_stream.haml}
+\begin{lstlisting}[language=JavaScript]
++= turbo_stream.prepend "overview" do
++  %div{id: "#{@filter_criterion}-configuration"}
++    = render(layout: 'layouts/filter', locals: { type: @filter_criterion.to_sym, delete: true}) do
++      = render @filter_criterion
++
++= turbo_stream.remove "dropdown-option-#{@filter_criterion}"
++= turbo_stream.remove "filter-advice"
+\end{lstlisting}
+
+\subsection{delete.turbo\_stream.haml}
+\begin{lstlisting}[language=JavaScript]
++= turbo_stream.remove "#{@filter_criterion}-configuration"
++
++= turbo_stream.append "filter-criteria-dropdown" do
++  = link_to t("people_filters.#{@filter_criterion}.title"), "/groups/#{@group.id}/people_filters/#{@filter_criterion}",
++          class: "dropdown-item", id: "dropdown-option-#{@filter_criterion}", data: {turbo_stream: true}
+\end{lstlisting}
+
+\subsection{subscriber/\_form.html.haml}
+\begin{lstlisting}[language=JavaScript]
+-  .accordion
+-    = render(layout: 'people_filters/filter', locals: { entry: @mailing_list, type: :attributes }) do
+-      = render 'people_filters/attributes', f: f, entry: @mailing_list
+-
+-    - FeatureGate.if('person_language') do
+-      = render(layout: 'people_filters/filter', locals: { type: :language }) do
+-        = render 'people_filters/language', f: f, entry: @mailing_list
+-
+-    = render_extensions('filter_form', locals: { entry: entry })
++  = render(layout: 'layouts/filter', locals: { entry: @mailing_list, type: :attributes, delete: false}) do
++    = render 'people_filters/attributes', f: f, entry: @mailing_list
++  = render_extensions('filter_form', locals: { entry: entry })
+\end{lstlisting}
+
+\subsection{routes.rb}
+\begin{lstlisting}[language=Ruby]
++      # Turbo Routes
++      get 'people_filters/:filter_criterion' => 'people_filters#filter_criterion'
++      delete 'people_filters/turbo/:filter_criterion' => 'people_filters#filter_criterion'
+\end{lstlisting}
+
+\newpage
+
+\subsection{global\_conditions\_spec.rb}
+\begin{lstlisting}[language=Ruby]
++# frozen_string_literal: true
++
++#  Copyright (c) 2024, Schweizer Alpen-Club. This file is part of
++#  hitobito_sac_cas and licensed under the Affero General Public License version 3
++#  or later. See the COPYING file at the top-level directory or at
++#  https://github.com/hitobito/hitobito_sac_cas.
++
++require "spec_helper"
++
++describe "Global Conditions", js: true do
++  let(:lang) { :de }
++  let(:top_leader) { people(:top_leader) }
++  let(:alice) { people(:bottom_member) }
++
++  context "modify" do
++    let(:path) {
++      edit_group_mailing_list_filter_path(group_id: MailingList.first.group_id,
++        mailing_list_id: MailingList.first.id)
++    }
++
++    before {
++      sign_in(top_leader)
++      visit path
++    }
++
++    it "can add global conditions" do
++      select "Firmenname", from: "attribute_filter"
++      first(".attribute_constraint_dropdown").find("option[value='not_match']").select_option
++      first("input.form-control[type='text']").set("Puzzle ITC")
++
++      select "Alter", from: "attribute_filter"
++      all(".attribute_constraint_dropdown")[1].find("option[value='equal']").select_option
++      all("input.form-control[type='text']")[1].set(56)
++
++      first(".btn.btn-primary", text: "Speichern").click
++
++      within("div#main") do
++        expect(page).to have_text("Firmenname enthaelt nicht Puzzle ITC")
++        expect(page).to have_text("Alter ist genau 56")
++      end
++    end
++
++    context "member access" do
++      before {
++        Rails.env.stub(production?: true)
++        sign_in(alice)
++      }
++
++      it "can't access global conditions" do
++        visit path
++        expect(page).to have_selector("div.alert-danger", text: "Sie sind nicht berechtigt, diese Seite anzuzeigen")
++      end
++    end
++  end
++end
+\end{lstlisting}
+
+\newpage
+
+\subsection{people\_filter\_spec.rb}
+\begin{lstlisting}[language=Ruby]
+    +# frozen_string_literal: true
++
++#  Copyright (c) 2024, Schweizer Alpen-Club. This file is part of
++#  hitobito_sac_cas and licensed under the Affero General Public License version 3
++#  or later. See the COPYING file at the top-level directory or at
++#  https://github.com/hitobito/hitobito_sac_cas.
++
++require "spec_helper"
++
++describe "PeopleFilter", js: true do
++  let(:lang) { :de }
++  let(:top_leader) { people(:top_leader) }
++  let(:alice) { people(:bottom_member) }
++
++  context "filtering" do
++    let(:path) { new_group_people_filter_path(group_id: Group.first.id) }
++
++    before {
++      sign_in(top_leader)
++      visit path
++      find(".btn.dropdown-toggle").click
++    }
++
++    context "tags" do
++      before {
++        alice.tag_list.add("lorem")
++        alice.tag_list.add("ipsum")
++        alice.save!
++        find("#dropdown-option-tag").click
++      }
++
++      it "can filter by present tags" do
++        expect(page).to have_selector("div#tag-configuration")
++        find("#present-tag-select-ts-control").set("lorem")
++        find("#present-tag-select-opt-2").click
++
++        first(".btn.btn-primary", text: "Suchen").click
++        within(".table.table-striped.table-hover") do
++          # Head table row and table row of found user
++          expect(all("tr").size).to eq(2)
++          expect(page).to have_selector("#person_#{alice.id}")
++        end
++      end
++
++      it "can filter by absent tags" do
++        visit path
++        find(".btn.dropdown-toggle").click
++        find("#dropdown-option-tag").click
++        expect(page).to have_selector("div#tag-configuration")
++        find("#absent-tag-select-ts-control").set("ipsum")
++        find("#absent-tag-select-opt-1").click
++
++        first(".btn.btn-primary", text: "Suchen").click
++        expect(page).to have_no_selector(".table.table-striped.table-hover")
++        expect(page).to have_no_selector("#person_#{alice.id}")
++      end
++    end
+\end{lstlisting}
+
+\newpage
+
+\subsection{people\_filter\_spec.rb}
+\begin{lstlisting}[language=Ruby]
++    context "roles" do
++      before {
++        find("#dropdown-option-role").click
++      }
++
++      it "can filter by present roles" do
++        expect(page).to have_selector("div#role-configuration")
++        # Select role
++        find("#role-select-ts-control").set(alice.roles.first.label)
++        find("#role-select-opt-2").click
++
++        # Select date
++        find("#filters_role_start_at").set("2025-03-18")
++        find("#filters_role_finish_at").set("2025-03-30")
++
++        # Select role kind
++        find("#role-kind-select-ts-control").set("Aktiv")
++        find("#role-kind-select-opt-1").click
++
++        first(".btn.btn-primary", text: "Suchen").click
++        within(".table.table-striped.table-hover") do
++          # Head table row and table row of found user
++          expect(all("tr").size).to eq(2)
++          expect(page).to have_selector("#person_#{alice.id}")
++        end
++      end
++    end
++
++    context "qualification" do
++      before {
++        find("#dropdown-option-qualification").click
++      }
++
++      it "can filter by qualifications" do
++        expect(page).to have_selector("div#qualification-configuration")
++
++        # Select qualification
++        find("#qualification-select-ts-control")
++          .set(alice.qualifications.first.qualification_kind.label)
++        find("#qualification-select-opt-4").click
++
++        # Select reference date
++        find("#filters_qualification_reference_date").set("2025-03-05")
++
++        first(".btn.btn-primary", text: "Suchen").click
++        within(".table.table-striped.table-hover") do
++          # Head table row and table row of found user
++          expect(all("tr").size).to eq(2)
++          expect(page).to have_selector("#person_#{alice.id}")
++        end
++      end
++    end
+\end{lstlisting}
+
+\newpage
+
+\subsection{people\_filter\_spec.rb}
+\begin{lstlisting}[language=Ruby]
+    +    context "attributes" do
+    +      before {
+    +        find("#dropdown-option-attributes").click
+    +      }
+    +
+    +      it "can filter by attributes" do
+    +        expect(page).to have_selector("div#attributes-configuration")
+    +
+    +        select "PLZ", from: "attribute_filter"
+    +        first(".attribute_constraint_dropdown").find("option[value='equal']").select_option
+    +        first("input.form-control[type='text']").set(alice.zip_code)
+    +
+    +        select "Vorname", from: "attribute_filter"
+    +        all(".attribute_constraint_dropdown")[1].find("option[value='equal']").select_option
+    +        all("input.form-control[type='text']")[1].set(alice.first_name)
+    +
+    +        first(".btn.btn-primary", text: "Suchen").click
+    +        within(".table.table-striped.table-hover") do
+    +          # Head table row and table row of found user
+    +          expect(all("tr").size).to eq(2)
+    +          expect(page).to have_selector("#person_#{alice.id}")
+    +        end
+    +      end
+    +
+    +      it "is xss-attack immune" do
+    +        expect(page).to have_selector("div#attributes-configuration")
+    +
+    +        select "Ort", from: "attribute_filter"
+    +        first(".attribute_constraint_dropdown").find("option[value='match']").select_option
+    +        first("input.form-control[type='text']").set("<script>alert('Hacked!');</script>")
+    +
+    +        first(".btn.btn-primary", text: "Suchen").click
+    +        expect {
+    +          page.driver.browser.switch_to.alert
+    +        }.to raise_error(Selenium::WebDriver::Error::NoSuchAlertError)
+    +      end
+    +    end
+\end{lstlisting}
+
+\newpage
+
+\subsection{people\_filter\_spec.rb}
+\begin{lstlisting}[language=Ruby]
++    context "saving" do
++      let(:path) { new_group_people_filter_path(group_id: Group.first.id) }
++
++      before {
++        sign_in(top_leader)
++        visit path
++        find(".btn.dropdown-toggle").click
++      }
++
++      it "can save filter" do
++        find("#dropdown-option-role").click
++
++        find("#role-select-ts-control").click
++        find("#role-select-opt-1").click
++
++        filter_name = "Filtername"
++        fill_in "people_filter_name", with: filter_name
++        first(".btn.btn-primary", text: "Suche speichern").click
++
++        expect(page).to have_selector("div.alert-success", text: "Filter #{filter_name} wurde erfolgreich erstellt.")
++      end
++    end
++  end     
+
++  context "member access" do
++    let(:path) { new_group_people_filter_path(group_id: Group.find_by(name: "Top").id) }
++
++    before {
++      Rails.env.stub(production?: true)
++      sign_in(alice)
++    }
++
++    it "can't access people filtering" do
++      visit path
++      expect(page).to have_selector("div.alert-danger", text: "Sie sind nicht berechtigt, diese Seite anzuzeigen")
++    end
++  end
++end    
+\end{lstlisting}
+
+\subsection{role.rb}
+\begin{lstlisting}[language=Ruby]
+def to_hash
++    merge_duration_args(role_types: args[:role_types], role_type_ids: args[:role_type_ids], kind: args[:kind])
+end
+\end{lstlisting}
+
+\newpage
+
+\subsection{\_main.scss}
+\begin{lstlisting}[language=Ruby]
+def to_hash
++    merge_duration_args(role_types: args[:role_types], role_type_ids: args[:role_type_ids], kind: args[:kind])
+end
+\end{lstlisting}
+
+\subsection{qualifications.yml}
+\begin{lstlisting}[language=Ruby]
++ bottom_member:
++    person: bottom_member
++    origin: "Verwalter"
++    qualification_kind: sl
++    start_at: 2025-03-04
++    finish_at: 2025-03-30
+\end{lstlisting}
+
+\subsection{views.fr.yml}
+\begin{lstlisting}[language=Ruby]
+people_filters:
++    filters_role_kind:
++        active_today: Actuellement actif
++        active: Actif
++        created: Cree
++        deleted: Supprime
++        inactive: Inactif
+
+tag:
++    prompt_tag_selection: Inclure
++    prompt_tag_absence_selection: Exclure
+
+role:
++    role_kind_title: Validite
++    prompt_role_placeholder: Saisir le nom du role souhaite
++    prompt_role_kind_placeholder: Saisir la validite souhaitee
++    duration_title: Date de reference
+
+qualification:
++    criterion: Critere
++    validity: Validite
++    validity_label:
++      active: Actif
++      reactivateable: Reactivable
++      not_active_but_reactivateable: Inactif mais reactivable
++      not_active: Non actif
++      all: Tous
++      none: Personne
++      only_expired: Uniquement les produits expires
++    prompt_qualification_placeholder: Saisir le nom de qualification souhaite
++    prompt_qualification_validity_placeholder: Saisir la validite souhaitee
+\end{lstlisting}
+
+\newpage
+
+\subsection{views.it.yml}
+\begin{lstlisting}[language=Ruby]
+people_filters:
++    filters_role_kind:
++        active: Attualmente attivo
++        created: Creato
++        deleted: Annullato
++        inactive: Inattivo
+
+tag:
++    prompt_tag_selection: Includere
++    prompt_tag_absence_selection: Escludere
+
+role:
++    role_kind_title: Validita
++    prompt_role_placeholder: Inserire il nome del ruolo desiderato
++    prompt_role_kind_placeholder: Inserire la validita desiderata
++    duration_title: Data chiave
+
+qualification:
++    criterion: Criterio
++    validity: Validita
++    validity_label:
++      active: Attivo
++      reactivateable: Riattivabile
++      not_active_but_reactivateable: Non e attivo ma puo essere riattivato
++      not_active: Non attivo
++      all: Tutti
++      none: Nessuno
++      only_expired: Solo scaduto
++    prompt_qualification_placeholder: Inserire il nome della qualifica desiderata
++    prompt_qualification_validity_placeholder: Inserire la validita desiderata
+\end{lstlisting}
+
+\newpage
+
+\subsection{views.de.yml}
+\begin{lstlisting}[language=Ruby]
+people_filters:
++    filters_role_kind:
++        active: Aktiv
++        created: Erstellt
++        deleted: Geloescht
++        inactive: Inaktiv
+
+tag:
++    prompt_tag_selection: Einschliessen
++    prompt_tag_absence_selection: Ausschliessen
+
+role:
++    role_kind_title: Gueltigkeit
++    prompt_role_placeholder: Gewuenschter Rollenname eingeben
++    prompt_role_kind_placeholder: Gewuenschte Gueltigkeit eingeben
++    duration_title: Stichdatum
+
+qualification:
++    criterion: Kriterium
++    validity: Gueltigkeit
++    validity_label:
++      active: Aktiv
++      reactivateable: Reactivable
++      not_active_but_reactivateable: Nicht aktiv aber reaktivierbar
++      not_active: Nicht aktiv
++      all: Alle
++      none: Keine
++      only_expired: Nur abgelaufene
++    prompt_qualification_placeholder: Gewuenschter Qualifikationsname
++    prompt_qualification_validity_placeholder: Gewuenschte Gueltigkeit
+\end{lstlisting}
+
+\newpage
+
+\subsection{views.en.yml}
+\begin{lstlisting}[language=Ruby]
+people_filters:
++    filters_role_kind:
++        active: Active
++        created: Created
++        deleted: Deleted
++        inactive: Inactive
+
+tag:
++    prompt_tag_selection: Include
++    prompt_tag_absence_selection: Exclude
+
+role:
++    role_kind_title: Validity
++    prompt_role_placeholder: Enter the desired role name
++    prompt_role_kind_placeholder: Enter the desired validity
++    duration_title: Key date
+
+qualification:
++    criterion: Criterion
++    validity: Validity
++    validity_label:
++      active: Active
++      reactivateable: Reactivateable
++      not_active_but_reactivateable: Not active but reactivateable
++      not_active: Not active
++      all: All
++      none: None
++      only_expired: Oly expired
++    prompt_qualification_placeholder: Enter desired qualification name
++    prompt_qualification_validity_placeholder: Enter the desired validity
+\end{lstlisting}
