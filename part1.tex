@@ -29,7 +29,7 @@ Mit dieser IPA soll ein neues UI mit Hotwire für die Persistierung von Filter-P
     \item Formular zur Konfiguration von Personen-Listen Filter: Das bestehende Formular muss ersetzt werden durch eine neue Implementation mit den in Mittel und Methoden definierten Web Technologien. Diese neue Umsetzung muss es erlauben, dynamisch weitere Filterkriterien hinzuzufügen im Gegensatz zur alten Implementation welche mit einem statischen Formular implementiert ist.
     \item Formular zur Konfiguration von Abo-Empfänger Filter: Das bestehende Formular besteht aus mehrerern Teilen, wovon im Rahmen der IPA nur der Teil für die Globalen Filterbedingungen angepasst werden muss. Wie bei den Personen-Listen Filter muss das Formular nun dynamisch implementiert werden. Die Formulare für die weiteren Filterbedingungen werden im Rahmen der IPA nicht angepasst. 
     \item Code der während dieser IPA entsteht soll auf ein privates Github Repo gepushed werden. Die VFs haben dabei stets Lese-Rechte.
-    \item Die Konventionen des Ruby Style Guide, des Rails Style Guide und für Git Commit Messages müssen eingehalten werden (siehe Mittel und Methoden).
+    \item Die Konventionen des Ruby Style Guide, des Rails Style Guide und für Git commit Messages müssen eingehalten werden (siehe Mittel und Methoden).
 \end{itemize}
 
 \newpage
@@ -109,6 +109,7 @@ Marc arbeitet bereits seit einigen Monaten an Features von Hitobito. Ausserdem h
 \end{itemize}
 
 \chapter{Firmenstandards}
+Standards welche von Puzzle ITC festgelegt und in dieser Arbeit verwendet werden.
 
 \section{Code conventions}
 Als Code convention werden die Ruby \href{https://github.com/rubocop/ruby-style-guide}{Style Guides} verwendet. 
@@ -130,6 +131,8 @@ eingefügt werden:
     rake license:insert
 \end{verbatim}
 
+\newpage
+
 Die daraus entstehende Lizenz sieht wie folgt aus:
 \newline
 
@@ -139,8 +142,6 @@ Die daraus entstehende Lizenz sieht wie folgt aus:
     # or later . See the COPYING file at the top - level directory or at
     # https :// github . com / hitobito / hitobito .
 \end{lstlisting}
-
-\newpage
 
 Alternativ dazu können diese Informationen mit 
 
@@ -154,9 +155,9 @@ entfernt oder mit
     rake license:update 
 \end{verbatim} aktualisiert werden.
 
-\section{Git commit convention}
-Die Git commit messages werden nach den Regeln von Puzzle ITC formuliert. Im Anhang
-unter \hyperref[sec:gitconv]{Git Commit Message Convention} finden sie eine Kopie der Firmenkonventionen. Diese wurden 
+\section{Git commit Konvention}
+Die Git commit Messages werden nach den Regeln von Puzzle ITC formuliert. Im Anhang
+unter \hyperref[sec:gitconv]{Git commit Message Konvention} finden sie eine Kopie der Firmenkonventionen. Diese wurden 
 basierend auf folgendem Tutorial definiert: \href{https://cbea.ms/git-commit}{Tutorial}
 
 \begin{itemize}
@@ -173,6 +174,7 @@ basierend auf folgendem Tutorial definiert: \href{https://cbea.ms/git-commit}{Tu
 \end{itemize}
 
 \chapter{IPA-Schutzbedarfanalyse}
+Welcher Schutz wird für die Daten und die Applikation im Rahmen dieser Arbeit benötigt?
 
 \section{Datensicherheit}
 Die notwendigen Daten, welche im Rahmen der IPA zu Test- und Vorführungszwecken verwendet werden,
@@ -182,10 +184,12 @@ schützenswert zu klassifizieren.
 \section{Applikationssicherheit}
 Im Rahmen der IPA wird nicht mit besonders schützenswerten Daten gearbeitet. Bei der Implementierung muss sichergestellt werden, dass
 Benutzer nur auf Daten zugreifen können, welche durch ihre Berechtigungen abgedeckt sind. Diese Sicherheit wird durch die Verwendung
-des can-can-can Gems gewährleistet. Dies ist wichtig, da sich bei späterer Implementierung der IPA in 
+des \texttt{can-can-can} Gems gewährleistet. Dies ist wichtig, da sich bei späterer Implementierung der IPA in 
 Hitobito besonders schützenswerte Daten in der produktiven Datenbank befinden.
 
 \chapter{Organisation der IPA-Ergebnisse}
+Wo werden die Ergebnisse der IPA abgelegt und wie wird im Fall eines Datenverlustes darauf eingegangen?
+
 \section{Datensicherung}
 In dieser IPA unterteilen wir die Datensicherung in:
 
@@ -206,8 +210,8 @@ In dieser IPA unterteilen wir die Datensicherung in:
         \hline
         Interval & Mind. 2x täglich \\
         \hline
-        Beschreibung & Die Dokumentation ist im ipa-puzzle-template Repository unter dem Branch probe-ipa angelegt.
-        Sobald ein Dokumentationsticket abgeschlossen wurde, werden die Änderungen auf den Github Server in das private Repository
+        Beschreibung & Die Dokumentation ist im \texttt{ipa} Repository unter dem Branch \texttt{master} angelegt.
+        Sobald eine User Story der Dokumentation abgeschlossen wurde, werden die Änderungen auf den Github Server in das private Repository
         gepushed. Dies geschieht mind. 2x täglich. Zusätzlich wird pro Tag ein Ordner auf einem USB-Stick erstellt.  Am Ende des Tages wird eine Kopie der Dokumentation
         in diesen Ordner geladen \\
       \hline
@@ -255,8 +259,6 @@ Die Nachweise für die Datensicherung finden Sie im Anhang.
     \begin{tabular}{|L{0.2\textwidth}|L{0.2\textwidth}|L{0.2\textwidth}|L{0.3\textwidth}|}
         \rowcolor{puzzleblue}\color{white}Version & \color{white} Datum & \color{white} Name & \color{white} Beschreibung \\
         \hline
-        Vorlage & 27.02.2025 &  Marc Egli & Dokumentenvorlage \\
-        \hline
         Version 0.1 & 04.03.2025 &  Marc Egli & Tag 1 abgeschlossen \\
         \hline
         Version 0.2 & 05.03.2025 &  Marc Egli & Tag 2 abgeschlossen \\
@@ -264,6 +266,22 @@ Die Nachweise für die Datensicherung finden Sie im Anhang.
         Version 0.3 & 06.03.2025 &  Marc Egli & Tag 3 abgeschlossen \\
         \hline
         Version 0.4 & 07.03.2025 &  Marc Egli & Tag 4 abgeschlossen \\
+        \hline
+        Vorlage 0.5 & 11.03.2025 &  Marc Egli & Tag 5 abgeschlossen \\
+        \hline
+        Version 0.6 & 12.03.2025 &  Marc Egli & Tag 6 abgeschlossen \\
+        \hline
+        Version 0.7 & 13.03.2025 &  Marc Egli & Tag 7 abgeschlossen \\
+        \hline
+        Version 0.8 & 14.03.2025 &  Marc Egli & Tag 8 abgeschlossen \\
+        \hline
+        Version 0.9 & 18.03.2025 &  Marc Egli & Tag 9 abgeschlossen \\
+        \hline
+        Version 1.0 & 19.03.2025 &  Marc Egli & Tag 10 abgeschlossen \\
+        \hline
+        Version 1.1 & 20.03.2025 &  Marc Egli & Tag 11 abgeschlossen \\
+        \hline
+        Version 1.2 & 21.03.2025 &  Marc Egli & Tag 12 abgeschlossen \\
         \hline
       \end{tabular}
       \caption{Änderungsprotokoll}
@@ -274,6 +292,7 @@ Die verwendete Projektmethode dieser IPA ist Scrum. Im folgenden Abschnitt wird 
 dieser Projektmethode beschrieben. Des Weiteren beschreibt dieser Abschnitt die Definition of Done (DoD).
 
 \section{Einsatz von Scrum}
+Wie wird Scrum im Rahmen dieser IPA eingesetzt?
 
 \subsection{Sprints}
 Die IPA wird insgesamt in drei Sprints unterteilt. Jedem Sprint wird eine Phase der Arbeit zugewiesen. Die 
@@ -290,12 +309,12 @@ Als Verwaltungstool wird Github Projects eingesetzt. Das Board hierzu kann unter
 aufgerufen werden. Das Board ist in sechs Spalten unterteilt: 
 
 \begin{itemize}
-    \item Backlog: User-Stories werden grob erfasst, keine Details nötig.
-    \item Refinement: User-Stories werden genauer beschrieben und Akzeptanzkriterien werden definiert.
-    \item Ready: User-Story wurde refined und geschätzt. Sie kann jetzt bearbeitet werden.
-    \item In-Progress: User-Story wird momentan bearbeitet.
-    \item In-Review: User-Story wurde abgeschlossen, alle Akzeptanzkriterien sind erfüllt.
-    \item Done: User-Story erfüllt DoD (Definition of Done).
+    \item Backlog: User Stories werden grob erfasst, keine Details nötig.
+    \item Refinement: User Stories werden genauer beschrieben und Akzeptanzkriterien werden definiert.
+    \item Ready: User Story wurde refined und geschätzt. Sie kann jetzt bearbeitet werden.
+    \item In-Progress: User Story wird momentan bearbeitet.
+    \item In-Review: User Story wurde abgeschlossen, alle Akzeptanzkriterien sind erfüllt.
+    \item Done: User Story erfüllt DoD (Definition of Done).
 \end{itemize}
 
 \begin{figure}[h]
@@ -307,10 +326,10 @@ aufgerufen werden. Das Board ist in sechs Spalten unterteilt:
 \subsection{Meetings}
 \textbf{Sprint Planning}
 
-Zu Beginn eines Sprints werden werden alle Aufgaben in Form von User-Stories im Backlog erfasst.
+Zu Beginn eines Sprints werden werden alle Aufgaben in Form von User Stories im Backlog erfasst.
 Die Stories werden anschliessend refined und danach geschätzt. Das Sprint Planning umfasst den Prozess der Erfassung
-von User-Stories, deren Refinement und Schätzung. Konnten im letzten Sprint die geplanten User-Stories nicht alle abgeschlossen werden,
-umfasst das Planning zusätzlich das Neurefinement und die Neuschätzung dieser User-Stories. Anwesend beim Sprint Planning ist auschliesslich
+von User Stories, deren Refinement und Schätzung. Konnten im letzten Sprint die geplanten User-Stories nicht alle abgeschlossen werden,
+umfasst das Planning zusätzlich das Neurefinement und die Neuschätzung dieser User Stories. Anwesend beim Sprint Planning ist auschliesslich
 der Kandidat.
 
 \textbf{Dailies}
@@ -327,8 +346,8 @@ Vorkommnisse werden im Arbeitsjournal dokumentiert.
 \label{sprintfinish}
 
 Nach jedem Sprint findet ein einstündiges Meeting für den Sprintabschluss statt. Darin werden die abgeschlossenen User-Stories
-in der In-Review-Spalte verifiziert. Erfüllt die hinterlegte Arbeit alle Akzeptanzkriterien, wird die User-Story auf Done geschoben. 
-Sind die Akzeptanzkriterien nicht erfüllt, wird die User-Story auf Refinement geschoben. Anwesend beim Sprintabschluss ist auschliesslich der Kandidat.
+in der In-Review-Spalte verifiziert. Erfüllt die hinterlegte Arbeit alle Akzeptanzkriterien, wird die User Story auf Done geschoben. 
+Sind die Akzeptanzkriterien nicht erfüllt, wird die User Story auf Refinement geschoben. Anwesend beim Sprintabschluss ist auschliesslich der Kandidat.
 In Folge des Sprintabschlusses, wird das Sprint Planning durchgeführt.
 
 \subsection{Abweichungen}
@@ -337,32 +356,32 @@ vorgenommen. Grund dafür ist, dass Scrum durch die Änderungen besser auf die I
 
 \textbf{Schätzung}
 
-Scrum verzichtet auf Schätzungen in Personenstunden und verwendet deswegen eine Währung namens "Story Points". Story Points werden
-der \href{https://de.wikipedia.org/wiki/Fibonacci-Folge}{Fibonacci-Zahlenreihe} folgend vergeben. Der Sinn dabei ist, der Schätzung einer User-Story 
+Scrum verzichtet auf Schätzungen in Personenstunden und verwendet deswegen eine Währung namens ``Story Points''. Story Points werden
+der \href{https://de.wikipedia.org/wiki/Fibonacci-Folge}{Fibonacci-Zahlenreihe} folgend vergeben. Der Sinn dabei ist, der Schätzung einer User Story 
 nach Personenstunden auszuweichen.
 
 Dieses Konzept wird in dieser IPA verworfen, um in der Lage zu sein, einen Zeitplan mit genauen Angaben in Personenstunden zu erstellen. Dies macht es dem Kandidaten
 möglich, besser einzuschätzen wie gut er in der Zeit liegt.
 
+\newpage
+
 \textbf{Abnahme Akzeptanzkriterien}
 
-Nach Scrum werden User-Stories vom Product Owner abgenommen. Um ständige Meetings mit dem Product Owner von
-Hitobito und den mithergehenden Zeitverlust zu vermeiden, werden die User-Stories vom Kandidaten selbt abgenommen. Den Prozess dazu
+Nach Scrum werden User Stories vom Product Owner abgenommen. Um ständige Meetings mit dem Product Owner von
+Hitobito und den mithergehenden Zeitverlust zu vermeiden, werden die User Stories vom Kandidaten selbt abgenommen. Der Prozess dazu
 ist unter \hyperref[sprintfinish]{\color{blue} Sprintabschlüsse} ersichtlich.
-
-\newpage
 
 \textbf{Sprint Retro}
 
 Das Sprint Retro bietet dem Product Owner die Möglichkeit, einen Überlick über die Stimmung im Entwicklerteam zu erhalten. Sprint Retros finden monatlich 
-im Geschäftsalltag statt. Auf das Sprint-Retro wird
+im Geschäftsalltag statt. Auf das Sprint Retro wird
 in dieser Arbeit verzichtet. Grund ist der kleine Zeitrahmen der IPA, welcher es unnötig macht, ein solches Meeting durchzuführen.
 
 \section{Definition of Done}
 \label{dod}
-Die Definition of Done definiert, wann eine User-Story abgeschlossen werden kann. Eine User-Story kann erst
+Die Definition of Done definiert, wann eine User Story abgeschlossen werden kann. Eine User Story kann erst
 abgeschlossen werden, wenn sie alle Kriterien der Definition of Done erfüllt. Im Rahmen der IPA werden zwei Definition of Done's verwendet.
-Eine für User-Stories welche den Code betreffen, eine zweite für User-Stories, welche die Dokumentation betreffen.
+Eine für User Stories welche den Code betreffen, eine zweite für User Stories, welche die Dokumentation betreffen.
 
 \subsection{DoD Code}
 
@@ -375,6 +394,8 @@ Eine für User-Stories welche den Code betreffen, eine zweite für User-Stories,
     \item Alle Akzeptanzkriterien erfüllt
 \end{itemize}
 
+\newpage
+
 \subsection{DoD Dokumentation}
 
 \begin{itemize}
@@ -386,24 +407,26 @@ Eine für User-Stories welche den Code betreffen, eine zweite für User-Stories,
 \end{itemize}
 
 \subsection{Akzeptanzkriterien}
-Die Akzeptanzkriterien einer User-Story, werden im dazugehörigen Ticket verwaltet. Jede User-Story wurde nach einem definierten Template
-erstellt, welches in Github hinterlegt wurde. Eine User-Story kann folgendermassen aufgebaut sein:
+Die Akzeptanzkriterien einer User Story, werden im dazugehörigen Ticket verwaltet. Jede User Story wurde nach einem definierten Template
+erstellt, welches in Github hinterlegt wurde. Eine User Story kann folgendermassen aufgebaut sein:
 
 \begin{figure}[h]
     \centering
     \fbox{\includegraphics[width=0.8\textwidth,]{user_story.png}}
-    \caption{Example of User Story}
+    \caption{Beispiel einer User Story}
 \end{figure}
+
+\newpage
 
 \section{Verwendungsgrund}
 Die Projektvorgehensmethode wurde so gewählt, da sie für die IPA mehrere Vorteile bringt:
 
 \begin{itemize}
-    \item \textbf{Sprint Ende:} SCRUM zwingt den Entwickler dazu, am Ende des Sprints ein vorzeigbares Produkt zu haben
+    \item \textbf{Sprint Ende:} Scrum zwingt den Entwickler dazu, am Ende des Sprints ein vorzeigbares Produkt zu haben
     \item \textbf{Agilität:} Wenn eine Story nicht erreicht wurde, kann sie in den nächsten Sprint gezogen werden
     \item \textbf{Daily:} Durch die Dailies, wird ein täglicher Austausch zwischen Fachkraft und Kandidat sichergestellt
-    \item \textbf{Akzeptanzkriterien:} Mit den Kriterien verhindern wir das abschliessen von halbfertigen Features oder fehlerhafter Software
-    \item \textbf{Board:} Durch das Github Projects Board, ermöglichen wir eine schnelle Übersicht über den Stand der IPA
+    \item \textbf{Akzeptanzkriterien:} Mit den Kriterien wird das Abschliessen von halbfertigen Features verhindert
+    \item \textbf{Board:} Durch das Github Projects Board, wird eine schnelle Übersicht über den Stand der IPA ermöglicht
 \end{itemize}
 
 \chapter{Projektaufbauorganisation}
@@ -441,11 +464,11 @@ Die Projektvorgehensmethode wurde so gewählt, da sie für die IPA mehrere Vorte
         \hline
         Verantwortliche Fachkraft & Unterstützt den Kandidaten von Seiten des Lehrbetriebes. Erste Anlaufstelle bei Problemen  \\
         \hline
-        Zusätzliche verantwortliche Fachkraft & Unterstützung für die verantwortliche Fachkraft \\
+        Zusätzlich verantwortliche Fachkraft & Unterstützung für die verantwortliche Fachkraft \\
         \hline
-        Experten & \textbf{Validierungsexperte:} Validiert die IPA-Aufgabenstellung.
-                    \textbf{Hauptexperte:} Verantwortlich für die Bewertung der IPA.
-                    \textbf{Nebenexperte:} Unterstützung für den Hauptexperten. \\ 
+        Experten & \textbf{Validierungsexperte:} Validiert die IPA-Aufgabenstellung
+                    \textbf{Hauptexperte:} Verantwortlich für die Bewertung der IPA
+                    \textbf{Nebenexperte:} Unterstützung für den Hauptexperten \\ 
         \hline
       \end{tabular}
       \caption{Rollenbeschreibung}
@@ -472,7 +495,7 @@ Die Projektvorgehensmethode wurde so gewählt, da sie für die IPA mehrere Vorte
         \hline
         Validierungsexperte & Lawson Mike \\ 
         \hline
-        Hauptexperte & Lorenz Hess \\ 
+        Hauptexperte & Lorenz Müller \\ 
         \hline
         Nebenexperte & Michael Moser \\ 
         \hline
@@ -505,9 +528,9 @@ Die Projektvorgehensmethode wurde so gewählt, da sie für die IPA mehrere Vorte
         \cline{4-7} \cline{9-12}&&& W & S & Risiko & Handlungsweise &&  W & S & Risiko & Handlungsweise \\
         \hline 
         1 & Datenverlust & Relevante Daten der Arbeit gehen verloren. & W2 & S3 & \cellcolor{yellow}Mittel & Risikominderung 
-        & Aktuellstes Backup wiederherstellen, GIT oder USB Stick & W2 & S2 & \cellcolor{green}Niedrig & Risikoakzeptanz \\
+        & Aktuellstes Backup wiederherstellen, Git oder USB-Stick & W2 & S2 & \cellcolor{green}Niedrig & Risikoakzeptanz \\
         \hline
-        2 & Internet fällt aus & Interne Dienste können nicht erreicht werden, Remote Meetings können nicht stattfinden & W4 & S3 & \cellcolor{red}Hoch & Risikominderung 
+        2 & Internet fällt aus & Interne Dienste können nicht erreicht werden, remote Meetings können nicht stattfinden & W4 & S3 & \cellcolor{red}Hoch & Risikominderung 
         & Internetzugang über Mobilnetzanbieter & W1 & S1 & \cellcolor{green}Niedrig & Risikoakzeptanz\\
         \hline
         3 & Änderungen haben unvorhergesehene Konsequenzen & Konzept muss angepasst werden, die Applikation muss an ungeplanten Stellen angepasst werden. & W3 & S2 & \cellcolor{yellow}Mittel & Risikoakzeptanz 
@@ -604,9 +627,9 @@ Während des Entwickelns kam ich aber dann sehr schnell in diesen ``Tunnel'' und
 dass ich es schaffen kann und war deswegen zusätzlich motiviert.
 
 Nach der Umsetzung kann ich sagen, dass ich sehr froh bin Scrum verwendet zu haben. Diese Arbeits- und Projektmethodik
-ist sehr nahe an meinem sonstigen Arbeitsalltag und ich musste dadurch nicht eine neue Projektmethode kennenlernen. Ausserdem ermöglichte SCRUM es mir,
+ist sehr nahe an meinem sonstigen Arbeitsalltag und ich musste dadurch nicht eine neue Projektmethode kennenlernen. Ausserdem ermöglichte Scrum es mir,
 nach jedem Sprint den Stand meines Projektes zu prüfen und so eine Einschätzung meiner momentanen Lage zu treffen. Da ich insgesamt zwei User Stories während der IPA beim 
-Sprintabschluss zurück ins Refinement schieben musste, war ich um die Agilität welche SCRUM mir gab sehr erleichtert. 
+Sprintabschluss zurück ins Refinement schieben musste, war ich um die Agilität welche Scrum mir gab sehr erleichtert. 
 
 \section{Schlussreflexion}
 Für mich lässt sich die IPA in drei Wörtern beschreiben: Spannend, lehrreich und stressig. 

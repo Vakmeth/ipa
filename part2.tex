@@ -37,21 +37,17 @@ tritt Puzzle dabei immer seine Grundwerte nach aussen, welche im Puzzlehouse abg
 Hitobito ist eines der Angebote von Puzzle. Es ist ein Community-Management Tool und
 als Open-Source Projekt auf Github zu finden. Das Tool wird von zahlreichen Verbänden, Parteien
 und Organisationen verwendet und befindet sich darum in einer kontinuerilichen Weiterentwicklung. Mit dem Wagons-Gem
-ermöglicht es Hitobito zudem spezielle Kundenanpassungen in einem eigenen "Wagon" zu vollziehen, ohne die Software anderer
+ermöglicht es Hitobito zudem spezielle Kundenanpassungen in einem eigenen ``Wagon'' zu vollziehen, ohne die Software anderer
 Kunden mit-anzupassen.
 
-Ich selbst arbeite jetzt seit einem halben Jahr im Hitobito und nahm darin vor allem Upgrades und Migrationen vor. So durfte ich
-bspw. das Upgrade von RoR (Ruby on Rails) von 6.1 auf 7.1 vornehmen oder die Migration von MySQL auf Postgres vollziehen.
+Ich selbst arbeite jetzt seit einem halben Jahr im Hitobito und nahm darin vor allem Upgrades und Migrationen vor. So durfte der Kandidat
+bspw. das Upgrade von RoR (Ruby on Rails) von 6.1 auf 7.1 vornehmen oder die Migration von MySQL auf PostgreSQL vollziehen.
 
 Da Hitobito von zahlreichen Kunden verwendet wird, ist die Applikation über die Jahre gewachsen. Viele Features wurden implementiert,
 um sie schnell dem Kunden zur Verfügung zu stellen. Mit einem immer wachsenden Anforderungskatalog ergaben sich dadurch komplexe Arbeitsabläufe
 welche im Tool etabliert wurden. Einer dieser komplexen Abläufe ist die Filterung nach Personen oder Abonnemente.
 
-Mit dieser IPA soll die Filterung zwischen diesen zwei Entitäten homogenisiert werden. Um dies zu tun,
-sollen zuerst zwei bis drei Konzepte ausgearbeitet und anschliessend in einem Variantenentscheid evaluiert werden. Für die Lösungsvariante wird in einem weiteren Schritt ein PoC (Proof of Concept) implementiert. 
-
-Nach der IPA soll basierend auf der neuen Filterlogik ein neues UI entworfen werden, um nebst der Ordnung im Backend
-eine besser User Experience für den Benutzer zu schaffen.
+Mit dieser IPA eine neue Benutzerschnittstelle entworfen werden eine besser User Experience für den Benutzer zu schaffen.
 
 In einer Zeit in welcher Unternehmen mehr den je Wert auf ein sauberes Design und der User Experience von Webseiten und Applikationen geben, das auch
 in einer älteren Applikation zu etablieren. Gerade bei einem Community-Management Tool wie Hitobito, welches tagtäglich von 
@@ -87,7 +83,7 @@ Danach werden unter dem Reiter ``Personen'' alle Personen der ausgewählten Grup
    \caption{Personenübersicht Hitobito}
 \end{figure}
 
-Unter dem Dropdown ``Weitere Ansichten'' kann der User entweder einen bestehenden Personenfilter auf die angezeigte Personenliste anwenden 
+Unter dem Dropdown ``Weitere Ansichten'' kann der Benutzer entweder einen bestehenden Personenfilter auf die angezeigte Personenliste anwenden 
 oder einen neuen Personenfilter erstellen. Der neue Personenfilter kann unter der Option ``Neuer Filter...'' erstellt werden.
 
 \begin{figure}[h]
@@ -286,12 +282,12 @@ Auf dieser Ansicht kann der Benutzer per Klick ein Abonnement auswählen.
 \newpage
 
 Daraufhin wird der Benutzer auf die Infoseite des Abonnements weitergeleitet. Um die Abonnementenfilterung
-einzusehen muss nun auf den Reiter ``Abonnementen'' navigiert werden.
+einzusehen muss nun auf den Reiter ``Abonnenten'' navigiert werden.
 
 \begin{figure}[h]
    \centering
    \fbox{\includegraphics[width=1\textwidth,]{single_subscription_overview.png}}
-   \caption{Übersicht einzelnes Abonnement}
+   \caption{Übersicht einzelnes Abonnementes}
 \end{figure}
 
 Unter dieser Ansicht ist es dem Benutzer möglich diverse Filterkriterien für das Abonnement zu definieren.
@@ -328,6 +324,7 @@ Zuerst werden die Anzeigemasken des Mockups vorgestellt. Dabei handelt es sich u
 bearbeiten kann.
 
 \textbf{Filterübersicht}
+
 Sobald der Benutzer auf ``Neuer Filter...'' in der Personenübersicht einer Gruppe klickt, soll er auf folgende Ansicht weitergeleitet werden:
 
 \begin{figure}[h]
@@ -344,7 +341,7 @@ Die Speicherungskomponente des Filters bleibt bestehen.
 \textbf{Filterübersicht mit Tags und Felder}
 
 Hat der Benutzer seine Filterkriterien definiert, werden diese in Boxen angezeigt.
-Die definierte Filterkriterien verschwinden aus dem Dropdown unter dem Hinzufüge-Butto. Stattdessen können 
+Die definierte Filterkriterien verschwinden aus dem Dropdown unter dem Hinzufüge-Button. Stattdessen können 
 die definierten Filterkriterien über den Stif in der oberen, rechten Ecke einer Box bearbeitete werden.
 
 \begin{figure}[h]

@@ -1536,10 +1536,10 @@ INPUT /usr/share/texlive/texmf-dist/tex/latex/inconsolata/ot1zi4.fd
 INPUT /usr/share/texlive/texmf-dist/tex/latex/inconsolata/ot1zi4.fd
 INPUT /usr/share/texlive/texmf-dist/tex/latex/inconsolata/ot1zi4.fd
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/inconsolata/ot1-zi4r-0.tfm
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/inconsolata/ot1-zi4r-0.tfm
 INPUT ./bilder//puzzle_tagline_blau.png
 INPUT bilder//puzzle_tagline_blau.png
 INPUT ./bilder//puzzle_tagline_blau.png
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/inconsolata/ot1-zi4r-0.tfm
 INPUT /usr/share/texmf/fonts/tfm/public/lm/rm-lmri12.tfm
 INPUT ./bilder//puzzle_tagline_blau.png
 INPUT bilder//puzzle_tagline_blau.png
@@ -1578,6 +1578,9 @@ INPUT ./bilder//user_story.png
 INPUT bilder//user_story.png
 INPUT ./bilder//user_story.png
 INPUT ./bilder//user_story.png
+INPUT ./bilder//puzzle_tagline_blau.png
+INPUT bilder//puzzle_tagline_blau.png
+INPUT ./bilder//puzzle_tagline_blau.png
 INPUT ./bilder//puzzle_tagline_blau.png
 INPUT bilder//puzzle_tagline_blau.png
 INPUT ./bilder//puzzle_tagline_blau.png
@@ -1929,6 +1932,9 @@ INPUT ./bilder//mockup_two_filters.png
 INPUT bilder//mockup_two_filters.png
 INPUT ./bilder//mockup_two_filters.png
 INPUT ./bilder//mockup_two_filters.png
+INPUT ./bilder//puzzle_tagline_blau.png
+INPUT bilder//puzzle_tagline_blau.png
+INPUT ./bilder//puzzle_tagline_blau.png
 INPUT ./bilder//puzzle_tagline_blau.png
 INPUT bilder//puzzle_tagline_blau.png
 INPUT ./bilder//puzzle_tagline_blau.png
