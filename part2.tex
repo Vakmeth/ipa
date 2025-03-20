@@ -306,7 +306,6 @@ zu vernachlässigen sind. Die globalen Bedingungen können über das Bearbeitung
 
 \newpage
 
-
 In den globalen Bedingungen bieten sich zwei Filterkriterien: Felder und Sprache. Die Funktionsweise
 ist dabei die gleiche, wie die der Personenfilter (weiter oben beschrieben).
 
@@ -429,9 +428,22 @@ Die Definition der Tags bleibt bestehen wie in der Soll-Situation beschrieben
 
 \section{Fehlende Informationen}
 Alle bekannten Informationen bei Beginn der IPA wurden in der Ist-Situation und der Soll-Situation beschrieben.
-Als unbekannte Informationen gelten: Die Bedürfnisse des Benutzers, Sicherheitsrisiken, sowie die darauf resultierenden Produktanforderungen.
+Als unbekannte Informationen gelten: Die Bedürfnisse des Benutzers, Sicherheitsrisiken, sowie die daraus resultierenden Produktanforderungen.
 Die genannten Bereiche werden in den kommenden Abschniten aufgenommen und analysiert. Alle unbekannten Informationen welche einzelne 
 Definitionen oder Abläufe betreffen wurden über das Internet oder KI recherchiert und anschliessend im Anhang unter dem Datum der Verwendung hinterlegt.
+
+\newpage
+
+\section{Änderungen am Mockup}
+Während des Implementierens wurden Aspekte entdeckt, welche am Mockup geändert werden mussten.
+Diese werden im folgenden Abschnitt dokumentiert.
+
+\begin{itemize}
+   \item \textbf{Bearbeitung der Filterkriterien: } Um Filterkriterien zu bearbeiten muss nicht auf ein Bearbeitungssymbol geklickt werden. Die Bearbeitung kann direkt nach dem Hinzufügen eines Filterkriteriums vorgenommen werden
+   \item \textbf{Gruppendropdown im Rollenfilterkriterium: } Es wird kein Dropdown zur Filterung der Rollen nach Gruppen zur Verfügung gestellt. Die Rollen sind alle über ein einzelnes Dropdown auswählbar.
+   \item \textbf{Entfernung eines Filterkriteriums: } Als zusätzliche Funktionalität wird ein Mülleimer Symbol auf jedem Filterkriterium eingefügt, um dieses von der Filterkonfiguration zu entfernen.
+   \item \textbf{Filterkriterium wird beibehalten: } Die Benutzerschnittstelle für das Bearbeiten des Filterkriteriums ``Felder'' wird nicht modifiziert und lediglich in der neuen Benutzerschnittstelle angeordnet. 
+\end{itemize}
 
 \newpage
 
@@ -703,9 +715,9 @@ werden als gleichwertig bewertet. Somit erhält die erste nicht funktionale Anfo
        \hline
        \rowcolor{puzzleblue} \multicolumn{2}{|l|}{\color{white}\textbf{Nicht funktionale Anforderung 2}} \\[4pt]
        \hline
-       Beschreibung & Es werden im Rahmen der Implementation nur Libraries ohne nachweisbare Schwachstelle verwendet. Basiert auf \hyperref[sec5]{\color{blue}Sicherheitsrisiko 5}  \\
+       Beschreibung & Es werden im Rahmen der Implementation etablierte Libraries. Basiert auf \hyperref[sec5]{\color{blue}Sicherheitsrisiko 5}  \\
        \hline
-       Messbarkeit & Es werden keine Schwachstellen bei den verwendeten Libraries gefunden.    \\
+       Messbarkeit & Die verwendeten Libraries sind bekannt und besitzen eine Vielzahl von Downloads  \\
        \hline
      \end{tabular}
      \caption{Nicht funktionale Anforderung 2}
@@ -2890,6 +2902,32 @@ Insgesamt wurden im Rahmen der IPA bis zu diesem Punkt 19 User Stories abgeschlo
 \newpage
 
 \chapter{Einführung}
+Im folgenden Abschnitt wird behandelt, wie das IPA Feature in die bestehende Hitobito Applikation eingeführt werden wird und
+welche weitere Arbeiten vor diesem Schritt erledigt werden müssen.
+
+\section{Einführung des Systemes}
+Die Arbeiten in dieser IPA werden wie ein normales Feature behandelt. 
+Das bedeutet, der Code wird sich erst mindestens einem Code Review unter-
+ziehen müssen und wenn nötig verbessert werden. Der Betrieb muss letztlich nicht
+unbedingt angepasst werden und ist in der Dokumentation auf GitHub beschrieben. 
+Jedoch müssen vor dem Merge in den produktiven
+Branch des Cores noch einige Arbeiten erledigt werden, welche innerhalb dieser IPA
+nicht beachtet wurden.
+
+
+\section{Weitere Arbeiten}
+Beim Filterkriterium ``Tags'' ist es momentan möglich sowohl bei dem Eingabefeld zum Ausschliessen wie auch beim Eingabefeld zum Einschliessen
+der Tags das gleiche Tag einzugeben. Dies ist ein logischer Fehler, der jedoch noch auf die alte Grundfunktionalität zurückzuführen ist. Bevor das IPA Feature
+gemerged wird sollte für die Behebung dieses Problems etwas Zeit investiert werden.
+
+Während der Umsetzung kam von Daniel Illi der Vorschlag, man könnte für die einzelnen Filterkriterien eine Validierung für deren Werte einfügen. In diesem Fall,
+müsste es, wie zu Beginn im Mockup angedacht, möglich sein ein einzelnes Filterkriterium speicher zu können. Bei Fehlschlagen der Validierung würde dann ein entsprechender 
+Fehler auf der Benutzerschnittstelle angezeigt werden. Diese Anpassung könnte vor einem Review oder als separates Feature zur Filterung implementiert werden.
+
+Ein wichtiger Aspekt ist zuletzt das Durchtesten mit allen Wagons von Hitobito. Bei vielen Anpassungen mit Core, sollte die Funktionalität in den Wagons mit manuellen sowie
+automatisierten Tests sichergestellt werden. Am Besten wird dies vor dem Review durch einen anderen Entwickler durchgeführt, um die Aufkommenden Fehler direkt selber beheben zu können und so
+Zeit im Review zu sparen.
+
 
 \chapter{Abschluss Sprint Finalisierung}
 \section{Backlog}

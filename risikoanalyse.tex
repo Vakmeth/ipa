@@ -5,13 +5,14 @@
   \begin{tabular}{|L{0.2\textwidth}|L{0.3\textwidth}|L{0.4\textwidth}|}
       \rowcolor{puzzleblue}\color{white} Action & \color{white} Controller & \color{white} Funktion \\ [12pt]
       \hline
-      index & PeopleController & Diese Schnittstelle liefert alle Personen zurück, wobei diese durch den gegebenen Filter gefiltert werden.
-      Der Filter kann entweder durch die Angabe einer Filter-ID oder dem Mitgeben von Parametern im Request definiert werden.  \\
-      \hline
-       index & SubscriptionController & Diese Schnittstelle liefert alle Abonnemente zurück, wobei diese durch die definierten Filter
-       gefiltert werden. Die Filter können über diverse Attribute bestimmt werden, im Rahmen dieser IPA sind allerdings auschliesslich die
-       globalen Bedingungen zu beachten, welche auf Maillinglisten gespeichert werden, welche wiederum mehrere Abonnenmente verwalten.  \\
-      \hline
+      new & PeopleFiltersController & Diese Schnittstelle liefert die Benutzerschnittstelle zur Filterkonfiguration zurück.  \\
+      \hline 
+      edit & PeopleFiltersController & Diese Schnittstelle liefert die Benutzerschnittstelle zur Filterkonfiguration zurück. Die Benutzerschnittstellen
+      sind mit den Werten aus dem definierten Filter befüllt. Der Filter wird über die Angabe einer Filter-ID definiert.  \\
+      \hline 
+      delete & PeopleFiltersController & Diese Schnittstelle ermöglicht das Löschen von Filterkriterien auf der Benutzerschnittstelle. Als Parameter
+      wird der Name des Filterkriteriums mitgegeben.   \\
+      \hline 
     \end{tabular}
     \caption{Schnittstellen}
 \end{table}
@@ -132,7 +133,7 @@ wie beschrieben verwendet.
       & Alle Eingaben des Benutzers escapen & W2 & S1 & \cellcolor{green}Niedrig & Risikoakzeptanz \\
       \hline
       5 & \label{sec5} Falsche Verwending einer Library & Schwachstelle der Library kann von Angreifern ausgenutzt werden & W2 & S3 & \cellcolor{yellow}Mttel & Risikominderung 
-      & Dokumentation der Libraries gut durchgehen, diese auf Schwachstellen überprüfen
+      & Dokumentation der Libraries gut durchgehen, Libraries verwenden welche in der Rails Landschaft etabliert sind
        & W2 & S2 & \cellcolor{green} Niedrig & Risikoakzeptanz \\
       \hline
   \end{tabular}
