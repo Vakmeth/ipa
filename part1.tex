@@ -131,6 +131,7 @@ eingefügt werden:
 \end{verbatim}
 
 Die daraus entstehende Lizenz sieht wie folgt aus:
+\newline
 
 \begin{lstlisting}[language=Ruby]
     # Copyright (c) 2012 -2021 , hitobito AG . This file is part of
@@ -153,9 +154,9 @@ entfernt oder mit
     rake license:update 
 \end{verbatim} aktualisiert werden.
 
-\section{Git Commit Message Conventions}
-Die Git Commit Messages werden nach den Regeln von Puzzle ITC formuliert. Im Anhang
-unter \hyperref[sec:gitconv]{Git Commit Message Concention} finden sie eine Kopie der Firmenkonventionen. Diese wurden 
+\section{Git commit convention}
+Die Git commit messages werden nach den Regeln von Puzzle ITC formuliert. Im Anhang
+unter \hyperref[sec:gitconv]{Git Commit Message Convention} finden sie eine Kopie der Firmenkonventionen. Diese wurden 
 basierend auf folgendem Tutorial definiert: \href{https://cbea.ms/git-commit}{Tutorial}
 
 \begin{itemize}
@@ -164,7 +165,7 @@ basierend auf folgendem Tutorial definiert: \href{https://cbea.ms/git-commit}{Tu
     \item Mit Grossbuchstaben beginnen
     \item Kein Punkt am Schluss
     \item Den \textit{imperative mood} (Befehlsform) verwenden, also «Fix bug with X» statt «Fixed bug with X» oder «More fixes for broken stuff»
-    \item Wenn vorhanden Ticket referenzieren:
+    \item Wenn vorhanden, Ticket referenzieren:
     \begin{itemize}
         \item Bei Open Project Work Packages: «Add X, refs \#12345»
         \item Bei Gitlab/Github Issues: «Add X \#12345»
@@ -174,15 +175,15 @@ basierend auf folgendem Tutorial definiert: \href{https://cbea.ms/git-commit}{Tu
 \chapter{IPA-Schutzbedarfanalyse}
 
 \section{Datensicherheit}
-Die notwendigen Daten welche im Rahmen der IPA zu Test- und Vorführungszwecken verwendet werden,
-sind durch das \href{https://github.com/faker-ruby/faker}{Faker-Gem} generiert. Diese Daten sind als nicht als besonders 
+Die notwendigen Daten, welche im Rahmen der IPA zu Test- und Vorführungszwecken verwendet werden,
+sind durch das \href{https://github.com/faker-ruby/faker}{Faker-Gem} generiert. Diese Daten sind als nicht besonders 
 schützenswert zu klassifizieren.
 
 \section{Applikationssicherheit}
 Im Rahmen der IPA wird nicht mit besonders schützenswerten Daten gearbeitet. Bei der Implementierung muss sichergestellt werden, dass
 Benutzer nur auf Daten zugreifen können, welche durch ihre Berechtigungen abgedeckt sind. Diese Sicherheit wird durch die Verwendung
 des can-can-can Gems gewährleistet. Dies ist wichtig, da sich bei späterer Implementierung der IPA in 
-Hitobito besonders Schützenswerte Daten in der produktien Datenbank befinden.
+Hitobito besonders schützenswerte Daten in der produktiven Datenbank befinden.
 
 \chapter{Organisation der IPA-Ergebnisse}
 \section{Datensicherung}
@@ -207,8 +208,8 @@ In dieser IPA unterteilen wir die Datensicherung in:
         \hline
         Beschreibung & Die Dokumentation ist im ipa-puzzle-template Repository unter dem Branch probe-ipa angelegt.
         Sobald ein Dokumentationsticket abgeschlossen wurde, werden die Änderungen auf den Github Server in das private Repository
-        gepushed. Dies geschieht mind. 2x täglich. Zusätzlich, wird pro Tag ein Ordner auf einem USB-Stick erstellt.  Am Ende des Tages wird eine Kopie der Dokumentation
-        in diesen Ordner geladen. \\
+        gepushed. Dies geschieht mind. 2x täglich. Zusätzlich wird pro Tag ein Ordner auf einem USB-Stick erstellt.  Am Ende des Tages wird eine Kopie der Dokumentation
+        in diesen Ordner geladen \\
       \hline
       \end{tabular}
       \caption{Sicherung Dokumentation}
@@ -228,9 +229,9 @@ In dieser IPA unterteilen wir die Datensicherung in:
         \hline
         Interval & Mind. 2x täglich \\
         \hline
-        Beschreibung & Für die Entwicklung wurden die Repositories hitobito und hitobito\-generic geforked.
-        Auf diesen Repositories wird an Tagen an welchen entwickelt wird, mind. 2x täglich committed. An diesen Tagen
-        wird zur doppelten Sicherung zusätzlich eine Kopie des Projektes auf den USB Stick gespeichert, unter dem Ordner des jeweiligen Tages. \\
+        Beschreibung & Für die Entwicklung wurden die Repositories Hitobito und Hitobito-Generic geforked.
+        Auf diesen Repositories wird an Tagen, an welchen entwickelt wird, mind. 2x täglich committed. Zusätzlich wird zur doppelten Sicherung eine Kopie des Projektes, unter dem Ordner des jeweiligen Tages,
+        auf den USB Stick gespeichert \\
       \hline
       \end{tabular}
       \caption{Sicherung Code}
@@ -240,12 +241,12 @@ In dieser IPA unterteilen wir die Datensicherung in:
 
 \subsection{Wiederherstellung des Codes}
 Im Falle eines Datenverlusts, können die Daten entweder über das Github Repository oder den USB-Stick wiederhergestellt werden.
-Bei der Wiederherstellung mit Git wird der SSH-Key für die Klonung des Repositories benötigt. Ist
+Bei der Wiederherstellung mit Git, wird der SSH-Key für die Klonung des Repositories benötigt. Ist
 dieser SSH-Key nicht verfügbar, wird die Wiederherstellung über den USB-Stick vorgenommen und das Projekt des letzten Speicherstandes
-kopiert. Im Falle der Wiederherstellung mit dem USB-Stick ist mit mehr Datenverlust zu rechnen falls der Datenverlust gegen Mittag oder Nachmittag auftritt, da
+kopiert. Im Falle der Wiederherstellung mit dem USB-Stick, ist mit mehr Datenverlust zu rechnen wenn dieser gegen Mittag oder Nachmittag auftritt, da
 die Speicherung erst am Ende des Tages erfolgt. Aus diesem Grund ist die Datenwiederherstellung mit Git zu bevorzugen.
 
-Die Nachweise für die Datensicherung finden sie im Anhang.
+Die Nachweise für die Datensicherung finden Sie im Anhang.
 
 \newpage
 
@@ -270,7 +271,7 @@ Die Nachweise für die Datensicherung finden sie im Anhang.
 
 \chapter{Projektmethode}
 Die verwendete Projektmethode dieser IPA ist Scrum. Im folgenden Abschnitt wird der Einsatz, Abweichungen, Werkzeuge und Begründung der Wahl
-dieser Projektmethode beschrieben. Des weiteren beschreibt dieser Abschnitt die Definition of Done (DoD).
+dieser Projektmethode beschrieben. Des Weiteren beschreibt dieser Abschnitt die Definition of Done (DoD).
 
 \section{Einsatz von Scrum}
 
@@ -290,7 +291,7 @@ aufgerufen werden. Das Board ist in sechs Spalten unterteilt:
 
 \begin{itemize}
     \item Backlog: User-Stories werden grob erfasst, keine Details nötig.
-    \item Refinement: User-Stories werden genauer Beschrieben und Akzeptanzkriterien werden definiert.
+    \item Refinement: User-Stories werden genauer beschrieben und Akzeptanzkriterien werden definiert.
     \item Ready: User-Story wurde refined und geschätzt. Sie kann jetzt bearbeitet werden.
     \item In-Progress: User-Story wird momentan bearbeitet.
     \item In-Review: User-Story wurde abgeschlossen, alle Akzeptanzkriterien sind erfüllt.
@@ -315,8 +316,8 @@ der Kandidat.
 \textbf{Dailies}
 
 Während eines Sprints wird jeden Tag um 09:00 Uhr ein Daily durchgeführt. Das Daily findet bei Puzzle ITC
-im Sitzungszimmer "Sudo" statt. Anwesend sind dabei der Kandidat, die verantwortliche Fachkraft und die zusätzliche verantwortliche
-Fachkraft. Ausgenommen von dieser Regel ist der erste Tag der IPA (04.03.2025) an welchem kein Daily durchgeführt wird. Grund dafür ist, dass zu diesem Zeitpunkt noch keine
+im Sitzungszimmer ``Sudo'' statt. Anwesend sind dabei der Kandidat, die verantwortliche Fachkraft und die zusätzlich verantwortliche
+Fachkraft. Ausgenommen von dieser Regel ist der erste Tag der IPA (04.03.2025), an welchem kein Daily durchgeführt wird. Grund dafür ist, dass zu diesem Zeitpunkt noch keine
 Organisation und Projektvorgehensweise definiert wurde und die ersten Prozesse von Scrum erst ab dem 2. Tag eintreffen können.
 
 Im Daily ist es dem Kandidat möglich, Fragen an seine verantwortlichen Fachkräfte zu stellen. Abläufe im Daily oder wichtige 
@@ -326,9 +327,9 @@ Vorkommnisse werden im Arbeitsjournal dokumentiert.
 \label{sprintfinish}
 
 Nach jedem Sprint findet ein einstündiges Meeting für den Sprintabschluss statt. Darin werden die abgeschlossenen User-Stories
-in der In-Review-Spalte verifiziert. Erfüllt die hinterlegte Arbeit alle Akzeptanzkriterien wird die User-Story auf Done geschoben. 
+in der In-Review-Spalte verifiziert. Erfüllt die hinterlegte Arbeit alle Akzeptanzkriterien, wird die User-Story auf Done geschoben. 
 Sind die Akzeptanzkriterien nicht erfüllt, wird die User-Story auf Refinement geschoben. Anwesend beim Sprintabschluss ist auschliesslich der Kandidat.
-In Folge des Sprintabschlusses wird das Sprint Planning durchgeführt.
+In Folge des Sprintabschlusses, wird das Sprint Planning durchgeführt.
 
 \subsection{Abweichungen}
 Trotz der Verwendung von Scrum, wurden Änderungen an der Definition dieser Projektvorgehensmethode
@@ -340,28 +341,28 @@ Scrum verzichtet auf Schätzungen in Personenstunden und verwendet deswegen eine
 der \href{https://de.wikipedia.org/wiki/Fibonacci-Folge}{Fibonacci-Zahlenreihe} folgend vergeben. Der Sinn dabei ist, der Schätzung einer User-Story 
 nach Personenstunden auszuweichen.
 
-Dieses Konzept wird in dieser IPA verworfen, um in der Lage zu sein einen Zeitplan mit genauen Angaben in Personenstunden zu erstellen. Dies macht es dem Kandidaten
-möglich besser einzuschätzen, wie gut er in der Zeit liegt.
+Dieses Konzept wird in dieser IPA verworfen, um in der Lage zu sein, einen Zeitplan mit genauen Angaben in Personenstunden zu erstellen. Dies macht es dem Kandidaten
+möglich, besser einzuschätzen wie gut er in der Zeit liegt.
 
 \textbf{Abnahme Akzeptanzkriterien}
 
 Nach Scrum werden User-Stories vom Product Owner abgenommen. Um ständige Meetings mit dem Product Owner von
 Hitobito und den mithergehenden Zeitverlust zu vermeiden, werden die User-Stories vom Kandidaten selbt abgenommen. Den Prozess dazu
-finden ist unter \hyperref[sec:sprintfinish]{Sprintabschlüsse} ersichtlich.
+ist unter \hyperref[sprintfinish]{\color{blue} Sprintabschlüsse} ersichtlich.
 
 \newpage
 
 \textbf{Sprint Retro}
 
-Das Sprint Retro bietet dem Product Owner eine Möglichkeit einen Überlick über die Stimmung im Entwicklerteam zu erhalten. Sprint Retros finden 
-im Geschäftsalltag Monatsweise statt. Auf das Sprint-Retro wird
-in dieser Arbeit verzichtet. Grund ist der kleine Zeitrahmen der IPA, welcher es unnötig macht ein solches Meeting durchzuführen.
+Das Sprint Retro bietet dem Product Owner die Möglichkeit, einen Überlick über die Stimmung im Entwicklerteam zu erhalten. Sprint Retros finden monatlich 
+im Geschäftsalltag statt. Auf das Sprint-Retro wird
+in dieser Arbeit verzichtet. Grund ist der kleine Zeitrahmen der IPA, welcher es unnötig macht, ein solches Meeting durchzuführen.
 
 \section{Definition of Done}
 \label{dod}
-Die Definition of Done definiert wan eine User-Story abgeschlossen werden kann. Eine User-Story kann erst
+Die Definition of Done definiert, wann eine User-Story abgeschlossen werden kann. Eine User-Story kann erst
 abgeschlossen werden, wenn sie alle Kriterien der Definition of Done erfüllt. Im Rahmen der IPA werden zwei Definition of Done's verwendet.
-Eine für User-Stories welche den Code betreffen, eine zweite für User-Stories welche die Dokumentation betreffen.
+Eine für User-Stories welche den Code betreffen, eine zweite für User-Stories, welche die Dokumentation betreffen.
 
 \subsection{DoD Code}
 
@@ -385,7 +386,7 @@ Eine für User-Stories welche den Code betreffen, eine zweite für User-Stories 
 \end{itemize}
 
 \subsection{Akzeptanzkriterien}
-Die Akzeptanzkriterien einer User-Story werden im dazugehörigen Ticket verwaltet. Jede User-Story wurde nach einem definierten Template
+Die Akzeptanzkriterien einer User-Story, werden im dazugehörigen Ticket verwaltet. Jede User-Story wurde nach einem definierten Template
 erstellt, welches in Github hinterlegt wurde. Eine User-Story kann folgendermassen aufgebaut sein:
 
 \begin{figure}[h]
@@ -398,11 +399,11 @@ erstellt, welches in Github hinterlegt wurde. Eine User-Story kann folgendermass
 Die Projektvorgehensmethode wurde so gewählt, da sie für die IPA mehrere Vorteile bringt:
 
 \begin{itemize}
-    \item \textbf{Sprint Ende:} SCRUM zwingt den Entwickler dazu am Ende des Sprints ein vorzeigbares Produkt zu haben
+    \item \textbf{Sprint Ende:} SCRUM zwingt den Entwickler dazu, am Ende des Sprints ein vorzeigbares Produkt zu haben
     \item \textbf{Agilität:} Wenn eine Story nicht erreicht wurde, kann sie in den nächsten Sprint gezogen werden
-    \item \textbf{Daily:} Durch die Dailies wird ein täglicher Austausch zwischen Fachkraft und Kandidat sichergestellt
+    \item \textbf{Daily:} Durch die Dailies, wird ein täglicher Austausch zwischen Fachkraft und Kandidat sichergestellt
     \item \textbf{Akzeptanzkriterien:} Mit den Kriterien verhindern wir das abschliessen von halbfertigen Features oder fehlerhafter Software
-    \item \textbf{Board:} Durch das Github Projects Board ermöglichen wir eine schnelle Übersicht über den Stand der IPA
+    \item \textbf{Board:} Durch das Github Projects Board, ermöglichen wir eine schnelle Übersicht über den Stand der IPA
 \end{itemize}
 
 \chapter{Projektaufbauorganisation}
@@ -423,10 +424,10 @@ Die Projektvorgehensmethode wurde so gewählt, da sie für die IPA mehrere Vorte
         Product Owner & Der Product Owner vertritt die Interessen des Kunden. Er priorisiert die Aufgaben im Product Backlog  \\
         \hline
         Scrum Master & Der Scrum Master unterstützt die Entwickler und beseitigt Hindernisse. Er sorgt für eine 
-        kontinuierliche Verbesserung in der Arbeit. \\
+        kontinuierliche Verbesserung in der Arbeit \\
         \hline
         Entwicklerteam & Das Entwicklerteam arbeitet selbstorganisiert den Sprint Backlog ab. 
-        Durch Dailies wird ein laufender Informationsaustausch sichergestellt. \\
+        Durch Dailies wird ein laufender Informationsaustausch sichergestellt \\
         \hline
       \end{tabular}
       \caption{Rollenbeschreibung}
@@ -438,7 +439,7 @@ Die Projektvorgehensmethode wurde so gewählt, da sie für die IPA mehrere Vorte
         \hline
         \rowcolor{puzzleblue} \multicolumn{2}{|l|}{\color{white}\textbf{Rollenbeschreibung}} \\[12pt]
         \hline
-        Verantwortliche Fachkraft & Unterstützt den Kandidaten von seiten des Lehrbetriebes. Erste Anlaufstelle bei Problemen.  \\
+        Verantwortliche Fachkraft & Unterstützt den Kandidaten von Seiten des Lehrbetriebes. Erste Anlaufstelle bei Problemen  \\
         \hline
         Zusätzliche verantwortliche Fachkraft & Unterstützung für die verantwortliche Fachkraft \\
         \hline
@@ -467,7 +468,7 @@ Die Projektvorgehensmethode wurde so gewählt, da sie für die IPA mehrere Vorte
         \hline
         Verantwortliche Fachkraft & Daniel Illi  \\
         \hline
-        Zusätzliche verantwortliche Fachkraft & Robin Steiner \\
+        Zusätzlich verantwortliche Fachkraft & Robin Steiner \\
         \hline
         Validierungsexperte & Lawson Mike \\ 
         \hline
@@ -587,12 +588,12 @@ W5 = Eintreffen hoch \\
 \chapter{Persönliches Fazit}
 Eine Analyse nach Beendung der Arbeit an der IPA.
 
-\section{Was lief weniger gut}
+\section{Was funktionierte weniger gut}
 Die Dokumentationsaufträge nahmen insgesamt mehr Zeit in Anspruch als gedacht. Vielfach war das auf Probleme mit meiner Konzentration zurückzuführen.
 Beim Dokumentieren muss viel hinterfragt und recherchiert werden, so kam ich nicht wie beim Programmieren in den ``Tunnel'' wo ich mich nur noch aufs Machen konzentrieren konnte.
 Obwohl ich dadurch Zeit beim Dokumentieren verlor, war ich so dennoch sicher das meine Informationen korrekt sind und ich auf einem guten Weg bin.
 
-\section{Was lief gut}
+\section{Was funktionierte gut}
 Während der Arbeit hatte ich stets ein gutes Zeitmanagement. Ich wusste, wann ich Überstunden machen musste oder wann ich die Zeit
 wieder aufholen kann. So konnte ich beruhigt in den letzten Tag starten, da ich nur noch die Dokumentation erneut gegenlesen musste.
 

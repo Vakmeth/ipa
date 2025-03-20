@@ -2,17 +2,17 @@
 \begin{table}[H]
     \begin{tabular}{|L{0.4\textwidth}|C{60pt}|C{60pt}|C{60pt}|}
         \hline
-        \rowcolor{puzzleblue}\color{white}Tätigkeiten & \color{white}Beteiligte \color{white}Personen & \color{white}Aufwand Geplant (std) & \color{white}Aufwand Effektiv (std) \\
+        \rowcolor{puzzleblue}\color{white}Tätigkeiten & \color{white}Beteiligte \color{white}Personen & \color{white}Aufwand geplant (std) & \color{white}Aufwand effektiv (std) \\
         \hline
          Add-Dropdown Fehler beheben & Marc Egli & 0 & 0.5 \\
         \hline
-        Daily & Marc Egli, Robin Steiner & 0.25 & 0.25 \\
+        Daily abhalten & Marc Egli, Robin Steiner & 0.25 & 0.25 \\
         \hline
-        2. Expertenbesuch & Marc Egli, Robin Steiner, Daniel Illi & 1 & 0.75 \\
+        Expertenbesuch vorbereiten, durchführen & Marc Egli, Robin Steiner, Daniel Illi & 1 & 0.75 \\
         \hline
         Endpoints implementieren & Marc Egli & 2 & 2.25 \\
         \hline
-        Dropdown weiter implementieren & Marc Egli & 0.5 & 0 \\
+        Dropdown implementieren & Marc Egli & 0.5 & 0 \\
         \hline
         Arbeitsjournal schreiben & Marc Egli & 0.25 & 0.25 \\
         \textbf{Total} &  & 4 & 4 \\
@@ -22,25 +22,25 @@
 \end{table}
 
 \subsection*{Tagesablauf}
-Wie geplant habe ich heute morgen zuerst den Fehler im Dropdown behoben. Der Fehler lag in etwas sehr offensichtlichem: Wenn man in Ruby das ``=''-Zeichen 
+Wie geplant habe ich heute Morgen zuerst den Fehler im Dropdown behoben. Der Fehler war eigentlich sehr offensichtlich: Wenn man in Ruby das ``=''-Zeichen 
 für Logik verwendet, wird der entsprechende Output auch in der View als Text angezeigt. Da ich eine For-Each-Schleife benutzt habe, um alle Filterkriterien im Dropdown
-als Optionen anzuzeigen und dabei das ``=''-Zeichen verwendet habe, wurde am Schluss das ganze Array als Text angezeigt. Um dieses Fehlverhalten zu beheben gilt es nur das ``='' zu einem 
+als Optionen anzuzeigen und dabei das ``=''-Zeichen verwendet habe, wurde am Schluss das ganze Array als Text angezeigt. Um dieses Fehlverhalten zu beheben, gilt es nur das ``='' zu einem 
 ``-'' zu wechseln. 
 
 Nachdem ich diesen Fehler behoben habe, führten wir das Daily durch. Anwesend waren nur Robin Steiner und ich, da ich die Terminänderung des Dailies aufgrund des Expertenbesuches zu spät
 mitgeteilt habe und er dadurch nicht am Daily teilnehmen konnte. Dies war jedoch nicht weiter schlimm, da ich für das heutige Daily keine Fragen notiert habe.
 
-Im Daily präsentierte ich Robin Steiner der Stand der IPA und bestätigte das ich alle Punkte welche mir beim letzten Expertenbesuch aufgezeigt wurden, behoben habe.
+Im Daily präsentierte ich Robin Steiner der Stand der IPA und bestätigte, dass ich alle Punkte, welche mir beim letzten Expertenbesuch aufgezeigt wurden, behoben habe.
 
 Nach dem Daily machte ich alles bereit für die Implementation der Endpoints. Später startete der Expertenbesuch. Die besprochenen Angelegenheiten sind wie zuvor in einem Sitzungsprotokoll
-einzusehen. Nachdem Expertenbesuch führte ich meine Arbeit an den Endpoints fort. Ich realisierte, dass ich anders als geplant nur einen Endpoint, anstatt einen Endpoint pro Filterkriterium brauche.
-Die Realisation ist so sogar noch besser: Es kann der Route schlichtweg das Filterkriterium mitgegeben werden und die Action des Controllers selbst entscheidet dann über den Parameter der den ich der Route
+einzusehen. Nach dem Expertenbesuch führte ich meine Arbeit an den Endpoints fort. Ich realisierte, dass ich anders als geplant nur einen Endpoint, anstatt einen Endpoint pro Filterkriterium brauche.
+So ist die Umsetzung um so besser: Es kann der Route schlichtweg das Filterkriterium mitgegeben werden und die Action des Controllers selbst entscheidet dann über den Parameter, den ich der Route
 mitgebe, welches Partial gerendert werden muss. So müssen nicht vier verschiedene Endpoints mit eigenen Routen eingesetzt werden, welche am Schluss trotzdem die gleiche Aufgabe haben.
 
 Durch die Änderung an den Anforderungen und weil ich zwischendurch ein Problem damit hatte, die nötigen Berechtigungen an die Route zu vergeben, hat die Umsetzung der Endpoints länger gedauert
 als gedacht.
 
-Zum Schluss des Tages schrieb ich wie gewohnt das Arbeitsjournal.
+Zum Schluss des Tages, schrieb ich wie gewohnt das Arbeitsjournal.
 
 \subsection*{Hilfestellungen}
 \begin{itemize}
@@ -49,13 +49,13 @@ Zum Schluss des Tages schrieb ich wie gewohnt das Arbeitsjournal.
 
 \subsection*{Reflexion}
 
-\subsubsection*{Was lief gut}
-Ich war heute sehr froh, konnte ich den Fehler im Dropdown spetitif beheben. Umso besser war es, dass ich alle Endpoints in einem zusammenfassen konnte. 
+\subsubsection*{Was funktionierte gut}
+Ich war heute sehr froh, konnte ich den Fehler im Dropdown spetitiv beheben. Umso besser war es, dass ich alle Endpoints in einem zusammenfassen konnte. 
 So habe ich nun eine saubere Ausgangslage, um die Turbo Streams zu erfassen. Ebenso hatte ich das Gefühl, dass der Expertenbesuch gut verlaufen ist und mir 
 die Tipps von Lorenz Müller weitergeholfen haben. Im Grossen und Ganzen bin ich sehr positiv eingestellt.
 
-\subsubsection*{Was lief weniger gut}
-Ausgenommen der Überschreitung der geschätzten Zeit für die Endpoints und das Dropdown lief heute alles gut.
+\subsubsection*{Was funktionierte weniger gut}
+Ausgenommen der Überschreitung der geschätzten Zeit für die Endpoints und das Dropdown, lief heute alles gut.
 Ich konnte die Fehler in meinem Konzept früh genug erkennen und habe nun mit der Zusammenfassung der Endpoints angemessen darauf reagiert.  
 
 \subsubsection*{Meine Erkenntnisse von heute}

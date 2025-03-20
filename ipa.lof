@@ -46,7 +46,7 @@
 \contentsline {figure}{\numberline {14.3}{\ignorespaces Beispiel Berechtigungen von Tim, selbstgezeichnet mit Draw.io\relax }}{101}{figure.caption.147}%
 \contentsline {figure}{\numberline {14.4}{\ignorespaces Beispiel Berechtigungen von Tim, selbstgezeichnet mit Draw.io\relax }}{102}{figure.caption.148}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {15.1}{\ignorespaces Anwendungsdiagram\relax }}{109}{figure.caption.165}%
+\contentsline {figure}{\numberline {15.1}{\ignorespaces Anwendungsdiagramm\relax }}{109}{figure.caption.165}%
 \contentsline {figure}{\numberline {15.2}{\ignorespaces Services\relax }}{112}{figure.caption.170}%
 \contentsline {figure}{\numberline {15.3}{\ignorespaces Lösungsvariante 1: Turbo-Konzept\relax }}{113}{figure.caption.171}%
 \contentsline {figure}{\numberline {15.4}{\ignorespaces Lösungsvariante 1: Klassendiagramm\relax }}{114}{figure.caption.172}%
@@ -54,7 +54,7 @@
 \contentsline {figure}{\numberline {15.6}{\ignorespaces Lösungsvariante 2: Klassendiagramm\relax }}{116}{figure.caption.174}%
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {16.1}{\ignorespaces Backlog nach Sprint Initialisierung\relax }}{148}{figure.caption.202}%
-\contentsline {figure}{\numberline {16.2}{\ignorespaces Burnup nach Sprint 1\relax }}{149}{figure.caption.203}%
+\contentsline {figure}{\numberline {16.2}{\ignorespaces Burn up nach Sprint 1\relax }}{149}{figure.caption.203}%
 \contentsline {figure}{\numberline {16.3}{\ignorespaces Charts nach Sprint 1\relax }}{149}{figure.caption.204}%
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {17.1}{\ignorespaces FilterDropdownController\relax }}{152}{figure.caption.206}%
@@ -74,7 +74,7 @@
 \contentsline {figure}{\numberline {17.15}{\ignorespaces Globale Bedingungen gespeichert\relax }}{175}{figure.caption.237}%
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {18.1}{\ignorespaces Backlog nach Sprint Umsetzung\relax }}{180}{figure.caption.241}%
-\contentsline {figure}{\numberline {18.2}{\ignorespaces Burnup nach Sprint 2\relax }}{181}{figure.caption.242}%
+\contentsline {figure}{\numberline {18.2}{\ignorespaces Burn up nach Sprint 2\relax }}{181}{figure.caption.242}%
 \contentsline {figure}{\numberline {18.3}{\ignorespaces Charts nach Sprint 2\relax }}{181}{figure.caption.243}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
@@ -82,5 +82,5 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {24.1}{\ignorespaces Puzzle ITC Git commit conventions\relax }}{195}{figure.caption.247}%
+\contentsline {figure}{\numberline {24.1}{\ignorespaces Puzzle ITC git commit message convention\relax }}{195}{figure.caption.247}%
 \contentsfinish 

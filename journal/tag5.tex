@@ -2,13 +2,13 @@
 \begin{table}[H]
     \begin{tabular}{|L{0.4\textwidth}|C{60pt}|C{60pt}|C{60pt}|}
         \hline
-        \rowcolor{puzzleblue}\color{white}Tätigkeiten & \color{white}Beteiligte \color{white}Personen & \color{white}Aufwand Geplant (std) & \color{white}Aufwand Effektiv (std) \\
+        \rowcolor{puzzleblue}\color{white}Tätigkeiten & \color{white}Beteiligte \color{white}Personen & \color{white}Aufwand geplant (std) & \color{white}Aufwand effektiv (std) \\
         \hline
          Testkonzept abschliessen & Marc Egli & 0 & 0.5 \\
         \hline
         Sprintabschluss machen & Marc Egli & 1 & 0.5 \\
         \hline
-        Daily & Marc Egli, Robin Steiner, Daniel Illi & 0.25 & 0.5 \\
+        Daily abhalten & Marc Egli, Robin Steiner, Daniel Illi & 0.25 & 0.5 \\
         \hline
         Sprint Planning durchführen & Marc Egli & 1 & 2 \\
         \hline
@@ -28,34 +28,34 @@
 \subsection*{Tagesablauf}
 Den Morgen begann ich mit dem Fertigstellen des Testkonzeptes. Die Schnittstellen welche ich noch überarbeiten wollte, werde
 ich in einer Story unterbringen, in welcher ich die nötigen Endpoints auch gerade implementiere, so kann ich beides gleichzeitig erledigen 
-ohne viel Zeit zu verlieren. Nach der Fertigstellung des Testkonzeptes schloss ich den Sprint ab. Nahezu alle stories konnte ich auf ``Done''
-schieben. Eine Story jedoch nicht, da ich zwei Teile in der Dokumentation noch nicht beschrieben habe. Somit viel diese User Story zurück ins 
+ohne viel Zeit zu verlieren. Nach der Fertigstellung des Testkonzeptes schloss ich den Sprint ab. Nahezu alle User Stories konnte ich auf ``Done''
+schieben. Eine Story jedoch nicht, da ich zwei Teile in der Dokumentation noch nicht beschrieben habe. Somit fiel diese User Story zurück ins 
 ``Refinement''. Nach dem Sprintabschluss fand das Daily statt.
 
 Im Daily sprach ich zum einen das Kriterium zu den Anforderungen an. Dort ist beschrieben das die Anforderungen lösungsneutral seien müssen, jedoch
 erfüllen meine Anforderungen dies nicht, da ich ein Mockup zur Vefügung habe und somit schon eine Lösung vorgegeben habe. Robin Steiner
-riet mir dieses Problem morgen mit meinem Hauptexperten zu besprechen. Danach fragte ich meine verantwortlichen Fachkräte ob ich Sätze in der Dokumentation
-mit ``In diesem Abschnitt wird XY erklärt'' beginnen darf. Die Antwort: Ja, wenn es sinnvoll eingesetzt wird. Die nächste meiner Fragen richtete sich an den 
-Anforderungskatalog. Hier wird im Kriterium G6 beschrieben dass die Sicherheitsmassnahmen hinterlegt werden müssen.
+riet mir dieses Problem morgen mit meinem Hauptexperten zu besprechen. Danach fragte ich meine verantwortlichen Fachkräfte, ob ich Sätze in der Dokumentation
+mit ``In diesem Abschnitt wird XY erklärt'', beginnen darf. Die Antwort: Ja, wenn es sinnvoll eingesetzt wird. Die nächste meiner Fragen richtete sich an den 
+Anforderungskatalog. Hier wird im Kriterium G6 beschrieben, dass die Sicherheitsmassnahmen hinterlegt werden müssen.
 Da ich bereits alle Sicherheitsrisiken und die Massnahmen dafür erfasst habe, fragte ich ob es reiche, wenn ich die Sicherheitsmassnahmen im Anforderungskatalog als
-Link hinterlegen könne. Robin Steiner und Daniel Illi bestätigten mir dies. Als nächstes habe ich mit meine verantwortlichen Fachkräften Diagrammstandards beschrieben.
-hierbei ging es darum, ob ich Standards verwenden soll oder nicht. Die Antwort: Morgen mit dem Hauptexperten klärten.
-Des weiteren fragte ich ob es möglich sei mit einem Test mehrere Anforderungen abzudecken. Daniel Illi antwortete darauf, dass
+Link hinterlegen könne. Robin Steiner und Daniel Illi bestätigten mir dies. Als nächstes habe ich mit meinen verantwortlichen Fachkräften Diagrammstandards beschrieben.
+hierbei ging es darum, ob ich Standards verwenden soll oder nicht. Die Antwort: Morgen mit dem Hauptexperten klären.
+Des Weiteren fragte ich, ob es möglich sei mit einem Test mehrere Anforderungen abzudecken. Daniel Illi antwortete darauf, dass
 dies möglich sei, wenn es sich um einen Feature Test handelt. Falls es ein Unit-Test ist, dürfe er nur eine einzelne Funktion abdecken. 
 
 Zudem fiel mir wie dokumentiert am Freitag auf, dass unsere Anforderungen nicht mit den möglichen Lösungsvarianten
 übereinstimmen. Ich besprach das Problem mit Daniel Illi und Robin Steiner. Daniel Illi riet mir, Anforderungen welche geändert werden müssen oder
 welche nicht mehr zutreffen, zu dokumentieren. Ich werde dafür einen Abschnitt ``Abweichungen'' in zweiten Teil der Dokumentation anlegen. 
 
-Zum Schluss besprach ich im Team den überarbeiten Anforderungskatalog wie es vom Kriterium G6 Punkt vier gefordert wird. Die Änderungen welche meine Stakeholder 
+Zum Schluss besprach ich im Team den überarbeiteten Anforderungskatalog, wie es vom Kriterium G6 Punkt vier gefordert wird. Die Änderungen welche meine Stakeholder 
 vorgeschlagen haben, nahm ich auf und werde diese im Anforderungskatalog nachführen. Änderungen bezüglich des Katalogs umfassten vor allem die Formulierung,
 welche laut Robin Steiner noch etwas ``zu holprig'' seien.
 
 Nach dem Daily führte ich das Sprint Planning für den nächsten Sprint durch und Plant die Tasks der Umsetzung.
 Den Nachmittag verbrachte ich bis zum Schluss mit der Implementierung der ersten User Stories. Hierbei freute ich mich sehr, da 
-ich endlich mit der Umsetzung staten konnte. Während des Entwickelns kamen mir Fragen zum Styling und welches Standard Template bei einem 
-GET request auf eine Ressource zurückgegeben wird. Gemäss Kriterium A10, Punkt 4 habe ich in unserem internen Firmenchat diese Fragen an Daniel Illi gestellt,
-um während dem Warten auf eine Antwort spetitif weiterarbeiten zu können. Bei der Implementation des Dropdown hatte ich zuletzt den Fehler, 
+ich endlich mit der Umsetzung starten konnte. Während des Entwickelns kamen mir Fragen zum Styling und welches Standard Template bei einem 
+GET request auf eine Ressource zurückgegeben wird. Gemäss Kriterium A10, Punkt 4, habe ich in unserem internen Firmenchat diese Fragen an Daniel Illi gestellt,
+um während dem Warten auf eine Antwort spetitiv weiterarbeiten zu können. Bei der Implementation des Dropdown hatte ich zuletzt den Fehler, 
 dass das ganze Array der Filterkriterien im Stil ``[Tags, Attribute, Rollen, Qualifikationen]'' angezeigt wurde. Diesen Fehler muss ich morgen noch beheben.
 
 Zum Schluss des Tages, schrieb ich das Arbeitsjournal.
@@ -67,20 +67,20 @@ Zum Schluss des Tages, schrieb ich das Arbeitsjournal.
 
 \subsection*{Reflexion}
 
-\subsubsection*{Was lief gut}
-Heute hatte ich das Gefühl das ich sehr schnell voran kam. Ich konnte die meisten Tasks wie geplant abhandeln und bin 
-momentan mehr oder weniger im Zeitplan. Ausserdem hatte ich viel mehr Freude an der Arbeit, da ich num endlich zum Entwickeln kam.
+\subsubsection*{Was funktionierte gut}
+Heute hatte ich das Gefühl, dass ich sehr schnell voran kam. Ich konnte die meisten Tasks wie geplant abhandeln und bin 
+momentan mehr oder weniger im Zeitplan. Ausserdem hatte ich viel mehr Freude an der Arbeit, da ich endlich zum ansetzen Entwickeln kam.
 
-\subsubsection*{Was lief weniger gut}
+\subsubsection*{Was funktionierte weniger gut}
 Ich hatte zu Beginn Probleme in den ``Entwicklermodus'' zu kommen und mich schnell im Code zurecht zu finden.
-Dies löste sich aber schnell und ich konnte die erste User Story bezüglich der Implementation umsetzen. Zudem kommte, dass ich das 
+Dies löste sich aber schnell und ich konnte die erste User Story bezüglich der Implementation umsetzen. Zudem kam, dass ich das 
 gesetzte Tagesziel erreicht habe und mit der Umsetzung starten konnte.
 
 \subsubsection*{Meine Erkenntnisse von heute}
 Wichtig ist es, dass ich meine Zeiten immer sauber raportiere ansonsten habe ich Probleme. Ich merkte dies im Verlaufe des heutigen Tages, als ich mich plötzlich gefragt habe ``Was genau hast du jetzt die letzte Stunde gemacht?''.
 Als Gegenmassnahme habe ich gemerkt, dass es mir sehr hilft,
 wenn ich immer nach Abschluss einer User Story den Zeitblock auf Papier notiere und dann direkt in den Zeitplan einschreibe. So habe ich am Ende 
-des Tages eine saubere Übersicht über meine Zeiten und kann diese dementsprechend im Arbeitsjournal eintragen.
+des Tages eine saubere Übersicht über meine Zeiten und kann diese entsprechend im Arbeitsjournal eintragen.
 
 \subsection*{Nächste Schritte}
 Morgen werde ich den Fehler im Dropdown der Filterkriterien beheben und anschliessend mit der Umsetzung weiterverfahren. Unter anderem sollen laut
