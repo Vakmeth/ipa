@@ -8,6 +8,8 @@
                  }
 
 \chapter{Kurzfassung des IPA-Berichtes}
+Die Ergebnisse der IPA werden in Kurzform beschrieben.
+
 \section{Ausgangssituation}
 Hitobito ist eine Open-Source-Software zur Verwaltung von Mitgliedern und Communities. Sie ermöglicht es, komplexe Gruppenstrukturen individuell nach den Bedürfnissen des Nutzers abzubilden. Mit Hitobito lassen sich Veranstaltungen, Kurse, Rollen sowie Mailinglisten effizient organisieren.
 Technisch basiert Hitobito auf einer Wagon-Core-Architektur. Das bedeutet, dass es ein zentrales Core-Projekt gibt, das durch sogenannte Wagons erweitert werden kann. Diese Wagons dienen dazu, Funktionen zu ergänzen, anzupassen oder spezifisch für einzelne Kunden zu gestalten. 
@@ -257,7 +259,7 @@ muss dieser erneut von Hand zusammengestellt werden.
 \newpage
 
 \subsection{Abonnente}
-Die Abonnentenfilterung kann nicht im Hitobito wie die Personenfilterung angezeigt werden. Stattdessen
+Die Abonnentenfilterung kann im Hitobito nicht wie die Personenfilterung angezeigt werden. Stattdessen
 wird die Filterung bei einem Export der Abonnenten als CSV angewendet. So werden im resultierenden CSV nur Personen
 angezeigt, welche den Filterkriterien entsprechen.
 
@@ -353,8 +355,6 @@ die definierten Filterkriterien über den Stift in der oberen, rechten Ecke eine
 In dieser Ansicht hat der Benutzer das Filterkriterium ``Tags'' und ``Felder'' definiert. Diese Optionen verschwinden
 somit aus dem Dropdown. Wurden zu jedem Filterkriterium Bedingungen erfasst, verschwindet der gesamte Hinzufügen-Button.
 
-\newpage
-
 \textbf{Filterübersicht mit Qualifikationen und Rollen}
 
 Im folgenden Bild hat der Benutzer Tags, Rollen und Qualifikationen als Filterkriterien erfasst.
@@ -364,6 +364,8 @@ Im folgenden Bild hat der Benutzer Tags, Rollen und Qualifikationen als Filterkr
    \fbox{\includegraphics[width=0.8\textwidth,]{mockup_roles_qualifications.png}}
    \caption{Mockup mit Qualifikationen und Rollen definiert}
 \end{figure}
+
+\newpage
 
 \subsection{Bearbeitungsmasken}
 Nachfolgend werden die Anzeigen vorgestellt, welche der Benutzer bearbeiten kann. Diese sind für den Benutzer zugänglich, indem er
@@ -552,23 +554,24 @@ Während des Interviews, werden die nachkommenden Fragen gestellt:
 \end{table}
 
 \newpage
+\newpage
 
 \begin{table}[h!]
    \begin{tabular}{|L{0.3\textwidth}|L{0.4\textwidth}|L{0.2\textwidth}|}
        \hline
        \rowcolor{puzzleblue}\color{white}Tätigkeit & \color{white} Antwort der Testperson & \color{white} Mimik und Gestik \\
        \hline
-       Frage 4 & Ich war selber ein sehr engagierter Pfadfinder. Ich wusste noch gar nicht, wie Hitobito funktioniert. Ein Kollege von mir, Tobi Hinderling, hatte
-       dann von einer Firma namens Puzzle ITC gehört, welche Hitobito betreibt. Er sagte sie sei super cool organisiert und er wolle unbedingt dort arbeiten. Das machte er
+       Frage 4 & Ich wusste zuerst noch gar nicht, wie Hitobito funktioniert. Ein Kollege von mir, Tobi Hinderling, hatte
+       dann von einer Firma gehört, welche Hitobito betreibt. Er sagte sie sei super cool organisiert und er wolle unbedingt dort arbeiten. Das machte er
        dann auch und hatte das Projektmanagement bei Hitobito inne. Tobias und ich, wir waren immer wieder am ``Aare böttle'' zusammen und da hat er mir gesagt, ich soll doch auch zu Puzzle kommen,
-       denn ihn würde mehr das UX als das Projektmanagement interessieren. Wir könnten dann intern die Rollen wechseln und genau so ist es geschehen. & Testperson Lacht bei der Anektote zu Tobias Hinderling. \\
+       denn ihn würde mehr das UX als das Projektmanagement interessieren. Wir könnten dann intern die Rollen wechseln und so ist es geschehen. & Testperson Lacht bei der Anektote zu Tobias Hinderling. \\
        \hline
-       Frage 5 & Die Kunden faszinieren mich an Hitobito. Wir haben eine sehr breite Kundenpalette. Wir streben auch eine langfristige Kunden an und nehmen nicht jeden.
+       Frage 5 & Die Kunden faszinieren mich. Wir haben eine breite Kundenpalette. Wir streben auch eine langfristige Kunden an und nehmen nicht jeden.
        Wir haben sehr viele Non-Profit Gruppen und generell auch sehr angenehme Kunden. & Denkt kurz nach, ist ernster bei der Antwort. \\
        \hline
        Frage 6 & Das war sehr lange her. Keine Ahnung. Zu lange her. & Schüttelt Kopf. \\
        \hline
-       Frage 7 & Ich habe die Filterung auch schon verwendet aber meist im Umfang von Tests und Abnahme der Akzeptanzkriterien von Tickets. & Testperson nickt als Bestätigung. \\
+       Frage 7 & Ich habe die Filterung schon verwendet aber meist im Umfang von Tests und Abnahme der Akzeptanzkriterien von Tickets. & Testperson nickt als Bestätigung. \\
      \hline
      \end{tabular}
      \caption{Ablaufprotokoll Teil 2}
@@ -903,6 +906,8 @@ werden erst nach der IPA überprüft und ergänzt.
 \end{table}
 
 \chapter{Entwurf}
+Es werden Lösungskonzepte für den erstellten Anforderungskatalog erarbeitet.
+
 \section{Anwendungskonzept}
 Im folgenden Abschnitt werden die Anwendungsfälle des Benutzers dokumentiert.
 
@@ -916,8 +921,8 @@ Im folgenden Abschnitt werden die Anwendungsfälle des Benutzers dokumentiert.
 \newpage
 
 \subsection{Anwendungsfälle}
-Aus dem Anwendungsdiagramm werden die 4 Use-Cases entnommen und hier im Detail beschrieben. Vier Use-Cases, da die Anzeige,
-die Bearbeitung und die Speicherung sowohl bei den Personenfiltern wie auch bei den Abonnementenfiltern über die gleiche Benutzerschnittstelle
+Aus dem Anwendungsdiagramm werden die 4 Anwendungsfälle entnommen und hier im Detail beschrieben. Vier Anwendungsfälle, da die Anzeige,
+die Bearbeitung und die Speicherung sowohl bei den Personenfiltern, wie auch bei den Abonnementenfiltern, über die gleiche Benutzerschnittstelle
 läuft.
 
 \begin{table}[h!]
@@ -1354,6 +1359,8 @@ beschrieben, ausgeführt werden:
 \newpage
 
 \section{Testkonzept}
+Das Testkonzept dient der Planung durchzuführender Tests.
+
 \subsection{Testinfrastruktur}
 Es gibt zwei Arten von Tests, welche in dieser Arbeit relevant sind:
 
@@ -1384,20 +1391,20 @@ auschliesslich die selbstverfassten Tests relevant.
      \caption{Fehlerklassen}
 \end{table}
 
+\newpage
+
 \subsection{Manuelle Tests}
 Die manuellen Tests werden lokal, mit den Testdaten von Hitobito durchgeführt. Die Testdaten können in der Hitobito-Konsole
 mit \texttt{hit rails wagon seed} eingespielt werden. Bei Fragen zur Aktvierung der Hitobito Konsole, den \hyperref[testsetup]{\color{blue}Beschrieb zum Testsetup} einsehen.
 
-\newpage
-
 Mit dem Generic Wagon bietet sich ein Benutzer-Account für das Login an:
 
 \begin{table}[h!]
-   \begin{tabular}{|L{0.2\textwidth}|L{0.3\textwidth}|L{0.2\textwidth}|L{0.4\textwidth}|}
+   \begin{tabular}{|L{0.2\textwidth}|L{0.3\textwidth}|L{0.2\textwidth}|L{0.2\textwidth}|}
        \hline
        \rowcolor{puzzleblue} \color{white}\textbf{Bezeichnung} & \color{white}\textbf{Username} & \color{white}\textbf{Passwort} & \color{white}\textbf{Berechtigungen}\\[12pt]
        \hline
-        Admin & admin@hitobito.ch & demo & Administrator mit vollem Zugriff \\
+        Admin & admin @hitobito.ch & demo & Administrator mit vollem Zugriff \\
        \hline
      \end{tabular}
      \caption{Accounts für manuelle Tests}
@@ -2193,6 +2200,7 @@ Gemäss dem Vorgehen wird die User Story zurück in die Spalte "Refinement" gese
 \newpage
 
 \section{Sprint Diagramme}
+Es werden zwei Sprint Diagramme analysiert.
 
 \subsection{Burn up}
 
@@ -2206,6 +2214,8 @@ Anhand des Burn ups sieht man, dass die meisten User Stories bis zum Sprintabsch
 Die Anzahl der User Stories hat sich am 07.03.2025 erhöht, da die User Story ``Entwurf'' aufgeteilt wurde. Dies geschah auf Anweisung
 des Hauptexperten Lorenz Müller.
 
+\newpage
+
 \subsection{User Story Chart}
 \begin{figure}[h]
    \centering
@@ -2218,6 +2228,8 @@ Als Fazit werden im obenstehenden Bild die Verteilung der Status aller User Stor
 \newpage
 
 \chapter{Umsetzung}
+Die Umsetzung behandelt technische Details zur Implementation der Lösungsvariante, sowie 
+die Aufnahme der Abweichungen von dieser.
 
 \section{Schnittstellen}
 Im Entwurf wurde definiert, dass pro Filterkriterium eine Schnittstelle (Endpoint) definiert wird. Während des Implementierens wurde diese Definition geändert.
@@ -2552,12 +2564,12 @@ Here's the corrected code:}
    end
 \end{lstlisting}
 
+\newpage
+
 \subsection{Höhere Effektivität}
 Während der Umsetzungsphase wurde ChatGPT die Meinung von ChatGPT zu den einzelnen Lösungsvarianten abgefragt.
 Das Ziel dahinter war, eine ``externe'' Einschätzung der Lösungen für das IPA-Produkt zu erhalten und potentielle Fehler in den Lösungsvarianten
 auszumachen. 
-
-\newpage
 
 Die Informationen wurden dem Modell mit folgendem Eingabewert übergeben:
 
@@ -2601,6 +2613,8 @@ Durch die Aktivierung der Option zur Quellenhinterlegung von ChatGPT wurde paral
 Obwohl ChatGPT die Lösung A preferierte, wurde aus den Angaben aus dem Video klar, dass die Lösung B die bessere Lösungsvariante sein wird. 
 Grund dafür ist, dass mehrere Aktionen zugleich ausgeführt werden müssen, dazu ist das Turboframe laut dem referenzierten Video von ChatGPT nicht fähig. 
 In diesem Fall hat ChatGPT die falsche Entscheidung getroffen, doch durch die Prüfung der Antwort konnte ein richtiger Schluss aus den Informationen des KI-Modells gezogen werden.
+
+\newpage
 
 \subsection{Fazit}
 Bei der Verwendung des KI-Modells ist es wichtig dieses nur für die definierten Fälle und mit den definierten Eingabewerten zu verwenden.
@@ -2877,6 +2891,7 @@ kommendne Sprint Planning im neuen Sprint eingeteilt.
 \newpage
 
 \section{Sprint Diagramme}
+Es werden zwei Sprint Diagramme analysiert.
 
 \subsection{Burn up}
 
@@ -2888,6 +2903,8 @@ kommendne Sprint Planning im neuen Sprint eingeteilt.
 
 Anhand des Burn ups sieht man, dass die meisten User Stories bis zum Sprintabschluss abgeschlossen werden konnten. Durch den heutigen
 Sprintabschluss wurden die Akzeptanzkriterien der einzelnen User Stories abgenommen und bei Erfüllung in die Spalte ``Done'' geschoben.
+
+\newpage
 
 \subsection{User Story Chart}
 \begin{figure}[h]
@@ -2945,6 +2962,7 @@ abgeschlossen werden.
 \newpage
 
 \section{Sprint Diagramme}
+Es werden zwei Sprint Diagramme analysiert.
 
 \subsection{Burn up}
 
@@ -2956,6 +2974,8 @@ abgeschlossen werden.
 
 Anhand des Burn ups sieht man, dass die meisten User Stories bis zum Sprintabschluss abgeschlossen werden konnten. Mit dem heutigen Tag,
 wurden alle User Stories (ausgenommen der erwähnten) abgeschlossen.
+
+\newpage
 
 \subsection{User Story Chart}
 \begin{figure}[h]
